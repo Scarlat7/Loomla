@@ -1,0 +1,4 @@
+Links úteis para referência futura:
+
+♥ Texto clicável no App:
+	http://stackoverflow.com/questions/7142378/how-can-i-use-ontouchlisteners-on-each-word-in-a-textview

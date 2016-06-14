@@ -1,10 +1,13 @@
 package testeTexto;
 
-import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.Arrays;
+import java.nio.file.Files;
 
 public class BNode implements Serializable{
 	
@@ -15,17 +18,19 @@ public class BNode implements Serializable{
 	
 	static int diskCounter = 0; //contador para ir botando o número do nodo no arquivo
 	
-	private int diskIndex;
+	protected int diskIndex;
 	
 	private static BNode root;
+	private static int rootIndex;
 	private int nkeys; //número de chaves atualmente armazenados
 	private boolean leaf; //flag que indica se o nodo é folha
 	
 	private int IDs[] = new int[MAX_KEY]; //Vetor que contem as chaves
 	private int Offsets[] = new int[MAX_KEY]; //Vetor que contém os deslocamento no arquivo de tradução referentes às chaves (dados)
 	private BNode children[] = new BNode[MAX_KEY + 1]; //ponteiros para os filhos
+	private int childrenIndex[] = new int[MAX_KEY + 1]; //número do bloco no disco do filho
 	
-	public static void main (String args[]) {
+	public static void main (String args[]) throws IOException {
 	    
 		
 		BNode a = new BNode(true);
@@ -35,31 +40,29 @@ public class BNode implements Serializable{
 		}
 		
 		a.print(0);
-		
-		/*try {
-			BNode a = new BNode();
-			a.insert(1, 0);
-			ByteArrayOutputStream baos = new ByteArrayOutputStream();
-			ObjectOutputStream oos;
-			oos = new ObjectOutputStream(baos);
-			oos.writeObject(a);
-			oos.close();
-			System.out.println(baos.size());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
 	}
 	
-	public BNode(boolean leaf){
-		if(root == null)
-			root = this;
+	public BNode(boolean leaf) throws IOException{
 		this.nkeys = 0;
 		this.leaf = leaf;
+		if(root == null){
+			root = this;
+			File file = new File("data_files");
+			if(!file.exists()) {
+				if (file.mkdirs()){
+					
+				} else {
+				    throw new IOException("Failed to create directory " + file);
+				}
+			}
+			this.leaf = true;
+			diskWrite(this);
+		}
 		this.diskIndex = diskCounter++;
 	}
 	
 	private BNode search(BNode n, int ID){
+
 		int i = 0;
 		
 		while(i < n.nkeys && ID > n.IDs[i])
@@ -68,14 +71,10 @@ public class BNode implements Serializable{
 			return n; 							// retorna nodo que contém a chave
 		if(n.leaf)
 			return null; 						// não encontrou
-		else //if(i < n.nkeys)
-			n = n.children[i];
-			//n = diskFetch(n.children[i]); 		// procura no filho esquerdo
-		//else
-			//n = n.children[i];
-			//n = diskFetch(n.children[i+1]);		 // procura no filho direito
-		
-		return search(n, ID);
+		else{
+			n = diskFetch(n.childrenIndex[i]);		
+			return search(n, ID);
+		}
 	}
 	
 	
@@ -91,9 +90,8 @@ public class BNode implements Serializable{
 		}
 		return -1;		
 	}	
-
 	
-	public BNode insert(int newID, int newOffset){
+	public BNode insert(int newID, int newOffset) throws IOException{
 		
 		if(search(this, newID) != null)
 			return null; 					//chave já contida na árvore
@@ -106,6 +104,8 @@ public class BNode implements Serializable{
 	    }
 		else //árvore já existe
 	    {
+			root = diskFetch(rootIndex);
+			
 	        //se a raiz está cheia, tem que fazer um split e criar uma nova raiz
 	        if (root.nkeys == MAX_KEY)
 	        {
@@ -114,6 +114,7 @@ public class BNode implements Serializable{
 	 
 	            //a antiga raiz é filha da nova
 	            newRoot.children[0] = root;
+	            newRoot.childrenIndex[0] = root.diskIndex;
 	            
 	            //faz split na raiz antiga
 	            newRoot.split(0, root);
@@ -122,26 +123,31 @@ public class BNode implements Serializable{
 	            int i = 0;
 	            if (newRoot.IDs[0] < newID)
 	                i++;
-	            newRoot.children[i].insertNonFull(newID, newOffset);
+	            newRoot.children[i].insertNoSplit(newID, newOffset);
 	 
 	            //atualiza raiz
+	            rootIndex = newRoot.diskIndex;
 	            root = newRoot;
+	            
 	        }
 	        else  
 	        	//se raiz não tá cheia, insere normal sem fazer split
-	            root.insertNonFull(newID, newOffset);
+	            root.insertNoSplit(newID, newOffset);
 	    }
+		
+		diskWrite(root);
+		
 		//retorno a raiz mesmo que não precise (porque já está guardada na classe nodo)
 		//isso porque as outras operações sobre a árvore ficam mais fáceis de serem pensadas
 		//se as começarmos da raiz (pelo menos para mim fica)
 		return root;
 	}
 	
-	public void insertNonFull(int newID, int newOffset)
+	public void insertNoSplit(int newID, int newOffset) throws IOException
 	{
 	    //último índice usado do array das chaves
 	    int i = nkeys-1;
-	    
+
 	    if (leaf)
 	    {
 	        //aplica meio que um insertion sort no array das chaves
@@ -157,6 +163,7 @@ public class BNode implements Serializable{
 	        IDs[i+1] = newID;
 	        Offsets[i+1] = newOffset;
 	        nkeys++;
+	        diskWrite(this);
 	    }
 	    
 	    //se não for uma folha tem que inserir num nodo do próximo nível
@@ -167,22 +174,23 @@ public class BNode implements Serializable{
 	            i--;
 	        i++;
 	        
+	        children[i] = diskFetch(childrenIndex[i]);
 	        //verifica se o filho no qual a chave deve ser inserida está cheio
 	        //se estiver tem que fazer um split
 	        if (children[i].nkeys == MAX_KEY)
 	        {
 	            split(i, children[i]);
-	 
+	            
 	            //verifica em qual dos novos filhos a nova chave ficará (usando para isso a lógica
 	            //de maior para direta, menor para a esquerda)
 	            if (IDs[i] < newID)
 	                i++;
 	        }
-	        children[i].insertNonFull(newID, newOffset);
+	        children[i].insertNoSplit(newID, newOffset);
 	    }
 	}
 	
-	public void split(int i, BNode toBeSplit)
+	public void split(int i, BNode toBeSplit) throws IOException
 	{
 	    //novo nodo que vai guardar as chaves da parte maior do nodo a ser dividido
 	    BNode newRight = new BNode(toBeSplit.leaf);
@@ -199,7 +207,9 @@ public class BNode implements Serializable{
 	    if (!toBeSplit.leaf)
 	        for (int j = 0; j < T; j++){
 	        	newRight.children[j] = toBeSplit.children[j+T];
+	        	newRight.childrenIndex[j] = toBeSplit.childrenIndex[j+T];
 	        	toBeSplit.children[j+T] = null;
+	        	toBeSplit.childrenIndex[j+T] = -1;
 	        }      
 	 
 	    //o nodo divido agora tem o número mínimo de chaves
@@ -209,11 +219,14 @@ public class BNode implements Serializable{
 	    //joga os que existem para o lado (até chegar um a direita do nodo que estamos dividindo)
 	    //um a direita e não um a esquerda porque foi tomada a decisão de que o novo nodo
 	    //contém as chaves maiores
-	    for (int j = nkeys; j >= i+1; j--)
+	    for (int j = nkeys; j >= i+1; j--){
 	        children[j+1] = children[j];
+	        childrenIndex[j+1] = childrenIndex[j];
+	    }
 	 
 	    //atualiza o ponteiro para esse novo nodo
 	    children[i+1] = newRight;
+	    childrenIndex[i+1] = newRight.diskIndex;
 	 
 	    //cria espaço para a nova chave a ser adicionada no nodo pai
 	    for (int j = nkeys-1; j >= i; j--){
@@ -228,6 +241,27 @@ public class BNode implements Serializable{
 	 
 	    //agora o nodo pai tem mais uma chave
 	    nkeys++;
+	    
+	    System.out.println("this: " + this.diskIndex);
+	    System.out.println("newRight: " + newRight.diskIndex);
+	    System.out.println("toBeSplit: " + toBeSplit.diskIndex);
+	    
+	    diskWrite(this);
+	    diskWrite(newRight);
+	    diskWrite(toBeSplit);
+	    
+	}
+	
+	@Override
+	public String toString(){
+		
+		String a = "";
+		
+		for(int i = 0; i<nkeys; i++){
+			a += (this.IDs[i] + "("+this.Offsets[i]+") ");
+		}
+		
+		return a;			
 	}
 	
 	//printa com caminhamento pré-fixado à esquerda
@@ -243,7 +277,40 @@ public class BNode implements Serializable{
 			
 		//printa os filhos desse elemento
 		for(int i=0; i<nkeys+1; i++)
-			if(children[i] != null)
+			if(children[i] != null){
+				children[i] = diskFetch(childrenIndex[i]);
 				children[i].print(height+1);
+			}
 	}
+	
+	public void diskWrite(BNode a) throws IOException{
+		   
+		try{
+			File file = new File("data_files//"+"b"+a.diskIndex+".bin");
+			
+			FileOutputStream output = new FileOutputStream(file);
+			ObjectOutputStream objOutput = new ObjectOutputStream(output);   
+			objOutput.writeObject(a);
+			objOutput.close();		   
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+	  }
+	
+	public BNode diskFetch(int index){
+		 
+		   try{
+			    
+			   //FileInputStream input = new FileInputStream("//data_files//"+"b"+index);
+			   FileInputStream input = new FileInputStream("data_files//"+"b"+index+".bin");
+			   ObjectInputStream objIn = new ObjectInputStream(input);
+			   BNode a = (BNode) objIn.readObject();
+			   objIn.close();
+			   return a;
+			   
+		   }catch(Exception ex){
+			   ex.printStackTrace();
+			   return null;
+		   } 
+	   } 
 }

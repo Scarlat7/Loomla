@@ -6,29 +6,25 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.io.RandomAccessFile;
 import java.util.StringTokenizer;
-
+import java.util.ArrayList;
 public class Trieteste{
 	 /**
 	 *
 	 */
 	 protected final static int MAX = 60;
-
-	 private int leafID;
+	 protected final static int IDMAX = 4; //tamanho máximo de índices
+	 private ArrayList<Integer> leafID = new ArrayList<>();
 	 private Trieteste[] teste = new Trieteste[MAX];
-
-	 public Trieteste() {
-		 leafID = -1;
-	 }
 
 	 public void addChild(int index){
 		 teste[index] = new Trieteste();
 	 }
 
 	 public void setLeafID(int ID){
-		 leafID = ID;
+		 leafID.add(ID);
 	 }
 
-	 public int getLeafID() {
+	 public ArrayList<Integer> getLeafID() {
 		 return leafID;
 	 }
 
@@ -42,22 +38,27 @@ public class Trieteste{
 		 	for(int i = 0; i < MAX; i++) {
 		 		arquivo.writeInt(0);
 		 	}
-		 	arquivo.writeInt(-1);
+			for(int i = 0; i < 4; i++){
+				arquivo.writeInt(-1);
+			}
 		 	long tam = arquivo.length();
-		 	if(tree.getLeafID()==-1)
+		 	if(tree.getLeafID().isEmpty())
 			 	for(int i = 0; i < MAX; i++){
 			 		if(tree.getChild(i) != null){
-			 			arquivo.seek(tam - (MAX+1)*4+i*4); //esse fseek vai a partir do inï¿½cio
+			 			arquivo.seek(tam - (MAX+IDMAX)*4+i*4); //esse fseek vai a partir do incio
 			 			arquivo.writeInt((int)arquivo.length());
 			 			tree.writeNode(arquivo, tree.getChild(i));
 			 		}
 				}
 		 	else{
-	 			arquivo.seek(tam-4); //esse fseek vai a partir do inï¿½cio
-	 			arquivo.writeInt(tree.getLeafID());
+	 			arquivo.seek(tam-4*IDMAX); //esse fseek vai a partir do incio
+				for(int i=0; i< tree.getLeafID().size(); i++){
+					arquivo.writeInt(tree.getLeafID().get(i));
+				}
+	 			
 	 			for(int i = 0; i < MAX; i++){
 			 		if(tree.getChild(i) != null){
-			 			arquivo.seek(tam - (MAX+1)*4+i*4); //esse fseek vai a partir do inï¿½cio
+			 			arquivo.seek(tam - (MAX+IDMAX)*4+i*4); //esse fseek vai a partir do incio
 			 			arquivo.writeInt((int)arquivo.length());
 			 			tree.writeNode(arquivo, tree.getChild(i));
 		 			}
@@ -68,9 +69,10 @@ public class Trieteste{
 	   }
 	 }
 
-	 public int searchTrie(RandomAccessFile arquivo, String word){
-	 	int index = 0;
-	 	int subtrai = 0;
+	 public ArrayList<Integer> searchTrie(RandomAccessFile arquivo, String word){
+	 	ArrayList<Integer> idList = new ArrayList<>();
+		int index = 0;
+		int subtrai = 0;
 	 	try{
 	 		arquivo.seek(0);
 	 		for(int i = 0; i< word.length(); i++){
@@ -84,17 +86,19 @@ public class Trieteste{
 	 			index = arquivo.readInt();
 	 		}
 	 		arquivo.seek(index+4*MAX);
-
-			return arquivo.readInt();
+			for(int i=0; i<IDMAX; i++){
+				idList.add(arquivo.readInt());
+			}
+			return idList;
 	  }catch (IOException e) {
 	     System.out.println("Error");
 		}
 
-	 	return -1;
+	 	return null;
 
 	}
 
-	 public int busca(String word){
+	 public ArrayList<Integer> busca(String word){
 		int subtrai=0;
 		if(word.charAt(0) <= 122 && word.charAt(0)>=97) subtrai = 97;
 		 else if(word.charAt(0) >= 223 && word.charAt(0)<=252) subtrai = 197;
@@ -114,7 +118,7 @@ public class Trieteste{
 			if(ronaldo != null){
 				ronaldo = ronaldo.getChild(word.charAt(i) -subtrai);
 			}
-			else return -1;
+			else return null;
 		}
 
 		return ronaldo.getLeafID();
@@ -152,7 +156,7 @@ public class Trieteste{
 
 							ronaldo = ronaldo.getChild(index);
 	 				  }
-						if(ronaldo.getLeafID()==-1)	ronaldo.setLeafID(ID);
+						if(ronaldo.getLeafID().size()< 4)	ronaldo.setLeafID(ID);
 					}
 					ID++;
 			 }
@@ -164,11 +168,9 @@ public class Trieteste{
 	 public static void main(String[] args) throws FileNotFoundException{
 		 Trieteste teste =  Trieteste.getText("arquivoTeste");
 		 Trieteste teste2 = new Trieteste();
-		 RandomAccessFile arquivo = new RandomAccessFile("theUltimateFile.bin", "rw");
+		 RandomAccessFile arquivo = new RandomAccessFile("theUltimateFile2.bin", "rw");
 		 teste.writeNode(arquivo, teste);
-		 int ID = teste2.searchTrie(arquivo, "dog");
-		 int ID2 = teste2.searchTrie(arquivo, "dot");
+		 ArrayList<Integer> ID = teste2.searchTrie(arquivo, "dog");
 		 System.out.println(ID);
-		 System.out.println(ID2);
 	 }
 }

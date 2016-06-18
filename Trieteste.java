@@ -71,10 +71,10 @@ public class Trieteste{
 
 	 public ArrayList<Integer> searchTrie(RandomAccessFile arquivo, String word){
 	 	ArrayList<Integer> idList = new ArrayList<>();
-		int index = 0;
+		int index = 4*(IDMAX+MAX);
 		int subtrai = 0;
 	 	try{
-	 		arquivo.seek(0);
+	 		//arquivo.seek(0);
 	 		for(int i = 0; i< word.length(); i++){
 	 			if(word.charAt(i) <= 122 && word.charAt(i)>=97) subtrai = 97;
 				 else if(word.charAt(i) >= 223 && word.charAt(i)<=252) subtrai = 197;
@@ -82,10 +82,11 @@ public class Trieteste{
 						 	case ' ': subtrai = -24; break;
 						 	case '-': subtrai = -12; break;
 					 }
-		 		arquivo.seek(index + 4*(word.charAt(i)-subtrai));
+		 		arquivo.seek(index - 4*(IDMAX+MAX) + 4*(word.charAt(i)-subtrai));
 	 			index = arquivo.readInt();
+	 			//System.out.println(index);
 	 		}
-	 		arquivo.seek(index+4*MAX);
+	 		arquivo.seek(index-4*IDMAX);
 			for(int i=0; i<IDMAX; i++){
 				idList.add(arquivo.readInt());
 			}
@@ -124,53 +125,104 @@ public class Trieteste{
 		return ronaldo.getLeafID();
 	 }
 
-	 public static Trieteste getText(String arquivo) throws FileNotFoundException{
+	 public static void getText(String textFile) throws FileNotFoundException{
 		 String word;
+		 int aux=0, cont=0, aux2=0, i=0;
 		 int ID = 1;
-		 Trieteste ronaldo = new Trieteste();
-		 Trieteste raiz = ronaldo;
+		 long tam;
+		 //Trieteste ronaldo = new Trieteste();
 		 try{
-			 File nome = new File(arquivo);
-			 Scanner in = new Scanner(nome);
-			 int index = 0;
-			 while(in.hasNextLine())
-			 {
-					word = in.nextLine();
-					StringTokenizer str = new StringTokenizer(word, "!^,?");
-					while(str.hasMoreElements())
-					{
-						ronaldo = raiz;
-						String strAux = str.nextToken();
-						for(int i = 0; i< strAux.length(); i++)
-	 				  {
-							if(strAux.charAt(i) <= 122 && strAux.charAt(i)>=97) index  = strAux.charAt(i) - 97;
-							else if(strAux.charAt(i) >= 223 && strAux.charAt(i)<=252) index  = strAux.charAt(i) - 197;
-							else switch(strAux.charAt(i)){
-							 	case 32: index = strAux.charAt(i)+24; break;
-							 	case 45: index = strAux.charAt(i)+12; break;
-						 	}
-
-							if(ronaldo.getChild(index) == null){
-		 						 ronaldo.addChild(index);
-		 					}
-
-							ronaldo = ronaldo.getChild(index);
-	 				  }
-						if(ronaldo.getLeafID().size()< 4)	ronaldo.setLeafID(ID);
-					}
-					ID++;
+			 RandomAccessFile arquivo = new RandomAccessFile("Peq.bin", "rw");
+			 for(int j = 0; j < MAX; j++) {
+			 		arquivo.writeInt(0);
 			 }
-			 in.close();
-		 }catch(FileNotFoundException e){}
-		 return raiz;
+			 for(int j = 0; j < 4; j++){
+					arquivo.writeInt(-1);
+			 }
+			
+		  //Trieteste raiz = ronaldo;
+			 try{
+				 File nome = new File(textFile);
+				 Scanner in = new Scanner(nome);
+				 int index = 0;
+				 boolean range = true;
+				 while(in.hasNextLine())
+				 {
+						word = in.nextLine();
+						StringTokenizer str = new StringTokenizer(word, "!^,?");
+						while(str.hasMoreElements())
+						{
+							//ronaldo = raiz
+							String strAux = str.nextToken();
+							System.out.println(strAux);
+							aux = MAX*4+IDMAX*4;
+							tam = 0;
+							while(i< strAux.length() && range)
+		 				  {
+								
+								if(strAux.charAt(i) <= 122 && strAux.charAt(i)>=97) index  = strAux.charAt(i) - 97;
+								else if(strAux.charAt(i) >= 223 && strAux.charAt(i)<=252) index  = strAux.charAt(i) - 197;
+								else switch(strAux.charAt(i)){
+								 	case 32: index = strAux.charAt(i)+24; break;
+								 	case 45: index = strAux.charAt(i)+12; break;
+								 	default: range = false; break;
+							 	}
+								if(range)
+								{
+									arquivo.seek(aux - (MAX+IDMAX)*4+index*4);
+									aux2= aux;
+									tam = arquivo.length();
+									if((aux = arquivo.readInt())== 0){
+				 						 //ronaldo.addChild(index);
+										 arquivo.seek(tam);
+										 for(int j = 0; j < MAX; j++) {
+											 arquivo.writeInt(0);
+										 }
+										 for(int j = 0; j < 4; j++){
+											 arquivo.writeInt(-1);
+										 }
+										 arquivo.seek(aux2 - (MAX+IDMAX)*4+index*4);
+										 arquivo.writeInt((int)arquivo.length());
+										 
+										 aux = (int)arquivo.length();
+				 					}
+									i++;
+								
+								}
+		 				  }
+							if(i == strAux.length()){
+								aux = aux-4*IDMAX;
+								arquivo.seek(aux);
+								System.out.println(aux);
+								while(cont <4 &&(index = arquivo.readInt())!= -1 && index != ID)	cont++;
+								
+								if(cont < 4 && index != ID){
+									arquivo.seek(arquivo.getFilePointer()-4);
+									System.out.println(arquivo.getFilePointer());
+									arquivo.writeInt(ID);
+								}
+								cont = 0;
+						
+							} else range = true;
+							i=0;
+						}
+						ID++;
+				 }
+				 in.close();
+			 }catch(FileNotFoundException e){System.out.println("Socorro1");}
+		 }catch(IOException e){System.out.println("socorro2");} 
 		}
 
 	 public static void main(String[] args) throws FileNotFoundException{
-		 Trieteste teste =  Trieteste.getText("arquivoTeste");
+	     //Trieteste.getText("arquivoTeste");
 		 Trieteste teste2 = new Trieteste();
-		 RandomAccessFile arquivo = new RandomAccessFile("theUltimateFile2.bin", "rw");
-		 teste.writeNode(arquivo, teste);
-		 ArrayList<Integer> ID = teste2.searchTrie(arquivo, "dog");
+		 RandomAccessFile arquivo = new RandomAccessFile("Peq.bin", "rw");
+		 //teste.writeNode(arquivo, teste);
+		 ArrayList<Integer> ID = teste2.searchTrie(arquivo, "veados");
+		 ArrayList<Integer> ID2 = teste2.searchTrie(arquivo, "rena");
+		 
 		 System.out.println(ID);
+
+		 System.out.println(ID2);
 	 }
 }

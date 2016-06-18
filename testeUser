@@ -28,6 +28,9 @@ public class User {
     }
     this.textosLidos.append(text);
   }
+  public void newWord(String word){
+
+  }
 }
 
 class TextosLidos extends User{

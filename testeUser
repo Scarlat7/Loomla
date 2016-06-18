@@ -1,0 +1,67 @@
+package testeTexto;
+
+public class User {
+  private int ID;
+  private String nome;
+  private String senha;
+  private float fluence;
+  private TextosLidos textosLidos[] = new TextosLidos[5];
+  private Palavras palavras[] = new Palavras[10];
+
+  public User(int ID, String nome, String senha){
+    this.ID = ID;
+    this.nome = nome;
+    this.senha = senha;
+  }
+  public void setFluence(float fluence){
+    this.fluence = fluence;
+  }
+  public void newRead(TextoLidos text){
+    boolean full = true;
+    for(int i = 0; i < textosLidos.length; i++){
+      if(textosLidos[i] == null) full = false;
+    }
+    if(full){
+      for(int i = 0; i< textosLidos.length-1; i++){
+        this.textosLidos[i] = this.textosLidos[i+1];
+      }
+    }
+    this.textosLidos.append(text);
+  }
+}
+
+class TextosLidos extends User{
+   private String nome;
+    private float compreensao;
+   private String data;
+   private short int dificuldade;
+   public TextosLidos(){
+      this.nome = "";
+      this.data = "";
+      this.compreensao = 0;
+      this.dificuldade = 0;
+   }
+   public TextosLidos(String nome, String data, float compreensao, short int dificuldade){
+      this.nome = nome;
+      this.compreensao = compreensao;
+      this.data = data;
+      this.dificuldade = dificuldade;
+   }
+}
+
+class Palavras extends User{
+    private int dificuldade;
+    private int procurada;
+    private String palavra;
+
+    public Palavras(){
+      this.dificuldade = 0;
+      this.procurada = 0;
+      this.palavra = "";
+    }
+    public Palavras(String palavra, int dificuldade, int procurada){
+      this.dificuldade = dificuldade;
+      this.procurada = procurada;
+      this.palavra = palavra;
+    }
+}

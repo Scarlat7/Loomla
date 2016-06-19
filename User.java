@@ -6,21 +6,46 @@ import java.util.ArrayList;
 
 public class User {
   protected int ID;
-  protected String nome;
-  protected String senha;
+  protected char nome[] = new char[10];
+  protected char senha[] = new char[10];
   protected float fluence;
   protected TextosLidos textosLidos[] = new TextosLidos[5];
   protected Palavras palavras[] = new Palavras[10];
   
   public User(int ID, String nome, String senha){
     this.ID = ID;
-    this.nome = nome;
-    this.senha = senha;
+    this.nome = nome.toCharArray();
+    this.senha = senha.toCharArray();
   }
   
+  public int getID(){
+	  return this.ID;
+  }
+    
+  public char[] getNome(){
+	  return this.nome;
+  }
+  
+  public char[] getSenha(){
+	  return this.senha;
+  }
+  
+  public float getFluence(){
+	  return this.fluence;
+  }
+  
+  public TextosLidos getTextosLidos(int i){
+	  return textosLidos[i];
+  }
+  
+  public Palavras getPalavras(int i){
+	  return palavras[i];
+  }
+ 
   public void setFluence(float fluence){
     this.fluence = fluence;
   }
+ 
   
   public void newRead(TextosLidos text){
       //boolean full = true;
@@ -44,7 +69,7 @@ public class User {
 	  short dificuldade = avaliaDificuldade(word);
 	    
 	  while(i<length && palavras[i] != null){
-		  if(palavras[i].palavra == word){
+		  if(new String(palavras[i].palavra) == word){
 			  palavras[i].procurada++;
 			  while(i>0 && palavras[i].procurada > palavras[i-1].procurada){
 					Palavras aux = palavras[i-1];
@@ -80,7 +105,7 @@ public class User {
   @Override
   public String toString(){
 
-	   String a = ID + "(" + nome + ")" + " com senha " + senha+"\r\n"+
+	   String a = ID + "(" + new String(nome) + ")" + " com senha " + new String(senha)+"\r\n"+
 			   "Fluencia " +fluence+ "% \r\n"+
 			   "Textos: \r\n";
 	   int i = 0;
@@ -159,27 +184,43 @@ public class User {
 }
 
 class TextosLidos{
-   protected String nome;
+   protected char[] nome = new char[15];
    protected float compreensao;
-   protected String data;
+   protected char[] data = new char[6];
    protected short dificuldade;
+   
    public TextosLidos(){
-      this.nome = "";
-      this.data = "";
+
       this.compreensao = 0;
       this.dificuldade = 0;
    }
    public TextosLidos(String nome, String data, float compreensao, short dificuldade){
-      this.nome = nome;
+      this.nome = nome.toCharArray();
       this.compreensao = compreensao;
-      this.data = data;
+      this.data = data.toCharArray();
       this.dificuldade = dificuldade;
+   }
+   
+   public char[] getNome(){
+	   return this.nome;
+   }
+   
+   public char[] getData(){
+	   return this.data;
+   }
+   
+   public float getCompreensao(){
+	   return compreensao;
+   }
+   
+   public short getDificuldade(){
+	   return this.dificuldade;
    }
    
    @Override
    public String toString(){
 
-	   String a = nome + " em " + data + " com " + compreensao + "% do texto de dificuldade "+dificuldade+" compreendido.";
+	   String a = new String(nome) + " em " + new String(data) + " com " + compreensao + "% do texto de dificuldade "+dificuldade+" compreendido.";
 	   
 	   return a;	
 	}
@@ -188,24 +229,35 @@ class TextosLidos{
 class Palavras{
 	protected int dificuldade;
 	protected int procurada;
-	protected String palavra;
+	protected char palavra[] = new char[30];
 
     public Palavras(){
       this.dificuldade = 0;
       this.procurada = 0;
-      this.palavra = "";
     }
     
     public Palavras(String palavra, int dificuldade, int procurada){
       this.dificuldade = dificuldade;
       this.procurada = procurada;
-      this.palavra = palavra;
+      this.palavra = palavra.toCharArray();
+    }
+    
+    public int getDificuldade(){
+    	return this.dificuldade;
+    }
+    
+    public int getProcurada(){
+    	return this.procurada;
+    }
+    
+    public char[] getPalavra(){
+    	return this.palavra;
     }
     
     @Override
     public String toString(){
 
- 	   String a = palavra + " procurada " + procurada + " vezes de dificuldade " + dificuldade;
+ 	   String a = new String(palavra) + " procurada " + procurada + " vezes de dificuldade " + dificuldade;
  	   
  	   return a;	
  	}

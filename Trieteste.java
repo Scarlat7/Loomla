@@ -32,42 +32,70 @@ public class Trieteste{
 		 return teste[index];
 	 }
 
-	 public void writeNode(RandomAccessFile arquivo, Trieteste tree){
-		try{
-			arquivo.seek(arquivo.length());
-		 	for(int i = 0; i < MAX; i++) {
-		 		arquivo.writeInt(0);
-		 	}
-			for(int i = 0; i < 4; i++){
-				arquivo.writeInt(-1);
-			}
-		 	long tam = arquivo.length();
-		 	if(tree.getLeafID().isEmpty())
-			 	for(int i = 0; i < MAX; i++){
-			 		if(tree.getChild(i) != null){
-			 			arquivo.seek(tam - (MAX+IDMAX)*4+i*4); //esse fseek vai a partir do incio
-			 			arquivo.writeInt((int)arquivo.length());
-			 			tree.writeNode(arquivo, tree.getChild(i));
-			 		}
-				}
-		 	else{
-	 			arquivo.seek(tam-4*IDMAX); //esse fseek vai a partir do incio
-				for(int i=0; i< tree.getLeafID().size(); i++){
-					arquivo.writeInt(tree.getLeafID().get(i));
-				}
-	 			
-	 			for(int i = 0; i < MAX; i++){
-			 		if(tree.getChild(i) != null){
-			 			arquivo.seek(tam - (MAX+IDMAX)*4+i*4); //esse fseek vai a partir do incio
-			 			arquivo.writeInt((int)arquivo.length());
-			 			tree.writeNode(arquivo, tree.getChild(i));
-		 			}
-			 	}
-	 		}
-		}catch (IOException e) {
-	         System.out.println("Error");
-	   }
-	 }
+	 public static int charToIndex(int letra){
+		    int index;
+		    if(letra <= 122 && letra >=97) index  = letra - 97;
+		    else if(letra >= 223 && letra <=252) index  = letra - 197;
+		    else switch(letra){
+		      case 32: index = letra +24; break;
+		      case 45: index = letra +12; break;
+		      default: index = -1; break;
+		    }
+		    return index;
+		}
+
+		public static void writeNewNode(long pointer, RandomAccessFile arquivo) throws IOException{
+		    arquivo.seek(pointer);
+		    for(int j = 0; j < MAX; j++) {
+		      arquivo.writeInt(0);
+		    }
+		    for(int j = 0; j < 4; j++){
+		      arquivo.writeInt(-1);
+		    }
+		}
+	 
+	 public void addToTrie(String word, int ID, RandomAccessFile arquivo) throws IOException{
+	     long tam;
+	     int aux=0, cont=0, aux2=0, i=0, index = 0; //aux2 vai ser usado como 
+	     boolean range = true;
+	     aux = MAX*4+IDMAX*4;
+	     if(arquivo.length()==0)
+		 {
+			writeNewNode(0, arquivo);
+		 }
+	     while(i< word.length() && range){
+	       index = charToIndex(word.charAt(i));
+	       if(index == -1) range = false;
+	       if(range){
+	         arquivo.seek(aux-(MAX+IDMAX)*4+index*4);
+	         aux2 = aux;
+	         tam = arquivo.length();
+	         if((aux = arquivo.readInt())== 0){
+	            writeNewNode(tam, arquivo);
+	            arquivo.seek(aux2 - (MAX+IDMAX)*4+index*4);
+	            arquivo.writeInt((int)arquivo.length());
+	            aux = (int)arquivo.length();
+	         }
+	         i++;
+	       }
+	     }
+	     if(i == word.length()){
+	        aux = aux-4*IDMAX;
+	        arquivo.seek(aux);
+	        while(cont <4 &&(index = arquivo.readInt())!= -1 && index != ID)	cont++;
+	       
+	        if(cont < 4 && index != ID){
+	          arquivo.seek(arquivo.getFilePointer()-4);
+	          arquivo.writeInt(ID);
+	       }
+	       cont = 0;
+	   
+	     }
+	     else{
+	      range = true;
+	      System.out.println("Caracter não reconhecido");
+	     } 
+	}
 
 	 public ArrayList<Integer> searchTrie(RandomAccessFile arquivo, String word){
 	 	ArrayList<Integer> idList = new ArrayList<>();
@@ -81,49 +109,28 @@ public class Trieteste{
 					 else switch(word.charAt(i)){
 						 	case ' ': subtrai = -24; break;
 						 	case '-': subtrai = -12; break;
+						 	default: subtrai = -1; break;
 					 }
-		 		arquivo.seek(index - 4*(IDMAX+MAX) + 4*(word.charAt(i)-subtrai));
-	 			index = arquivo.readInt();
+	 			if(subtrai != -1 && index > 0){
+	 				arquivo.seek(index - 4*(IDMAX+MAX) + 4*(word.charAt(i)-subtrai));
+		 			index = arquivo.readInt();
+	 			} else index = -1;
+		 		
 	 			//System.out.println(index);
 	 		}
-	 		arquivo.seek(index-4*IDMAX);
-			for(int i=0; i<IDMAX; i++){
-				idList.add(arquivo.readInt());
-			}
-			return idList;
+	 		if(index > 4*IDMAX){
+	 			arquivo.seek(index-4*IDMAX);
+				for(int i=0; i<IDMAX; i++){
+					idList.add(arquivo.readInt());
+				}
+				return idList;
+	 		} else return null;
+	 		
 	  }catch (IOException e) {
-	     System.out.println("Error");
+	     System.out.println("Error Search");
 		}
-
 	 	return null;
-
 	}
-
-	 public ArrayList<Integer> busca(String word){
-		int subtrai=0;
-		if(word.charAt(0) <= 122 && word.charAt(0)>=97) subtrai = 97;
-		 else if(word.charAt(0) >= 223 && word.charAt(0)<=252) subtrai = 197;
-		 	else switch(word.charAt(0)){
-			 	case 32: subtrai = -24; break;
-			 	case 45: subtrai = -12; break;
-			}
-		Trieteste ronaldo = this.getChild(word.charAt(0) -subtrai);
-
-		for(int i = 1; i< word.length(); i++){
-			if(word.charAt(i) <= 122 && word.charAt(i)>=97) subtrai = 97;
-			 else if(word.charAt(i) >= 223 && word.charAt(i)<=252) subtrai = 197;
-				 else switch(word.charAt(i)){
-					 	case ' ': subtrai = -24; break;
-					 	case '-': subtrai = -12; break;
-				 }
-			if(ronaldo != null){
-				ronaldo = ronaldo.getChild(word.charAt(i) -subtrai);
-			}
-			else return null;
-		}
-
-		return ronaldo.getLeafID();
-	 }
 
 	 public static void getText(String textFile) throws FileNotFoundException{
 		 String word;
@@ -132,15 +139,11 @@ public class Trieteste{
 		 long tam;
 		 //Trieteste ronaldo = new Trieteste();
 		 try{
-			 RandomAccessFile arquivo = new RandomAccessFile("Peq.bin", "rw");
-			 for(int j = 0; j < MAX; j++) {
-			 		arquivo.writeInt(0);
+			 RandomAccessFile arquivo = new RandomAccessFile("arvoreTrie", "rw");
+			 if(arquivo.length()==0)
+			 {
+				writeNewNode(0, arquivo);
 			 }
-			 for(int j = 0; j < 4; j++){
-					arquivo.writeInt(-1);
-			 }
-			
-		  //Trieteste raiz = ronaldo;
 			 try{
 				 File nome = new File(textFile);
 				 Scanner in = new Scanner(nome);
@@ -152,35 +155,21 @@ public class Trieteste{
 						StringTokenizer str = new StringTokenizer(word, "!^,?");
 						while(str.hasMoreElements())
 						{
-							//ronaldo = raiz
 							String strAux = str.nextToken();
-							System.out.println(strAux);
 							aux = MAX*4+IDMAX*4;
 							tam = 0;
 							while(i< strAux.length() && range)
 		 				  {
 								
-								if(strAux.charAt(i) <= 122 && strAux.charAt(i)>=97) index  = strAux.charAt(i) - 97;
-								else if(strAux.charAt(i) >= 223 && strAux.charAt(i)<=252) index  = strAux.charAt(i) - 197;
-								else switch(strAux.charAt(i)){
-								 	case 32: index = strAux.charAt(i)+24; break;
-								 	case 45: index = strAux.charAt(i)+12; break;
-								 	default: range = false; break;
-							 	}
+								index = charToIndex(word.charAt(i));
+								if(index == -1) range = false;
 								if(range)
 								{
 									arquivo.seek(aux - (MAX+IDMAX)*4+index*4);
 									aux2= aux;
 									tam = arquivo.length();
 									if((aux = arquivo.readInt())== 0){
-				 						 //ronaldo.addChild(index);
-										 arquivo.seek(tam);
-										 for(int j = 0; j < MAX; j++) {
-											 arquivo.writeInt(0);
-										 }
-										 for(int j = 0; j < 4; j++){
-											 arquivo.writeInt(-1);
-										 }
+										 writeNewNode(tam, arquivo);
 										 arquivo.seek(aux2 - (MAX+IDMAX)*4+index*4);
 										 arquivo.writeInt((int)arquivo.length());
 										 
@@ -193,12 +182,10 @@ public class Trieteste{
 							if(i == strAux.length()){
 								aux = aux-4*IDMAX;
 								arquivo.seek(aux);
-								System.out.println(aux);
 								while(cont <4 &&(index = arquivo.readInt())!= -1 && index != ID)	cont++;
 								
 								if(cont < 4 && index != ID){
 									arquivo.seek(arquivo.getFilePointer()-4);
-									System.out.println(arquivo.getFilePointer());
 									arquivo.writeInt(ID);
 								}
 								cont = 0;
@@ -213,13 +200,13 @@ public class Trieteste{
 		 }catch(IOException e){System.out.println("socorro2");} 
 		}
 
-	 public static void main(String[] args) throws FileNotFoundException{
-	     //Trieteste.getText("arquivoTeste");
+	 public static void main(String[] args) throws IOException{
+	     //Trieteste.getText("leozin");
 		 Trieteste teste2 = new Trieteste();
-		 RandomAccessFile arquivo = new RandomAccessFile("Peq.bin", "rw");
-		 //teste.writeNode(arquivo, teste);
-		 ArrayList<Integer> ID = teste2.searchTrie(arquivo, "veados");
-		 ArrayList<Integer> ID2 = teste2.searchTrie(arquivo, "rena");
+		 RandomAccessFile arquivo = new RandomAccessFile("reginaldo", "rw");
+		 teste2.addToTrie("ronaldo", 4, arquivo);
+		 ArrayList<Integer> ID = teste2.searchTrie(arquivo, "reiajreopja");
+		 ArrayList<Integer> ID2 = teste2.searchTrie(arquivo, "ronaldo");
 		 
 		 System.out.println(ID);
 

@@ -6,15 +6,16 @@ import java.io.RandomAccessFile;
 
 public class UserFiles {
 
-  public void addUserData(User usuario) throws IOException{
-	  RandomAccessFile userData = new RandomAccessFile("UserData", "r");
+  public static void addUserData(User usuario) throws IOException{
+	  RandomAccessFile userData = new RandomAccessFile("UserData", "rw");
 	  userData.seek(usuario.getID());
 	  userData.writeInt(usuario.getID());
 	  for(int i=0; i<10; i++){
-		  userData.writeChar(usuario.getNome()[i]);
+		 userData.writeChar(usuario.getNome()[i]);
 	  }
 	  for(int i=0; i<10;i++){
-		  userData.writeChar(usuario.getSenha()[i]);
+
+		 userData.writeChar(usuario.getSenha()[i]);
 	  }
 	  userData.writeFloat(usuario.getFluence());
 	  for(int i =0; i<5; i++){
@@ -60,17 +61,73 @@ public class UserFiles {
 	  }
 	  userData.close();
   }
-	
+  public static User getUserData(String nome) throws IOException{
+	  RandomAccessFile userData = new RandomAccessFile("UserData", "r");
+	  char arrayAux1[] = new char[10];
+	  Trieteste user = new Trieteste();
+	  int ID = user.searchTrie("UserTrie", nome, 1).get(0);
+	  User usuario = new User();
+	  userData.seek(ID);
+	  usuario.setID(userData.readInt()); //Le a ID;
+	  for(int i=0; i<10; i++){ 
+		 arrayAux1[i] = userData.readChar(); //Le o nome
+	  }
+	  usuario.setNome(arrayAux1); //Usuario recebe nome
+	  arrayAux1 = new char[10];
+	  for(int i=0; i<10;i++){
+		 arrayAux1[i] = userData.readChar(); //Le a senha
+	  }
+	  usuario.setSenha(arrayAux1);		//usuario recebe
+	  usuario.setFluence(userData.readFloat());
+	  TextosLidos texto[] = new TextosLidos[5];
+	  for(int i =0; i<5; i++){
+		  texto[i] = new TextosLidos();
+		  arrayAux1 = new char[15];
+		  for(int j=0; j<15; j++){
+			  arrayAux1[j] = userData.readChar();
+		  }
+		  texto[i].setNome(arrayAux1);
+		  texto[i].setCompreensao(userData.readFloat());
+		  arrayAux1 = new char[6];
+		  for(int j=0; j<6;j++){
+			 arrayAux1[j] = userData.readChar(); 
+		  }
+		  texto[i].setData(arrayAux1);
+		  texto[i].setDificuldade(userData.readShort());
+
+		  usuario.setTextosLidos(texto[i], i);
+	  }
+	  Palavras palavra[] = new Palavras[10];
+	  arrayAux1 = new char[30];
+	  for(int i=0; i<10; i++){
+		  	  palavra[i] = new Palavras();
+			  palavra[i].setDificuldade(userData.readInt());
+			  palavra[i].setProcurada(userData.readInt());
+			  for(int j=0; j<30; j++){
+				  arrayAux1[j] = userData.readChar();
+			  }
+			  palavra[i].setPalavra(arrayAux1);
+			  usuario.setPalavras(palavra[i], i);
+	  }
+	  userData.close();
+	  return usuario;
+  }
   public static int getNewUserID(String fileName)	throws IOException{
-	  RandomAccessFile arquivo = new RandomAccessFile(fileName, "r");
+	  RandomAccessFile arquivo = new RandomAccessFile(fileName, "rw");
 	  int ID = (int)arquivo.length();
 	  arquivo.close();
 	  return ID;
   }
-  public void addUser(String name, String password) throws IOException{
+  public static void addUser(String name, String password) throws IOException{
 	  RandomAccessFile userTrie = new RandomAccessFile("UserTrie", "rw");
 	  Trieteste usuario = new Trieteste();
 	  User newUser = new User(getNewUserID("UserData"), name, password);
-	  usuario.addToTrie(name, newUser.getID(), userTrie);
+	  usuario.addToTrie(name, newUser.getID(), userTrie, 1);
+	  addUserData(newUser);
+  }
+  public static void main(String[] args) throws IOException {
+	 Trieteste user = new Trieteste();
+	 User leonardo = getUserData("nat");
+	 System.out.println(leonardo.getSenha());
   }
 }

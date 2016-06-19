@@ -12,7 +12,7 @@ public class Trieteste{
 	 *
 	 */
 	 protected final static int MAX = 60;
-	 protected final static int IDMAX = 4; //tamanho máximo de índices
+	 //protected final static int IDMAX = 4; //tamanho máximo de índices
 	 private ArrayList<Integer> leafID = new ArrayList<>();
 	 private Trieteste[] teste = new Trieteste[MAX];
 
@@ -54,7 +54,7 @@ public class Trieteste{
 		    }
 		}
 	 
-	 public void addToTrie(String word, int ID, RandomAccessFile arquivo) throws IOException{
+	 public void addToTrie(String word, int ID, RandomAccessFile arquivo, int IDMAX) throws IOException{
 	     long tam;
 	     int aux=0, cont=0, aux2=0, i=0, index = 0; //aux2 vai ser usado como 
 	     boolean range = true;
@@ -82,9 +82,9 @@ public class Trieteste{
 	     if(i == word.length()){
 	        aux = aux-4*IDMAX;
 	        arquivo.seek(aux);
-	        while(cont <4 &&(index = arquivo.readInt())!= -1 && index != ID)	cont++;
+	        while(cont <IDMAX &&(index = arquivo.readInt())!= -1 && index != ID)	cont++;
 	       
-	        if(cont < 4 && index != ID){
+	        if(cont < IDMAX && index != ID){
 	          arquivo.seek(arquivo.getFilePointer()-4);
 	          arquivo.writeInt(ID);
 	       }
@@ -97,7 +97,8 @@ public class Trieteste{
 	     } 
 	}
 
-	 public ArrayList<Integer> searchTrie(RandomAccessFile arquivo, String word){
+	 public ArrayList<Integer> searchTrie(String fileName, String word, int IDMAX) throws FileNotFoundException{
+		RandomAccessFile arquivo = new RandomAccessFile(fileName, "rw");
 	 	ArrayList<Integer> idList = new ArrayList<>();
 		int index = 4*(IDMAX+MAX);
 		int subtrai = 0;
@@ -132,7 +133,7 @@ public class Trieteste{
 	 	return null;
 	}
 
-	 public static void getText(String textFile) throws FileNotFoundException{
+	 public static void getText(String textFile, int IDMAX) throws FileNotFoundException{
 		 String word;
 		 int ID = 1;
 		 Trieteste ronaldo = new Trieteste();
@@ -153,7 +154,7 @@ public class Trieteste{
 						{
 							String strAux = str.nextToken();
 							//System.out.println(strAux);
-							ronaldo.addToTrie(strAux, ID, arquivo);
+							ronaldo.addToTrie(strAux, ID, arquivo, IDMAX);
 						}
 						ID++;
 				 }
@@ -163,12 +164,11 @@ public class Trieteste{
 		}
 
 	 public static void main(String[] args) throws IOException{
-	     Trieteste.getText("arquivoTeste");
+	     //Trieteste.getText("arquivoTeste");
 		 Trieteste teste2 = new Trieteste();
-		 RandomAccessFile arquivo = new RandomAccessFile("soco", "rw");
 		 //teste2.addToTrie("ronaldo", 4, arquivo);
-		 ArrayList<Integer> ID = teste2.searchTrie(arquivo, "have");
-		 ArrayList<Integer> ID2 = teste2.searchTrie(arquivo, "dog");
+		 ArrayList<Integer> ID = teste2.searchTrie("soco", "have", 4);
+		 ArrayList<Integer> ID2 = teste2.searchTrie("soco", "dog", 4);
 		 
 		 System.out.println(ID);
 

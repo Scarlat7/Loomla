@@ -12,10 +12,14 @@ public class User {
   protected TextosLidos textosLidos[] = new TextosLidos[5];
   protected Palavras palavras[] = new Palavras[10];
   
+  public User(){
+	  
+  }
+  
   public User(int ID, String nome, String senha){
     this.ID = ID;
-    this.nome = nome.toCharArray();
-    this.senha = senha.toCharArray();
+    this.nome = newArray.sizedArray(nome.toCharArray(),10);
+    this.senha = newArray.sizedArray(senha.toCharArray(), 10);
   }
   
   public int getID(){
@@ -44,6 +48,27 @@ public class User {
  
   public void setFluence(float fluence){
     this.fluence = fluence;
+  }
+  public void setID(int ID){
+	  this.ID = ID;
+  }
+    
+  public void setNome(char[] nome){
+	  //System.arraycopy(nome, 0, this.nome, 0, nome.length);
+	 this.nome = nome;
+  }
+  
+  public void setSenha(char[] senha){
+	  this.senha = senha;
+  }
+  
+  
+  public void setTextosLidos(TextosLidos texto, int i){
+	  this.textosLidos[i] = new TextosLidos(texto.getNome(), texto.getData(),texto.getCompreensao(), texto.getDificuldade());
+  }
+  
+  public void setPalavras(Palavras palavra, int i){
+	  this.palavras[i] = new Palavras(palavra.getPalavra(), palavra.getDificuldade(), palavra.getProcurada());
   }
  
   
@@ -124,7 +149,7 @@ public class User {
 	   
 	   return a;	
   }
-	  
+  
   
   private short avaliaDificuldade(String word){
 	  
@@ -190,16 +215,22 @@ class TextosLidos{
    protected short dificuldade;
    
    public TextosLidos(){
-
       this.compreensao = 0;
       this.dificuldade = 0;
    }
    public TextosLidos(String nome, String data, float compreensao, short dificuldade){
-      this.nome = nome.toCharArray();
+      this.nome = newArray.sizedArray(nome.toCharArray(), 15);
       this.compreensao = compreensao;
-      this.data = data.toCharArray();
+      this.data = newArray.sizedArray(data.toCharArray(), 6);
       this.dificuldade = dificuldade;
    }
+   
+   public TextosLidos(char[] nome, char[] data, float compreensao, short dificuldade){
+	      this.nome = nome;
+	      this.compreensao = compreensao;
+	      this.data = data;
+	      this.dificuldade = dificuldade;
+}
    
    public char[] getNome(){
 	   return this.nome;
@@ -217,10 +248,26 @@ class TextosLidos{
 	   return this.dificuldade;
    }
    
+   public void setNome(char[] nome){
+	   this.nome = nome;
+   }
+   
+   public void setData(char[] data){
+	   this.data = data;
+   }
+   
+   public void setCompreensao(float compreensao){
+	   this.compreensao = compreensao;
+   }
+   
+   public void setDificuldade(short dificuldade){
+	   this.dificuldade = dificuldade;
+   }
+   
    @Override
    public String toString(){
 
-	   String a = new String(nome) + " em " + new String(data) + " com " + compreensao + "% do texto de dificuldade "+dificuldade+" compreendido.";
+	   String a = String.valueOf(nome) + " em " + String.copyValueOf(data) + " com " + compreensao + "% do texto de dificuldade "+dificuldade+" compreendido.";
 	   
 	   return a;	
 	}
@@ -239,8 +286,14 @@ class Palavras{
     public Palavras(String palavra, int dificuldade, int procurada){
       this.dificuldade = dificuldade;
       this.procurada = procurada;
-      this.palavra = palavra.toCharArray();
+      this.palavra = newArray.sizedArray(palavra.toCharArray(), 30);
     }
+    
+    public Palavras(char[] palavra, int dificuldade, int procurada){
+        this.dificuldade = dificuldade;
+        this.procurada = procurada;
+        this.palavra = palavra;
+      }
     
     public int getDificuldade(){
     	return this.dificuldade;
@@ -253,13 +306,37 @@ class Palavras{
     public char[] getPalavra(){
     	return this.palavra;
     }
+    public void setDificuldade(int dificuldade){
+    	this.dificuldade = dificuldade;
+    }
+    
+    public void setProcurada(int procurada){
+    	this.procurada = procurada;
+    }
+    
+    public void setPalavra(char[] palavra){
+    	this.palavra = palavra;
+    }
     
     @Override
     public String toString(){
 
- 	   String a = new String(palavra) + " procurada " + procurada + " vezes de dificuldade " + dificuldade;
+ 	   String a = String.valueOf(palavra) + " procurada " + procurada + " vezes de dificuldade " + dificuldade;
  	   
  	   return a;	
  	}
 }
 
+class newArray{
+	  public static char[] sizedArray(char[] Array, int size){
+		  char[] newArray = new char[size];
+		  int i;
+		  for(i=0; i<Array.length; i++){
+			  newArray[i] = Array[i];
+		  }
+		  for(; i<size; i++){
+			  newArray[i] = 0;
+		  }
+		  return newArray; 
+	  }
+}

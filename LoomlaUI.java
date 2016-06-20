@@ -9,6 +9,7 @@ import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -73,7 +74,12 @@ public class LoomlaUI extends javax.swing.JFrame {
         UserButton2 = new javax.swing.JButton();
         LogOutButton2 = new javax.swing.JButton();
         SugeridosContainer = new javax.swing.JScrollPane();
-        TextChooser = new javax.swing.JList<>();
+        DefaultListModel<String> listModel = new DefaultListModel<>();
+        listModel.addElement("AlanTuring.txt");
+        listModel.addElement("Sigismundo.txt");
+        listModel.addElement("Diefenbakers.txt");
+        listModel.addElement("Lebensmitte.txt");
+        TextChooser = new javax.swing.JList<>(listModel);
         OpenButton = new javax.swing.JButton();
         SearchButton = new javax.swing.JButton();
         TextContainer = new javax.swing.JScrollPane();
@@ -595,10 +601,15 @@ public class LoomlaUI extends javax.swing.JFrame {
             .addComponent(LogOutButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        TextChooser.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        TextChooser.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         SugeridosContainer.setViewportView(TextChooser);
 
         OpenButton.setText("Abrir");
+        OpenButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OpenButtonActionPerformed(evt);
+            }
+        });
 
         SearchButton.setText("Procurar...");
         SearchButton.addActionListener(new java.awt.event.ActionListener() {
@@ -837,6 +848,17 @@ public class LoomlaUI extends javax.swing.JFrame {
             card.show(mainPanel, "User");
     }
 
+    private void OpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    String selected = TextChooser.getSelectedValue();
+    System.out.println("AAAH");
+    System.out.println(selected);
+        try {
+          Text.read( new FileReader(selected), null );
+        }catch(IOException e){
+        	JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir o arquivo.");
+        }
+    }
+    
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {
         int returnVal = FileChooser.showOpenDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -844,7 +866,7 @@ public class LoomlaUI extends javax.swing.JFrame {
             try {
               Text.read( new FileReader( file.getAbsolutePath() ), null );
             }catch(IOException e){
-            	JOptionPane.showMessageDialog(new JFrame(),"Error loading file.");
+            	JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir o arquivo.");
             }
         }
     }
@@ -875,10 +897,15 @@ public class LoomlaUI extends javax.swing.JFrame {
         RandomAccessFile arquivo;
         try {
                 arquivo = new RandomAccessFile("Trie.bin", "rw");
+                String translation = "";
                 //ArrayList<Integer> ID = teste.searchTrie(arquivo, busca);
                 // ArrayList<Integer> ID2 = teste2.searchTrie(arquivo, "rena");
                  //System.out.println(ID);
                  //System.out.println(ID2);
+                JOptionPane.showMessageDialog(new JFrame(),
+                	    translation,
+                	    ("Tradução de "+busca),
+                	    JOptionPane.PLAIN_MESSAGE);
         } catch (FileNotFoundException e1) {
                 e1.printStackTrace();
         }

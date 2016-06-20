@@ -11,7 +11,7 @@ public class Trieteste{
 	 /**
 	 *
 	 */
-	 protected final static int MAX = 60;
+	 protected final static int MAX = 61;
 	 //protected final static int IDMAX = 4; //tamanho máximo de índices
 	 private ArrayList<Integer> leafID = new ArrayList<>();
 	 private Trieteste[] teste = new Trieteste[MAX];
@@ -37,8 +37,11 @@ public class Trieteste{
 		    if(letra <= 122 && letra >=97) index  = letra - 97;
 		    else if(letra >= 223 && letra <=252) index  = letra - 197;
 		    else switch(letra){
-		      case 32: index = letra +24; break;
-		      case 45: index = letra +12; break;
+		      case 32: index = letra +24; break; //56
+		      case 33: index = letra +24; break; //57
+		      case 45: index = letra +13; break; //58
+		      case 63: index = letra -4; break;  //59
+		      case 94: index = letra -34; break; //60
 		      default: index = -1; break;
 		    }
 		    return index;
@@ -97,23 +100,37 @@ public class Trieteste{
 	     } 
 	}
 
-	 public ArrayList<Integer> searchTrie(String fileName, String word, int IDMAX) throws FileNotFoundException{
+	 public ArrayList<Integer> searchTrie(String fileName, String word, String lingua, int IDMAX) throws FileNotFoundException{
 		RandomAccessFile arquivo = new RandomAccessFile(fileName, "rw");
+		char token; int cont = 0; int IdAux = 0;
+		switch(lingua){
+			case "Português": token = '?'; break;
+			case "Inglês": token = '^'; break;
+			case "Alemão": token = '!'; break;
+			default: token = 0;
+		}
+		if(token == 0)return null;
+		word = token + word;
 	 	ArrayList<Integer> idList = new ArrayList<>();
 		int index = 4*(IDMAX+MAX);
-		int subtrai = 0;
+		int indice = 0;
+		int letra;
 	 	try{
 	 		//arquivo.seek(0);
 	 		for(int i = 0; i< word.length(); i++){
-	 			if(word.charAt(i) <= 122 && word.charAt(i)>=97) subtrai = 97;
-				 else if(word.charAt(i) >= 223 && word.charAt(i)<=252) subtrai = 197;
-					 else switch(word.charAt(i)){
-						 	case ' ': subtrai = -24; break;
-						 	case '-': subtrai = -12; break;
-						 	default: subtrai = -1; break;
+	 			letra = word.charAt(i);
+	 			if(word.charAt(i) <= 122 && word.charAt(i)>=97) indice = letra - 97;
+				 else if(word.charAt(i) >= 223 && word.charAt(i)<=252) indice = letra - 197;
+					 else switch(letra){
+					 		case 32: indice = letra +24; break; //56
+					 		case 33: indice = letra +24; break; //57
+					 		case 45: indice = letra +13; break; //58
+					 		case 63: indice = letra -4; break;  //59
+					 		case 94: indice = letra -34; break; //60
+						 	default: indice = -1; break;
 					 }
-	 			if(subtrai != -1 && index > 0){
-	 				arquivo.seek(index - 4*(IDMAX+MAX) + 4*(word.charAt(i)-subtrai));
+	 			if(letra != -1 && index > 0){
+	 				arquivo.seek(index - 4*(IDMAX+MAX) + 4*(indice));
 		 			index = arquivo.readInt();
 	 			} else index = -1;
 		 		
@@ -122,9 +139,11 @@ public class Trieteste{
 	 		if(index > 4*IDMAX){
 	 			arquivo.seek(index-4*IDMAX);
 				for(int i=0; i<IDMAX; i++){
-					idList.add(arquivo.readInt());
+					if((IdAux = arquivo.readInt()) == -1) cont++;
+					idList.add(IdAux);
 				}
-				return idList;
+				if(cont < 4)return idList;
+				else return null;
 	 		} else return null;
 	 		
 	  }catch (IOException e) {
@@ -138,7 +157,7 @@ public class Trieteste{
 		 int ID = 1;
 		 Trieteste ronaldo = new Trieteste();
 		 try{
-			 RandomAccessFile arquivo = new RandomAccessFile("soco", "rw");
+			 RandomAccessFile arquivo = new RandomAccessFile("Database", "rw");
 			 if(arquivo.length()==0)
 			 {
 				writeNewNode(0, arquivo);
@@ -149,7 +168,7 @@ public class Trieteste{
 				 while(in.hasNextLine())
 				 {
 						word = in.nextLine();
-						StringTokenizer str = new StringTokenizer(word, "!^,?");
+						StringTokenizer str = new StringTokenizer(word, ",");
 						while(str.hasMoreElements())
 						{
 							String strAux = str.nextToken();
@@ -164,11 +183,11 @@ public class Trieteste{
 		}
 
 	 public static void main(String[] args) throws IOException{
-	     //Trieteste.getText("arquivoTeste");
+	     //Trieteste.getText("arquivoTeste", 4);
 		 Trieteste teste2 = new Trieteste();
 		 //teste2.addToTrie("ronaldo", 4, arquivo);
-		 ArrayList<Integer> ID = teste2.searchTrie("soco", "have", 4);
-		 ArrayList<Integer> ID2 = teste2.searchTrie("soco", "dog", 4);
+		 ArrayList<Integer> ID = teste2.searchTrie("Database", "com", "Português", 4);
+		 ArrayList<Integer> ID2 = teste2.searchTrie("Database", "of", "Inglês", 4);
 		 
 		 System.out.println(ID);
 

@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BNode implements Serializable{
@@ -25,12 +26,25 @@ public class BNode implements Serializable{
 	private boolean leaf; //flag que indica se o nodo � folha
 
 	private int IDs[] = new int[MAX_KEY]; //Vetor que contem as chaves
-	//private int translations[] = new int[MAX_KEY]; //Vetor que cont�m os deslocamento no arquivo de tradu��o referentes �s chaves (dados)
-	private ArrayList<String> translations[] = new ArrayList<>[MAX_KEY];
+	private ArrayList<String>[] translations = new ArrayList[MAX_KEY];
+	//private ArrayList<String> translations[] = new ArrayList<String>[MAX_KEY];
 	private int childrenIndex[] = new int[MAX_KEY + 1]; //n�mero do bloco no disco do filho
 
 	public static void main (String args[]) throws IOException {
 
+		/*BNode.translations[0] = new ArrayList<>();
+		BNode.translations[1] = new ArrayList<>();
+		translations[0].add("oiii");
+		translations[0].add("eii");
+		translations[1].add("aii");
+
+		for(String a : translations[0]){
+			System.out.println(a);
+		}
+		for(String a : translations[1]){
+			System.out.println(a);
+		}*/
+		
 		/****descomente para gerar �rvore ****/
 
 		/*
@@ -53,6 +67,8 @@ public class BNode implements Serializable{
 		a.insert(148794, 69);
 		System.out.println(a.getOffset(148794));
 		*/
+		
+		
 
 	}
 
@@ -110,7 +126,7 @@ public class BNode implements Serializable{
 
 
 
-	public int getOffset(int ID){
+	public ArrayList<String> getTranslations(int ID){
 		int i = 0;
 		BNode dummy = search(this, ID);
 		if(dummy != null){
@@ -119,10 +135,10 @@ public class BNode implements Serializable{
 			if(i < dummy.nkeys && ID == dummy.IDs[i])
 				return dummy.translations[i];
 		}
-		return -1;
+		return null;
 	}
 
-	public BNode insert(int newID, int newOffset) throws IOException{
+	public BNode insert(int newID, String newTranslation) throws IOException{
 
 		if(search(this, newID) != null)
 			return null; 					//chave j� contida na �rvore
@@ -147,7 +163,7 @@ public class BNode implements Serializable{
             int i = 0;
             if (newRoot.IDs[0] < newID)
                 i++;
-            diskFetch(newRoot.childrenIndex[i]).insertNoSplit(newID, newOffset);
+            diskFetch(newRoot.childrenIndex[i]).insertNoSplit(newID, newTranslation);
 
             //atualiza raiz
             root = newRoot;
@@ -155,7 +171,7 @@ public class BNode implements Serializable{
         }
         else{
         	//se raiz n�o t� cheia, insere normal sem fazer split
-            root.insertNoSplit(newID, newOffset);
+            root.insertNoSplit(newID, newTranslation);
     	}
 
 		diskWrite(root, true);
@@ -166,7 +182,7 @@ public class BNode implements Serializable{
 	return root;
 	}
 
-	private void insertNoSplit(int newID, int newOffset) throws IOException
+	private void insertNoSplit(int newID, String newTranslation) throws IOException
 	{
 	    //�ltimo �ndice usado do array das chaves
 	    int i = nkeys-1;
@@ -184,7 +200,7 @@ public class BNode implements Serializable{
 	        }
 
 	        IDs[i+1] = newID;
-	        translations[i+1] = newOffset;
+	        translations[i+1].add(newTranslation);
 	        nkeys++;
 	        diskWrite(this, false);
 	    }
@@ -209,7 +225,7 @@ public class BNode implements Serializable{
 	            if (IDs[i] < newID)
 	                i++;
 	        }
-	        children.insertNoSplit(newID, newOffset);
+	        children.insertNoSplit(newID, newTranslation);
 	    }
 	}
 

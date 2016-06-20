@@ -3,6 +3,7 @@ package testeTexto;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.ArrayList;
 
 public class UserFiles {
 
@@ -65,6 +66,9 @@ public class UserFiles {
 	  RandomAccessFile userData = new RandomAccessFile("UserData", "r");
 	  char arrayAux1[] = new char[10];
 	  Trieteste user = new Trieteste();
+	  ArrayList<Integer> b = user.searchTrie("UserTrie", nome, 1);
+	  if(b == null)
+		  return null;
 	  int ID = user.searchTrie("UserTrie", nome, 1).get(0);
 	  User usuario = new User();
 	  userData.seek(ID);
@@ -130,4 +134,20 @@ public class UserFiles {
 	 User leonardo = getUserData("nat");
 	 System.out.println(leonardo.getSenha());
   }
+}
+
+class ToString{
+	public static String toString(char[] word){
+		String palavra;
+		int i=0;
+		while(i < word.length && word[i]!=0){
+			i++;
+		}
+		char Aux[] = new char[i];
+		for(int j =0; j<i; j++){
+			Aux[j] = word[j];
+		}
+		palavra = String.valueOf(Aux);
+		return palavra;
+	}
 }

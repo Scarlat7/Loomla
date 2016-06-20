@@ -13,7 +13,14 @@ public class User {
   protected Palavras palavras[] = new Palavras[10];
   
   public User(){
-	  
+	  ID = -1;
+	  int i;
+	  for(i = 0; i<textosLidos.length; i++){
+		  textosLidos[i] = new TextosLidos();
+	  }
+	  for(i = 0; i<palavras.length; i++){
+		  palavras[i] = new Palavras();
+	  }
   }
   
   public User(int ID, String nome, String senha){
@@ -166,9 +173,9 @@ public class User {
 	  User eu = new User(0, "Scarlat7", "hahaha");
 	  eu.setFluence(50);
 	  
-	  TextosLidos t = new TextosLidos("babaca", "12/04/2016", (float)67.5, (short)15);
-	  TextosLidos r = new TextosLidos("troxa", "13/04/2016", (float)67.5, (short)15);
-	  TextosLidos s = new TextosLidos("babaca", "15/04/2016", (float)67.5, (short)15);
+	  TextosLidos t = new TextosLidos("babaca", "120416", (float)67.5, (short)15);
+	  TextosLidos r = new TextosLidos("troxa", "130416", (float)67.5, (short)15);
+	  TextosLidos s = new TextosLidos("babaca", "150416", (float)67.5, (short)15);
 	  
 	  eu.newRead(t);
 	  eu.newRead(r);

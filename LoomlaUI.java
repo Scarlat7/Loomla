@@ -41,7 +41,7 @@ public class LoomlaUI extends javax.swing.JFrame {
         LoginPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        LoginText = new javax.swing.JTextField();
+        LoginText = new javax.swing.JTextField(10);
         PasswordField = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
         LogButton = new javax.swing.JButton();
@@ -110,7 +110,11 @@ public class LoomlaUI extends javax.swing.JFrame {
         });
         LoginText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginTextActionPerformed(evt);
+                try {
+					LoginTextActionPerformed(evt);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
             }
         });
 
@@ -125,7 +129,12 @@ public class LoomlaUI extends javax.swing.JFrame {
         });
         PasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PasswordFieldActionPerformed(evt);
+                try {
+					PasswordFieldActionPerformed(evt);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
         });
 
@@ -138,7 +147,12 @@ public class LoomlaUI extends javax.swing.JFrame {
         LogButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         LogButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogButtonActionPerformed(evt);
+                try {
+					LogButtonActionPerformed(evt);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
         });
 
@@ -146,6 +160,15 @@ public class LoomlaUI extends javax.swing.JFrame {
         SignUpButton.setText("Sign up");
         SignUpButton.setToolTipText("Type your desired username and password.");
         SignUpButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        SignUpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                try {
+					SignUpButtonActionPerformed(evt);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+            }
+        });
 
         ErrorMessage.setDisplayedMnemonic('h');
         ErrorMessage.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -710,40 +733,80 @@ public class LoomlaUI extends javax.swing.JFrame {
         pack();
     }
 
-    private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {
+    private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
         LogButtonActionPerformed(evt);
     }
 
-    private void LoginTextActionPerformed(java.awt.event.ActionEvent evt) {
+    private void LoginTextActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
     	LogButtonActionPerformed(evt);
     }
 
-    private void LogButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    private void LogButtonActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
         
         char[] password = PasswordField.getPassword();
         String pass = String.valueOf(password);
         String username = LoginText.getText();
         
-        Trieteste a = new Trieteste();
-        loggedUser = new User(0, "Scarlat7", "");//searchTrie(username);
-          
-        if(pass.equals(loggedUser.senha)){
+        User loggedUser = UserFiles.getUserData(username);
+        	
+        if(loggedUser == null){
+        	ErrorMessage.setText("Nome de usuário não encontrado.");
+        }	
+        	
+        if(pass.equals(ToString.toString(loggedUser.getSenha()))){
             PasswordField.setText("");
             LoginText.setText("");
-            UserButton.setText(loggedUser.nome);
-            UserButton2.setText(loggedUser.nome);
-            loggedUser.palavras[0] = new Palavras("Abacate", 2, 23);
-            loggedUser.palavras[1] = new Palavras("Feijão", 2, 53);
-            loggedUser.palavras[2] = new Palavras("Entao", 4, 12);
-            loggedUser.textosLidos[0] = new TextosLidos("o Lindo Fim", "120416", (float)36.7, (short)23);
-            loggedUser.textosLidos[1] = new TextosLidos("Abacates", "160416", (float)38, (short)15);
-            loggedUser.textosLidos[2] = new TextosLidos("hahahaha", "120516", (float)36.4, (short)74);
+            UserButton.setText(username);
+            UserButton2.setText(username);
+            int i = 0;
+            while(i<loggedUser.palavras.length && loggedUser.palavras[i] != null){
+            	for(int j = 0; j<TabelaPalavras.getRowCount(); j++){
+            		TabelaPalavras.setValueAt(ToString.toString(loggedUser.palavras[i].getPalavra()), i, 0);
+        			TabelaPalavras.setValueAt(loggedUser.palavras[i].dificuldade, i, 1);
+        			TabelaPalavras.setValueAt(loggedUser.palavras[i].procurada, i, 2);
+            	}
+            	i++;
+            }
+            i = 0;
+            while(i<loggedUser.textosLidos.length && loggedUser.textosLidos[i] != null){
+            	for(int j = 0; j<TabelaTextos.getRowCount(); j++){
+            		System.out.println(loggedUser.textosLidos[i].getNome());
+            		TabelaTextos.setValueAt(ToString.toString(loggedUser.textosLidos[i].getNome()), i, 0);
+        			String aux = String.valueOf(loggedUser.textosLidos[i].data);
+        			String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
+        			TabelaTextos.setValueAt(a, i, 1);
+        			TabelaTextos.setValueAt(loggedUser.textosLidos[i].compreensao, i, 2);
+            	}
+            	i++;
+            }
+            Fluency.setText(String.valueOf(loggedUser.fluence)+"%");
+            
             CardLayout card = (CardLayout)mainPanel.getLayout();
             card.show(mainPanel, "User");
         }
         else
-            ErrorMessage.setText("Wrong password-user combination, please try again."); 
+            ErrorMessage.setText("Senha errada."); 
         
+    }
+    
+    private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) throws IOException{
+    	char[] password = PasswordField.getPassword();
+        String pass = String.valueOf(password);
+        String username = LoginText.getText();
+        
+        for(int i = 0; i<username.length(); i++)
+        	if(Trieteste.charToIndex(username.charAt(i)) == -1){
+        		ErrorMessage.setText("Caracteres devem ser letras minúsculas.");
+        		return;
+        	}
+          
+        if(pass.length() <= 10 && username.length() <= 10){
+        	UserFiles.addUser(username, pass);
+        	ErrorMessage.setText("Usuário criado.");
+        }
+        else
+        	ErrorMessage.setText("O limite de caracteres é 10."); 
+    	
     }
 
     private void LoginTextFocusGained(java.awt.event.FocusEvent evt) {
@@ -812,9 +875,9 @@ public class LoomlaUI extends javax.swing.JFrame {
         RandomAccessFile arquivo;
         try {
                 arquivo = new RandomAccessFile("Trie.bin", "rw");
-                ArrayList<Integer> ID = teste.searchTrie(arquivo, busca);
+                //ArrayList<Integer> ID = teste.searchTrie(arquivo, busca);
                 // ArrayList<Integer> ID2 = teste2.searchTrie(arquivo, "rena");
-                 System.out.println(ID);
+                 //System.out.println(ID);
                  //System.out.println(ID2);
         } catch (FileNotFoundException e1) {
                 e1.printStackTrace();
@@ -859,7 +922,8 @@ public class LoomlaUI extends javax.swing.JFrame {
         
         for(int i = 0; i<j; i++){
 			TabelaTextos.setValueAt(s[i].nome, i, 0);
-			String a = s[i].data.substring(0, 2)+"/" + s[i].data.substring(2, 4)+"/"+ s[i].data.substring(4, 6);
+			String aux = String.valueOf(s[i].data);
+			String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
 			TabelaTextos.setValueAt(a, i, 1);
 			TabelaTextos.setValueAt(s[i].compreensao, i, 2);
         }

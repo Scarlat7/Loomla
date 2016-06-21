@@ -99,7 +99,7 @@ public class Trieteste{
 	      System.out.println("Caracter não reconhecido");
 	     } 
 	}
-
+	 
 	 public ArrayList<Integer> searchTrie(String fileName, String word, String lingua, int IDMAX) throws FileNotFoundException{
 		RandomAccessFile arquivo = new RandomAccessFile(fileName, "rw");
 		char token; int cont = 0; int IdAux = 0;
@@ -110,8 +110,9 @@ public class Trieteste{
 			case "Alemão": token = '!'; break;
 			default: token = 0;
 		}
-		if(token == 0)return null;
-		word = token + word;
+		//if(token == 0)return null;
+		if(token != 0)
+			word = token + word;
 	 	ArrayList<Integer> idList = new ArrayList<>();
 		int index = 4*(IDMAX+MAX);
 		int indice = 0;

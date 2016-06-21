@@ -66,10 +66,10 @@ public class UserFiles {
 	  RandomAccessFile userData = new RandomAccessFile("UserData", "r");
 	  char arrayAux1[] = new char[10];
 	  Trieteste user = new Trieteste();
-	  ArrayList<Integer> b = user.searchTrie("UserTrie", nome, 1);
+	  ArrayList<Integer> b = user.searchTrie("UserTrie", nome, "", 1);
 	  if(b == null)
 		  return null;
-	  int ID = user.searchTrie("UserTrie", nome, 1).get(0);
+	  int ID = user.searchTrie("UserTrie", nome, "", 1).get(0);
 	  User usuario = new User();
 	  userData.seek(ID);
 	  usuario.setID(userData.readInt()); //Le a ID;
@@ -131,6 +131,9 @@ public class UserFiles {
   }
   public static void main(String[] args) throws IOException {
 	 Trieteste user = new Trieteste();
+	// addUser("rei", "oleole");
+	// addUser("nat", "nat222");
+	// addUser("leo", "oleole");
 	 User leonardo = getUserData("nat");
 	 System.out.println(leonardo.getSenha());
   }

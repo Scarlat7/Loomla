@@ -162,7 +162,7 @@ public class Trieteste{
 		 
 		 Trieteste ronaldo = new Trieteste();
 		 try{
-			 RandomAccessFile arquivo = new RandomAccessFile("DataBase", "rw");
+			 RandomAccessFile arquivo = new RandomAccessFile("Eusei", "rw");
 			 if(arquivo.length()==0)
 			 {
 				writeNewNode(0, arquivo);
@@ -170,24 +170,25 @@ public class Trieteste{
 			 try{
 				 File nome = new File(textFile);
 				 Scanner in = new Scanner(nome);
+				 
 				 while(in.hasNextLine())
 				 {
 						word = in.nextLine();
 						StringTokenizer str = new StringTokenizer(word, ",");
 						while(str.hasMoreElements())
 						{
+							
 							String strAux = str.nextToken();
+							System.out.println(strAux);
 							//System.out.println(strAux);
 							ronaldo.addToTrie(strAux, ID, arquivo, IDMAX);
 							switch(strAux.charAt(0)){
-								case '^': port.insert(ID, strAux, "Inglês"); 
-										  german.insert(ID, strAux, "Inglês");
+								case '^': english = english.insert(ID, strAux, "Inglês"); 
+										  System.out.println(english.getTranslations(1, "Inglês"));
 										  break;
-								case '?': english.insert(ID, strAux, "Português");
-										  german.insert(ID, strAux, "Português");
+								case '?': port = port.insert(ID, strAux, "Português");
 										  break;
-								case '!': english.insert(ID, strAux, "Alemão");
-										  port.insert(ID, strAux, "Alemão"); 
+								case '!': german = german.insert(ID, strAux, "Alemão");
 										  break;
 								default:  break;
 							}
@@ -200,16 +201,20 @@ public class Trieteste{
 		}
 
 	 public static void main(String[] args) throws IOException{
-	     //Trieteste.getText("arquivoTeste", 4);
-		 BNode german = new BNode("Inglês");
+	     Trieteste.getText("leozin", 4);
+		 BNode ingles = new BNode("Inglês");
+		 BNode port = new BNode("Português");
+		 BNode german = new BNode("Alemão");
+		 //ingles.insert(1, "!ácido", "Inglês");
+		// System.out.println(ingles.getTranslations(1, "Inglês"));
 		 Trieteste teste2 = new Trieteste();
 		 //teste2.addToTrie("ronaldo", 4, arquivo);
-		 ArrayList<Integer> ID = teste2.searchTrie("DataBase", "DOG", "Inglês", 4);
-		 ArrayList<Integer> ID2 = teste2.searchTrie("DataBase", "do", "Português", 4);
-		 
-		 ArrayList<String> translations = german.getTranslations(ID.get(0), "Alemão");
+		 ArrayList<Integer> ID = teste2.searchTrie("Eusei", "florestação", "Português", 4);
+		 ArrayList<Integer> ID2 = teste2.searchTrie("Eusei", "publicidade", "Português", 4);
+
+		 ArrayList<String> translations = ingles.getTranslations(ID.get(0),"Inglês");
 		 System.out.println(ID);
-		 System.out.println(translations.get(0));
+		 System.out.println(translations);
 		 System.out.println(ID2);
 	 }
 }

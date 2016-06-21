@@ -3985,6 +3985,7 @@
 !bedrohte art,?espécies vulneráveis (uicn),^vulnerable species
 ^wadden sea,!wattenmeer,?mar de wadden
 ^wage system,!lohnform,?sistemas de salários
+?prosseguimento,!Strafverfolgung,^goings
 ^wall,!wand,?paredes
 ^war,!krieg,?guerra,^armed conflict,!bewaffneter konflikt
 ^warm-blooded animal,!warmblüter,?animais de sangue quente
@@ -4171,6 +4172,11 @@
 ^wood product,!holzprodukt,?produtos de madeira
 ^wood waste,!holzabfall,?resíduos de madeira
 ^wool,!wolle,?lã
+^led,?levou,!leiten
+^codebreaking,?quebrador de códigos,!code bruch
+^worked,?trabalhou,!arbeitete
+^shortened,?diminui,!verkürzt
+^as many as,!so viele wie,?tanto quanto
 ^work accident,!arbeitsunfall,?acidentes de trabalho,?acidente de trabalho
 ^worked-out open cut,!restloch,?minas esgotadas
 ^working condition,!arbeitsbedingung,?condições de trabalho
@@ -5475,7 +5481,7 @@
 ^as,^equally,^every bit,?tão,!wie,^like
 ^yesterday,!gestern,?ontem,^yesterday,!gestern,?ontem,^yesterday,!gestern,?ontem
 ^year,!jahr,?ano
-^year,!jahr,^an,?ano,!ja!
+^year,!jahr,^an,?ano
 ^fermata,!fermate,^pause,?fermata
 ^stop,!stoppen,!anhalten
 ^your,!dein,?teu
@@ -5941,12 +5947,13 @@
 ^float,!schwimmen,?flutuar
 ^say,!sagen,?dizer,^tell,^state
 !falls,^if,!wenn,?em,?if,?se
-^in,!in,?em,^inside
+^in,!in,!im,?em,^inside
 ^at,!an,!auf,!bei,^near,!an,!auf,!bei,?em,!nahe,!neben
 ^ashes,^remains,!asche,!asche
 ^room
 ^float,!schwimmbrett,?bóia
 ^float
+^engagement,!engagement,?combate,?noivado
 ^living room,^sitting room,!wohnzimmer,!wohnstube,?sala de estar,^sitting room,^lounge room,^front room,^lounge
 ^pull,^tug,!zug
 ^wash,!waschen,!waschung
@@ -6039,9 +6046,13 @@
 ^chocolate,!schokolade,?chocolate
 ^chocolate,!praline,?pralina
 ^lesson,!lektion,?lição
+?futura,^forthcoming,!zukunft
 ^length,!länge,?comprimento
 ^potato,!kartoffel,?batata
+?devastador,!verheerend,^devatating
 ^something,!etwas,?algo
+?surgimento,!aussehen,^appearance
+?possibilitado,^enabled,!freigegeben
 ^watch,!uhr,?relógio de pulso,?relógio,!armbanduhr,^wrist watch,^pocketwatch,^wristwatch,?relógio
 !leib,^body,!körper,?corpo,^organic structure,^physical structure,^organic structure,^physical structure,^organic structure,^physical structure
 !frieren
@@ -6192,6 +6203,7 @@
 ^knock,!klopfen,?bater,?bater com os nós dos dedos
 ^tobedeleted
 ^someone,!jemand,?alguém,^somebody,^some one
+?mandou,^comanded,!geschickt
 ^forgive,^excuse,^pardon,?escusar,!vergeben,!verzeihen,^reprieve
 ^last,?último,!letzt,^final,^ultimate,!allerletzte,!zuletzt,!letzt,!allerletzt
 ^datum,?dado,!datum
@@ -6331,7 +6343,10 @@
 ^at,?em
 ^at,?arroba
 ^at,^att
-^been,!gewesen
+?deposto,^ousted,!verdrängt
+^has been,?foi,!ist gewesen
+^estimated,?estimado,!geschätzte
+^been,!gewesen,?sido
 ^be,!sein,!befinden,?estar
 ^be,!sein,!geschehen,!passieren,?passar-se,?acontecer
 ^be,!sein,^exist,!existieren,?ser
@@ -7258,11 +7273,12 @@
 ^and,!und,?e
 ^moon
 ^and,^too
-^by,^through,!durch,!mittels,!vermittels,!vermittelst,^by
+^by,^through,!durch,!mittels,!vermittels,!vermittelst,?por
 ^on
 !um,^about
-^with,!mit
-^of,!aus
+^with,!mit,?com
+^of,!aus,?de,?do,?da
+?passou,^passed,!bestanden
 !bombe,^bomb,?bomba
 ^bomb,^bombshell,!granate,!sexbombe,^sex bomb,!brett
 ^bomb,!flop
@@ -7391,7 +7407,6 @@
 !pöbel,^rabble,!mob
 ^hot cross bun
 ^tag,!fangerles,!fangen,!fangerles
-^it,?apanhador
 ^sardines
 ^tag
 ^british bulldogs,^bulldogs
@@ -7460,7 +7475,8 @@
 ^tea,^dinner,^supper,^evening meal,!abendessen,?jantar,!nachtessen,!abendbrot,^tea
 ^tea,?chá,!tee
 ^afternoon tea,!nachmittagstee
-^year,!schuljahr,?ano,?ano lectivo
+^school year,!schuljahr,?ano lectivo
+^years,?anos,!jahre
 ^englishman,!engländer
 ^englishman
 ^englishwoman,!engländerin
@@ -7794,7 +7810,7 @@
 !hemd,!oberhemd,^dress shirt
 !atheismus,^atheism,!gottesleugnung,^godlessness
 !atheismus,^atheism
-^decade,!jahrzehnt,!dekade,!dezennium
+^decade,!jahrzehnt,!dekade,!dezennium,?década
 ^millennium,!jahrtausend,!millennium,?milénio
 ^cuba,?cuba,!kuba,^republic of cuba
 ^quarter,!quartal,^trimester,!trimester,!vierteljahr
@@ -9926,7 +9942,7 @@
 ^logo,?logotipo,!logo
 ^thirst,!durst,?sede
 ^apricot,?abricó,!aprikose
-^algorithm,!algorithmus,?algorytm,?algoritmo
+^algorithm,!algorithmus,?algoritmo
 ^thirsty,!durstig,?sequioso,?sedento,?com sede
 ^personal pronoun,!personalpronomen,?pronome pessoal,!persönliches fürwort
 ^canticle,!canticum
@@ -11698,7 +11714,7 @@
 !logik,^logic
 ^must,!müßen,!müssen,?dever,^have to,^have to
 ^financial,!finanziell,!geldlich,!pekuniär,!geldmäßig,?financeiro
-^can,^to be able to,!können,^be able to
+^can,^to be able to,!können,^be able to,?poder
 ^noodle,!nudel,^fettuccine
 ^revelation,!enthüllung,?revelação,^divulgence
 ^revelation,!offenbarung,^divine revelation,!göttliche offenbarung
@@ -11965,9 +11981,14 @@
 ^short term,!kurzfristig,?a curto prazo
 ^crockery,!essgeschirr,^dishes,!geschirr
 ^xhosa,!xhosa,?xhosa
+^create,?criar,!erstellen
+^searched,?buscou,!gesucht
+^trying,?tentando,!versuchen
 !gegen bezahlung,^against payment,?contra pagamento,?a pagamento
 ^misapprehension,^misconception,^misunderstanding,^cross-purpose,!missverständnis,?mal-entendido
 ^flamboyant,?flamboaiã
+?iniciou,^began,!begann
+^your,?sua,?seu,!ihre
 !seinerseits,!ihrerseits,!seinerseits,^in turn,?por sua vez
 ^accelerated,!beschleunigt,?acelerado
 !doppler-effekt,^doppler effect,!dopplereffekt,?efeito doppler
@@ -12598,7 +12619,7 @@
 ^taxpayer,!steuerpflichtiger,?contribuinte
 ^traditional,!herkömmlich,?tradicional,!traditionell
 ^treasurer,!schatzmeister,?tesoureiro
-^general,?general,!general
+^general,?general,!general,?geral
 ^toronto,!toronto,?toronto
 ^murder
 !ontario,^ontario,?ontário
@@ -15140,7 +15161,7 @@
 !kamillentee,^chamomile tea,!kamillenblütentee,?chá de camomila
 ^motorcyclist,!motorradfahrer
 !pfefferminztee,^peppermint tea,^mint tea
-^execute,^run,!ausführen,^launch
+^execute,^run,!ausführen,^launch,?executar
 ^gregarious,?gregário
 ^labyrinthine,?labiríntico
 ^mazy,?labiríntico,^labyrinthine
@@ -16876,7 +16897,7 @@
 ^seyki spoken
 ^shangama
 ^shangama spoken
-^sido
+^
 ^sido spoken
 ^wubahamer,^ubamer
 ^wubahamer spoken
@@ -19206,7 +19227,7 @@
 ^scorpion,!skorpione,!skorpion,?escorpião
 ^demolish,!abbrechen
 !feile,^file,?lima
-^purpose,^resolution,^determination,!beschluss,!entschluss
+^purpose,^resolution,^determination,!beschluss,!entschluss,?propósito
 ^wood frog,!waldfrosch
 ^purpose,^topic,^subject,!gegenstand,!thema
 ^resolution
@@ -22797,6 +22818,7 @@
 ^class,!schicht,?classe,?estrato
 !mahnung,^admonishment,?repreensão
 ^grave monument,!grabdenkmal,!grabmal,?monumento fúnebre
+?monumento,^monument,!denkmal
 !maurisch,^moorish,?mourisco
 ^veronica,!schweißtuch,?sudario
 ^mildew,!schimmel,?bolor
@@ -23666,7 +23688,6 @@
 ^adolescent
 ^sphincter,!schließmuskel,?esfíncter,!sphinkter
 ^18th century,!17. jahrhundert,!18. jahrhundert,!18. jh.,?século xviii
-^ao naga
 ^sudoku,^sudoku,^sudoku,!sudoku,?sudoku
 ^property,!eigenschaft
 ^ligature,!ligatur,!doppelbuchstabe,^typographic ligature
@@ -24266,7 +24287,6 @@
 ^isconahua
 ^isnag
 ^italian sign language,!italienische gebärdensprache
-^is expressed by
 ^is expressed by
 ^sign,^signing
 ^esan
@@ -26248,7 +26268,7 @@
 ^astonishingly
 ?vespeiro,^wasps' nest,!wespennest
 ^additionally
-^highly,?altamente
+^highly,?altamente,!höchst
 ^ample,^large,^plenteous
 ^academically
 ^academic costume,^toga
@@ -26871,16 +26891,10 @@
 ^degenerate
 ^bastardize,^bastardise
 ^waistcoat,^vest,!weste,?colete
-!viéville
 !cumae,^cumae
-^kusaghe
-^krisa
-^uare
-^kumalu
-^kumba
 ^bale,!ballen,?fardo
 ^ballad,!ballade,?balada
-^of the
+^of the,
 ?disco
 ^cd,?disco compacto,!compact disc
 ^ball bearing,!kugellager,?rolamento de esferas
@@ -27587,7 +27601,7 @@
 ^agrarian,?agrário
 ^ardisia,!spitzblumen
 ^being,!sein,?existência
-^being,!wesen,?ser
+^being,!wesen,?ser,?sendo
 ^belated,!verspätet,?tardio,^late,^tardy,^delayed,^lated
 ^belch,!rülpsen,?arrotar
 ^beleaguered,!belagert,?sitiado
@@ -29404,7 +29418,7 @@
 ^recursion
 ?recursividade,^recursivity
 ^splittable,!teilbar
-^widely
+^widely,!weit,?largamente
 ^automata
 ^cellular automata,^cellular automaton,?autómato celular
 ^pushdown automaton
@@ -30644,7 +30658,7 @@
 ^conservative
 ^saigon
 ^considerate,!zuvorkommend,!rücksichtsvoll
-^considered,!wohl bedacht,!durchdacht,!erwogen,!bedacht
+^considered,!wohl bedacht,!durchdacht,!erwogen,!bedacht,?considerado
 ^consolation,!trost,?consolação
 ^conspirator,!verschwörer,?conspirado
 ^constancy,!beständigkeit
@@ -32025,7 +32039,6 @@
 ^disputable,^debatable,^questionable,!anfechtbar,?discutível
 ^disputation,^debate,!streitgespräch,?discussão
 ^disqualification,!disqualifikation
-^is
 ^menstruate,!menstruieren,?menstruar
 ^disqualify,!disqualifizieren,?dyskwalifikowac
 ^disquiet,^anxiety,^uneasiness,!unruhe,?inquietação
@@ -32099,7 +32112,6 @@
 ^disturbance,!störung,?desordem
 ^disturbed,!geistesgestört,^mentally ill,!psychisch krank,^mad,!gestört
 ^disunit,^separate,^disjoin,!teilen
-^is
 !karolinger,^carlovingians,^carolings,^karlings,^carolingians
 !karolingisch,^carolingian
 ^are
@@ -32611,7 +32623,9 @@
 ^mythologic,^mythological
 ^mythology,?mitologia,!mythologie
 ^municipal,?municipal
-^historian,?historiador
+^historian,?historiador,!historiker
+?tais como,^such as,!wie
+?consideram,^think,!betrachten
 ^constitutional,?constitucional
 ^constitutionally,!gesetzmäßig,!verfassungsmäßig
 ^north american,!nordamerikaner
@@ -33189,6 +33203,12 @@
 ^synthase
 ^subsequent,?subseqüente
 ^stimulation,?estimulação
+^techniques,?técnicas,!techniken
+^could,?poderia,?podia,!könnte
+^including,?incluindo,!einschließlich
+^improvements,?melhoras,!verbesserungen
+^ciphers,?códigos,!chiffren
+^devised,?criou,!erdacht
 ^responsible,?responsável,!verantwortlich
 ^randomly,^indiscriminately,^haphazardly,^willy-nilly,^arbitrarily,^at random,^every which way,?aleatoriamente,!zufällig
 ^pulmonary,^pneumonic,^pulmonic,?pulmonar
@@ -34910,6 +34930,7 @@
 ^audacious,^barefaced,^bodacious,^bald-faced,^brassy,^brazen,^brazen-faced,^insolent,!unverschämt,!unverfroren,!schamlos
 ^audacious,^brave,^dauntless,^fearless,^hardy,^intrepid,^unfearing,!furchtlos,!unerschrocken
 ^during the summer,!sommers,!sommersüber
+^during,?durante,!während
 ^at night,!nachts
 ^in the morning,!morgens
 ^in the afternoon,!nachmittags
@@ -36482,7 +36503,7 @@
 ^in vogue
 ^bewitch,!verhexen,^ensorcell,^ensorcel,^jinx,^witch,!bezirzen,!verwünschen,!verfluchen
 ^romagnol
-^influential,!einflussreich
+^influential,!einflussreich,?influente
 ^season
 ^interpellation,!interpellation
 ^inquisition,?inquisição,!inquisition
@@ -36921,6 +36942,7 @@
 ^entity-relationship model
 ^functional dependency
 ^many-to-many relationship
+^many,?muitas,!viele
 ^pneumology,^pulmonology,^respiratory medicine,^chest medicine,!pneumologie,!pneumonologie,!pulmonologie,!pulmologie,!lungenheilkunde
 ^pulselessness,!pulslosigkeit
 ^on^to-many relationship
@@ -37820,7 +37842,7 @@
 !kairos,^kairos
 ^straight,!straße,!straight,?sequência
 ^baldness,!glatzköpfigkeit,!kahlköpfigkeit
-^king,!könig,?rei
+^king,!könig,?rei,?monarca
 ^deuce,!zwei
 ^adempiere
 ^compiere
@@ -38315,7 +38337,7 @@
 ^sexagenarian
 ^supernumerary,!überzählig
 ^white dwarf,^degenerate dwarf,^wd,!weißer zwerg,?anã branca
-^machine,^machine,!maschine
+^machine,^machine,!maschine,?máquina
 ^car
 ^fish
 ^apple scab
@@ -39000,33 +39022,23 @@
 !essgestört
 ^it,!es
 ^we
-^we
-^this
 ^this,^that,^this
 ^qur'anic,^quranic,!koranisch
 ^particle
 ^affliction
-^affliction
-^verbal noun
 ^verbal noun
 ^verbal adjective
 ^verbal adverb
 ^all
-^all
-^four,!vier
+^four,!vier,?quatro
 ^perfectionism,!perfektionismus,?perfeccionismo,!perfektionismus,?perfeccionismo
 ^perfectionist,!perfektionist
 ^perfectionistic,!perfektionistisch
 ^lethargic,?letárgico,!lethargisch
 ^long
-^long
 ^long,^elongated
 ^long
-^long
-^long
 ^wall clock,!wanduhr
-^long
-^long
 ^long
 ^leiomyosarcoma,!leiomyosarkom
 ^boxer shorts,^loose boxers,^boxers
@@ -39177,7 +39189,7 @@
 ^salty,!salzig,?salgado
 ^twist,!verziehen,?torcer,!verdrehen
 ^seal,?selar
-^tight
+^tight,!fest,?apertado
 ^two thousand
 ^anteater,^antbear,!ameisenbär,?tamanduá
 ^impurity,!unreinheit,!verunreinigung,^impureness
@@ -42374,17 +42386,12 @@
 ^genus
 ^duplicate
 ^duplicate,^replicate
-^double
 ^double,^two-fold,^twofold,^dual
 ^alignment
-^align
 ^align,^coordinate
 ^coin
 ^sludge
 ^shiny
-^shiny
-^convert
-^convert
 ^convert,^change over
 ^distribute,^spread
 ^distribute
@@ -42395,12 +42402,7 @@
 ^degraded,^devalued
 ^steel grey
 ^feel
-^feel
-^feel
-^feel
-^find
 ^find,^determine,^ascertain
-^find
 ^foundation
 ^foundation,^fundament,^groundwork,^cornerstone
 !schweigen,^be silent,^keep silence,^be in silence
@@ -42412,16 +42414,12 @@
 ^collision
 ^frustrated,^disappointed
 ^frustrating
-^frustrating
 !kaputtgraded
 ^unbox
 ^time period,^period of time
 ^dazed
-^dazed
 ^knocked out
 ^stun
-^stun
-^ray
 ^ray,^irradiate
 ^semiarid
 ^crystalline lens,^lens,^aquula
@@ -42430,51 +42428,31 @@
 ^tortuous,^twisting,^twisty
 ^copious
 ^massive
-^massive
-^flat
-^flat
 ^flat
 ^flat,^categorical
 ^flat,^prostrate
 ^prostrate
-^match
-^match
 ^match,^equal,^rival
 ^treat
 ^embody
-^embody
-^brutalize
-^brutalize
 ^brutalize
 ^snowy
 ^elaborate
-^elaborate
-^elaborate
-^elaborate
 ^defend
 ^futuristic
-^converge
 ^converge
 ^resume
 ^help
 ^help,^help oneself
 ^high intensity training,^high intensity training
-^fifth
+^fifth,?quinto
 ^plead
-^plead
-^plead
-^precious
-^precious
+^precious,?precioso
 ^farsighted
 ^warlike
 ^helpful
 ^tender
-^tender
-^tender
-^tender
 ^uninterested
-^uninterested
-^defeated
 ^defeated
 ^helpless,!hilflos
 ^nervous
@@ -42482,10 +42460,8 @@
 ^thoughtless
 ^uptight
 ^worried
-^worried
 ^apprehensive
 ^wee
-^taxi
 ^taxi
 ^fib
 ^garden snail
@@ -42494,57 +42470,48 @@
 ^harasser
 ^snatcher
 ^indict
-^model
+^model,?modelo,modell
 ^biceps curl
 !lungerjournalismus
 ^overhead press,^shoulder press
-^overhead press
 ^strength training,^resistance training
 ^stifling
 ^ventilated
 ^inflate
-^inflate
-^inflate
-^inflate
 ^deflate
-^deflate
-^blanket
 ^blanket
 ^accompanied
 ^unaccompanied
 ^unaccompanied
 ^loner
 ^solitude
-^solitude
 ^alienated
 ^permanently
 ^perpetual
-^perpetual
 ^level
-^level
-^level
-^quota
 ^quota
 ^carload
 ^vanload,^truckload
 ^spoonful
 ^extent
 ^collection
-^collection
-^collection
-^collection
 ^note
-^note
-^spread out
 ^spread out
 ^expand
 ^angry
 ^huffy,^sore
 ^annoyed,^harassed,^pestered
 ^irritated,^nettled,^pissed,^pissed off
+^played,?jogou,?desempenhou,!gespielt
 !deuchen
+^cracking,!spaltung,?fratura,?quebra
+^enabled,!freigegeben,?permitiu
+^intercepted,!abgefangen,?interceptado
+^messages,?mensagens,!nachrichten
+^coded,!codiert,?codificados
 ^strip
 ^male
+^settings,?configurações,!einstellungen
 ^pose,^airs
 ^pose
 ^shirtless
@@ -42561,11 +42528,7 @@
 ^pasta
 ^romance
 ^flight
-^flight
 ^runner
-^runner
-^exercise
-^exercise
 ^exercise,^exert
 ^celebrate
 ^look,^looking,!gucken,!sehen
@@ -42593,7 +42556,6 @@
 ^grimace
 ^classify
 ^stomp
-^stomp
 ^rings
 ^bellow,^roar
 ^roar
@@ -42608,10 +42570,6 @@
 ^wrestling lock,^lock
 ^wristlock,^wrist lock
 ^lock
-^lock
-^lock
-^lock
-^incite
 ^incite
 ^headlock
 ^grip,^bring up
@@ -42623,8 +42581,6 @@
 ^starting block
 ^athletic,?atlético
 ^swimmer
-^swimmer
-^manageable
 ^manageable
 ^curl
 ^love
@@ -44092,4 +44048,7 @@
 !erscheinen,^show up
 ^supple,^lithe,^fit,^acrobatic,^deft,^willowy,^graceful,^elegant,^agile,^loos^jointed,^loos^limbed,^flexible,^nimble,^lissom,^limber
 ^supple
-e
+^was,!war,?era
+^providing,?provendo,!bereitstellen
+^formalisation,?formalização,!formalisierung
+^concepts,?conceitos,!konzepte

@@ -17,8 +17,10 @@ public class BNode implements Serializable{
 	public final static int T = 50; //grau da B-Tree (nï¿½mero mï¿½nimo de filhos)
 	public final static int MAX_KEY = 2*T-1; //nï¿½mero mï¿½ximo de chaves
 
-	static int diskCounter = 1; //contador para ir botando o nï¿½mero do nodo no arquivo
-
+	static int diskCounterPT = 1; //contador para ir botando o nï¿½mero do nodo no arquivo
+	static int diskCounterEN = 1;
+	static int diskCounterDE = 1;
+	
 	protected int diskIndex;
 
 	private static boolean existingTree = false;
@@ -27,56 +29,50 @@ public class BNode implements Serializable{
 
 	private int IDs[] = new int[MAX_KEY]; //Vetor que contem as chaves
 	private ArrayList<String>[] translations = new ArrayList[MAX_KEY];
-	//private ArrayList<String> translations[] = new ArrayList<String>[MAX_KEY];
 	private int childrenIndex[] = new int[MAX_KEY + 1]; //nï¿½mero do bloco no disco do filho
 
 	public static void main (String args[]) throws IOException {
-
-		/*BNode.translations[0] = new ArrayList<>();
-		BNode.translations[1] = new ArrayList<>();
-		translations[0].add("oiii");
-		translations[0].add("eii");
-		translations[1].add("aii");
-
-		for(String a : translations[0]){
-			System.out.println(a);
-		}
-		for(String a : translations[1]){
-			System.out.println(a);
-		}*/
-		
-		/****descomente para gerar ï¿½rvore ****/
+		/****descomente para gerar árvore ****/
 
 		/*
 		BNode a = new BNode(true);
-		for(int i = 2; i<= 1000; i++){
-			a = a.insert(i, i+1);
+		for(int i = 2; i<= 150; i++){
+			a = a.insert(i, "a");
 		}
+		a.insert(75, "b");
 		*/
+		
 
 		/*****descomente para testar ï¿½rvore depois de escrita *****/
 		/***um e somente um deve estar descomentado por vez! ****/
 
 		/*
-		BNode a = new BNode();
-		System.out.println(BNode.diskCounter);
-		System.out.println(a.IDs[0]);
-		System.out.println(BNode.existingTree);
+		BNode a = new BNode("portugues");
 
-		System.out.println(a.getOffset(4));
-		a.insert(148794, 69);
-		System.out.println(a.getOffset(148794));
+		ArrayList<String> b = a.getTranslations(75);
+		for(String c : b)
+			System.out.println(c);
+		System.out.println(BNode.removeDuplicateTranslation(75, "b"));
+		b = a.getTranslations(75);
+		for(String c : b)
+			System.out.println(c);
 		*/
 		
 		
 
 	}
 
-	public BNode() throws IOException{
+	public BNode(String language) throws IOException{
 
-		BNode a = diskFetch(0);
+		BNode a = diskFetch(0, language);
 
-		diskCounter = new File("data_files//").listFiles().length;
+		if(language.equals("Português"))
+			diskCounterPT = new File(language+"//").listFiles().length;
+		else if(language.equals("Inglês"))
+			diskCounterEN = new File(language+"//").listFiles().length;
+			else if(language.equals("Alemão"))
+				diskCounterDE = new File(language+"//").listFiles().length;
+		
 		existingTree = true;
 
 		this.diskIndex = a.diskIndex ;
@@ -88,12 +84,14 @@ public class BNode implements Serializable{
 
 	}
 
-	public BNode(boolean leaf) throws IOException{
+	public BNode(boolean leaf, String language) throws IOException{
 		this.nkeys = 0;
 		this.leaf = leaf;
+		for(int i = 0; i<translations.length; i++)
+			translations[i] = new ArrayList<String>();
 		if(!existingTree){
 			existingTree = true;
-			File file = new File("data_files");
+			File file = new File(language);
 			if(!file.exists()) {
 				if (file.mkdirs()){
 
@@ -102,13 +100,24 @@ public class BNode implements Serializable{
 				}
 			}
 			this.leaf = true;
-			this.diskIndex = diskCounter;
-			diskWrite(this, true);
+			if(language.equals("Português"))
+				this.diskIndex = diskCounterPT;
+			else if(language.equals("Inglês"))
+				this.diskIndex = diskCounterEN;
+				else if(language.equals("Alemão"))
+					this.diskIndex = diskCounterDE;
+			diskWrite(this, true, language);
 		}
-		this.diskIndex = diskCounter++;
+		if(language.equals("Português"))
+			this.diskIndex = diskCounterPT++;
+		else if(language.equals("Inglês"))
+			this.diskIndex = diskCounterEN++;
+			else if(language.equals("Alemão"))
+				this.diskIndex = diskCounterDE++;
+
 	}
 
-	private BNode search(BNode n, int ID){
+	private BNode search(BNode n, int ID, String language){
 
 		int i = 0;
 
@@ -119,16 +128,16 @@ public class BNode implements Serializable{
 		if(n.leaf)
 			return null; 						// nï¿½o encontrou
 		else{
-			n = diskFetch(n.childrenIndex[i]);
-			return search(n, ID);
+			n = diskFetch(n.childrenIndex[i], language);
+			return search(n, ID, language);
 		}
 	}
 
 
 
-	public ArrayList<String> getTranslations(int ID){
+	public ArrayList<String> getTranslations(int ID, String language){
 		int i = 0;
-		BNode dummy = search(this, ID);
+		BNode dummy = search(this, ID, language);
 		if(dummy != null){
 			while(i < dummy.nkeys && ID > dummy.IDs[i])
 				i++;
@@ -138,32 +147,36 @@ public class BNode implements Serializable{
 		return null;
 	}
 
-	public BNode insert(int newID, String newTranslation) throws IOException{
-
-		if(search(this, newID) != null)
-			return null; 					//chave jï¿½ contida na ï¿½rvore
+	public BNode insert(int newID, String newTranslation, String language) throws IOException{
 
 		BNode root;
 
-		root = diskFetch(0);
+		root = diskFetch(0, language);
+		
+		BNode test = search(this, newID, language);
+		
+		if( test != null){	//chave já contida na árvore
+			test.addNewTranslation(newID, newTranslation, test.diskIndex == root.diskIndex, language);  //então apenas adicionais a nova tradução à lista de traduções dessa palavra
+			return diskFetch(0, language);						//retorna raiz para manter o funcionamento da árvore
+		}
 
         //se a raiz estï¿½ cheia, tem que fazer um split e criar uma nova raiz
         if (root.nkeys == MAX_KEY)
         {
 
-            BNode newRoot= new BNode(false);
+            BNode newRoot= new BNode(false, language);
 
             //a antiga raiz ï¿½ filha da nova
             newRoot.childrenIndex[0] = root.diskIndex;
 
             //faz split na raiz antiga
-            newRoot.split(0, root);
+            newRoot.split(0, root, language);
 
             //vï¿½ qual dos filhos da nova raiz vai receber a nova chave
             int i = 0;
             if (newRoot.IDs[0] < newID)
                 i++;
-            diskFetch(newRoot.childrenIndex[i]).insertNoSplit(newID, newTranslation);
+            diskFetch(newRoot.childrenIndex[i], language).insertNoSplit(newID, newTranslation, language);
 
             //atualiza raiz
             root = newRoot;
@@ -171,10 +184,10 @@ public class BNode implements Serializable{
         }
         else{
         	//se raiz nï¿½o tï¿½ cheia, insere normal sem fazer split
-            root.insertNoSplit(newID, newTranslation);
+            root.insertNoSplit(newID, newTranslation, language);
     	}
 
-		diskWrite(root, true);
+		diskWrite(root, true, language);
 
 	//retorno a raiz mesmo que nï¿½o precise (porque jï¿½ estï¿½ guardada na classe nodo)
 	//isso porque as outras operaï¿½ï¿½es sobre a ï¿½rvore ficam mais fï¿½ceis de serem pensadas
@@ -182,7 +195,33 @@ public class BNode implements Serializable{
 	return root;
 	}
 
-	private void insertNoSplit(int newID, String newTranslation) throws IOException
+	private void addNewTranslation(int ID, String newTranslation, boolean isRoot, String language) throws IOException
+	{
+		int i = 0;
+		while(i<nkeys && IDs[i] != ID)
+			i++;
+		translations[i].add(newTranslation);
+		diskWrite(this, isRoot, language);
+	}
+	
+	private static boolean removeDuplicateTranslation(int ID, String dupTrans, String language) throws IOException
+	{
+		int i = 0;
+		BNode root = diskFetch(0, language);
+		BNode t = root.search(root, ID, language);
+		
+		while(i<t.nkeys && t.IDs[i] != ID)
+			i++;
+		for(String a : t.translations[i]){
+			if(a.equals(dupTrans)){
+				t.translations[i].remove(dupTrans);
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private void insertNoSplit(int newID, String newTranslation, String language) throws IOException
 	{
 	    //ï¿½ltimo ï¿½ndice usado do array das chaves
 	    int i = nkeys-1;
@@ -202,7 +241,7 @@ public class BNode implements Serializable{
 	        IDs[i+1] = newID;
 	        translations[i+1].add(newTranslation);
 	        nkeys++;
-	        diskWrite(this, false);
+	        diskWrite(this, false, language);
 	    }
 
 	    //se nï¿½o for uma folha tem que inserir num nodo do prï¿½ximo nï¿½vel
@@ -213,26 +252,26 @@ public class BNode implements Serializable{
 	            i--;
 	        i++;
 
-	        BNode children = diskFetch(childrenIndex[i]);
+	        BNode children = diskFetch(childrenIndex[i], language);
 	        //verifica se o filho no qual a chave deve ser inserida estï¿½ cheio
 	        //se estiver tem que fazer um split
 	        if (children.nkeys == MAX_KEY)
 	        {
-	            split(i, children);
+	            split(i, children, language);
 
 	            //verifica em qual dos novos filhos a nova chave ficarï¿½ (usando para isso a lï¿½gica
 	            //de maior para direta, menor para a esquerda)
 	            if (IDs[i] < newID)
 	                i++;
 	        }
-	        children.insertNoSplit(newID, newTranslation);
+	        children.insertNoSplit(newID, newTranslation, language);
 	    }
 	}
 
-	private void split(int i, BNode toBeSplit) throws IOException
+	private void split(int i, BNode toBeSplit, String language) throws IOException
 	{
 	    //novo nodo que vai guardar as chaves da parte maior do nodo a ser dividido
-	    BNode newRight = new BNode(toBeSplit.leaf);
+	    BNode newRight = new BNode(toBeSplit.leaf, language);
 	    newRight.nkeys = T-1;
 
 	    //copia essas chaves da metade maior para
@@ -277,9 +316,9 @@ public class BNode implements Serializable{
 	    //agora o nodo pai tem mais uma chave
 	    nkeys++;
 
-	    diskWrite(this, false);
-	    diskWrite(newRight, false);
-	    diskWrite(toBeSplit, false);
+	    diskWrite(this, false, language);
+	    diskWrite(newRight, false, language);
+	    diskWrite(toBeSplit, false, language);
 
 	}
 
@@ -296,7 +335,7 @@ public class BNode implements Serializable{
 	}
 
 	//printa com caminhamento prï¿½-fixado ï¿½ esquerda
-	public void print(int height)
+	public void print(int height, String language)
 	{
 
 		System.out.println("*** "+height+" ***");
@@ -309,17 +348,17 @@ public class BNode implements Serializable{
 		//printa os filhos desse elemento
 		for(int i=0; i<nkeys+1; i++)
 			if(childrenIndex[i] != 0)
-				diskFetch(childrenIndex[i]).print(height+1);
+				diskFetch(childrenIndex[i], language).print(height+1, language);
 	}
 
-	public void diskWrite(BNode a, boolean isRoot) throws IOException{
+	private static void diskWrite(BNode a, boolean isRoot, String language) throws IOException{
 
 		try{
 			File file;
 			if(isRoot)
-				file = new File("data_files//"+"b"+0+".bin");
+				file = new File(language+"//"+"b"+0+".bin");
 			else
-				file = new File("data_files//"+"b"+a.diskIndex+".bin");
+				file = new File(language+"//"+"b"+a.diskIndex+".bin");
 
 			FileOutputStream output = new FileOutputStream(file);
 			ObjectOutputStream objOutput = new ObjectOutputStream(output);
@@ -330,10 +369,10 @@ public class BNode implements Serializable{
 		}
 	  }
 
-	public BNode diskFetch(int index){
+	private static BNode diskFetch(int index, String language){
 
 		   try{
-			   FileInputStream input = new FileInputStream("data_files//"+"b"+index+".bin");
+			   FileInputStream input = new FileInputStream(language+"//"+"b"+index+".bin");
 			   ObjectInputStream objIn = new ObjectInputStream(input);
 			   BNode a = (BNode) objIn.readObject();
 			   objIn.close();

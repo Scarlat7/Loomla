@@ -103,6 +103,7 @@ public class Trieteste{
 	 public ArrayList<Integer> searchTrie(String fileName, String word, String lingua, int IDMAX) throws FileNotFoundException{
 		RandomAccessFile arquivo = new RandomAccessFile(fileName, "rw");
 		char token; int cont = 0; int IdAux = 0;
+		word = word.toLowerCase();
 		switch(lingua){
 			case "Português": token = '?'; break;
 			case "Inglês": token = '^'; break;
@@ -186,8 +187,8 @@ public class Trieteste{
 	     //Trieteste.getText("arquivoTeste", 4);
 		 Trieteste teste2 = new Trieteste();
 		 //teste2.addToTrie("ronaldo", 4, arquivo);
-		 ArrayList<Integer> ID = teste2.searchTrie("Database", "com", "Português", 4);
-		 ArrayList<Integer> ID2 = teste2.searchTrie("Database", "of", "Inglês", 4);
+		 ArrayList<Integer> ID = teste2.searchTrie("Database", "DO", "Inglês", 4);
+		 ArrayList<Integer> ID2 = teste2.searchTrie("Database", "do", "Português", 4);
 		 
 		 System.out.println(ID);
 

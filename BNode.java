@@ -23,7 +23,6 @@ public class BNode implements Serializable{
 	
 	protected int diskIndex;
 
-	private static boolean existingTree = false;
 	private int nkeys; //nï¿½mero de chaves atualmente armazenados
 	private boolean leaf; //flag que indica se o nodo ï¿½ folha
 
@@ -73,7 +72,7 @@ public class BNode implements Serializable{
 			else if(language.equals("Alemão"))
 				diskCounterDE = new File(language+"//").listFiles().length;
 		
-		existingTree = true;
+	
 
 		this.diskIndex = a.diskIndex ;
 		this.nkeys = a.nkeys;
@@ -89,8 +88,7 @@ public class BNode implements Serializable{
 		this.leaf = leaf;
 		for(int i = 0; i<translations.length; i++)
 			translations[i] = new ArrayList<String>();
-		if(!existingTree){
-			existingTree = true;
+	
 			File file = new File(language);
 			if(!file.exists()) {
 				if (file.mkdirs()){
@@ -98,7 +96,6 @@ public class BNode implements Serializable{
 				} else {
 				    throw new IOException("Failed to create directory " + file);
 				}
-			}
 			this.leaf = true;
 			if(language.equals("Português"))
 				this.diskIndex = diskCounterPT;

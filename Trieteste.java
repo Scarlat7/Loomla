@@ -153,12 +153,16 @@ public class Trieteste{
 	 	return null;
 	}
 
-	 public static void getText(String textFile, int IDMAX) throws FileNotFoundException{
+	 public static void getText(String textFile, int IDMAX) throws IOException{
 		 String word;
 		 int ID = 1;
+		 BNode german = new BNode(true, "Alemão");
+		 BNode port = new BNode(true, "Português");
+		 BNode english = new BNode(true, "Inglês");
+		 
 		 Trieteste ronaldo = new Trieteste();
 		 try{
-			 RandomAccessFile arquivo = new RandomAccessFile("Database", "rw");
+			 RandomAccessFile arquivo = new RandomAccessFile("DataBase", "rw");
 			 if(arquivo.length()==0)
 			 {
 				writeNewNode(0, arquivo);
@@ -175,23 +179,37 @@ public class Trieteste{
 							String strAux = str.nextToken();
 							//System.out.println(strAux);
 							ronaldo.addToTrie(strAux, ID, arquivo, IDMAX);
+							switch(strAux.charAt(0)){
+								case '^': port.insert(ID, strAux, "Inglês"); 
+										  german.insert(ID, strAux, "Inglês");
+										  break;
+								case '?': english.insert(ID, strAux, "Português");
+										  german.insert(ID, strAux, "Português");
+										  break;
+								case '!': english.insert(ID, strAux, "Alemão");
+										  port.insert(ID, strAux, "Alemão"); 
+										  break;
+								default:  break;
+							}
 						}
 						ID++;
 				 }
 				 in.close();
-			 }catch(FileNotFoundException e){System.out.println("Socorro1");}
+			 }catch(IOException e){System.out.println("Socorro1");}
 		 }catch(IOException e){System.out.println("socorro2");} 
 		}
 
 	 public static void main(String[] args) throws IOException{
 	     //Trieteste.getText("arquivoTeste", 4);
+		 BNode german = new BNode("Inglês");
 		 Trieteste teste2 = new Trieteste();
 		 //teste2.addToTrie("ronaldo", 4, arquivo);
-		 ArrayList<Integer> ID = teste2.searchTrie("Database", "DO", "Inglês", 4);
-		 ArrayList<Integer> ID2 = teste2.searchTrie("Database", "do", "Português", 4);
+		 ArrayList<Integer> ID = teste2.searchTrie("DataBase", "DOG", "Inglês", 4);
+		 ArrayList<Integer> ID2 = teste2.searchTrie("DataBase", "do", "Português", 4);
 		 
+		 ArrayList<String> translations = german.getTranslations(ID.get(0), "Alemão");
 		 System.out.println(ID);
-
+		 System.out.println(translations.get(0));
 		 System.out.println(ID2);
 	 }
 }

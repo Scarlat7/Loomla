@@ -9,22 +9,32 @@ public class UserFiles {
   public static int MAXTEXT = 25;
   public static int MAXWORDS = 20;
   
+  /*
+   * para escrever os dados atuais do usuário no arquivo de usuário é feita uma série 
+   * de for proporcionais a o tamanho dos campos de usuário
+   * */
+  
   public static void addUserData(User usuario) throws IOException{
 	  RandomAccessFile userData = new RandomAccessFile("UserData", "rw");
-	  userData.seek(usuario.getID());
+	  userData.seek(usuario.getID());	//a ID é o deslocamento no arquivo de dados
+	  
 	  userData.writeInt(usuario.getID());
+	  
 	  for(int i=0; i<10; i++){
 		 userData.writeChar(usuario.getNome()[i]);
 	  }
+	  
 	  for(int i=0; i<10;i++){
 
 		 userData.writeChar(usuario.getSenha()[i]);
 	  }
+	  
 	  userData.writeFloat(usuario.getFluence());
+	  
 	  for(int i =0; i<5; i++){
 		  TextosLidos texto = usuario.getTextosLidos(i);
 		 
-		 if(texto == null){
+		 if(texto == null){		//se o usuário tiver campos nulos é preciso escrever só zeros no arquivo
 			  for(int j=0; j<MAXTEXT; j++){
 				  userData.writeChar(0);
 			  }
@@ -50,6 +60,7 @@ public class UserFiles {
 			  userData.writeShort(texto.getDificuldade());
 		  }	  
 	  }
+	  
 	  for(int i=0; i<MAXWORDS; i++){
 		  Palavras palavra = usuario.getPalavras(i);
 		  System.out.println(usuario.getPalavras(i));
@@ -74,16 +85,26 @@ public class UserFiles {
 	  }
 	  userData.close();
   }
+  
+  /*
+   * para pegar dados do usuário é feito a mesma coisa que para escrever os dados,
+   * mas ao invés de escrever dados, eles são lidos.
+   * */
+  
   public static User getUserData(String nome) throws IOException{
 	  RandomAccessFile userData = new RandomAccessFile("UserData", "r");
 	  char arrayAux1[] = new char[10];
 	  Trieteste user = new Trieteste();
-	  ArrayList<Integer> b = user.searchTrie("UserTrie", nome, "", 1);
+	  
+	  ArrayList<Integer> b = user.searchTrie("UserTrie", nome, "", 1); 
+	  
 	  if(b == null)
 		  return null;
+	  
 	  int ID = user.searchTrie("UserTrie", nome, "", 1).get(0);
 	  User usuario = new User();
 	  userData.seek(ID);
+			  
 	  usuario.setID(userData.readInt()); //Le a ID;
 	  for(int i=0; i<10; i++){ 
 		 arrayAux1[i] = userData.readChar(); //Le o nome
@@ -130,23 +151,22 @@ public class UserFiles {
 	  return usuario;
   }
   public static int getNewUserID(String fileName)	throws IOException{
-	  RandomAccessFile arquivo = new RandomAccessFile(fileName, "rw");
-	  int ID = (int)arquivo.length();
+	  RandomAccessFile arquivo = new RandomAccessFile(fileName, "rw");	//a ID do usuário é o tamanho do arquivo de dados do usuário antes dele ser criado
+	  int ID = (int)arquivo.length();	//ID é o deslocamento necessário dentro do arquivo de dados
 	  arquivo.close();
 	  return ID;
   }
-  public static void addUser(String name, String password) throws IOException{
-	  RandomAccessFile userTrie = new RandomAccessFile("UserTrie", "rw");
-	  Trieteste usuario = new Trieteste();
-	  User newUser = new User(getNewUserID("UserData"), name, password);
-	  usuario.addToTrie(name, newUser.getID(), userTrie, 1);
-	  addUserData(newUser);
+  public static void addUser(String name, String password) throws IOException{	//adiciona um novo usuário nos arquivos
+	  RandomAccessFile userTrie = new RandomAccessFile("UserTrie", "rw");	//abre ou cria a trie
+	  Trieteste usuario = new Trieteste();	
+	  User newUser = new User(getNewUserID("UserData"), name, password);	//novo usuário é inicializado com sua ID, nome e password
+	  usuario.addToTrie(name, newUser.getID(), userTrie, 1);	//adiciona no arquivo Trie o usuário
+	  addUserData(newUser); //guarda os dados
   }
   public static void main(String[] args) throws IOException {
 	 //Trieteste user = new Trieteste();
 	 User leo = getUserData("leo");
-	 //Palavras word = leo.getPalavras(5);
-	 //char array[] = {'a', 'b', 'c'};;
+	 
 	 System.out.println(leo.getPalavras(5));
 	 //word.setPalavra(array);
 	 addUserData(leo);
@@ -154,18 +174,17 @@ public class UserFiles {
 	 {
 		 System.out.println(leo.getPalavras(i));
 	 }
-	// leo.setPalavras(, 5);
-	 
-	 //addUser("rei", "oleole");
+
 	  addUser("thomas", "nat222");
-	 //addUser("leo", "oleole");
-	 
-	 //User leonardo = getUserData("nat");
-	 //System.out.println(leonardo.getSenha());
   }
 }
 
-class ToString{
+/*
+ * essa classe foi feita para transformar um array de char com tamanho pré-definido
+ * em uma string perfeita
+ * */
+
+class ToString{		
 	public static String toString(char[] word){
 		String palavra;
 		int i=0;

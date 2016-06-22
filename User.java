@@ -3,23 +3,24 @@ package testeTexto;
 import java.util.StringTokenizer;
 
 public class User {
-  public static int MAXTEXT = 25;
-  public static int MAXWORDS = 20;
-  protected int ID;
-  protected char nome[] = new char[10];
-  protected char senha[] = new char[10];
-  protected float fluence;
-  protected TextosLidos textosLidos[] = new TextosLidos[5];
-  protected Palavras palavras[] = new Palavras[MAXWORDS];
+  public static int MAXTEXT = 25;	//constante para tamanho máximo do nome do texto
+  public static int MAXWORDS = 20;	//constante para tamanho máximo da lista de palavras salva que um usuário buscou
+  
+  protected int ID;		//ID do usuário
+  protected char nome[] = new char[10];	//nome do Usuário
+  protected char senha[] = new char[10];//senha do usuário
+  protected float fluence;	//fluencia do usuário
+  protected TextosLidos textosLidos[] = new TextosLidos[5];	//array de textos do usuário
+  protected Palavras palavras[] = new Palavras[MAXWORDS];	//array de palavras do usuário
   
   public User(){
-	  ID = -1;
+	  ID = -1;	//não tem ID se ele foi inicializado sem parâmetros
 	  int i;
-	  for(i = 0; i<textosLidos.length; i++){
+	  for(i = 0; i<textosLidos.length; i++){	//inicializa textos lidos pelo usuário
 		  textosLidos[i] = new TextosLidos();
 	  }
 	  for(i = 0; i<palavras.length; i++){
-		  palavras[i] = new Palavras();
+		  palavras[i] = new Palavras();		//inicializa palavras buscadas pelo usuário
 	  }
   }
   
@@ -61,14 +62,12 @@ public class User {
   }
     
   public void setNome(char[] nome){
-	  //System.arraycopy(nome, 0, this.nome, 0, nome.length);
 	 this.nome = nome;
   }
   
   public void setSenha(char[] senha){
 	  this.senha = senha;
   }
-  
   
   public void setTextosLidos(TextosLidos texto, int i){
 	  this.textosLidos[i] = new TextosLidos(texto.getNome(), texto.getData(),texto.getCompreensao(), texto.getDificuldade());
@@ -80,10 +79,9 @@ public class User {
  
   
   public void newRead(TextosLidos text){
-      //boolean full = true;
 	  int i = 0;
 	  int length = this.textosLidos.length;
-	    
+	  
 	  while(i<length && this.textosLidos[i].dificuldade != 0 )
 		  i++;
 	    
@@ -107,6 +105,7 @@ public class User {
 					Palavras aux = palavras[i-1];
 					palavras[i-1] = palavras[i];
 					palavras[i] = aux;
+					i--;
 			  }	
 			  return;
 		  }
@@ -158,7 +157,7 @@ public class User {
   }
   
   
-  private short avaliaDificuldade(String word){
+  private short avaliaDificuldade(String word){ 	//avaliamos a dificuldade pelo número de letras - número de vogais
 	  
 	  short cont = 0;
 	  for(int i = 0; i<word.length(); i++)
@@ -166,60 +165,15 @@ public class User {
 		     word.charAt(i) == 'o' || word.charAt(i) == 'u')
 			  	cont--;
 	  return (short)(cont + word.length()); 
-  }
-  
-  public static void main(String[] args){
-	  
-	  User eu = new User(0, "Scarlat7", "hahaha");
-	  eu.setFluence(50);
-	  
-	  TextosLidos t = new TextosLidos("babaca", "120416", (float)67.5, (short)15);
-	  TextosLidos r = new TextosLidos("troxa", "130416", (float)67.5, (short)15);
-	  TextosLidos s = new TextosLidos("babaca", "150416", (float)67.5, (short)15);
-	  
-	  eu.newRead(t);
-	  eu.newRead(r);
-	  eu.newRead(s);  
-	  
-	  eu.newWord("tata");
-	  eu.newWord("tata");
-	  eu.newWord("asshole");
-	  eu.newWord("still an asshole");
-	  eu.newWord("still an esshole");
-	  eu.newWord("still en asshole");
-	  eu.newWord("still on asshole");
-	  eu.newWord("asshole");
-	  eu.newWord("asshole");
-	  eu.newWord("kkkk");
-	  eu.newWord("still in asshole");
-	  eu.newWord("still en esshole");
-	  eu.newWord("stell en asshole");
-	  eu.newWord("stall en asshole");
-	  eu.newWord("stoll en asshole");
-	  
-	  
-	  System.out.println(eu);
-	  
-	     /*Trieteste.getText("arquivoTeste");
-		 Trieteste teste2 = new Trieteste();
-		 RandomAccessFile arquivo = new RandomAccessFile("Trie.bin", "rw");
-		 //teste.writeNode(arquivo, teste);
-		 ArrayList<Integer> ID = teste2.searchTrie(arquivo, "have");
-		 ArrayList<Integer> ID2 = teste2.searchTrie(arquivo, "rena");
-		 
-		 System.out.println(ID);
-
-		 System.out.println(ID2);*/
-	 }
-  
+  }  
   
 }
 
 class TextosLidos{
-   protected char[] nome = new char[User.MAXTEXT];
-   protected float compreensao;
-   protected char[] data = new char[6];
-   protected short dificuldade;
+   protected char[] nome = new char[User.MAXTEXT];	//nome do texto
+   protected float compreensao;		//compreensao do texto em função das palavras que o usuário buscou e a dificuldade do texto
+   protected char[] data = new char[6];	//data de quando o texto foi lido
+   protected short dificuldade;	//dificuldade do texto baseada no número de palavras do texto
    
    public TextosLidos(){
       this.compreensao = 0;
@@ -237,7 +191,7 @@ class TextosLidos{
 	      this.compreensao = compreensao;
 	      this.data = data;
 	      this.dificuldade = dificuldade;
-}
+   }
    
    public char[] getNome(){
 	   return this.nome;
@@ -272,7 +226,6 @@ class TextosLidos{
    }
    
    public int dificuldadeTexto(String texto){
-   	
 	   int npalavras = 0;  
 	   
 	   StringTokenizer str = new StringTokenizer((texto), " ");
@@ -314,9 +267,9 @@ class TextosLidos{
 }
 
 class Palavras{
-	protected int dificuldade;
-	protected int procurada;
-	protected char palavra[] = new char[30];
+	protected int dificuldade;	//dificuldade da palavra em função do número de letras e vogais
+	protected int procurada;	//quantas vezes ela foi procurada
+	protected char palavra[] = new char[30];	//a palavra em si
 
     public Palavras(){
       this.dificuldade = 0;
@@ -367,7 +320,7 @@ class Palavras{
  	}
 }
 
-class newArray{
+class newArray{		//classe para reescrever um array com um tamanho determinado. É utilizado para converter uma string no código
 	  public static char[] sizedArray(char[] Array, int size){
 		  char[] newArray = new char[size];
 		  int i;

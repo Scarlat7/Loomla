@@ -1,18 +1,14 @@
+/************************************************************
+ * Codigo principal do programa Loomla						*
+ * Por Natalia Gubiani Rampon e Leonardo da Luz Dorneles	*
+ * Ultima atualizacao: 22/06/2016							*
+ ************************************************************/
+
 package testeTexto;
 
-import java.awt.CardLayout;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.StringTokenizer;
 
+/* Bibliotecas graficas do java */
+import java.awt.CardLayout;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
@@ -22,17 +18,39 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 
+/* Bibliotecas de arquivos do java */
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+/* Bibliotecas de tipos de dado necessarios do java */
+import java.math.BigDecimal;		//para fazer o arrendondamento de floats
+import java.text.SimpleDateFormat;	//formatadora de data
+import java.util.Date;				//data
+import java.util.ArrayList;			//lista encadeada
+import java.util.Arrays;			//classe arrays
+
+
+/* Classe da interface grafica
+ * Nela que o programa em si eh rodado */
 public class LoomlaUI extends javax.swing.JFrame {
 	
+	
+	/* vetores booleanos para controle de que ordem (descrescente ou crescente)
+	* se encontram mostradas as tabelas de palavras mais procuradas e textos lidos recentemente
+	* true - crescente, false - decrescente*/ 
 	public static boolean[] ordemPalavra = new boolean[3];
 	public static boolean[] ordemTexto = new boolean[3];
 	
-	public static User loggedUser;
-	public static String currentLang;
-	public static String secondLang;
-	public static TextosLidos currentText;
-	public static int	palavrasTraduzidas = 0;
+	/* variaveis para controle da atual sessão do usuario */
+	public static User loggedUser;					//usuario atualmente logado
+	public static String textLang;					//lingua do texto sendo lido
+	public static String translationLang;			//lingua em que vao ser traduzidas as palavras
+	public static TextosLidos currentText;			//texto sendo lido atualmente
+	public static int	palavrasTraduzidas = 0;		//contador de palavras traduzidas pelo usuario no texto atual
 	
+	/* inicia componentes graficos e variaveis de controle das tabelas */
     public LoomlaUI() {
         initComponents();
         for(int i=0; i < 3; i++){
@@ -40,6 +58,10 @@ public class LoomlaUI extends javax.swing.JFrame {
         	ordemTexto[i] = true;
         }
     }
+    
+    /* declaracao dos componentes graficos 
+     * daqui em diante, somente as partes importantes para o
+     * desenvolvimento de algoritmos em si serão comentadas */
     
     @SuppressWarnings({ "unchecked", "serial" })
     private void initComponents() {
@@ -82,7 +104,7 @@ public class LoomlaUI extends javax.swing.JFrame {
         LogOutButton2 = new javax.swing.JButton();
         SugeridosContainer = new javax.swing.JScrollPane();
         DefaultListModel<String> listModel = new DefaultListModel<>();
-        listModel.addElement("AlanTuring.txt");
+        listModel.addElement("AlanTuring.txt");							//textos sugeridos pela plataforma
         listModel.addElement("Sigismundo.txt");
         listModel.addElement("Diefenbakers.txt");
         listModel.addElement("Lebensmitte.txt");
@@ -126,7 +148,7 @@ public class LoomlaUI extends javax.swing.JFrame {
                 try {
 					LoginTextActionPerformed(evt);
 				} catch (IOException e) {
-					e.printStackTrace();
+					JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir o arquivo de usuários.");
 				}
             }
         });
@@ -145,13 +167,12 @@ public class LoomlaUI extends javax.swing.JFrame {
                 try {
 					PasswordFieldActionPerformed(evt);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir o arquivo de usários.");
 				}
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("LoomlaLogo.png"));
+        jLabel3.setIcon(new javax.swing.ImageIcon("dados//LoomlaLogo.png"));
         jLabel3.setText("jLabel3");
 
         LogButton.setBackground(new java.awt.Color(255, 255, 255));
@@ -163,8 +184,7 @@ public class LoomlaUI extends javax.swing.JFrame {
                 try {
 					LogButtonActionPerformed(evt);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir o arquivo de usuários.");
 				}
             }
         });
@@ -178,7 +198,7 @@ public class LoomlaUI extends javax.swing.JFrame {
                 try {
 					SignUpButtonActionPerformed(evt);
 				} catch (IOException e) {
-					e.printStackTrace();
+					JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir o arquivo de usuários.");
 				}
             }
         });
@@ -253,7 +273,7 @@ public class LoomlaUI extends javax.swing.JFrame {
         UserPanel.setBackground(new java.awt.Color(255, 153, 0));
 
         UserButton.setBackground(new java.awt.Color(0, 153, 0));
-        UserButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        UserButton.setFont(new java.awt.Font("Tahoma", 1, 12)); 
         UserButton.setForeground(new java.awt.Color(255, 255, 255));
         UserButton.setText("User");
         UserButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -274,9 +294,9 @@ public class LoomlaUI extends javax.swing.JFrame {
                 .addComponent(UserButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("UserIcon.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon("dados//UserIcon.png")); 
 
-        ReadButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        ReadButton.setFont(new java.awt.Font("Tahoma", 1, 12)); 
         ReadButton.setForeground(new java.awt.Color(255, 255, 255));
         ReadButton.setText("Read");
         ReadButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -297,8 +317,7 @@ public class LoomlaUI extends javax.swing.JFrame {
                 try {
 					LogOutButtonActionPerformed(evt);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir o arquivo de usuários.");
 				}
             }
         });
@@ -340,6 +359,16 @@ public class LoomlaUI extends javax.swing.JFrame {
         TabelaPalavras.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
             	{null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
@@ -466,7 +495,7 @@ public class LoomlaUI extends javax.swing.JFrame {
 
         Fluency.setFont(new java.awt.Font("Tahoma", 1, 150)); 
         Fluency.setForeground(new java.awt.Color(255, 255, 255));
-        Fluency.setText("60%");
+        Fluency.setText("0%");
 
         jLabel10.setFont(new java.awt.Font("Bookman Old Style", 1, 18)); 
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
@@ -584,8 +613,7 @@ public class LoomlaUI extends javax.swing.JFrame {
                 try {
 					LogOutButton2ActionPerformed(evt);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir o arquivo de usuários.");
 				}
             }
         });
@@ -647,8 +675,7 @@ public class LoomlaUI extends javax.swing.JFrame {
                 try {
 					TextMouseReleased(evt);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir os arquivos de dados.\r\n"+e.getMessage());
 				}
             }
         });
@@ -774,53 +801,6 @@ public class LoomlaUI extends javax.swing.JFrame {
     	LogButtonActionPerformed(evt);
     }
 
-    private void LogButtonActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
-        
-        char[] password = PasswordField.getPassword();
-        String pass = String.valueOf(password);
-        String username = LoginText.getText();
-        
-        loggedUser = UserFiles.getUserData(username);
-        
-        if(loggedUser == null){
-        	ErrorMessage.setText("Nome de usuário não encontrado.");
-        }	
-        	
-        if(pass.equals(ToString.toString(loggedUser.getSenha()))){
-            PasswordField.setText("");
-            LoginText.setText("");
-            UserButton.setText(username);
-            UserButton2.setText(username);
-            Text.setText("");
-            updateUserPage();
-            
-            CardLayout card = (CardLayout)mainPanel.getLayout();
-            card.show(mainPanel, "User");
-        }
-        else
-            ErrorMessage.setText("Senha errada."); 
-        
-    }
-    
-    private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) throws IOException{
-    	char[] password = PasswordField.getPassword();
-        String pass = String.valueOf(password);
-        String username = LoginText.getText();
-        
-        for(int i = 0; i<username.length(); i++)
-        	if(Trieteste.charToIndex(username.charAt(i)) == -1){
-        		ErrorMessage.setText("Caracteres devem ser letras minúsculas.");
-        		return;
-        	}
-          
-        if(pass.length() <= 10 && username.length() <= 10){
-        	UserFiles.addUser(username, pass);
-        	ErrorMessage.setText("Usuário criado.");
-        }
-        else
-        	ErrorMessage.setText("O limite de caracteres é 10."); 
-    	
-    }
 
     private void LoginTextFocusGained(java.awt.event.FocusEvent evt) {
         LoginText.selectAll();
@@ -839,40 +819,119 @@ public class LoomlaUI extends javax.swing.JFrame {
     private void PasswordFieldFocusLost(java.awt.event.FocusEvent evt) {
        PasswordField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
     }
+    
+    private void LogOutButton2ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
+	    LogOutButtonActionPerformed(evt);
+    }
+    
+    /* Função que faz login do usuário */
+    private void LogButtonActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
+        
+    	/* Pega a senha e nome do usuário dos campos de leitura */
+        char[] password = PasswordField.getPassword();
+        String pass = String.valueOf(password);
+        String username = LoginText.getText();
+        
+        /* Pega o usuário no arquivo de usuários (arquivo serial indexado por TRIE)*/
+        loggedUser = UserFiles.getUserData(username);
+        
+        if(loggedUser == null){
+        	ErrorMessage.setText("Nome de usuário não encontrado.");
+        }	
+        	
+        if(pass.equals(ToString.toString(loggedUser.getSenha()))){	//testa se a senha digitada é igual a senha do usuário no arquivo de dados
+            /* Atribui campos da interface grafica, pois o usuario efetuou o login com sucesso */
+        	PasswordField.setText("");
+            LoginText.setText("");
+            UserButton.setText(username);
+            UserButton2.setText(username);
+            Text.setText("");
+            updateUserPage();
+            
+            CardLayout card = (CardLayout)mainPanel.getLayout();
+            card.show(mainPanel, "User");
+        }
+        else
+            ErrorMessage.setText("Senha errada."); 
+        
+    }
+    
+    /* Faz o cadastro de um novo usuario */
+    private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) throws IOException{
+    	
+    	/* Pega a senha e nome do usuário dos campos de leitura */
+    	char[] password = PasswordField.getPassword();
+        String pass = String.valueOf(password);
+        String username = LoginText.getText();
+        
+        /* Testa se os caracteres são validos */
+        for(int i = 0; i<username.length(); i++){
+        	if(Trieteste.charToIndex(username.charAt(i)) == -1){
+        		ErrorMessage.setText("Caracteres devem ser letras minúsculas.");
+        		return;
+        	}
+        }
+         
+        /* Testa se o usuário já não existe no arquivo de usuários
+         * e se o tamanho da senha e do nome de usuário estão dentro dos limites aceitáveis */
+        if(UserFiles.getUserData(username) == null){
+	        if(pass.length() <= 10 && username.length() <= 10){
+	        	UserFiles.addUser(username, pass); //novo usuário correto, então o salvo no arquivo de usuários
+	        	ErrorMessage.setText("Usuário criado.");
+	        }
+	        else
+	        	ErrorMessage.setText("O limite de caracteres é 10."); 
+        }
+        else
+        	ErrorMessage.setText("Usuário já criado."); 
+    	
+    }
 
+    /* Troca para a janela de leitura */
     private void ReadButtonActionPerformed(java.awt.event.ActionEvent evt) {
-    		currentLang = (String) CurrentLan.getSelectedItem();
-        	secondLang = (String) SecondLan.getSelectedItem();
+    		
+    		/* Salva as línguas atualmente selecionadas para as variáveis de controle */
+    		textLang = (String) CurrentLan.getSelectedItem();
+        	translationLang = (String) SecondLan.getSelectedItem();
+        	
     		CardLayout card = (CardLayout)mainPanel.getLayout();
             card.show(mainPanel, "Read");
     }
 
+    /* Troca para a janela de informações do usuário */
     private void UserButton2ActionPerformed(java.awt.event.ActionEvent evt) {
     		try {
+    			/* Salva os dados da seção atual no arquivo de usuários e atualiza a janela */
 				UserFiles.addUserData(loggedUser);
 				updateUserPage();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir o arquivo de usuários.");
 			}
     	
     		CardLayout card = (CardLayout)mainPanel.getLayout();
             card.show(mainPanel, "User");
     }
 
+    /* Abre um dos textos recomendados */
     private void OpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
-    	String selected = TextChooser.getSelectedValue();
     	
+    	/* Pega o texto atualmente selecionado */
+    	String selected = TextChooser.getSelectedValue();
     
+    	/* Se o campo de texto não está vazio então o usuário estava lendo um texto, logo,
+    	 * as suas informações sobre a leitura do texto antigo devem ser salvas antes de abrir um novo */
     	if(!Text.getText().equals("")){
         	roundUpText();
         }
+    	/* Cria instância do novo texto sendo lido */
     	currentText = new TextosLidos();
     	
+    	/* Pega a data em que o arquivo foi aberto */
         Date time = new Date();
         SimpleDateFormat ft =  new SimpleDateFormat("ddMMyy");
         ft.format(time);
         
+        /* Atribui a data e o nome do arquivo ao texto atual */
         currentText.setData(ft.format(time).toCharArray());
         currentText.setNome(selected.toCharArray());
     	
@@ -883,17 +942,24 @@ public class LoomlaUI extends javax.swing.JFrame {
         }
     }
     
+    /* Abre um arquivo selecionado pelo usuário */
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        int returnVal = FileChooser.showOpenDialog(this);
+    	
+    	/* Pega o texto que o usuário escolheu */
+    	int returnVal = FileChooser.showOpenDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file = FileChooser.getSelectedFile();
             
+            /* Se o campo de texto não está vazio então o usuário estava lendo um texto, logo,
+        	 * as suas informações sobre a leitura do texto antigo devem ser salvas antes de abrir um novo */
             if(Text.getText() != ""){
             	roundUpText();
             }
             
+            /* Cria instância do novo texto sendo lido */
             currentText = new TextosLidos();
             
+            /* Atribui a data e o nome do arquivo ao texto atual */
             Date time = new Date();
             SimpleDateFormat ft =  new SimpleDateFormat("ddMMyy");
             ft.format(time);
@@ -908,118 +974,160 @@ public class LoomlaUI extends javax.swing.JFrame {
         }
     }
 
-    private void LogOutButton2ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
-	    LogOutButtonActionPerformed(evt);
-    }
-
+    /* Função de log out */
     private void LogOutButtonActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
-        roundUpText();
+        
+    	/* Como o usuário saiu, os dados sobre a leitura do texto devem ser salvos */
+    	roundUpText();
+    	
+    	/* Assim como toda a instância do usuário deve ser atualizada no arquivo de usuários */
     	UserFiles.addUserData(loggedUser);
+    	
     	CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "Login");
     }
 
+    /* Selecionador de língua do texto */
     private void CurrentLanActionPerformed(java.awt.event.ActionEvent evt) {
-        JComboBox cb = (JComboBox)evt.getSource();
-        currentLang = (String)cb.getSelectedItem(); 
+        
+    	/* Atualiza língua do texto escolhida pelo usuário */
+    	JComboBox cb = (JComboBox)evt.getSource();
+        textLang = (String)cb.getSelectedItem(); 
     }
 
+    /* Selecionador de língua de tradução */
     private void SecondLanActionPerformed(java.awt.event.ActionEvent evt) {
-        JComboBox cb = (JComboBox)evt.getSource();
-        secondLang = (String)cb.getSelectedItem(); 
+        
+    	/* Atualiza língua do texto escolhida pelo usuário */
+    	JComboBox cb = (JComboBox)evt.getSource();
+        translationLang = (String)cb.getSelectedItem(); 
     }
 
+    /* Função que pega a palavra selecionada pelo usuário */
     private void TextMouseReleased(java.awt.event.MouseEvent evt) throws IOException {
-        String busca = (Text.getSelectedText());
+        
+    	/* Pega a palavra selecionada pelo usuário e bota na variável busca */
+    	String busca = (Text.getSelectedText());
+    	
+    	/* Como uma nova palavra foi pesquisada, incrementa-se o número de palavras pequisadas nesse texto */ 
         palavrasTraduzidas++;
+        
+        /* Adiciona-se essa nova palavra às palavras procuradas pelo usuário */
         loggedUser.newWord(busca);
         
-        String language = secondLang;
-        String nativa = currentLang;
+        /* Atribui à variável language a língua em que a palavra será traduzida
+         * e à variável nativa a língua em que a palavra buscada está */
+        String language = translationLang;
+        String nativa = textLang;
+        
+        /* Contadores */
         int nIDs = 0, i = 1;
+        
+        /* Atribui à variável teste o handle da árvore TRIE, que é usada para pesquisar a palavra selecionada 
+         * e conseguir seu ID */
         Trieteste teste = new Trieteste();
         
         try {
+        		/* Atribui à variável data o handle da árvore B em que serão pesquisadas as traduções da palavra */
         		BNode data = new BNode(language);
-                String translation = "";
+        		
+                String translation = ""; //variável em que serão concatenadas as traduções
+                
+                /* Atribui à variável ID a lista de IDs (significados) que essa palavra têm */
                 ArrayList<Integer> ID = teste.searchTrie("words.data", busca, nativa, 4);
                 
+                /* Passa por todos IDs procurando-os na árvore B */
                 while(nIDs < 4 && ID.get(nIDs)!= -1){
                 	
+                	/* Pega da árvore B a lista de traduções desse ID */
                 	ArrayList<String> translations = data.getTranslations(ID.get(nIDs), language);
+                	
+                	/* Se existem traduções, as escrevemos na string */
                 	if(translations != null)
-                	for(String meaning: translations){
-                		translation += i+ ". " +meaning+ "\r\n";
-                		i++;
-                	}
+	                	for(String meaning: translations){
+	                		translation += i+ ". " +meaning+ "\r\n";
+	                		i++;
+	                	}
                 	nIDs++;
                 }
 
+                /* Mostra ao usuário, em um pop-up as traduções da palavra */
                 JOptionPane.showMessageDialog(new JFrame(),
                 	    translation,
                 	    ("Tradução de "+busca),
                 	    JOptionPane.PLAIN_MESSAGE);
         } catch (FileNotFoundException e1) {
-                e1.printStackTrace();
+        	JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir os arquivos de dados. " + e1.getMessage());
         }
     }
     
-    
+    /* Efetua a ordenação da coluna em que o usuário clicou na tabela de palavras*/
     private void TabelaPalavrasMouseClicked(java.awt.event.MouseEvent evt) {
         
     	int j=0;
+    	
+    	/* Pega o nome da coluna em que o usuário clicou */
     	int col = TabelaPalavras.columnAtPoint(evt.getPoint());
         String name = TabelaPalavras.getColumnName(col);
-        ordemPalavra[col] = !ordemPalavra[col];
+        
+        ordemPalavra[col] = !ordemPalavra[col]; //a ordem da coluna muda de decrescente para crescente ou vice-versa
+       
+        /* Copia o array de palavras procuradas pelo usuário atual ao vetor s, que será ordenado*/
         Palavras[] s = Arrays.copyOf(loggedUser.palavras, loggedUser.palavras.length, Palavras[].class);
         
+        /* Acha até que índice está ocupado o array, levando em conta o fato de a dificuldade 0 ser inválida */
         while(j<s.length && s[j].dificuldade != 0)
         	j++;
         
+        /* Aplica o MergeSort no vetor e atualiza a tabela */
         Sort.MergeSortPalavras(s,0,j,name,ordemPalavra[col]);
         updateTabelaPalavra(s, j);
  
     }
     
+    /* Efetua a ordenação da coluna em que o usuário clicou na tabela de textos */
     private void TabelaTextosMouseClicked(java.awt.event.MouseEvent evt) {
     	
     	int j=0;
+    	/* Pega o nome da coluna em que o usuário clicou */
     	int col = TabelaTextos.columnAtPoint(evt.getPoint());
         String name = TabelaTextos.getColumnName(col);
-        ordemTexto[col] = !ordemTexto[col];
+        
+        ordemTexto[col] = !ordemTexto[col];//a ordem da coluna muda de decrescente para crescente ou vice-versa
+        
+        /* Copia o array de textos procuradas pelo usuário atual ao vetor s, que será ordenado */
         TextosLidos[] s = Arrays.copyOf(loggedUser.textosLidos, loggedUser.textosLidos.length, TextosLidos[].class);
         
+        /* Acha até que índice está ocupado o array, levando em conta o fato de a dificuldade 0 ser inválida */
         while(j<s.length && s[j].dificuldade != 0)
         	j++;
         
+        /* Aplica o MergeSort no vetor e atualiza a tabela */
         Sort.MergeSortTextos(s,0,j,name,ordemTexto[col]);
         updateTabelaTexto(s, j);
         
     }
     
-    private Object[] getCol(JTable table, int col) {
-        DefaultTableModel t = (DefaultTableModel) table.getModel();
-        int nLin = t.getRowCount();
-        Object[] tableData = new Object[nLin];
-        for (int i = 0 ; i < nLin ; i++)
-                tableData[i] = t.getValueAt(i,col);
-        return tableData;
-    } 
-    
+    /* Função que salva os dados do texto sendo lido para o arquivo */
     private void roundUpText(){
+    	
+    	/* Calcula a dificuldade do texto e o quanto o usuário entendeu dele */
     	int totalPalavras = currentText.dificuldadeTexto(Text.getText());
     	currentText.calculaCompreensao(totalPalavras, palavrasTraduzidas);
+    	
+    	/*Atualiza fluência do usuário fazendo uma média simples */
     	loggedUser.fluence = (loggedUser.fluence + currentText.compreensao)/2;
     	palavrasTraduzidas = 0;
-    	loggedUser.newRead(currentText);
+    	loggedUser.newRead(currentText);  //adiciona o novo texto aos textos lidos do usuário
+    	
     	try {
 			UserFiles.addUserData(loggedUser);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(new JFrame(),"Erro ao abrir o arquivo de usuários.");
 		}
     }
     
+    /* Atualiza tabela de palavras procuradas pelo usuário */
     private void updateTabelaPalavra(Palavras s[], int tam){
     	
     	for(int i = 0; i<tam; i++){
@@ -1029,6 +1137,7 @@ public class LoomlaUI extends javax.swing.JFrame {
         }
     }
     
+    /* Atualiza tabela de textos lidos pelo usuário */
     private void updateTabelaTexto(TextosLidos s[], int tam){
     	
     	for(int i = 0; i<tam; i++){
@@ -1041,40 +1150,44 @@ public class LoomlaUI extends javax.swing.JFrame {
     	
     }
     
+    /* Dá um refresh nos dados da página do usuário */
     private void updateUserPage(){
-        int i = 0;
-           while(i<loggedUser.palavras.length && loggedUser.palavras[i].dificuldade != 0){
-	            for(int j = 0; j<TabelaPalavras.getRowCount(); j++){
-	            	TabelaPalavras.setValueAt(ToString.toString(loggedUser.palavras[i].getPalavra()), i, 0);
-	            	TabelaPalavras.setValueAt(loggedUser.palavras[i].dificuldade, i, 1);
-	            	TabelaPalavras.setValueAt(loggedUser.palavras[i].procurada, i, 2);
-	            }
-	            i++;
-           }
-           
-           i = 0;
-           while(i<loggedUser.textosLidos.length && loggedUser.textosLidos[i].dificuldade != 0){
-        	   for(int j = 0; j<TabelaTextos.getRowCount(); j++){
-        		   TabelaTextos.setValueAt(ToString.toString(loggedUser.textosLidos[i].getNome()), i, 0);
-        		   String aux = ToString.toString(loggedUser.textosLidos[i].data);
-        		   String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
-        		   TabelaTextos.setValueAt(a, i, 1);
-        		   TabelaTextos.setValueAt(round(loggedUser.textosLidos[i].compreensao)+"%", i, 2);
-               }
-	           i++;
-           }
-           Fluency.setText(String.valueOf(round(loggedUser.fluence))+"%");
+       
+    	int i = 0;
+        
+    	while(i<loggedUser.palavras.length && loggedUser.palavras[i].dificuldade != 0){
+    		for(int j = 0; j<TabelaPalavras.getRowCount(); j++){
+	        	TabelaPalavras.setValueAt(ToString.toString(loggedUser.palavras[i].getPalavra()), i, 0);
+	        	TabelaPalavras.setValueAt(loggedUser.palavras[i].dificuldade, i, 1);
+	        	TabelaPalavras.setValueAt(loggedUser.palavras[i].procurada, i, 2);
+            }
+            i++;
+        }
+       
+    	i = 0;
+    	while(i<loggedUser.textosLidos.length && loggedUser.textosLidos[i].dificuldade != 0){
+    		for(int j = 0; j<TabelaTextos.getRowCount(); j++){
+			    TabelaTextos.setValueAt(ToString.toString(loggedUser.textosLidos[i].getNome()), i, 0);
+			    String aux = ToString.toString(loggedUser.textosLidos[i].data);
+			    String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
+			    TabelaTextos.setValueAt(a, i, 1);
+			    TabelaTextos.setValueAt(round(loggedUser.textosLidos[i].compreensao)+"%", i, 2);
+    		}
+    		i++;
+    	}
+    	Fluency.setText(String.valueOf(round(loggedUser.fluence))+"%");
    }
 
-    public static float round(float n){
+   /* Função que arredonda um float para duas casas decimais (usada para impressão de dados) */
+   public static float round(float n){
     	
     	BigDecimal result = new BigDecimal(Float.toString(n));
     	result = result.setScale(2, BigDecimal.ROUND_HALF_UP);
     	
     	return result.floatValue();
-    }
+   }
     
-    
+    /* Mais inicializações gráficas */
     public static void main(String args[]) {
 
         try {
@@ -1101,7 +1214,6 @@ public class LoomlaUI extends javax.swing.JFrame {
         });
     }
     
-    // Variables declaration - do not modify
     private javax.swing.JPanel Buttons;
     private javax.swing.JPanel Buttons2;
     private javax.swing.JComboBox<String> CurrentLan;
@@ -1150,5 +1262,4 @@ public class LoomlaUI extends javax.swing.JFrame {
     private javax.swing.JTable TabelaTextos;
     private javax.swing.JTable TabelaPalavras;
     private javax.swing.JPanel mainPanel;
-    // End of variables declaration
 }

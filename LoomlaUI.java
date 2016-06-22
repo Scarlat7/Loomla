@@ -66,6 +66,7 @@ public class LoomlaUI extends javax.swing.JFrame {
     @SuppressWarnings({ "unchecked", "serial" })
     private void initComponents() {
 
+    	this.setTitle("Loomla");
         FileChooser = new javax.swing.JFileChooser();
         mainPanel = new javax.swing.JPanel();
         LoginPanel = new javax.swing.JPanel();
@@ -1045,7 +1046,7 @@ public class LoomlaUI extends javax.swing.JFrame {
                 	/* Se existem traduções, as escrevemos na string */
                 	if(translations != null)
 	                	for(String meaning: translations){
-	                		translation += i+ ". " +meaning+ "\r\n";
+	                		translation += i+ ". " +meaning.substring(1)+ "\r\n";
 	                		i++;
 	                	}
                 	nIDs++;

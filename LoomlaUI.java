@@ -849,7 +849,6 @@ public class LoomlaUI extends javax.swing.JFrame {
 
     private void UserButton2ActionPerformed(java.awt.event.ActionEvent evt) {
     		try {
-    			//System.out.println(loggedUser.getTextosLidos(i));
 				UserFiles.addUserData(loggedUser);
 				updateUserPage();
 			} catch (IOException e) {
@@ -933,39 +932,29 @@ public class LoomlaUI extends javax.swing.JFrame {
     private void TextMouseReleased(java.awt.event.MouseEvent evt) throws IOException {
         String busca = (Text.getSelectedText());
         palavrasTraduzidas++;
-        System.out.println(loggedUser);
         loggedUser.newWord(busca);
         
         String language = secondLang;
         String nativa = currentLang;
         int nIDs = 0, i = 1;
         Trieteste teste = new Trieteste();
-        //System.out.println(secondLang);
-      
-       // RandomAccessFile arquivo;
+        
         try {
         		BNode data = new BNode(language);
-        		// arquivo = new RandomAccessFile("words.data", "rw");
                 String translation = "";
                 ArrayList<Integer> ID = teste.searchTrie("words.data", busca, nativa, 4);
-                System.out.println(ID);
-                System.out.println(nativa);
+                
                 while(nIDs < 4 && ID.get(nIDs)!= -1){
                 	
-                	System.out.println(language);
                 	ArrayList<String> translations = data.getTranslations(ID.get(nIDs), language);
-                   // System.out.println( data.getTranslations(39335, "Português"));
                 	if(translations != null)
                 	for(String meaning: translations){
-                		//System.out.println(meaning);
                 		translation += i+ ". " +meaning+ "\r\n";
                 		i++;
                 	}
                 	nIDs++;
                 }
-                // ArrayList<Integer> ID2 = teste2.searchTrie(arquivo, "rena");
-                 //System.out.println(ID);
-                 //System.out.println(ID2);
+
                 JOptionPane.showMessageDialog(new JFrame(),
                 	    translation,
                 	    ("Tradução de "+busca),
@@ -984,7 +973,7 @@ public class LoomlaUI extends javax.swing.JFrame {
         ordemPalavra[col] = !ordemPalavra[col];
         Palavras[] s = Arrays.copyOf(loggedUser.palavras, loggedUser.palavras.length, Palavras[].class);
         
-        while(j<s.length && s[j] != null)
+        while(j<s.length && s[j].dificuldade != 0)
         	j++;
         
         Sort.MergeSortPalavras(s,0,j,name,ordemPalavra[col]);
@@ -1000,7 +989,7 @@ public class LoomlaUI extends javax.swing.JFrame {
         ordemTexto[col] = !ordemTexto[col];
         TextosLidos[] s = Arrays.copyOf(loggedUser.textosLidos, loggedUser.textosLidos.length, TextosLidos[].class);
         
-        while(j<s.length && s[j] != null)
+        while(j<s.length && s[j].dificuldade != 0)
         	j++;
         
         Sort.MergeSortTextos(s,0,j,name,ordemTexto[col]);
@@ -1054,7 +1043,7 @@ public class LoomlaUI extends javax.swing.JFrame {
     
     private void updateUserPage(){
         int i = 0;
-           while(i<loggedUser.palavras.length && loggedUser.palavras[i] != null){
+           while(i<loggedUser.palavras.length && loggedUser.palavras[i].dificuldade != 0){
 	            for(int j = 0; j<TabelaPalavras.getRowCount(); j++){
 	            	TabelaPalavras.setValueAt(ToString.toString(loggedUser.palavras[i].getPalavra()), i, 0);
 	            	TabelaPalavras.setValueAt(loggedUser.palavras[i].dificuldade, i, 1);
@@ -1064,18 +1053,18 @@ public class LoomlaUI extends javax.swing.JFrame {
            }
            
            i = 0;
-           while(i<loggedUser.textosLidos.length && loggedUser.textosLidos[i] != null){
-               for(int j = 0; j<TabelaTextos.getRowCount(); j++){
-                TabelaTextos.setValueAt(ToString.toString(loggedUser.textosLidos[i].getNome()), i, 0);
-             String aux = ToString.toString(loggedUser.textosLidos[i].data);
-             String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
-             TabelaTextos.setValueAt(a, i, 1);
-             TabelaTextos.setValueAt(round(loggedUser.textosLidos[i].compreensao)+"%", i, 2);
+           while(i<loggedUser.textosLidos.length && loggedUser.textosLidos[i].dificuldade != 0){
+        	   for(int j = 0; j<TabelaTextos.getRowCount(); j++){
+        		   TabelaTextos.setValueAt(ToString.toString(loggedUser.textosLidos[i].getNome()), i, 0);
+        		   String aux = ToString.toString(loggedUser.textosLidos[i].data);
+        		   String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
+        		   TabelaTextos.setValueAt(a, i, 1);
+        		   TabelaTextos.setValueAt(round(loggedUser.textosLidos[i].compreensao)+"%", i, 2);
                }
-               i++;
-              }
-              Fluency.setText(String.valueOf(round(loggedUser.fluence))+"%");
-          }
+	           i++;
+           }
+           Fluency.setText(String.valueOf(round(loggedUser.fluence))+"%");
+   }
 
     public static float round(float n){
     	

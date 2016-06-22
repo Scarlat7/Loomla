@@ -9,7 +9,7 @@ public class User {
   protected float fluence;
   protected TextosLidos textosLidos[] = new TextosLidos[5];
   protected Palavras palavras[] = new Palavras[10];
-  
+  public static int MAXTEXT = 25;
   public User(){
 	  ID = -1;
 	  int i;
@@ -82,7 +82,7 @@ public class User {
 	  int i = 0;
 	  int length = this.textosLidos.length;
 	    
-	  while(this.textosLidos[i] != null && i<length)
+	  while(i<length && this.textosLidos[i].dificuldade != 0 )
 		  i++;
 	    
 	  if(i == length)
@@ -95,11 +95,11 @@ public class User {
   public void newWord(String word){
 	  int i = 0;
 	  int length = this.palavras.length;
-	  
+	  if(word.length()==0) return;
 	  short dificuldade = avaliaDificuldade(word);
 	    
-	  while(i<length && palavras[i] != null){
-		  if(new String(palavras[i].palavra) == word){
+	  while(i<length && palavras[i].dificuldade != 0){
+		  if(ToString.toString((palavras[i].palavra)).equals(word)){
 			  palavras[i].procurada++;
 			  while(i>0 && palavras[i].procurada > palavras[i-1].procurada){
 					Palavras aux = palavras[i-1];
@@ -119,7 +119,7 @@ public class User {
 			  palavras[i] = new Palavras(word, dificuldade, 1);
 	  }
 	  else{
-		  if(palavras[i] != null){
+		  if(palavras[i].dificuldade != 0){
 			  i--;
 			  while(i>0 && palavras[i].procurada <= 1){
 				  palavras[i+1] = palavras[i];
@@ -214,7 +214,7 @@ public class User {
 }
 
 class TextosLidos{
-   protected char[] nome = new char[15];
+   protected char[] nome = new char[User.MAXTEXT];
    protected float compreensao;
    protected char[] data = new char[6];
    protected short dificuldade;
@@ -224,7 +224,7 @@ class TextosLidos{
       this.dificuldade = 0;
    }
    public TextosLidos(String nome, String data, float compreensao, short dificuldade){
-      this.nome = newArray.sizedArray(nome.toCharArray(), 15);
+      this.nome = newArray.sizedArray(nome.toCharArray(), User.MAXTEXT);
       this.compreensao = compreensao;
       this.data = newArray.sizedArray(data.toCharArray(), 6);
       this.dificuldade = dificuldade;
@@ -293,10 +293,10 @@ class TextosLidos{
    
    public void calculaCompreensao(int totalPalavras, int palavrasProcuradas){
 	   	
-	   float entendimento = (float) palavrasProcuradas/totalPalavras;
+	   float entendimento = 1 - (float) palavrasProcuradas/totalPalavras;
 	   float fatorDificuldade = 1 + (int)this.dificuldade*(float)0.01;
 	   
-	   this.compreensao = entendimento * fatorDificuldade;
+	   this.compreensao = 100 * entendimento * fatorDificuldade;
    }
    
    @Override

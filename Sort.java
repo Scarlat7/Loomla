@@ -16,7 +16,7 @@ public class Sort {
 	    	while(i < mid && j < end){ 
 	    		if(!order){
 	    			if(campo.equals("Palavra"))
-			            if(v[i].palavra.compareTo(v[j].palavra) <= 0)
+			            if(ToString.toString(v[i].palavra).compareTo(ToString.toString(v[j].palavra)) <= 0)
 			                aux[k++] = v[i++];                      
 			            else
 			                aux[k++] = v[j++];
@@ -35,7 +35,7 @@ public class Sort {
 	    		}
 	    		else
 	    			if(campo.equals("Palavra"))
-			            if(v[i].palavra.compareTo(v[j].palavra) >= 0)
+			            if(ToString.toString(v[i].palavra).compareTo(ToString.toString(v[j].palavra)) >= 0)
 			                aux[k++] = v[i++];                      
 			            else
 			                aux[k++] = v[j++];
@@ -90,19 +90,22 @@ public class Sort {
 	    	while(i < mid && j < end){ 
 	    		if(!order){
 	    			if(campo.equals("Título")){
-			            if(v[i].nome.compareTo(v[j].nome) <= 0)
+			            if(ToString.toString(v[i].nome).compareTo(ToString.toString(v[j].nome)) <= 0)
 			                aux[k++] = v[i++];                      
 			            else
 			                aux[k++] = v[j++];
 	    			}
 	    			else if(campo.equals("Data")){
 	    				
-	    				int dataEmDias1 = Integer.parseInt(v[i].data.substring(0, 2))
-	    								+ 30*Integer.parseInt(v[i].data.substring(2, 4))
-	    								+ 365*Integer.parseInt(v[i].data.substring(4, 6));
-	    				int dataEmDias2 = Integer.parseInt(v[j].data.substring(0, 2))
-										+ 30*Integer.parseInt(v[j].data.substring(2, 4))
-										+ 365*Integer.parseInt(v[j].data.substring(4, 6));
+	    				String data1 = ToString.toString(v[i].data);
+	    				String data2 = ToString.toString(v[j].data);
+	    				
+	    				int dataEmDias1 = Integer.parseInt(data1.substring(0, 2))
+	    								+ 30*Integer.parseInt(data1.substring(2, 4))
+	    								+ 365*Integer.parseInt(data1.substring(4, 6));
+	    				int dataEmDias2 = Integer.parseInt(data2.substring(0, 2))
+										+ 30*Integer.parseInt(data2.substring(2, 4))
+										+ 365*Integer.parseInt(data2.substring(4, 6));
 	    				
 	    				if(dataEmDias1 <= dataEmDias2)
 			                aux[k++] = v[i++];                      
@@ -118,19 +121,22 @@ public class Sort {
 	    		}
 	    		else{
 	    			if(campo.equals("Título")){
-			            if(v[i].nome.compareTo(v[j].nome) >= 0)
+			            if(ToString.toString(v[i].nome).compareTo(ToString.toString(v[j].nome)) >= 0)
 			                aux[k++] = v[i++];                      
 			            else
 			                aux[k++] = v[j++];
 	    			}
 	    			else if(campo.equals("Data")){
 	    				
-	    				int dataEmDias1 = Integer.parseInt(v[i].data.substring(0, 2))
-	    								+ 30*Integer.parseInt(v[i].data.substring(2, 4))
-	    								+ 365*Integer.parseInt(v[i].data.substring(4, 6));
-	    				int dataEmDias2 = Integer.parseInt(v[j].data.substring(0, 2))
-										+ 30*Integer.parseInt(v[j].data.substring(2, 4))
-										+ 365*Integer.parseInt(v[j].data.substring(4, 6));
+	    				String data1 = ToString.toString(v[i].data);
+	    				String data2 = ToString.toString(v[j].data);
+	    				
+	    				int dataEmDias1 = Integer.parseInt(data1.substring(0, 2))
+										+ 30*Integer.parseInt(data1.substring(2, 4))
+										+ 365*Integer.parseInt(data1.substring(4, 6));
+	    				int dataEmDias2 = Integer.parseInt(data2.substring(0, 2))
+										+ 30*Integer.parseInt(data2.substring(2, 4))
+										+ 365*Integer.parseInt(data2.substring(4, 6));
 	    				
 	    				if(dataEmDias1 >= dataEmDias2)
 			                aux[k++] = v[i++];                      
@@ -156,7 +162,6 @@ public class Sort {
 	            }
 
 	    	System.arraycopy(aux, 0, v, begin, quantity);
-	        //System.arraycopy(aux, begin, v, begin, quantity);
 	    }
 	    
 	    public static void MergeSortTextos(TextosLidos[] s, int inicio, int ultimo, String campo, boolean ordem){

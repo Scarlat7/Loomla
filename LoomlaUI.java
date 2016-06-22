@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -687,9 +688,9 @@ public class LoomlaUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("Língua nativa:");
+        jLabel5.setText("Língua do texto:");
 
-        jLabel6.setText("Segunda língua:");
+        jLabel6.setText("Língua nativa:");
 
         javax.swing.GroupLayout ReadLayout = new javax.swing.GroupLayout(Read);
         Read.setLayout(ReadLayout);
@@ -790,6 +791,7 @@ public class LoomlaUI extends javax.swing.JFrame {
             LoginText.setText("");
             UserButton.setText(username);
             UserButton2.setText(username);
+            Text.setText("");
             int i = 0;
             while(i<loggedUser.palavras.length && loggedUser.palavras[i] != null){
             	for(int j = 0; j<TabelaPalavras.getRowCount(); j++){
@@ -803,14 +805,14 @@ public class LoomlaUI extends javax.swing.JFrame {
             while(i<loggedUser.textosLidos.length && loggedUser.textosLidos[i] != null){
             	for(int j = 0; j<TabelaTextos.getRowCount(); j++){
             		TabelaTextos.setValueAt(ToString.toString(loggedUser.textosLidos[i].getNome()), i, 0);
-        			String aux = String.valueOf(loggedUser.textosLidos[i].data);
+        			String aux = ToString.toString(loggedUser.textosLidos[i].data);
         			String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
         			TabelaTextos.setValueAt(a, i, 1);
-        			TabelaTextos.setValueAt(loggedUser.textosLidos[i].compreensao, i, 2);
+        			TabelaTextos.setValueAt(round(loggedUser.textosLidos[i].compreensao), i, 2);
             	}
             	i++;
             }
-            Fluency.setText(String.valueOf(loggedUser.fluence)+"%");
+            Fluency.setText(String.valueOf(round(loggedUser.fluence))+"%");
             
             CardLayout card = (CardLayout)mainPanel.getLayout();
             card.show(mainPanel, "User");
@@ -859,15 +861,17 @@ public class LoomlaUI extends javax.swing.JFrame {
     }
 
     private void ReadButtonActionPerformed(java.awt.event.ActionEvent evt) {
-            CardLayout card = (CardLayout)mainPanel.getLayout();
+    		currentLang = (String) CurrentLan.getSelectedItem();
+        	secondLang = (String) SecondLan.getSelectedItem();
+    		CardLayout card = (CardLayout)mainPanel.getLayout();
             card.show(mainPanel, "Read");
     }
 
     private void UserButton2ActionPerformed(java.awt.event.ActionEvent evt) {
     		try {
-    			
+    			//System.out.println(loggedUser.getTextosLidos(i));
 				UserFiles.addUserData(loggedUser);
-				
+				updateUserPage();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -880,11 +884,11 @@ public class LoomlaUI extends javax.swing.JFrame {
     private void OpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
     	String selected = TextChooser.getSelectedValue();
     	
-    	currentText = new TextosLidos();
-    	
+    
     	if(!Text.getText().equals("")){
         	roundUpText();
         }
+    	currentText = new TextosLidos();
     	
         Date time = new Date();
         SimpleDateFormat ft =  new SimpleDateFormat("dd/MM/yy");
@@ -905,11 +909,11 @@ public class LoomlaUI extends javax.swing.JFrame {
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file = FileChooser.getSelectedFile();
             
-            currentText = new TextosLidos();
-            
             if(Text.getText() != ""){
             	roundUpText();
             }
+            
+            currentText = new TextosLidos();
             
             Date time = new Date();
             SimpleDateFormat ft =  new SimpleDateFormat("dd/MM/yy");
@@ -930,7 +934,8 @@ public class LoomlaUI extends javax.swing.JFrame {
     }
 
     private void LogOutButtonActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
-        UserFiles.addUserData(loggedUser);
+        roundUpText();
+    	UserFiles.addUserData(loggedUser);
     	CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "Login");
     }
@@ -951,21 +956,30 @@ public class LoomlaUI extends javax.swing.JFrame {
         System.out.println(loggedUser);
         loggedUser.newWord(busca);
         
-        String language = currentLang;
-        String nativa = secondLang;
-        int nIDs = 0, i;
+        String language = secondLang;
+        String nativa = currentLang;
+        int nIDs = 0, i = 1;
         Trieteste teste = new Trieteste();
-        
-        RandomAccessFile arquivo;
+        //System.out.println(secondLang);
+      
+       // RandomAccessFile arquivo;
         try {
-        		BNode data = new BNode(nativa);
-                //arquivo = new RandomAccessFile("Eusei", "rw");
+        		BNode data = new BNode(language);
+        		// arquivo = new RandomAccessFile("words.data", "rw");
                 String translation = "";
-                ArrayList<Integer> ID = teste.searchTrie("Eusei", busca, language, 4);
-                while(ID.get(nIDs)!= -1){
+                ArrayList<Integer> ID = teste.searchTrie("words.data", busca, nativa, 4);
+                System.out.println(ID);
+                System.out.println(nativa);
+                while(nIDs < 4 && ID.get(nIDs)!= -1){
+                	
+                	System.out.println(language);
                 	ArrayList<String> translations = data.getTranslations(ID.get(nIDs), language);
+                   // System.out.println( data.getTranslations(39335, "Português"));
+                	if(translations != null)
                 	for(String meaning: translations){
-                		translation += nIDs+ "." +meaning+ "\r\n";
+                		//System.out.println(meaning);
+                		translation += i+ ". " +meaning+ "\r\n";
+                		i++;
                 	}
                 	nIDs++;
                 }
@@ -994,12 +1008,8 @@ public class LoomlaUI extends javax.swing.JFrame {
         	j++;
         
         Sort.MergeSortPalavras(s,0,j,name,ordemPalavra[col]);
-        
-        for(int i = 0; i<j; i++){
-			TabelaPalavras.setValueAt(s[i].palavra, i, 0);
-			TabelaPalavras.setValueAt(s[i].dificuldade, i, 1);
-			TabelaPalavras.setValueAt(s[i].procurada, i, 2);
-        }
+        updateTabelaPalavra(s, j);
+ 
     }
     
     private void TabelaTextosMouseClicked(java.awt.event.MouseEvent evt) {
@@ -1014,14 +1024,8 @@ public class LoomlaUI extends javax.swing.JFrame {
         	j++;
         
         Sort.MergeSortTextos(s,0,j,name,ordemTexto[col]);
+        updateTabelaTexto(s, j);
         
-        for(int i = 0; i<j; i++){
-			TabelaTextos.setValueAt(s[i].nome, i, 0);
-			String aux = String.valueOf(s[i].data);
-			String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
-			TabelaTextos.setValueAt(a, i, 1);
-			TabelaTextos.setValueAt(s[i].compreensao, i, 2);
-        }
     }
     
     private Object[] getCol(JTable table, int col) {
@@ -1036,9 +1040,72 @@ public class LoomlaUI extends javax.swing.JFrame {
     private void roundUpText(){
     	int totalPalavras = currentText.dificuldadeTexto(Text.getText());
     	currentText.calculaCompreensao(totalPalavras, palavrasTraduzidas);
+    	loggedUser.fluence = (loggedUser.fluence + currentText.compreensao)/2;
+    	palavrasTraduzidas = 0;
     	loggedUser.newRead(currentText);
+    	try {
+			UserFiles.addUserData(loggedUser);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
+    
+    private void updateTabelaPalavra(Palavras s[], int tam){
+    	
+    	for(int i = 0; i<tam; i++){
+			TabelaPalavras.setValueAt(ToString.toString(s[i].palavra), i, 0);
+			TabelaPalavras.setValueAt(s[i].dificuldade, i, 1);
+			TabelaPalavras.setValueAt(s[i].procurada, i, 2);
+        }
+    }
+    
+    private void updateTabelaTexto(TextosLidos s[], int tam){
+    	
+    	for(int i = 0; i<tam; i++){
+			TabelaTextos.setValueAt(ToString.toString(s[i].nome), i, 0);
+			String aux = ToString.toString(s[i].data);
+			String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
+			TabelaTextos.setValueAt(a, i, 1);
+			TabelaTextos.setValueAt(s[i].compreensao, i, 2);
+        }
+    	
+    }
+    
+    private void updateUserPage(){
+        int i = 0;
+           while(i<loggedUser.palavras.length && loggedUser.palavras[i] != null){
+	            for(int j = 0; j<TabelaPalavras.getRowCount(); j++){
+	            	TabelaPalavras.setValueAt(ToString.toString(loggedUser.palavras[i].getPalavra()), i, 0);
+	            	TabelaPalavras.setValueAt(loggedUser.palavras[i].dificuldade, i, 1);
+	            	TabelaPalavras.setValueAt(loggedUser.palavras[i].procurada, i, 2);
+	            }
+	            i++;
+           }
+           
+           i = 0;
+           while(i<loggedUser.textosLidos.length && loggedUser.textosLidos[i] != null){
+               for(int j = 0; j<TabelaTextos.getRowCount(); j++){
+                TabelaTextos.setValueAt(ToString.toString(loggedUser.textosLidos[i].getNome()), i, 0);
+             String aux = ToString.toString(loggedUser.textosLidos[i].data);
+             String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
+             TabelaTextos.setValueAt(a, i, 1);
+             TabelaTextos.setValueAt(loggedUser.textosLidos[i].compreensao, i, 2);
+               }
+               i++;
+              }
+              Fluency.setText(String.valueOf(round(loggedUser.fluence))+"%");
+          }
 
+    public static float round(float n){
+    	
+    	BigDecimal result = new BigDecimal(Float.toString(n));
+    	result = result.setScale(2, BigDecimal.ROUND_HALF_UP);
+    	
+    	return result.floatValue();
+    }
+    
+    
     public static void main(String args[]) {
 
         try {
@@ -1064,7 +1131,7 @@ public class LoomlaUI extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify
     private javax.swing.JPanel Buttons;
     private javax.swing.JPanel Buttons2;

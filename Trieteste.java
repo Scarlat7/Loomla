@@ -96,7 +96,7 @@ public class Trieteste{
 	     }
 	     else{
 	      range = true;
-	      System.out.println("Caracter não reconhecido");
+	      //System.out.println("Caracter não reconhecido");
 	     } 
 	}
 	 
@@ -163,7 +163,7 @@ public class Trieteste{
 		 
 		 Trieteste ronaldo = new Trieteste();
 		 try{
-			 RandomAccessFile arquivo = new RandomAccessFile("Eusei", "rw");
+			 RandomAccessFile arquivo = new RandomAccessFile("Words.data", "rw");
 			 if(arquivo.length()==0)
 			 {
 				writeNewNode(0, arquivo);
@@ -180,12 +180,12 @@ public class Trieteste{
 						{
 							
 							String strAux = str.nextToken();
-							System.out.println(strAux);
+							//System.out.println(strAux);
 							//System.out.println(strAux);
 							ronaldo.addToTrie(strAux, ID, arquivo, IDMAX);
 							switch(strAux.charAt(0)){
 								case '^': english = english.insert(ID, strAux, "Inglês"); 
-										  System.out.println(english.getTranslations(1, "Inglês"));
+										  //System.out.println(english.getTranslations(1, "Inglês"));
 										  break;
 								case '?': port = port.insert(ID, strAux, "Português");
 										  break;
@@ -202,7 +202,8 @@ public class Trieteste{
 		}
 
 	 public static void main(String[] args) throws IOException{
-	     Trieteste.getText("leozin", 4);
+	    // Trieteste.getText("arquivoTeste", 4);
+		 try {
 		 BNode ingles = new BNode("Inglês");
 		 BNode port = new BNode("Português");
 		 BNode german = new BNode("Alemão");
@@ -210,12 +211,14 @@ public class Trieteste{
 		// System.out.println(ingles.getTranslations(1, "Inglês"));
 		 Trieteste teste2 = new Trieteste();
 		 //teste2.addToTrie("ronaldo", 4, arquivo);
-		 ArrayList<Integer> ID = teste2.searchTrie("Eusei", "florestação", "Português", 4);
-		 ArrayList<Integer> ID2 = teste2.searchTrie("Eusei", "publicidade", "Português", 4);
+		 ArrayList<Integer> ID = teste2.searchTrie("words.data", "rei", "Português", 4);
+		 //ArrayList<Integer> ID2 = teste2.searchTrie("Eusei", "publicidade", "Português", 4);
 
-		 ArrayList<String> translations = ingles.getTranslations(ID.get(0),"Inglês");
+		 ArrayList<String> translations = port.getTranslations(ID.get(0),"Alemão");
 		 System.out.println(ID);
 		 System.out.println(translations);
-		 System.out.println(ID2);
+		 } catch (FileNotFoundException e1) {
+             e1.printStackTrace();
+     }// System.out.println(ID2);
 	 }
 }

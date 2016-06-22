@@ -6,7 +6,8 @@ import java.io.RandomAccessFile;
 import java.util.ArrayList;
 
 public class UserFiles {
-
+  public static int MAXTEXT = 25;
+  
   public static void addUserData(User usuario) throws IOException{
 	  RandomAccessFile userData = new RandomAccessFile("UserData", "rw");
 	  userData.seek(usuario.getID());
@@ -21,8 +22,9 @@ public class UserFiles {
 	  userData.writeFloat(usuario.getFluence());
 	  for(int i =0; i<5; i++){
 		  TextosLidos texto = usuario.getTextosLidos(i);
-		  if(texto == null){
-			  for(int j=0; j<15; j++){
+		 
+		 if(texto == null){
+			  for(int j=0; j<MAXTEXT; j++){
 				  userData.writeChar(0);
 			  }
 			  userData.writeFloat(0);
@@ -32,8 +34,13 @@ public class UserFiles {
 			  userData.writeShort(0);
 		  }
 		  else{
-			  for(int j=0; j<15;j++){
-				  userData.writeChar(texto.getNome()[j]);
+			  for(int j=0; j<MAXTEXT;j++){
+				  //System.out.println(i + " " + j + texto.getNome()[j]);
+				  if(texto.getNome().length > j){
+					  userData.writeChar(texto.getNome()[j]);
+				  }
+					  
+				  else userData.writeChar(0);
 			  }
 			  userData.writeFloat(texto.getCompreensao());
 			  for(int j=0; j<6;j++){
@@ -44,7 +51,9 @@ public class UserFiles {
 	  }
 	  for(int i=0; i<10; i++){
 		  Palavras palavra = usuario.getPalavras(i);
+		  System.out.println(usuario.getPalavras(i));
 		  if(palavra == null){
+			  System.out.println(i);
 			  userData.writeInt(0);
 			  userData.writeInt(0);
 			  for(int j=0; j<30; j++){
@@ -56,9 +65,11 @@ public class UserFiles {
 			  userData.writeInt(palavra.getDificuldade());
 			  userData.writeInt(palavra.getProcurada());
 			  for(int j=0; j<30; j++){
-				  userData.writeChar(palavra.getPalavra()[j]);
+				  if(palavra.getPalavra().length > j)
+					  userData.writeChar(palavra.getPalavra()[j]);
+				  else userData.writeChar(0);
 			  }
-		  }
+		 }
 	  }
 	  userData.close();
   }
@@ -86,8 +97,8 @@ public class UserFiles {
 	  TextosLidos texto[] = new TextosLidos[5];
 	  for(int i =0; i<5; i++){
 		  texto[i] = new TextosLidos();
-		  arrayAux1 = new char[15];
-		  for(int j=0; j<15; j++){
+		  arrayAux1 = new char[MAXTEXT];
+		  for(int j=0; j<MAXTEXT; j++){
 			  arrayAux1[j] = userData.readChar();
 		  }
 		  texto[i].setNome(arrayAux1);
@@ -102,8 +113,9 @@ public class UserFiles {
 		  usuario.setTextosLidos(texto[i], i);
 	  }
 	  Palavras palavra[] = new Palavras[10];
-	  arrayAux1 = new char[30];
+	  
 	  for(int i=0; i<10; i++){
+		  arrayAux1 = new char[30];
 		  	  palavra[i] = new Palavras();
 			  palavra[i].setDificuldade(userData.readInt());
 			  palavra[i].setProcurada(userData.readInt());
@@ -130,12 +142,25 @@ public class UserFiles {
 	  addUserData(newUser);
   }
   public static void main(String[] args) throws IOException {
-	 Trieteste user = new Trieteste();
-	// addUser("rei", "oleole");
-	// addUser("nat", "nat222");
-	// addUser("leo", "oleole");
-	 User leonardo = getUserData("nat");
-	 System.out.println(leonardo.getSenha());
+	 //Trieteste user = new Trieteste();
+	 User leo = getUserData("leo");
+	 //Palavras word = leo.getPalavras(5);
+	 //char array[] = {'a', 'b', 'c'};;
+	 System.out.println(leo.getPalavras(5));
+	 //word.setPalavra(array);
+	 addUserData(leo);
+	 for(int i = 0; i < 10; i++)
+	 {
+		 System.out.println(leo.getPalavras(i));
+	 }
+	// leo.setPalavras(, 5);
+	 
+	 //addUser("rei", "oleole");
+	  addUser("thomas", "nat222");
+	 //addUser("leo", "oleole");
+	 
+	 //User leonardo = getUserData("nat");
+	 //System.out.println(leonardo.getSenha());
   }
 }
 

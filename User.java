@@ -3,13 +3,15 @@ package testeTexto;
 import java.util.StringTokenizer;
 
 public class User {
+  public static int MAXTEXT = 25;
+  public static int MAXWORDS = 20;
   protected int ID;
   protected char nome[] = new char[10];
   protected char senha[] = new char[10];
   protected float fluence;
   protected TextosLidos textosLidos[] = new TextosLidos[5];
-  protected Palavras palavras[] = new Palavras[10];
-  public static int MAXTEXT = 25;
+  protected Palavras palavras[] = new Palavras[MAXWORDS];
+  
   public User(){
 	  ID = -1;
 	  int i;

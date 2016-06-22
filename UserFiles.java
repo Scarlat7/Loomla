@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class UserFiles {
   public static int MAXTEXT = 25;
+  public static int MAXWORDS = 20;
   
   public static void addUserData(User usuario) throws IOException{
 	  RandomAccessFile userData = new RandomAccessFile("UserData", "rw");
@@ -49,7 +50,7 @@ public class UserFiles {
 			  userData.writeShort(texto.getDificuldade());
 		  }	  
 	  }
-	  for(int i=0; i<10; i++){
+	  for(int i=0; i<MAXWORDS; i++){
 		  Palavras palavra = usuario.getPalavras(i);
 		  System.out.println(usuario.getPalavras(i));
 		  if(palavra == null){
@@ -112,9 +113,9 @@ public class UserFiles {
 
 		  usuario.setTextosLidos(texto[i], i);
 	  }
-	  Palavras palavra[] = new Palavras[10];
+	  Palavras palavra[] = new Palavras[MAXWORDS];
 	  
-	  for(int i=0; i<10; i++){
+	  for(int i=0; i<MAXWORDS; i++){
 		  arrayAux1 = new char[30];
 		  	  palavra[i] = new Palavras();
 			  palavra[i].setDificuldade(userData.readInt());

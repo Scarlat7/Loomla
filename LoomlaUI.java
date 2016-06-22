@@ -792,27 +792,7 @@ public class LoomlaUI extends javax.swing.JFrame {
             UserButton.setText(username);
             UserButton2.setText(username);
             Text.setText("");
-            int i = 0;
-            while(i<loggedUser.palavras.length && loggedUser.palavras[i] != null){
-            	for(int j = 0; j<TabelaPalavras.getRowCount(); j++){
-            		TabelaPalavras.setValueAt(ToString.toString(loggedUser.palavras[i].getPalavra()), i, 0);
-        			TabelaPalavras.setValueAt(loggedUser.palavras[i].dificuldade, i, 1);
-        			TabelaPalavras.setValueAt(loggedUser.palavras[i].procurada, i, 2);
-            	}
-            	i++;
-            }
-            i = 0;
-            while(i<loggedUser.textosLidos.length && loggedUser.textosLidos[i] != null){
-            	for(int j = 0; j<TabelaTextos.getRowCount(); j++){
-            		TabelaTextos.setValueAt(ToString.toString(loggedUser.textosLidos[i].getNome()), i, 0);
-        			String aux = ToString.toString(loggedUser.textosLidos[i].data);
-        			String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
-        			TabelaTextos.setValueAt(a, i, 1);
-        			TabelaTextos.setValueAt(round(loggedUser.textosLidos[i].compreensao), i, 2);
-            	}
-            	i++;
-            }
-            Fluency.setText(String.valueOf(round(loggedUser.fluence))+"%");
+            updateUserPage();
             
             CardLayout card = (CardLayout)mainPanel.getLayout();
             card.show(mainPanel, "User");
@@ -891,7 +871,7 @@ public class LoomlaUI extends javax.swing.JFrame {
     	currentText = new TextosLidos();
     	
         Date time = new Date();
-        SimpleDateFormat ft =  new SimpleDateFormat("dd/MM/yy");
+        SimpleDateFormat ft =  new SimpleDateFormat("ddMMyy");
         ft.format(time);
         
         currentText.setData(ft.format(time).toCharArray());
@@ -916,7 +896,7 @@ public class LoomlaUI extends javax.swing.JFrame {
             currentText = new TextosLidos();
             
             Date time = new Date();
-            SimpleDateFormat ft =  new SimpleDateFormat("dd/MM/yy");
+            SimpleDateFormat ft =  new SimpleDateFormat("ddMMyy");
             ft.format(time);
             currentText.setData(ft.format(time).toCharArray());
             currentText.setNome(file.getName().toCharArray()); 
@@ -1067,7 +1047,7 @@ public class LoomlaUI extends javax.swing.JFrame {
 			String aux = ToString.toString(s[i].data);
 			String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
 			TabelaTextos.setValueAt(a, i, 1);
-			TabelaTextos.setValueAt(s[i].compreensao, i, 2);
+			TabelaTextos.setValueAt(round(s[i].compreensao)+"%", i, 2);
         }
     	
     }
@@ -1090,7 +1070,7 @@ public class LoomlaUI extends javax.swing.JFrame {
              String aux = ToString.toString(loggedUser.textosLidos[i].data);
              String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
              TabelaTextos.setValueAt(a, i, 1);
-             TabelaTextos.setValueAt(loggedUser.textosLidos[i].compreensao, i, 2);
+             TabelaTextos.setValueAt(round(loggedUser.textosLidos[i].compreensao)+"%", i, 2);
                }
                i++;
               }

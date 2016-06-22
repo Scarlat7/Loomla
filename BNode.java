@@ -7,8 +7,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 public class BNode implements Serializable{
 
@@ -32,7 +34,7 @@ public class BNode implements Serializable{
 
 	public static void main (String args[]) throws IOException {
 		/****descomente para gerar árvore ****/
-
+		
 		/*
 		BNode a = new BNode(true);
 		for(int i = 2; i<= 150; i++){

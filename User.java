@@ -296,7 +296,10 @@ class TextosLidos{
 	   float entendimento = 1 - (float) palavrasProcuradas/totalPalavras;
 	   float fatorDificuldade = 1 + (int)this.dificuldade*(float)0.01;
 	   
-	   this.compreensao = 100 * entendimento * fatorDificuldade;
+	   if(100 * entendimento * fatorDificuldade >= 100)
+		   this.compreensao = 100 * entendimento;
+	   else
+		   this.compreensao = 100 * entendimento * fatorDificuldade;
    }
    
    @Override

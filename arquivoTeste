@@ -340,7 +340,7 @@
 ^bicycle,!zweirad,?bicicletas,?bicicleta,^bike,^cycle,!fahrrad,!rad
 ^bilateral convention,?convenções bilaterais,!bilateraler vertrag
 ^bilge oil,!bilgenöl,?óleos dos porões
-^bilge water,!bilgenwasser,?águas dos porões,^bilg^water,!kieljauche
+^bilge water,!bilgenwasser,?águas dos porões,^bilge-water,!kieljauche
 ^bioaccumulation,!bioakkumulation,?bioacumulação
 !bioakkumulativer schadstoff,^bioaccumulative pollutant,?poluentes bioacumulativos
 ^bio-availability,!bioverfügbarkeit,?biodisponibilidade
@@ -863,7 +863,7 @@
 ^degradation of natural resources,!abbau von natürlichen ressourcen,?degradação dos recursos naturais,!abbau natürlicher ressourcen
 ^degradation product,!abbauprodukt,?produtos de degradação
 ^degreasing,!entfettung,?desengorduramento
-^d^inking,!deinking,?remoção de tintas,!druckfarbenentfernung
+^de-inking,!deinking,?remoção de tintas,!druckfarbenentfernung
 ^delinquency,!delinquenz,?delinquência
 ^delta,!delta,?deltas,!flussdelta
 ^demand,!nachfrage,?procura (economia),?procura
@@ -974,7 +974,7 @@
 ^domestic waste water,!haushaltsabwasser,?águas residuais domésticas
 ^dosage,!dosierung,?dosagens
 ^dose,!dosis,?dose
-^dos^effect relationship,!dosis-wirkun!beziehung,?relação dos^efeito,^exposur^response relationship,^dos^response relationship,!dosis-wirkungs-kurve
+^dose-effect relationship,!dosis-wirkun!beziehung,?relação dose-efeito,^exposure-response relationship,^dose-response relationship,!dosis-wirkungs-kurve
 ^draft legislation,!gesetzentwurf,?legislação (projectos)
 ^dragonfly,!libelle,?libélulas,?libélula
 ^drainage,!entwässerung,?drenagem
@@ -1017,14 +1017,14 @@
 ^earth's crust,!erdkruste,?crosta terrestre,^crust,^earth's crust
 ^earthquake,!erdbeben,?sismos,?sismo
 ^earth science,!geowissenschaften,?ciências da terra
-^earth-sun relationship,!erd^sonn^beziehung,?inter-relações terra-sol
+^earth-sun relationship,!erde-sonn^beziehung,?inter-relações terra-sol
 ^earthworm,!regenwurm,?minhocas
 ^earwig,!ohrwürmer,?bichas-cadelas,!ohrwurm,!ohrenzwicker
 ^east africa,!ostafrika,?áfrica oriental
 ^eastern asia,!ostasien,?ásia oriental,^east asia
 ^eastern europe,!osteuropa,?europa oriental
-^east-west relations,!ost-west-beziehung,?relações est^oeste
-^east-west trade,!ost-west-handel,?comércio est^oeste
+^east-west relations,!ost-west-beziehung,?relações este-oeste
+^east-west trade,!ost-west-handel,?comércio este-oeste
 ^ec council of ministers,!e!ministerrat,?conselho de ministros da ce
 ^ec directive,!eu-richtlinie,?directivas comunitárias
 ^ec directive on biocides,!eu-biozidrichtlinie,?biocidas (directiva ce)
@@ -1140,7 +1140,7 @@
 ^emergency law,!notstandsrecht,?legislação de emergência
 ^emergency plan,!nofallplan,?planeamento de emergência
 ^emergency relief,!nothilfe,?assistência à emergência
-^emergency relief measure,!erst^hilf^maßnahmen,?medidas de emergência (socorro)
+^emergency relief measure,!erste-hilf^maßnahmen,?medidas de emergência (socorro)
 ^emergency shelter,!notunterkunft,?abrigos de emergência
 ^emission,!emission,?emissões
 ^emission control,!emissionsüberwachung,?controlo de emissões
@@ -1715,7 +1715,7 @@
 ^handicraft,!kunsthandwerk,?artesanato
 ^harbour,!hafen,?portos,?porto
 ^hardness,!härte,?dureza
-^hard-to-dispos^of waste,?resíduos volumosos,!schwerentsorgbarer abfall
+^hard-to-dispose-of waste,?resíduos volumosos,!schwerentsorgbarer abfall
 ^waste water pollution,!abwasserbelastung,?poluição de águas residuais
 ^harmonisation of law,!rechtsvereinheitlichung,?harmonização da legislação
 ^harvest,!ernte,?colheitas,?colheita,!ernteertrag
@@ -1730,7 +1730,7 @@
 !ackerrandstreifen,?cabeceiros,^headland
 ^health,!gesundheit,?saúde
 ^health care,!gesundheitsfürsorge,?cuidados de saúde,^healthcare
-^health-environment relationship,!gesundheit-umweltbeziehung,?relações saúd^ambiente
+^health-environment relationship,!gesundheit-umweltbeziehung,?relações saúde-ambiente
 ^health facility,!gesundheitseinrichtung,?estabelecimentos de saúde
 ^health hazard,!gesundheitsgefährdung,?perigos para a saúde
 ^health legislation,!gesundheitsrecht,?saúde (legislação)
@@ -2240,7 +2240,7 @@
 ^mangrove swamp,!mangrovensumpf,?pântanos de mangais
 ^man-made climate change,!klimaänderung (anthropogen),?variação climática artificial,!anthropogener klimawandel
 ^man-nature relationship,!mensch-natur-verhältnis,?relação homem-natureza
-^manpower,!arbeitskraft,?mão-d^obra
+^manpower,!arbeitskraft,?mão-de-obra
 ^manufacturing activity,?actividades de produção,!produzierende tätigkeit
 ^manufacturing trade,?comércio de produtos manufacturados,!produzierendes gewerbe
 ^manure,!dünger,?adubos
@@ -2345,7 +2345,7 @@
 ^micropollutant,!spurenstoffverunreinigung,?micropoluentes
 ^microscopy,!mikroskopie,?microscopia
 ^microwave,!mikrowellen,?microondas,!mikrowelle
-^migrant labour,!wanderarbeitskräfte,?mão-d^obra migrante
+^migrant labour,!wanderarbeitskräfte,?mão-de-obra migrante
 ^human migration,!bevölkerungsmigration,?migrações humanas
 ^animal migration,!tierwanderung,?migrações de animais
 ^migratory bird,!zugvogel,?aves migratórias,^ave migratoria,^emigrant bird
@@ -2526,7 +2526,7 @@
 ^noise disturbance,!lärmbelästigung,?perturbações sonoras,^noise pollution,?poluição sonora
 ^noise emission,!geräuschemission,?emissões sonoras
 ^noise emission levy,!lärmabgabe,?emissões sonoras (taxas)
-!lärmarme technik,^nois^free technology,?tecnologia livre de ruído
+!lärmarme technik,^noise-free technology,?tecnologia livre de ruído
 ^noise immission,!lärmimmission,?imissões de ruído
 ^noise legislation,!lärmrecht,?normas de ruído
 ^noise level,!lärmpegel,?níveis de ruído
@@ -2622,8 +2622,8 @@
 ^off-peak travelling,!fahren außerhalb der stoßzeiten,?viagens (fora das horas de ponta)
 ^off-peak working,!arbeiten außerhalb der üblichen bürozeiten,?trabalho (fora das horas de ponta)
 ^offset policy (emissions trading),!offset policy,?política externa (taxas de emissão)
-^offshore mining,?extracção mineira offshore,!offshor^erdölbohrung,^offshore oil drilling
-^offshore oil drilling,!offshor^erdölbohrung,?perfuração petrolífera offshore
+^offshore mining,?extracção mineira offshore,!offshore-erdölbohrung,^offshore oil drilling
+^offshore oil drilling,!offshore-erdölbohrung,?perfuração petrolífera offshore
 ^off-site,?off-site,!off-site
 ^oil binding agent,!ölbindemittel,?aditivos de ligação (óleo)
 ^oil-based energy,!energie auf ölbasis,?energia convencional (hidrocarbonetos)
@@ -2722,7 +2722,7 @@
 ^particle separator,!partikelabscheider,?separadores de partículas
 ^passenger transport,!personenverkehr,?transporte de passageiros
 ^pasture,!weide,?pastagens,!weideland
-^past^like waste,!pastenartiger abfall,?resíduos pastosos
+^paste-like waste,!pastenartiger abfall,?resíduos pastosos
 ^pathogen,!krankheitserreger,?microrganismos patogénicos,!pathogen,^infectious agent
 ^pathogenic organism,!krankheitserreger,?organismos patogénicos
 ^pathologic effect,?efeitos patológicos,!pathologische wirkung
@@ -3147,7 +3147,7 @@
 ^refugee,!flüchtling,?refugiados
 ^refuse collection vehicle,!müllsammelfahrzeug,?veículos de recolha de lixo
 ^refuse derived fuel,!brennstoff aus müll,?combustíveis à base de desperdícios
-^refus^sludge compost,!müll-klärschlamm-kompost,?compostos de lixos e lamas
+^refuse-sludge compost,!müll-klärschlamm-kompost,?compostos de lixos e lamas
 ^regeneration,!regeneration,?regeneração
 ^retrofitting of old plants,!altanlagensanierung,?centrais regeneradas
 ^region,!region,?regiões,?região
@@ -3169,7 +3169,7 @@
 ^rehabilitation,!sanierung,?reabilitação,^återställande
 ^rehousing,!umsiedeln,?realojamentos
 ^reintroduction,!wiedereinbürgerung,?reintrodução
-^caus^effect relation,!kausalzusammenhang,?relação causa-efeito
+^cause-effect relation,!kausalzusammenhang,?relação causa-efeito
 ^release of organisms,!freisetzung (organismen),?libertação de organismos
 ^religion,!religion,?religião
 ^remote sensing,!fernerkundung,?detecção remota
@@ -3644,8 +3644,8 @@
 ^strip mining,!tagebau,?extracção de minérios a céu aberto,^opencast mining,^openpit mining
 ^strontium,!strontium,?estrôncio
 ^structural adjustment program,!strukturanpassungsprogramm,?programas de ajustamento estrutural
-^structur^activity relationship,!struktur-wirkun!beziehung,?relação estrutura-actividade molecular
-^structur^borne noise,!körperschall,?ruído de transmissão estrutural
+^structure-activity relationship,!struktur-wirkun!beziehung,?relação estrutura-actividade molecular
+^structure-borne noise,!körperschall,?ruído de transmissão estrutural
 ^structure plan,!strukturplan,?planos estruturais
 ^submarine morphology,!unterwassermorphologie,?morfologia submarina
 ^submarine,!unterseeboot,?submarinos,!u-boot,^u-boat,?submarino
@@ -4016,9 +4016,9 @@
 ^waste dumping,!lagerung von abfall,?descargas descontroladas de resíduos
 ^waste exchange,!abfallbörse,?troca de resíduos
 ^waste export,!abfallexport,?exportação de resíduos
-^wast^fed heating and power plant,!müllheizkraftwerk,?centrais termoeléctricas alimentadas a resíduos
-^wast^fed heating plant,!müllheizwerk,?centrais térmicas alimentadas a resíduos
-^wast^fed power station,!müllkraftwerk,?centrais eléctricas alimentadas a resíduos
+^waste-fed heating and power plant,!müllheizkraftwerk,?centrais termoeléctricas alimentadas a resíduos
+^waste-fed heating plant,!müllheizwerk,?centrais térmicas alimentadas a resíduos
+^waste-fed power station,!müllkraftwerk,?centrais eléctricas alimentadas a resíduos
 ^waste gas,!abgas,?gases residuais,!abluft,?gás residual
 ^waste gas emission,!abgasemission,?emissões gasosas
 ^waste gas examination,!abgasuntersuchung,?emissões gasosas (análises)
@@ -4185,7 +4185,7 @@
 ^workplace,!arbeitsplatz,?locais de trabalho
 ^world,!welt,?mundo
 ^world heritage site,!welterbe,?sítio de património mundial
-^writ^off,!abschreibung,?estorno
+^write-off,!abschreibung,?estorno
 ^wrongful act,!vergehen,?actos ilícitos
 ^wrongful government act,?actos ilícitos do governo,!unerlaubter regierungsakt
 ^xenobiotic substance,!xenobiotische substanz,?substâncias xenobióticas,!xenobiotischer stoff,!xenobiotikum,^xenobiotic,?xenobiótico
@@ -4458,7 +4458,7 @@
 ^market study,!marktstudie,?estudos de mercado
 ^free trade,!handelsfreiheit,?comércio livre,!freihandel
 ^less developed country,!entwicklungsländer,?países subdesenvolvidos
-^north-south relationship,!nord-süd-beziehung,?relações nort^sul
+^north-south relationship,!nord-süd-beziehung,?relações norte-sul
 ^calculation,!berechnung,?cálculos
 ^density,!dichte,?densidade,!massendichte
 ^spatial distribution,?distribuição espacial,!räumliche verteilung
@@ -4526,7 +4526,7 @@
 ^urban planning and development,!stadtplanung und -entwicklung,?planeamento e desenvolvimento urbano
 ^land use regime,!flächennutzungsverwaltung,?uso da terra (regime)
 ^new town,!neustadt,?novas cidades
-^pr^emption zone,!gebiet mit vorkaufsrecht,?zonas de preempção
+^pre-emption zone,!gebiet mit vorkaufsrecht,?zonas de preempção
 ^land-management intervention area,!eingriff in die raumordnung,?gestão de terras (áreas de intervenção)
 !ländliche architektur,^rural architecture,?arquitectura rural
 ^traditional architecture,?arquitectura tradicional,!traditionelle architektur,^vernacular architecture
@@ -4555,7 +4555,7 @@
 ^hunting licence,!jagdschein,?licenças de caça
 ^building permit,!baugenehmigung,?licenças de construção,^construction permit
 ^fishing licence,!fischereilizenz,?licenças de pesca,^fishing license
-^law draft,!gesetzentwurf,?projectos-d^lei
+^law draft,!gesetzentwurf,?projectos-de-lei
 ^regulation,!regulierung,?regulamentos
 ^transposition of directive,!umsetzung von richtlinien,?transposição de directivas
 ^concession,!konzession,?concessão
@@ -4585,7 +4585,7 @@
 ^certification,!zertifizierung,?certificação
 ^homologation,!billigung,?homologação
 ^notification,!meldung,?notificação
-^pr^emption,!vorkaufsrecht,?preempção
+^pre-emption,!vorkaufsrecht,?preempção
 ^prescription,!vorschrift,?prescrição
 ^repression,!unterdrückung,?repressão
 ^devolution,!devolution,?descentralização de poderes
@@ -5697,7 +5697,7 @@
 ^sheep,!schaf,?ovelha,!hausschaf
 ^neighbour,!nachbar,^vecino,?vizinho,!nachbarin,!nachbar,!nachbar
 ^orange,!orange,?laranja,!apfelsine
-^orange,?cor-d^laranja,!orange,!orange,?alaranjado,?laranja
+^orange,?cor-de-laranja,!orange,!orange,?alaranjado,?laranja
 ^neck,!hals,?pescoço,!nacken
 ^guts,!eingeweide,^entrails,?tripas
 ^white,!weiß,?branco
@@ -6367,11 +6367,7 @@
 ^tobedeleted
 ^tobedeleted
 ^you,^one,!man,?-se,?tu,?-se
-^you,?tu
-^i,!i,?i
-^to
-^to
-^to
+^you,?tu,?você,!du;
 ^to,?à,?a,?à
 ^brain,!gehirn,?cérebro,!hirn,!denkorgan,!denkapparat
 ^brain,^brainbox,^genius,^brainiac,^mastermind,^einstein,!leuchte,!genie,!einstein,!schlauberger,!intelligenzbestie
@@ -6379,12 +6375,10 @@
 ?sistema nervoso central,^central nervous system,!zentralnervensystem
 ^brainstem,^brain stem,!hirnstamm,?tronco cerebral
 !rückenmark,^spinal cord,?espinal medula,^spinal marrow
-^head
+^head,?cabeça
 ^false,^untrue,!falsch,!unwahr,?falso
 ^false,?falso,!falsch
 ^blood type,!blutgruppe,?grupo sanguíneo
-^itinerant
-^itinerant
 ^perugia,!perugia,?perugia
 ^blister,!blase,!bulla,?bolha
 !knacken,^sleep,!schlafen,!schlummern,!ruhen,!heia machen,!pennen,!ratzen,?dormir,!ruhen,^rest,^kip,^slumber
@@ -6403,7 +6397,7 @@
 ^chest,!brust,^breast,!oberkörper,!bovvokörrepo,?peito,^thorax,!brustkasten,!brust
 ^chest,!truhe
 ^double,!doppelt,!zweifach,?dobro,^doubled,^twofold,^two-fold
-^deep,!tief,!ßa???,?profundo
+^deep,!tief,?profundo
 ^dish,!gericht,?prato
 ^direction,!richtung,?direcção
 ^develop,?desenvolver,!entwickeln
@@ -6416,7 +6410,7 @@
 ^desk,?secretária,!schreibtisch
 ^lock,!schloss,?fehadura,!schloß
 ^lock,!schloss,!schleuse,?eclusa
-^plane,!ebene,!ep?ped?,?plano
+^plane,!ebene,?plano
 ^aeroplane,^plane,!flugzeug,?avião,?aeroplano,^bird,^fixed-wing aircraft
 ^north,!norden,?norte
 ^word,?palavra,?vocábulo,!wort
@@ -6436,7 +6430,7 @@
 ^cathedral,!dom,!kathedrale,?catedral,!kathedralkirche
 ^chapel,!kapelle
 ^temple,!schläfe,?têmpora
-^skull,!schädel,!?e????efa??,?crânio
+^skull,!schädel,?crânio
 ^escape,!flucht,?fuga,?evasão
 ^increase,^gain,^increment,?aumento,?acrescentamento,!zunahme,!zuwachs,!erhöhung
 ^inside,!innen,!drinnen,?dentro,?no interior,^interior
@@ -6798,7 +6792,7 @@
 ^brown,!braun,?marrom,?castanho
 ^brown,!bräunen,?tornar-se castanho
 ^brown,!rösten,!anbräunen,!bräunen,?tostar
-^truce,^ceas^fire,!waffenruhe,!feuerpause,!waffenstillstand,?cessar-fogo,^ceasefire
+^truce,^cease-fire,!waffenruhe,!feuerpause,!waffenstillstand,?cessar-fogo,^ceasefire
 ^hiragana,!hiragana,?hiragana,?hiragana,^hiragana
 ^berlin,!berlin,?berlim
 ^after,?depois,?após,!nach
@@ -7242,18 +7236,10 @@
 ^silly,^foolish,!verrückt,^doltish
 !holunder,^elderberry,^elder
 !wenn,^when
-!und
+!und,?e,^and
 !erde,^earth,?terra,^earth,!der blaue planet,^the world,!die welt,^blue planet,!blauer planet,^globe,^earth,^world,!welt,!erdkugel,!weltkugel
 !erde,!erdung,^ground wire,!masse,!erde,!erdung,^ground wire,^ground,?massa
 !erde,!humus,^humus,!erde
-!salz
-!alle
-!alle
-!andere
-!andere
-!andere
-!eins
-!eins
 !mutter,^nut,!schraubenmutter
 !kind,^child,^child,!kind,^young,^offspring,?filho
 ^frau,^lady,!frau
@@ -7327,10 +7313,8 @@
 ^greenland,!grönland,?groenlândia
 ^middle east,!naher osten
 !florida,^florida,?flórida,^sunshine state
-^spike
+^spike,?espinho
 ^lemma,!lemma,^lemma,!lemma
-^spike
-^spike
 ^architect,?arquiteto,!architekt,!architektin,?arquitecto,!architekt,!architektin
 !gänsevögel,^anseriformes
 ^house band,!hausband,!hauskapelle
@@ -7338,19 +7322,18 @@
 ^gorilla,!gorilla,?gorila
 ^sardonic,^cynical,!sardonisch,!boshaft,^cynical,!höhnisch,!zynisch,!bissig
 ^athlete,!sportler,!sportlerin,!athlet,^sport,^sportsman,^sportswoman,^sportswoman,^sportsperson
-^performer
 ^bank,?banco
 ^bank,!bank,!organbank
 ^bank,?banco
-!dohle,^jackdaw,^daw,?gralha-d^nuca-cinzenta
+!dohle,^jackdaw,^daw,?gralha-de-nuca-cinzenta
 ^tasty,!lecker,!schmackhaft,!wohlschmeckend,^palatable,^sapid,!köstlich
 ^haze,!dunst
 ^word of the day,!wort des tages
 ^wiki,!wiki,?wiki
 ^pulcinella,^punch,!pulcinella
 !schindmähre,^dobbin
-^fog,!nebel
-^mist
+^fog,!nebel,?neblina,?névoa
+^mist,?névoa,?neblina
 ^somaliland,!somaliland,?somalilândia
 ^victim,!opfer,?vítima
 ^victim,!opfer,^sacrifice
@@ -7543,7 +7526,7 @@
 ^pilgrimage,!wallfahrt
 ^hem,!saum,?bainha
 ^hem,!säumen,?fazer a bainha,?bainhar
-^make do!eared,!eselsohr,^do!ear,^dogear,!eselsohr machen
+^make dog-eared,!eselsohr,^dog-ear,^dogear,!eselsohr machen
 ^bizarre,!bizarr,!eigenwillig,!kurios,?bizarro
 ^they,!sie,?eles
 !ereignislos,^uneventful
@@ -7693,7 +7676,7 @@
 ^offer,!offerte,!angebot,^bid
 ^homing pigeon,!brieftaube,^carrier pigeon,?pombo correio
 ^easy mark
-^firefighter,!feuerwehrmann,!feuerwehrfrau,!feuerwehrleute,^fireman,^firewoman,!brandmeister,!brandmeisterin,!feuerwehrmann,?bombeiro,^fire fighter,^fir^eater
+^firefighter,!feuerwehrmann,!feuerwehrfrau,!feuerwehrleute,^fireman,^firewoman,!brandmeister,!brandmeisterin,!feuerwehrmann,?bombeiro,^fire fighter,^fire-eater
 ^roughage,!rauhfutter
 ^pigeon,?pombo,!taube,^dove
 ^sparrow,!spatz,?pardal,!sperling
@@ -8702,9 +8685,9 @@
 !kindertagesbetreuung,^day care,!krippe,!hort
 ^kiss,!küssen,?beijar
 ^foster home
-^pink,!pink,?cor-d^rosa,!pink,!rosa,?rosa
+^pink,!pink,?cor-de-rosa,!pink,!rosa,?rosa
 ^neapolitan
-^pink,!pink,!rosa,?cor-d^rosa,?rosa
+^pink,!pink,!rosa,?cor-de-rosa,?rosa
 !europium,^europium,?európio
 !kofferraum,?bagageira,^boot,^trunk
 ^mourning,!trauer,^mourning
@@ -10012,7 +9995,7 @@
 ^diet,!diät,?dieta
 ^downtime,!downtime
 ^renege,?descumprir
-^developer,^programmer,!entwickler,!softwar^entwickler,!programmierer,^software developer,?programador
+^developer,^programmer,!entwickler,!software-entwickler,!programmierer,^software developer,?programador
 ^master plan
 ^openly,^openlijk
 ^cause,!ursache
@@ -10097,45 +10080,9 @@
 ^little rock
 ^sacramento,!sacramento,?sacramento
 ^denver,?denver
-^hartford
-^dover
-^tallahassee
 ^atlanta,?atlanta
-^honolulu
-^boise
 ^springfield,!springfield
 ^indianapolis,?indianápolis,!indianapolis
-^des moines
-^topeka
-^frankfort
-^baton rouge
-^augusta
-^annapolis
-^lansing
-^st. paul
-^jackson
-^jefferson city
-^helena
-^lincoln
-^carson city
-^concord
-^trenton
-^santa fe
-^albany
-^raleigh
-^bismarck
-^columbus,!columbus
-^oklahoma city
-^salem
-^harrisburg
-^providence
-^pierre
-^nashville
-^austin,?austin
-^salt lake city
-^montpelier
-^richmond
-^olympia
 ^charleston,!charleston
 ^madison
 ^cheyenne
@@ -10268,13 +10215,8 @@
 ^single,^whole,!ganz
 ^single,!allein
 ^single,^unmarried,^unwed,^spouseless,!alleinstehend,!ledig,!unverheiratet
-^single
-^single
-^single
 ^single,^single out
-^single
 ^cocaine,!kokain,!cocain,?cocaína
-^dog
 ^jack-o'-lantern,^jack o'lantern,!jack o’lantern
 ^halloween,!halloween
 !süßwaren,!süßigkeiten,^candy,!süßigkeit,!süßware
@@ -10287,27 +10229,20 @@
 ^sniper,?franco-atirador,!heckenschütze,?franco atirador
 !klempner,^plumber,?picheleiro
 !elektriker,^electrician,?electricista
-^ma
-^mali
 !zebraspringspinne,^zebra spider
-^arch,?arco
-^arch,?arco
 ^arch,?arco
 ^mason,^bricklayer,^stonemason,!maurer,?pedreiro
 !überall,^everywhere,!allenthalben,!allerorts,!allerorten,!allüberall
 !überallhin,^everywhere
-!überallher
 ^purgatory,!fegefeuer
 ^purgatory
 ^hell,!hölle
 ^hell,!hölle
-!priester
 ^alpha and omega,!das a und das o,!a und o,!alpha und omega
 !a und o,^alpha and omega
 ^anal sex,^anal intercourse,!analverkehr,!analkoitus,?sexo anal,!analsex
 ^semen,!sperma,!ejakulat,!samen,?sémen,?esperma
 ^audacity,?audácia,^audaciousness,^temerity,!kühnheit,!wagemut,!verwegenheit
-^69,^69 position,!neunundsechzig
 ^prostitution,!prostitution,?prostituição
 ^ancestor,^ancient person,^ancient person
 ^heterosexuality,!heterosexualität,?heterossexualidade
@@ -10333,9 +10268,8 @@
 !hohl
 ^copy,^duplicate,!kopie
 ^backup,!backup,!sicherheitskopie
-!feuersalamander,^fire salamander,?salamandra-d^fogo,^fire salamander
+!feuersalamander,^fire salamander,?salamandra-de-fogo,^fire salamander
 ^duplicate,!duplikat
-^copy
 ^copy,^copiar,^imitate,!nachäffen,!nachmachen,!nachahmen
 ^day of the dead,!tag der toten
 ^snow globe,!schneekugel
@@ -10361,7 +10295,6 @@
 ^share,!pflugeisen
 ^paediatrician,!kinderarzt,?pediatra,!pädiatrist,^pediatrician,!pädiater
 ^share,!teilen,?compartilhar,?partilhar
-^share
 ^share,?partilhar,!teilen
 ^contrary,^opposite
 ^wales,!wales,?país de gales
@@ -10393,8 +10326,6 @@
 ^free morpheme,!frei morphem,!freies morphem
 ^bound morpheme,!gebunde morphem,!genundenes morphem,!gebundenes morphem
 ^bitter,!bitter,?amargo
-^bitter
-^duduk,!duduk
 ^recorder,!blockflöte,?flauta doce
 ^poison,!vergiften
 ^poisonous,!giftig,!toxisch
@@ -10466,8 +10397,6 @@
 ^ambulatory,?deambulatório,?charola
 ^antefixa
 !abakus,^abacus,?ábaco
-^altar
-^are
 ^alchemy,!alchimie,?alquimia,!alchemie,!alchymie
 ^forgiveness,!vergebung,?perdão
 ^pardon,!begnadigung
@@ -10515,7 +10444,6 @@
 ^blood sedimentation
 ^phishing,!phishing,?phishing
 ^thrombus,^blood clot
-^conversation
 ^conversation,!unterhaltung,?conversa
 !zeitschleife,^time loop
 ^bathing
@@ -10531,7 +10459,7 @@
 ^impunity,?impunidade,!straflosigkeit
 !diätist,^dietician,?dietista
 ^gagauz,^gagauz
-^wisent,!wisent,?bisont^europeu,?bisão-europeu,^aurochs
+^wisent,!wisent,?bisonte-europeu,?bisão-europeu,^aurochs
 !geograf,^geographer,?geógrafo
 ^contagious,!ansteckend,!infektiös,?contagioso,^contractable,^catching,!kontagiös
 ^ruffe,!kaulbarsch
@@ -10644,11 +10572,9 @@
 ^moldovan,^moldavian
 ^moldavian,!moldawisch,?moldávio
 ^yugoslavia,!jugoslawien,^jugoslavija
-^yugoslav
-^yugoslav
 ^foreplay,!vorspiel
 ^venus,!venus,?vénus
-^earth
+^earth,?terra
 ^jupiter,!jupiter,?júpiter
 ^saturn,!saturn,?saturno
 ^uranus,!uranus,?urano
@@ -10656,17 +10582,13 @@
 !graveur,^engraver,?gravador
 ^markov property,!markow-eigenschaft,!markov-eigenschaft
 ^markov chain,!markow-kette,?cadeias de markov,?cadeia de markov,!markowsche kette,!markov-kette,!markoff-kette,^markoff chain
-^upstage
 ^flagship,!flaggschiff
-^flagship
 !jagdaufseher,!wildhüter,^gamekeeper
 ^intractable,!widerspenstig,!störrisch
 ^across
 ^reminiscent,?nostálgico
 ^concise,!knapp,!prägnant,!konzis,?conciso,!kurz und bündig
 ^angle,!winkel
-^angle
-^animal
 !ehrpusselig,!ehrpusslig
 !ehrpusseligkeit
 ^lithuanian,?lituano
@@ -11077,7 +10999,7 @@
 ^dessert,!nachspeise,!dessert,?sobremesa,!nachtisch
 ^cryptic,!kryptisch
 ^congratulations,!glückwunsch
-!todmüde,^dead tired,!hundemüde,!übermüdet,^do!tired,?morto de cansado,^bone tired,^bon^tired
+!todmüde,^dead tired,!hundemüde,!übermüdet,^dog-tired,?morto de cansado,^bone tired,^bon^tired
 ^economist,!ökonom,!wirtschaftswissenschaftler
 ^cassava,^manioc,!maniok,!mandioka,!kassava,!kassave,!yuca
 ^maa,^maa
@@ -11238,7 +11160,7 @@
 !weihnachtslied,^christmas carol
 ^persuade,!überreden,?persuadir,?convencer,!überzeugen
 ^persuation,!überzeugung,^persuasion
-^incandescent,!weißglühend,^whit^hot
+^incandescent,!weißglühend,^white-hot
 !rotglühend,^red-hot
 ^apocope,!apokope,!abissio,!abscisio,!abscissio,!absissio,?apócope
 ^musicology,!musikwissenschaft,?musicologia
@@ -11427,11 +11349,11 @@
 ^cosmonaut,!kosmonaut
 ^taikonaut,!taikonaut
 ^harmonium,^harmonium,!harmonium
-!dudelsack,!sackpfeife,^bagpipes,?gaita-d^fole
+!dudelsack,!sackpfeife,^bagpipes,?gaita-de-fole
 !frohe weihnachten und ein schönes neues jahr,^merry christmas and a happy new year,?bom natal e feliz ano novo
 !möchtegern,^pseudo,^wannabe,^wanna-be,^would-be
 ^pony,!pony
-^ponytail,?rabo-d^cavalo,!pferdeschwanz
+^ponytail,?rabo-de-cavalo,!pferdeschwanz
 ^gift ribbon,!geschenkband
 !relativitätstheorie,^theory of relativity
 ^liberalism,!liberalismus,?liberalismo
@@ -12018,7 +11940,7 @@
 ^alkene,!alkene,?alceno,?alqueno,!alken
 ^alkyne,!alkine,?alcino,!acetylenkohlenwasserstof,!alkin,!acetylenkohlenwasserstoff
 !bescheiden,^modest
-^dyslexia,!legasthenie,?dislexia,!les^rechtschreib-störung,!les^rechtschreib-schwäche
+^dyslexia,!legasthenie,?dislexia,!lese-rechtschreib-störung,!lese-rechtschreib-schwäche
 ^deaf,!taub,?surda,!gehörlos,?surdo
 ^braille,!blindenschrift,?braille,!brailleschrift
 ^polyester,!polyester,?poliéster
@@ -12179,7 +12101,7 @@
 !betrag,^amount,?montante,?totalizar
 ^amplifier,!verstärker,?amplificador
 !zeichentrick,^animation,?animação
-^preview,!vorpremiere,!preview,!voraufführung,?ant^estreia
+^preview,!vorpremiere,!preview,!voraufführung,?ante-estreia
 ^application software,^applications software,!anwendersoftware,^application,^app,^application software,^software application,!anwendung,!applkation,!applikation,!anwendungssoftware,?aplicação,?software aplicativo,^application program
 !rätsel,^situation puzzle,^mystery,^enigma,?charada
 !rätsel,^mystery,?adivinha
@@ -12776,7 +12698,7 @@
 ^about-turn,!kursänderung,?inversão de rota
 !bewässert,^irrigational,!bewässerungs-,?irrigável
 !antrag,^appeal,^petition,?instância,^request
-^large land holdings,!großgrundbesitz,^larg^scale landed property,?latifúndio
+^large land holdings,!großgrundbesitz,^large-scale landed property,?latifúndio
 ^authorised,!berechtigt,!autorisiert,?autorizado
 !hebel,^lever,?alavanca
 ^liquidate,!liquidieren,?liquidar
@@ -13028,7 +12950,7 @@
 ^hold an office,?cumprir uma tarefa
 ^hold,!bekleiden,?exercer,^occupy,^fill,^bear
 ^impugn,^challenge,^contest,^dispute,!bestreiten,^compete,^contend
-^pr^eclampsia,!präeklampsie
+^pre-eclampsia,!präeklampsie
 ^albuminuria,!albuminurie
 ^bilingual,!bilingual,!zweisprachig
 ^bilingual
@@ -13681,7 +13603,7 @@
 ^mononucleosis,^infectious mononucleosis,^pfeiffer's disease,^glandular fever,!pfeiffer-drüsenfieber,!pfeiffersches drüsenfieber,!mononukleose,!monozytenangina,!morbus pfeiffer
 ^expression,?expressão,!ausdruck
 ^expression,?expressão
-^drake equation,!drak^gleichung
+^drake equation,!drake-gleichung
 ^digression,?digressão
 ^exotic,!exotisch
 ^exotic,!exotisch
@@ -13896,7 +13818,7 @@
 ^obviously,!wohlgemerkt,^obviously,?obviamente
 !stubenrein
 !eclair,^éclair,?éclair
-!ringelnatter,^grass snake,?cobra-d^água-d^colar
+!ringelnatter,^grass snake,?cobra-de-água-de-colar
 ^the
 !bedürftig,^needing,?pobre em
 !gabelung,^crossroads,!scheideweg,?encruzilhada
@@ -13947,7 +13869,7 @@
 ^internet connection,!internetanschluss,!internetanbindung,!internetyugang,!internetverbindung,!internetzugang
 ^guerrilla,!guerilla,?guerrilha,^guerilla,^irregular,^insurgent,!guerilla,!partisan,!partisanin,^partisan
 ^name,?nomear,?denominar,!benennen,!nennen,^call
-^homepage creation,!homepag^erstellung
+^homepage creation,!homepage-erstellung
 ^garage,!garage,?garagem
 ^web design,^website design,!webdesign,!webgestaltung
 ^cartilage,!knorpel,?cartilagem
@@ -14160,7 +14082,7 @@
 ^spine,^backbone,^spine,?coluna vertebral,!rückgrat
 !volltreffer,^bull's eye,?golpe de sorte,?tiro certeiro,^fluke,^good luck,^stroke of luck
 !einen stich ins herz geben,^rip into the heart of,?ataque ao seio de
-!oberbefehlshaber,^commander-in-chief,^generalissimo,?comandant^geral
+!oberbefehlshaber,^commander-in-chief,^generalissimo,?comandante-geral
 ^shop assistant,!verkäufer,?empregado de balcão,^salesperson,^cashier,^cashier
 !mitschüler,?companheiro,^partner
 !ausgleichen,^compensate,?compensar
@@ -14279,7 +14201,7 @@
 !kreuzzug,^crusade,?cruzada,!kampagne,!feldzug
 !einsturz,^collapse,?queda
 ^bloody,!blutig,?sangrento
-!pfleg^,^care,?cuidado,^caring
+!pflege-,^care,?cuidado,^caring
 !zunächst,^at first,?inicialmente,?de início,!zuerst,^initially,^first
 ^state,!staat
 ^state,!zustand
@@ -14319,7 +14241,7 @@
 ^chancroid,!weicher schanker
 ^chlamydia,!chlamydien
 ^gonorrhea,!gonorrhoe,?gonorréia
-^lymphogranuloma venereum,!lymphogranuloma venereum,!venerisches granulom,!lymphopathia venerea,!lymphogranuloma inguinale,!nicolas-durand-favr^krankheit
+^lymphogranuloma venereum,!lymphogranuloma venereum,!venerisches granulom,!lymphopathia venerea,!lymphogranuloma inguinale,!nicolas-durand-favre-krankheit
 ^genital ulcer disease,!genitales geschwür
 ^pelvic inflammatory disease,!akute beckenentzündung
 ^humoral immunity,!humorale immunität
@@ -14598,7 +14520,7 @@
 ^torpedo,!torpedo,?torpedo
 ^trustworthy,!vertrauenswürdig,?confiável
 ^trust,!vertrauen,?confiança,^confidence
-!mess^,^trade fair,?relativo a feira
+!messe-,^trade fair,?relativo a feira
 !ausgerichtet,^targeted,?orientado
 ^budget,!haushaltsgesetz,^budget act,?lei orçamentária
 !polizeibeamter für die zoll- und steuerkontrolle,^customs,?agente de alfândega
@@ -14773,7 +14695,7 @@
 !hemmung,^inhibition,?inibição
 ^lash,!peitschen,?chicotear
 !kern,^keystone,^lynchpin,?ponto fulcral
-!rauchpatrone,^smok^producing round,?fumigação
+!rauchpatrone,^smoke-producing round,?fumigação
 !wutentbrannt,^infuriated,?furibundo
 !krebs,^crab,?caranguejo,!krabbe
 !zeugen,^generate,^procreate,?gerar
@@ -14931,7 +14853,7 @@
 !unversehrt,^intact,?intacto
 !ausrufen,^call,?convocar,?divulgar
 !anthrazit,^anthracite,^anthracite coal
-!seeadler,^whit^tailed eagle,^whit^tailed eagle,^sea eagle,^erne,^ern,^whit^tailed sea-eagle
+!seeadler,^white-tailed eagle,^white-tailed eagle,^sea eagle,^erne,^ern,^white-tailed sea-eagle
 ^colostrum,!vormilch,!kolostrum,!kolostralmilch,!biestmilch,!beestmilch,!erstmilch
 !erkennen,^identification,^pinpoint,?identificação
 ^limitation,^constraint,!beschränkung,!beschränktheit,!begrenztheit
@@ -14990,7 +14912,7 @@
 ^mausoleum,!mausoleum,?mausoléu
 ^marquetry,!marketerie,?marchetaria
 ^mercenary,!söldner,?mercenário
-^siberian tiger,^north china tiger,^manchurian tiger,^amur tiger,^korean tiger,!sibirischer tiger,!amurtiger,?tigr^siberiano,^siberian tiger,^north china tiger,^manchurian tiger,^amur tiger,^korean tiger,^ussuri tiger,^altaic tiger,!amur-tiger
+^siberian tiger,^north china tiger,^manchurian tiger,^amur tiger,^korean tiger,!sibirischer tiger,!amurtiger,?tigre-siberiano,^siberian tiger,^north china tiger,^manchurian tiger,^amur tiger,^korean tiger,^ussuri tiger,^altaic tiger,!amur-tiger
 ^monoculture,!monokultur,?monocultura
 ^mistral,!mistral,?mistral
 ^bribe,?suborno,!schmiergeld,!bakschisch,^payoff,!bestechungsgeld
@@ -15326,7 +15248,7 @@
 ^deplete
 ^gregorian calendar,!gregorianischer kalender,!gregorianischer kalender
 ^web mail
-^crowbar,!nageleisen,!brecheisen,?pé-d^cabra,^jemmy,^nail bar,^pry bar,!kuhfuß
+^crowbar,!nageleisen,!brecheisen,?pé-de-cabra,^jemmy,^nail bar,^pry bar,!kuhfuß
 ^anime,!anime,?anime
 ^multiply,!multiplizieren,!malnehmen,?multiplicar
 ^add,!addieren,?somar,^add together
@@ -15557,25 +15479,6 @@
 !bougainvillea,!drillingsblume,^bougainvillea,!bougainville
 ^scratch,?arranhar,^graze
 ^swell,^inflar,!anschwellen,!schwellen,!zunehmen,!blähen,!aufblähen,!aufquellen
-^heredity
-^heredity
-^hypotonic
-^hypertonic
-^hydroponics
-^homologous
-^heterologous
-^helix,!helix
-^hermaphrodite
-^hermaphrodite
-^attenuated vaccine
-^edible vaccine
-^multivalent vaccine
-^peptide vaccine
-^recombinant vaccine
-^viral vaccine
-^live recombinant vaccine
-^dna vaccine
-^vegemite
 ^cheddar,^cheddar
 ^cheddar,^cheddar,!cheddar,^cheddar cheese
 ^indigence,?indigência
@@ -15608,7 +15511,7 @@
 !knüppelschlag,^bludgeon,^bludgeon strike,?cacetada
 !lenker,^handlebar,?guiador
 !fäulnis,^putrescence,^putridity,?podridão
-!casalinga,!hausfrau,^housewife,?dona de casa,?doméstica,?dona-d^casa
+!casalinga,!hausfrau,^housewife,?dona de casa,?doméstica,?dona-de-casa
 !freimauerisch,^masonic,?maçónico
 !kindergarten,^kindergarten,?jardim de infância
 !göbekli tepe,^göbekli tepe
@@ -15621,7 +15524,6 @@
 ^meritocracy,!leistungsprinzip,?meritocracia
 ^water turbine,!wasserturbine
 ^worship,!verehrung,!anbetung,?adorar
-^worship
 !walpurgisnacht,^walpurgis night
 ^workforce,!belegschaft,!arbeiterschaft,!belegschaft,^work force
 !maifeiertag,!erster mai,!tag der arbeit,!kampftag der arbeiterbewegung,^may day
@@ -15639,7 +15541,7 @@
 ^muzzle,!maulkorb,?açaimo,?açaime
 !verstümmelung,^mutilation,?mutilação
 !scharf,^sharp,?bem acabado
-!(markt-)nische,^market niche,!marktnische,?nicho de mercado
+^market niche,!marktnische,?nicho de mercado
 !adeln,^ennoble,?enobrecer,?nobilitar
 !nominierung,^nomination,?nomeação
 !nachlässigkeit,^nonchalance,?desleixo
@@ -15677,11 +15579,7 @@
 ^fallow,^set-aside
 ^felon,!verbrecher
 !hornisse,^european hornet,^hornet,?vespão,?abelha-pedreira
-!kampf,^fight
-!des
-^two
-!des
-^couch
+!kampf,^fight,?luta
 !insektenstich,^insect sting
 !hornissenstich,^hornet sting
 !bienenstich,^bee sting,^bee bite
@@ -15794,18 +15692,10 @@
 !entnahme,^withdrawal,?levantamento
 ^premeditated,!vorsätzlich,?premeditato
 ^voter,!wähler
-^iso 639-6 codes,!iso-639-6-codes,?códigos iso 639-3,?códigos iso 639-6,^iso-dis-639-6 codes,!iso-dis-639-6-codes,?códigos iso-dis-639-6,^iso dis-639-6 codes,!iso dis-639-6-codes,?códigos iso dis-639-6,^iso 639-6 codes
 ^parent,?pai,!oberbegriff
 ^child,?filho,!unterbegriff
 ^altaic proper
 ^halh mongolian,^mongolian,!mongolisch,!chalcha-mongolisch,?mongol,?mongol khalkha
-^darkhat spoken
-^oirat kalmyk cluster
-^kalmyk; oirat
-^kalmyk; oirat written
-^kalmyk; oirat written cyrillic script
-^kalmyk; oirat spoken
-^kalmyk,^russian oirat,^kalmyk oirat,!kalmykisch,^kalmyk-oirat
 ^mon
 ^khôn!khêng
 ^vietnamese spoken,!gesprochenes vietnamesisch
@@ -15874,1183 +15764,23 @@
 ^cornish,!kornisch,!kernewek,!kernowek,!kernuak,?córnico,^cornish
 ^cornish written,?córnico escrito
 ^cornish written latin script old
-^cornish written latin script pr^modern
+^cornish written latin script pre-modern
 ^cornish written latin script modern
 ^cornish spoken,?córnico falado
 ^modern revived cornish
 ^kemmyn
 ^breton written,!geschriebenes bretonisch
 ^indic,!indoarische sprache,!indoarisch,^indo-aryan languages,^indic languages
-^northern india
-^lomavren
-^lomavren spoken
-^caló cluster
-^caló ,^caló
-^caló written
-^caló written latin script
-^caló spoken
-^caló-c
-^calaó
-^catalonian caló
-^gitano
-^caló-s
-^caló-brasil
-^rodi cluster
-^traveller danish
-^traveller danish spoken
-^dansk-rodi
-^skånsk-rodi
-^svenska-rodi
-^travellers norwegian
-^travellers norwegian spoken
-^anglicised- romani cluster
-^angloromani
-^angloromani spoken
-^pogadi-chib-a
-^anglo-romani-america
-^anglo-romani-africa
-^anglo-romani-australia
-^elamo dravidian
 ^elamite,!elamisch,!elamitisch
-^elamite written
-^elamite written proto-elamite inscription
-^elamite written linear-elamite inscription
 ^dravidian,!dravidisch
-^dravidian northwest cluster
 ^brahui,!brahui,^brahvi
 ^brahui written,!geschriebenes brahui
 ^brahui written nastaliq script
 ^brahui written perso-arabic script: kalat model
 ^brahui spoken,!gesprochenes brahui
-^bra'uidi-formal
-^jharawian
-^kalat
 ^sarawan,!sarawan
-^dravidian proper
-^dravidian northeast cluster
-^kurux,^kurukh,^ku?ux,^kuru??
-^kurux written
-^kurux written devanagari script
-^kurux spoken
-^oraon
-^kisan
-^chota-nagpur-kurukh
-^chota-nagpur-kurukh spoken
-^hazaribagh
-^raigarh
-^nepali kurux
-^nepali kurux spoken
-^sauria paharia
-^sauria paharia written
-^sauria paharia written devanagari script
-^sauria paharia spoken
-^sahibganj
-^godda
-^hiranpur
-^litipara
-^kumarbhag paharia,^kumhar bhag paharia
-^kumarbhag paharia written
-^kumarbhag paharia written devanagari script
-^kumarbhag paharia spoken
-^malpaharia-malto
-^sawriya-malto
-^dravidian central
-^kolami parij
-^kolami naiki cluster
-^northwestern kolami
-^northwestern kolami written
-^northwestern kolami written devanagari script
-^northwestern kolami spoken
-^wardha
-^wardha spoken
-^naikri
-^naikri spoken
-^madka-kinwat
-^madka-kinwat spoken
-^pulgaon
-^pulgaon spoken
-^wani
-^wani spoken
-^maregaon
-^maregaon spoken
-^southwestern kolami
-^southwestern kolami written
-^southwestern kolami written devanagari script
-^southwestern kolami spoken
-^naiki-p
-^naiki-p spoken
-^metla-kinwat
-^metla-kinwat spoken
-^manda spoken
-^pengo
-^pengo written
-^pengo spoken
-^telugu cluster
 ^telugu written,!geschriebenes telugu,^telugu written
-^telugu written telugu script historical,^telugu written telugu script historical
-^telugu written telugu script modern
-^telugu written latin script
-^telugu spoken
-^telugu-formal
-^telugu-general
-^srikaukulam
-^visakhapatnam
-^gunter
-^rayalasimaaa,^rayalasima
-^telangana
-^east godveri
-^nellore
-^beradi
-^dasari
-^dommara
-^golari
-^kamathi
-^komtao
-^salewari
-^vadaga
-^vadari
-^yanadi
-^konda-reddi
-^chenchu
-^chenchu written
-^chenchu written telugu script
-^chenchu spoken
-^savara
-^savara written
-^savara written oriya script
-^savara written telugu script
-^savara spoken
-^waddar
-^waddar spoken
-^holiya
-^holiya written
-^holiya spoken
-^dravidian south
-^tulu cluster
-^tulu
-^tulu written
-^tulu written kannada script
-^tulu spoken
-^bellari
-^bellari written
-^bellari written kannada script
-^ainu written,!geschriebenes ainu
-^shatt
-^shatt written
-^shatt spoken
-^daman-shatt
-^safia-shatt
-^tebeldia-shatt
-^east sudanic eastern
 ^nubian,!nubisch,?núbio
-^nubian northern cluster
-^nobiin,!nobiin,^mahan
-^nobiin written,!geschriebenes nobiin
-^nobiin written arab script
-^nobiin written latin script
-^nobiin spoken,!gesprochenes nobiin
-^fiadidja
-^fiadidja spoken
-^mahas
-^mahas spoken
-^nubian central
-^kenuz
-^kenuz written
-^kenuz spoken
-^dongola
-^dongola spoken
-^hill nubian
-^kithoniri- wunci cluster
-^el hugeirat
-^el hugeirat spoken
-^kodin-ni-ai
-^kodin-ni-ai spoken
-^dair
-^dair spoken
-^kadaru-ghulfan cluster
-^ghulfan
-^ghulfan spoken
-^kurgul
-^morung
-^debri
-^debri spoken
-^kadaru
-^kadaru spoken
-^kururuu
-^kurtala
-^dabatna
-^kuldaji
-^karko
-^karko spoken
-^wali
-^wali spoken
-^ginuk
-^ginuk spoken
-^tabaq
-^tabaq spoken
-^dilling
-^dilling spoken
-^nubian western cluster
-^midob
-^midob spoken
-^urrti
-^torti
-^shalkota
-^birked cluster
-^birked
-^haraza
-^nyimang cluster
-^ama (sudan)
-^ama (sudan) written
-^ama (sudan) written latin script
-^ama (sudan) spoken
-^i-nyimang
-^mandal
-^afitti
-^afitti spoken
-^ditti
-^ditti spoken
-^unietti
-^unietti spoken
-^dinik
-^dinik spoken
-^temein cluster
-^temein
-^temein written
-^temein written latin script
-^temein spoken
-^keiga-jirru
-^keiga-jirru spoken
-^tese
-^tese spoken
-^umm-danab
-^umm-danab spoken
-^wider-kadugli cluster,^kadu languages,^kadugli–krongo languages,^tumtum languages
-^thoma-ma-miri
-^thoma-ma-miri written
-^thoma-ma-miri written latin script
-^thoma-ma-miri spoken
-^thoma-ma-dhalla
-^thoma-ma-dhalla spoken
-^thoma-ma-dholubi
-^thoma-ma-dholubi spoken
-^kufo
-^kufo spoken
-^kanga
-^kanga spoken
-^abu-sinun
-^chiroro- kursi
-^kufa- lima
-^krongo abdalla
-^tumma- sangali
-^tumma- sangali spoken
-^katcha-kadugli-miri,^kadugli,^central kadu
-^katcha-kadugli-miri spoken
-^damba
-^sangali
-^belanya
-^krongo-abdallah
-^tulishi
-^tulishi spoken
-^kamdang
-^kamdang spoken
-^turuj
-^turuj spoken
-^turuj-a
-^logoke
-^minjimmina
-^krongo
-^krongo spoken
-^tabanya
-^dimodongo
-^fama
-^tumtum
-^tumtum spoken
-^talasa
-^talasa spoken
-^karondi
-^karondi spoken
-^keiga
-^keiga spoken
-^keiga-el-kheil
-^kalda
-^lubun
-^tummero
-^sani-mo-rofik
-^saani-mo-rofik spoken
-^nera cluster
-^nara
-^nara written
-^nara written latin script
-^nara spoken
-^higir
-^higir written
-^higir written ethiopic script
-^higir written latin script
-^higir spoken
-^mogareb
-^mogareb spoken
-^koyta
-^koyta spoken
-^santora
-^santora spoken
-^kunama cluster
-^kunama
-^kunama written
-^kunama written latin script
-^kunama written ethiopic script
-^kunama spoken
-^marda
-^marda spoken
-^aimara,^aymara
-^aimara spoken
-^sokodasa
-^sokodasa spoken
-^barka
-^barka spoken
-^setiit
-^setiit spoken
-^tiika
-^tiika spoken
-^bitaama
-^bitaama spoken
-^ilit
-^ilit spoken
-^komuz
-^gumuz cluster
-^gumuz
-^gumuz written
-^gumuz written latin script
-^gumuz spoken
-^guba
-^wenbera
-^sirba
-^agalo
-^yaso
-^mandura,^mandura
-^dibate
-^metemma
-^dakunza
-^dakunza spoken
-^sai
-^sai spoken
-^sese
-^sese spoken
-^disoha
-^disoha spoken
-^dekoka
-^dekoka spoken
-^dewiya
-^dewiya spoken
-^kukwaya
-^kukwaya spoken
-^gombo
-^gombo spoken
-^jemhwa
-^jemhwa spoken
-^modea
-^modea spoken
-^welqita
-^welqita spoken
-^eastern jebel
-^aka-kelo- molo cluster
-^aka,^silak,^sillok
-^aka written
-^aka written latin script
-^aka written ethiopic script
-^aka spoken
-^molo
-^molo spoken
-^kelo
-^keelo spoken
-^ndu-faa-kelo
-^ndu-faa-kelo spoken
-^beni-sheko
-^beni-sheko spoken
-^tornasi
-^tornasi spoken
-^gaam cluster
-^gaam
-^gaam written
-^gaam spoken
-^agadi
-^bagis
-^beek
-^bulmut
-^kilgu
-^kukuli
-^mugum
-^sidak
-^berta cluster
-^berta
-^berta written
-^berta written latin script
-^berta spoken
-^shuru
-^bake
-^undu
-^mayu
-^fadashi
-^dabuso
-^gamila
-^gamila spoken
-^gobato
-^gobato spoken
-^koman cluster
-^gule
-^anej written
-^anej written latin script
-^anej written ethiopic script
-^uduk
-^uduk written
-^uduk spoken
-^twam-pa-c
-^twam-pa-s
-^kwama
-^kwama spoken
-^komo (sudan)
-^komo (sudan) written
-^komo (sudan) spoken
-^beilla
-^chali
-^koma of begi
-^koma of daga
-^madiin
-^madin spoken
-^opuuo
-^opuuo spoken
-^buldiit
-^buldiit spoken
-^kusgilo
-^kusgilo spoken
-^surma
-^surmic south
-^surmic southwest
-^didinga -murle
-^didinga longarim cluster
-^narim
-^narim written
-^narim written latin script
-^narim written ethiopic script
-^narim spoken
-^didinga
-^didinga written
-^didinga written latin script
-^didinga written ethiopic script
-^didinga spoken
-^lowudo
-^chukudom
-^murle cluster
-^murle
-^murle written
-^murle spoken
-^ol-ci-lotilla
-^ol-ci-bom
-^olam
-^murl^omo
-^tenet cluster
-^tennet
-^tennet written
-^tennet spoken
-^kacipo- balesi cluster
-^zilmamu
-^zilmamu spoken
-^bal^si
-^bal^si spoken
-^kacipo-balesi
-^kacipo spoken
-^kwegu
-^pastoral
-^me'en cluster
-^me’en
-^me’en written
-^me’en written ethiopic script
-^me’en spoken
-^bodi
-^tishena
-^suri cluster
-^mursi
-^mursi written
-^mursi spoken
-^tirma
-^tirma spoken
-^suri
-^suri written
-^suri spoken
-^kwegoi cluster
-^kwegu
-^kwegu spoken
-^muguji-apo
-^muguji-apo spoken
-^majan!shabo cluster
-^majang
-^majang
-^majang spoken
-^shabo
-^shabo spoken
-^nilotic
-^nilotic western
-^dinka nuer
-^dinka cluster
-^northeastern dinka
-^northeastern dinka written
-^northeastern dinka written latin script
-^northeastern dinka spoken
-^abialang
-^paloc
-^dongjol
-^ngok
-^ngok spoken
-^thoi- luac
-^thoi- luac spoken
-^thoi
-^luac
-^rut
-^rut spoken
-^northwestern dinka
-^northwestern dinka written
-^northwestern dinka written latin script
-^northwestern dinka spoken
-^pawang
-^kwil
-^awet
-^alor
-^jok
-^pan-aru
-^malual- tuic
-^malual- tuic spoken
-^malual
-^abiem
-^tuic
-^palioupiny
-^palioupiny spoken
-^gomjuer
-^cimel
-^ajuet
-^akuan!ayat
-^southwestern dinka
-^southwestern dinka written
-^southwestern dinka written latin script
-^southwestern dinka spoken
-^rek-c
-^paliet
-^luac-w
-^aguok
-^apuk
-^awan
-^lau-sw
-^rek-v
-^gok
-^gok spoken
-^south central dinka
-^south central dinka written
-^south central dinka written latin script
-^south central dinka spoken
-^agar
-^ciec
-^aliap
-^aliap spoken
-^aker
-^thany
-^southeastern dinka
-^southeastern dinka written
-^southeastern dinka written latin script
-^southeastern dinka spoken
-^bor-gok
-^athoc
-^twi,!twi,?twi
-^nyaruen! ghol
-^nyaruen! ghol spoken
-^nyarueng
-^ghol
-^nuer cluster
-^nuer
-^nuer written
-^nuer written latin script
-^nuer spoken
-^thiang
-^thiang spoken
-^gawaar
-^gawaar spoken
-^door- nyuong
-^door- nyuong spoken
-^door
-^nyuong
-^dar-cieng
-^dar-cieng spoken
-^aak
-^dok
-^jagei
-^jagei spoken
-^leek- laak
-^leek- laak spoken
-^leek
-^laak
-^bul
-^bul spoken
-^jikany-w
-^jikany-w spoken
-^nuer-east
-^nuer-east spoken
-^jikany-e
-^jikany-e spoken
-^reel
-^reel spoken
-^kuek-rorkec
-^apak
-^aril
-^jilek
-^akot
-^luo,^dholuo
-^luo northern
-^shilluk cluster
-^shilluk
-^shilluk written
-^shilluk written latin script
-^shilluk spoken
-^dho-colo-western
-^dho-colo-western spoken
-^dho-colo-eastern
-^dho-colo-eastern spoken
-^anuak cluster
-^anuak
-^anuak written
-^anuak written latin script
-^anuak spoken
-^adongo
-^adongo spoken
-^lul
-^lul spoken
-^openo
-^openo spoken
-^ciro
-^ciro spoken
-^pari cluster
-^päri
-^päri spoken
-^thuri cluster
-^thuri
-^thuri spoken
-^dh^bodho
-^dh^bodho spoken
-^dh^colo-s
-^dh^colo-s spoken
-^jur manangeer
-^jur manangeer spoken
-^jur cluster
-^luwo
-^luwo spoken
-^bor cluster
-^belanda bor
-^belanda bor spoken
-^dh^bor-n
-^dh^bor-n spoken
-^dh^bor-w
-^dh^bor-w spoken
-^dh^bor-e
-^dh^bor-e spoken
-^luo southen
-^luo acholi
-^alur acholi cluster
-^alur
-^alur written
-^alur spoken
-^aluur-a
-^nam
-^ma-mbisa
-^kot
-^nyoro
-^lango acholi cluster
-^acholi written
-^acholi written latin script,^acholi (latin)
-^acholi spoken
-^dok-acholi
-^lo!acholi
-^lo!m^labwor
-^lo!m^labwor spoken
-^dho-pa-lwo
-^dho-pa-lwo spoken
-^nyakwai
-^nyakwai spoken
-^lango
-^lango written
-^lango written latin script
-^lango spoken
-^kumam cluster
-^kumam
-^kumam spoken
-^adhola cluster
-^adhola
-^adhola written
-^adhola spoken
-^luo cluster
-^luo
-^luo written
-^luo spoken
-^maban-burun
-^burun cluster
-^ragreig
-^ragreig spoken
-^burun
-^burun spoken
-^maiak
-^maiak spoken
-^mughaja
-^mughaja spoken
-^bogon
-^bogon spoken
-^tarak
-^tarak spoken
-^mufwa
-^mufwa spoken
-^maban cluster
-^gerawi
-^gerawi spoken
-^begu
-^begu spoken
-^jumjum
-^jumjum spoken
-^tunya
-^terta
-^wadega
-^wadega spoken
-^mabaan
-^mabaan spoken
-^nilotic-eastern
-^bari cluster
-^mandari
-^mandari written
-^mandari written latin script
-^mandari spoken
-^kutuk-na-mundari
-^kutuk-na-mundari spoken
-^bari
-^bari written
-^bari spoken
-^nyangbara
-^nyangbara spoken
-^nyangbara-nw
-^nyangbara-ne
-^nyangbara-s
-^pöjulu
-^pöjulu spoken
-^pöjulu-n
-^pöjulu-c
-^pöjulu-s
-^pöjulu-sw
-^pöjulu-se
-^nyepu
-^nyepu spoken
-^kutuk-na-kuku
-^kutuk-na-kuku spoken
-^ligo
-^ligo spoken
-^kakwa,^bari kakwa,^kakua,^kwakwak
-^kakwa written
-^kakwa spoken
-^yei
-^aba
-^yumbe
-^lotuxo-teso
-^lotuxo-maa
-^lotuxo cluster
-^otuho,^lotuko,^lotuxo
-^otuho written
-^otuho spoken
-^lokoya
-^lokoya spoken
-^o-irya
-^o-bolong
-^netuk-on-o-ghoriuk
-^netuk-on-o-ghoriuk spoken
-^tuxo
-^tuxo spoken
-^lowudo
-^lowudo spoken
-^logotok
-^logotok spoken
-^lopit
-^lopit spoken
-^lomya
-^lomya spoken
-^dongotono
-^dongotono spoken
-^lorwama
-^lorwama spoken
-^lokathan
-^lokathan spoken
-^lango (sudan)
-^lango (sudan) written
-^lango (sudan) spoken
-^imatong
-^langgo-dongotono
-^acholi-torit
-^acholi-torit spoken
-^logiri-dongotono
-^lolibai
-^logir
-^logir spoken
-^ongamo-maa cluster
-^masai
-^masai written
-^masai spoken
-^sirya
-^wuasinkishu
-^maasai-c
-^oytai
-^ooddo-kila-ni
-^kankere
-^kore
-^kaputiei
-^matapato
-^kisongo
-^arusha
-^baraguyu
-^sikirari
-^kwavi
-^oigob
-^samburu
-^samburu written
-^samburu spoken
-^chamus
-^chamus spoken
-^ngasa
-^ngasa spoken
-^teso-turkana
-^turkana cluster
-^jiy^n
-^jiy^n spoken
-^toposa
-^toposa written
-^toposa spoken
-^toposa-w
-^toposa-e
-^nyangatom
-^nyangatom spoken
-^puma
-^puma spoken
-^turkana
-^turkana written
-^turkana spoken
-^turkana-n
-^turkana-s
-^ketebo
-^ketebo spoken
-^o-rom
-^o-rom spoken
-^na-pore
-^na-pore spoken
-^i-dodotho
-^i-dodotho spoken
-^jiy^s
-^jiy^s spoken
-^karamojong
-^karamojong written
-^karamojong spoken
-^teso cluster
-^teso
-^teso written
-^teso spoken
-^ngora
-^pallisa
-^tesyo
-^tesyo spoken
-^tororo
-^busia
-^nilotic-southern
-^wider kalenjin
-^pakot cluster
-^pökoot
-^pökoot written
-^pökoot written latin script
-^pökoot spoken
-^suk-w
-^suk-e
-^ngi-kadama
-^ngi-kadama spoken
-^nandi-markweta,^nandi–markweta languages
-^markweta cluster
-^markwet
-^markwet spoken
-^markwet-n
-^markwet-s
-^endo
-^endo written
-^endo spoken
-^sambirir
-^sambirir spoken
-^talai
-^talai written
-^talai spoken
-^north tugen
-^north tugen spoken
-^elgon cluster
-^kupsabiny
-^kupsabiny spoken
-^mbai
-^mbai spoken
-^ki-?sorai
-^ki-?sorai spoken
-^sabaot
-^sabaot
-^sabaot spoken
-^pok
-^pok spoken
-^nga-lek-a?l-kony
-^nga-lek-a?l-kony spoken
-^ng’oma
-^ng’oma spoken
-^nandi cluster,^nandi languages
-^kalenjin
-^kalenjin written
-^kalenjin written latin script
-^kalenjin spoken
-^south tugen
-^south tugen spoken
-^keyyo
-^keyyo spoken
-^ngalek-a?naandi
-^ngalek-a?naandi spoken
-^nandi-a
-^kapsabet
-^terik
-^terik spoken
-^ngalek-a?kipsigiis
-^ngalek-a?kipsigiis spoken
-^cherangany
-^cherangany spoken
-^okiek cluster
-^okiek
-^okiek spoken
-^sogoo
-^suiei
-^suiei spoken
-^mosiro
-^mosiro spoken
-^aramanik
-^aramanik spoken
-^kisankasa
-^kisankasa spoken
-^mediak
-^mediak spoken
-^tato cluster
-^omotik
-^omotik spoken
-^datooga
-^datooga written
-^datooga spoken
-^kangara
-^kangara spoken
-^buraa-diiga
-^buraa-diiga spoken
-^rooti-gaanga
-^rooti-gaanga spoken
-^bian-jida
-^bian-jida spoken
-^darora-jega
-^darora-jega spoken
-^bajut
-^bajut spoken
-^gisam-janga
-^gisam-janga spoken
-^baraba-yiiga
-^baraba-yiiga spoken
-^tsima-jeega
-^tsima-jeega spoken
-^daragwa-jega
-^daragwa-jega spoken
-^reimo-jik
-^reimo-jik spoken
-^manga-tiga
-^manga-tiga spoken
-^ghumbi-ega
-^ghumbi-ega spoken
-^bisi-yeda
-^bisi-yeda spoken
-^gidang'o-diga
-^gidang'o-diga spoken
-^salawa-jega
-^salawa-jega spoken
-^omotic,!omotisch,^omotic languages
-^omotic south,!südomotisch,^south omotic,^somotic
-^hamer-banna,^hamer
-^hamer-banna written
-^hamer-banna written ethiopic script
-^hamer-banna spoken
-^bana-apo
-^bana-apo spoken
-^karo (ethipopoa)
-^karo (ethipopoa) spoken
-^bashada-apo
-^bashada-apo spoken
-^aari
-^aari written
-^aari written ethiopic script
-^aari spoken
-^gozza
-^gozza spoken
-^biyo
-^biyo spoken
-^laydo
-^laydo spoken
-^seyki
-^seyki spoken
-^shangama
-^shangama spoken
-^
-^sido spoken
-^wubahamer,^ubamer
-^wubahamer spoken
-^zeddo
-^zeddo spoken
-^galila
-^galila spoken
-^dime,^dima
-^dime written
-^dime written ethiopic script
-^dime spoken
-^omotic north,!nordomotisch,^north omotic,^nomotic,^aroid
-^gonga gimojan
-^gimojan
-^ometo-gimira complex
-^chara cluster
-^chara
-^chara spoken
-^ometo
-^ometo east cluster
-^zays^ zergulla
-^zays^ zergulla spoken,^zays^zergulla spoken
-^zayse
-^zayse spoken
-^zergulla
-^zergulla spoken
-^koorete
-^koorete written
-^koorete written latin script
-^koorete written ethiopic script
-^koorete spoken
-^gidicho
-^gidicho spoken
-^kachama-ganjule
-^kachama-ganjule spoken
-^ganjule
-^ganjule spoken
-^ometo central
-^walamo,^wolaytta
-^walamo written
-^walamo written latin script
-^walamo spoken
-^laha
-^zala
-^dache
-^dache spoken
-^dorze
-^dorze spoken
-^dorz^s
-^dorz^u
-^gamo-gofa-dawro
-^gamo-gofa-dawro written
-^gamo-gofa-dawro written latin script
-^gamo-gofa-dawro spoken
-^gofa
-^gofa spoken
-^gamo
-^dawro
-^kulo-kale
-^kulo-kale spoken
-^jimma
-^jimma spoken
-^gene
-^gene spoken
-^waka
-^waka spoken
-^kucha
-^kucha spoken
-^konta
-^konta spoken
-^oyda
-^oyda spoken
-^melo
-^melo spoken
-^ometo south
-^male (ethiopia)
-^male (ethiopia) spoken
-^ometo west
-^basketo,^basketto,^baskatta,^mesketo
-^basketo written
-^basketo spoken
-^doko
-^mongombo
-^dolo
-^gimira cluster
-^bench
-^bench written
-^bench written ethiopic script
-^bench spoken
-^mieru
-^mieru spoken
-^siiz-dod
-^siiz-dod spoken
-^kaba
-^kaba spoken
-^janjero cluster
-^yemsa
-^yemsa spoken
-^fuga
-^fuga spoken
-^gonga complex
-^gonga south cluster
-^kafa
-^kafa spoken
-^shekkacho
-^shekkacho written
-^shekkacho written latin script
-^shekkacho spoken
-^bosha
-^gonga central cluster
-^anfillo
-^anfillo spoken
-^gonga north
-^guba
-^guba spoken
-^boro
-^boro spoken
-^naga
-^naga spoken
-^amuru
-^amuru spoken
-^wambera
-^wambera spoken
-^dizoïd cluster
-^dizi
-^dizi spoken
-^aro-duku
-^maji-damt
-^jiaba-gai
-^kolu-kontakolu
-^mui
-^nayi
-^nayi spoken
-^sheko
-^sheko written
-^sheko spoken
-^bulla
-^dorsha
-^mao cluster
-^didessa
-^didessa spoken
-^mao-koole
-^mao-koole spoken
-^bambeshi-a
-^kere
-^hozo
-^hozo spoken
-^sezo
-^sezo spoken
-^ganza spoken
-^ganza spoken
-^yabus
-^asosa
 ^romance,!romanisch,?românica,^romance languages,^romanic languages,^latin languages,^neo-latin languages
 ^continental,^italo-western languages,^italo-western
 ^western continental,^western romance languages
@@ -17066,402 +15796,20 @@
 ^galego-e
 ^galego-argentina
 ^fala,!fala,?fala
-^fala written
-^fala written latin script
-^fala spoken
-^valvideiru
-^manegu
-^lagarteiru
-^português-n
-^português-n spoken
-^português-ne
-^português-cn
-^beira
 ^portuguese written,?português escrito
 ^portuguese written latin script historical
 ^portuguese written latin script
 ^portuguese spoken,?português falado
-^?formal
-^estremenho
-^brasil-f
-^português-g
-^português-g spoken
-^riodonorés,^rionor
-^português-africa-w,^west-african portuguese
-^prêtoguês,^southern african portuguese
-^português-goa,^goan portuguese
-^português-macão
-^português-timor
-^madeirense
-^madeirense spoken
-^funchal
-^porto-santo
-^açoriano
-^açoriano spoken
-^açoriano-e
-^açoriano-c
-^açoriano-nw
-^brasileiro-g
-^brasileiro-g spoken
-^brasileiro-ne
-^brasileiro-e
-^rio-d^janeiro
-^são-paolo
-^brasileiro-se
-^mato-grosso
-^amazonas
-^falares-baianos
-^falares-baianos spoken
-^mineiro
-^mineiro spoken
-^carioca
-^carioca spoken
-^paulista
-^paulista spoken
-^fronteiriço
-^fronteiriço spoken
-^ibero-romance north central
-^spanish written,?espanhol escrito
-^spanish written latin script historical
-^spanish written latin script
-^spanish spoken,?espanhol falado
-^castellano-formal
-^castellano –formal written latin script castille model
-^americano-formal
-^americano formal written latin script mexican model
-^español-g
-^español-g spoken
-^españa-g
-^castilla- léon
-^galicia
-^asturias
-^cantabrica
-^rioja
-^vasco
-^navarra
-^madrid
-^la-mancha
-^estremadura
-^español-aragón
-^español-valencia
-^español-cataluña
-^español-baleares
-^andaluz,^andalusian
-^andaluz spoken
-^español-canario
-^español-canario spoken
-^español-sahariano
-^español-sahariano spoken
-^español-guineo
-^español-guineo spoken
-^americano-s
-^americano-s spoken
-^mexicano
-^beliceño
-^guatemaltacao,^guatemalteco
-^salvadoreño
-^hondureño
-^nicaragüense
-^costarricense
-^panameño
-^cubano,^cuban spanish
-^dominicano
-^puertorriqueño
-^virgenense
-^trinidadeño
-^venezolano
-^colombiano
-^ecuatoriano,^ecuadorian spanish
-^peruano
-^chileno,^chilean spanish
-^boliviano
-^paraguayo
-^uruguayo,^uruguayan spanish
-^argentino
 ^filipino,?filipino
-^rioplatense
-^rioplatense spoken
-^cocoliche
-^lunfardo
-^loreto-ucayali spanish
-^loreto-ucayali spanish spoken
-^chicano
-^chicano spoken
-^chicano-california
-^chicano-arizona
-^chicano-new-mexico
-^chicano-colorado
-^chicano-texas
-^chicano-louisiana
-^chicano-tampa
-^chicano-miami
-^chicano-dc
-^chicano-new-york
-^chicano-illinois
-^extremaduran,?estremenho,!extremadurisch
-^extremaduran written
-^extremaduran written latin script,^extremaduran written latin script
-^extremaduran spoken
-^artu ehtremenu
-^bahu ehtremenu
-^mayu ehtremenu
-^asturo leonése cluster
-^astur written
-^astur written latin script
-^astur spoken
 ^astur-formal,!astur-formal
-^astur-formal written latin script oviedo model
-^astur-e
-^astur-c
-^astur-w
-^astur-gallaico
 ^mirandese,?mirandês,!mirandés,^miranda do douro
 ^mirandese written,?mirandês escrito
 ^mirandese written latin script
 ^mirandese spoken,?mirandês falado
 ^leonés,?leonês
-^leonés spoken
-^leonés-n
-^leonés-s
-^leonés-w
-^leonés-e
-^ibero-romance south cluster
-^navarro-aragonés
-^navarro-aragonés written
-^navarro-aragonés written latin script
-^aragonese written
-^aragonese written latin script
-^aragonese spoken
-^aragonés-formal
-^fobano
-^semontanés
-^aragonés-pr^pirenaico
-^chaqués
-^sarrablés
-^sobrarbés
-^ribagorzano-w
-^ansotano
-^ansotano spoken
-^cheso
-^cheso spoken
-^tensino–pandicuto
-^tensino–pandicuto spoken
-^tensino
-^pandicuto
-^belsetán
-^belsetán spoken
-^chistabín
-^chistabín spoken
-^benasqués
-^benasqués spoken
-^mozarabic,!mozarabisch,?moçárabe
-^mozarabic written,!geschriebenes mozarabisch
-^mozarabic written arabic script
-^ibero-romance northeastern
-^catalan written
-^catalan written latin script historical
-^catalan written latin script
-^catalan spoken
-^català-formal
-^català-c
-^salat
-^rossellonès
-^capcinès
-^puigcerda
-^andorrès
-^pallarès
-^barrabès
-^ribagorçan-e
-^lliterà
-^català-nw
-^alguerès
-^alguerès spoken
-^valencià
-^valencià spoken
-^eivissenc
-^eivissenc spoken
-^mallorquí
-^mallorquí spoken
-^menorquí
-^menorquí spoken
-^gallo-romance south
-^gascon,?gascão
-^gascon written
-^gascon written latin script
-^gascon spoken
-^medoquin
-^bordalés
-^bazadés
-^landés
-^neraqués
-^gascon-lomagne
-^armagnaqués
-^astaraqués
-^biarnés
-^biarnés spoken
-^palois
-^biarnés-ossau
-^aspés
-^bigordan
-^bigordan spoken
-^tarbais
-^argelès
-^bagnères
-^aure
-^comengés
-^comengés spoken
-^couseranés
-^couseranés spoken
-^aranés
-^aranés spoken
-^pujolo
-^canejan
-^proensal-l
-^proensal-l written
-^proensal-language written latin script
-^transalpin
 ^languedocian,^languedocien,!languedokisch
-^languedocian written
-^languedocian written latin script
-^languedocian spoken
-^bas-languedocian
-^languedocian moyen
-^occitan-formal
-^agenés
-^brageiragués
-^carcinòl
-^roërgàs
-^orlhagués- carladésenc,^orlhagués-carladésenc
-^barrasenc
-^gavaudanés
-^lozérien-ne
-^mendois
-^cebenòl
-^lengadocian-e
-^lengadocian-c
-^foissenc
-^ariegés-s
-^provençal
-^provençal written
-^provençal written latin script
-^provençal written latin script rhône model
-^provençal written latin script mistral model
-^provençal spoken
-^provençal maritime
-^prouvençau-formal
-^coumtadin
-^arlaten
-^camarguen
-^bagnoulen
-^nimoués
-^fourcauquieren- manousquin,^fourcauquieren-manousquin
-^aptois
-^sestian
-^barjoulen- draguignanen,^barjoulen-draguignanen
-^prouvençau-castellane
-^marsihés
-^toulounen
-^maures
-^grassenc
-^canenc
-^nissart
-^nissart spoken
-^nissart-u
-^nissart-n
-^esteron
-^haut^vésubie
-^oc-cisalpin'
-^oc-cisalpin' spoken
-^limunenc
-^antraigin
-^aisonenc–berbezan
-^val-grana
-^val-máira
-^val-varáita
-^chisone
-^gavouot
-^gavouot spoken
-^briançonnais
-^queirassenc
-^embrunés
-^valeien
-^gavuout-tinée
-^gavouot-verdon
-^gavouot-var
-^gavouot-la-blanche
-^dignés
-^sisterounés
-^gavouot-bochaine
-^gapian
-^vivaro-dauphinois'
-^vivaro-dauphinois' spoken
-^ardèch^se
-^albenassien
-^privadois
-^boutierot
-^vernoux- doux
-^annonéen
-^valentinois
-^drômois-ne
-^drômois-se
-^montilien
-^auvergnat
-^auvergnat-s,^southern auvergnat,^upper auvergnat
-^auvergnat-s written
-^auvergnat-s written latin script
-^auvergnat-s spoken
-^cantalés
-^vellav^n
-^vellav^s
-^yssingelais
-^auvergnat-n
-^auvergnat-n written
-^auvergnat-n written latin script
-^auvergnat-n spoken
-^forezien
-^livradois
-^clermontois
-^issoirien
-^brivadois
-^monts-dômes
-^combraillais
-^limousin
-^limousin spoken
-^lemozin-n
-^lemojaud
-^millevaches
-^corrézien
-^sarladés
-^peiregordin
-^nontronés
-^montberonés
-^saint-eutrope
-^marchois
-^marchois spoken
-^croissant-w
-^marchois-c
-^montluçonnais
-^croissant-e
 ^gallo-romance,!galloromanisch,^gallo-romance languages
 ^galo-romance north,!nordgalloromanisch
-^parlange
-^parlange spoken
-^maraîchin
-^poitevin-n
-^poitevin-w
-^poitevin-c
-^poitevin-s
-^aunisien
-^saintongeais
-^angoumois
-^gavache
-^gallo,!gallo
-^gallo spoken,!gesprochenes gallo
-^malouin
-^bocage
-^rennais
-^châteaubriantais
-^nantais
 ^anglo-normand,!anglonormannisch,^anglo-norman,?anglo-normando,?anglo-normando
 ^anglo-normand spoken,!gesprochenes anglonormannisch
 ^dgernésiais-nw,^northwest dgernésiais
@@ -17474,1369 +15822,38 @@
 ^normand,!normannisch
 ^normand spoken,!gesprochenes normannisch
 ^cotentinais-n,^cotentinais
-^coutançais
-^calvadosien
-^lieuvin- evrecin,^lieuvin
-^vexinois
-^roumois
-^cauchois
-^bray,^brayon
 ^picard,!picardisch,!pikardisch
 ^picard written,!geschriebenes picardisch
-^picard written latin script
-^picard spoken,!gesprochenes picardisch
-^belgium picard
-^artois
-^laonnois
-^vermandois
-^noyonnais
-^amiénois
-^vimeu
-^marquenterre
-^boulonnais-paysan
-^boulonnais-marin
-^calaisien
-^cambresis
-^ternois
-^arrageois
-^ch-ti-mi
-^hennuyer
-^walloon written
-^walloon written latin script
-^walloon spoken
-^wallon-w
-^wallon-c
-^wallon-e
-^wallon-s
-^wallon-américain
-^champaignat,!champenois
-^champaignat spoken
-^bassignot- langrois
-^sennonais
-^vallage
-^troyen
-^briâd
-^côt^champenoise
-^der- perthois
-^rémois
-^argonnais-w
-^porcien
-^ardennais
-^sugny
-^lorrain,!lothringisch
-^lorrain spoken,!gesprochenes lothringisch
-^argonnais
-^longovicien
-^gaumais
-^nancéin
-^spinalien
-^déodatien
-^welche
-^welche spoken
-^bruche
-^villé
-^lièpvre
-^kaysersberg
-^orbey
-^jurassien
-^jurassien spoken
-^saôn^n
-^doubs- ognon
-^lomont- doubs
-^ajulot
-^vâdais
-^taignon
-^bourguignon,^burgundian
-^bourguignon spoken
-^charollais
-^beaunois
-^auxois
-^morvandiau
-^morvandiau spoken
-^morvandiau-n
-^morvandiau-w
-^morvandiau-se
-^morvandiau-e
-^bourbonnais- berrichon
-^bourbonnais- berrichon spoken
-^bourbonnais
-^nivernais
-^auxerrois
-^haut-berrichon
-^bas-berrichon
-^angevin- orléanais,^angevin-orléanais
-^angevin-orléanais spokennn,^angevin-orléanais spoken
-^orléanais
-^blésois
-^tourangeau
-^manceau
-^angevin
-^mayennais
-^avranchin- mortainais,^avranchin-mortainais
-^virois
-^falaisien
-^varenne
-^hiémois–séois
-^percheron
-^saint-andré
-^thimerais
-^chartrain
 ^acadjin,^acadian french,!akadisches französisch,!akadisch
-^acadjin spoken
-^acadien-d'acadie
-^acadien-québequois
 ^cajun french,!cajun,!cajun-französisch,^louisiana regional french
-^cajun french written
-^cajun french written latin script
-^cajun french spoken
-^marsh-french'
-^prairi^french'
-^bi!woods-french'
-^canadien
-^canadien spoken
-^québecois
-^joual
-^francien
-^francien spoken
 ^french written,!geschriebenes französisch,?francês escrito,!schriftfranzösisch
-^french written latin script historical
-^french written latin script
 ^french spoken,!gesprochenes französisch,!sprechfranzösisch
-^parisien-f
-^belg^f,^belgian french,!belgisches französisch
-^suiss^f,^swiss french,!schweizer französisch
-^canadien-f
-^français-g
-^français-g spoken
-^français-a
-^parisien-u
-^banlieue
-^français-d^normandie
-^français-du-nord
-^français-du-nord-est
-^français-d^l'est
-^français-d^bourgogne
-^français-du-centre
-^français-d^l'ouest
-^français-du-nord-ouest
-^français-breton
-^français-d'auvergne
-^français-du-limousin
-^français-du-sud-ouest
-^français-basque
-^français-du-sud
-^français-du-sud-est
-^français-d^corse
-^français-belge
-^français-belge spoken
-^français-suisse
-^français-suisse spoken
-^français-d'aoste
-^français-d'aoste spoken
-^français-germanique
-^français-germanique spoken
-^français-flamand
-^français-francique
-^français-alsacien
-^français-suiss^allemand
-^français-nord-américain
-^français-nord-américain spoken
-^français-d^saint-pierre
-^français-du-canada
-^français-des-maritimes
-^français-d^nouvell^angleterre
-^français-d^louisiane
-^français-antillais
-^français-antillais spoken
-^français-haïtien
-^français-guadeloupéen
-^français-martiniquais
-^français-guyanais
-^français-du-levant
-^français-du-levant spoken
-^français-d^grèce
-^français-d^liban-syrie
-^français-d'égypte
-^français-maghrebin
-^français-maghrebin spoken
-^français-tunisien
-^français-algérien
-^français-marocain
-^maghrebin-france
-^pied-noir-france
-^français-d'afrique
-^français-d'afrique spoken
-^français-d^mauritanie
-^français-d^sénégal,^french of senegal
-^français-d^mali
-^français-d^guinée
-^français-d^burkina-faso
-^français-d^côt^d'ivoire
-^français-d^togo
-^français-d^bénin
-^français-d^niger
-^français-d^cameroun
-^français-d^gabon
-^français-d^congo
-^français-d^tchad
-^français-d^centrafrique
-^français-d^zaïre
-^françs-d^ruanda-burundi
-^français-d^djibouti
-^français-des-comores
-^français-d^madagascar
-^français-d^réunion,^réunion creole,^reunionese creole,!réunion-kreolisch,?crioulo de reunião
-^français-d^maurice
-^français-des-seychelles,^seychellois creole,^seselwa,!seychellenkreol,!seselwa,?crioulo de seychelles
-^africain-france
-^français-d'inde
-^français-d'inde spoken
-^français-d^mahé
-^français-d^pondichéry
-^français-d^karikal
-^français-d^yanaon
-^français-d^chandernagore
-^français-du-sudest-asiatique
-^français-du-sudest-asiatique spoken
-^français-d^viêt-nam
-^français-d^laos
-^français-d^cambodge
-^français-d'océanie
-^français-d'océanie spoken
-^français-caldoche
-^français-canaque
-^français-d^vanuatu
-^français-d^wallis-futuna
-^français-d^polynésie
-^franco-provençal written
-^franco provençal written latin script
-^franco-provençal spoken
-^franc-comtois
-^franc-comtois spoken
-^neuchâtelois
-^vaudois-nw
-^pontissalien
-^ain-n
-^valserine
-^lyonnais
-^lyonnais spoken
-^bugey
-^jurassien
-^forèzien
-^bressan
-^burgondan
-^mâconnais
-^lyonnais-rural
-^roannais- stéphanois
-^dauphinois-n
-^dauphinois-n spoken
-^dauphinois-rhodanien
-^crémieu
-^terres-froides
-^chambaran
-^grésivaudan
-^savoyard
-^savoyard spoken
-^bessanèis
-^langrin
-^matchutin
-^tarentaise
-^arly
-^chambérien
-^annecien
-^faucigny
-^chablais- genevois
-^vaudois
-^vaudois spoken
-^vaudois-interlacustre
-^gruyère
-^enupper
-^genevois
-^fribourgeois
-^valaisan
-^valdôtain
-^valdôtain spoken
-^faetar
-^val-veni
-^val-di-ferret
-^doir^balté^c
-^val-du-grand-saint-bernard
-^val-pelline
-^val-tournanche
-^ayassin
-^val-d^la-thuile
-^val-grisanche
-^val-d^rhêmes
-^val-savaranche
-^val-d^cogne
-^val-d^camporcher
-^rhaeto-romance cluster,^rhaeto-romance languages,^rhaeto-romance,^rhaetian
-^rhaeto-romance
-^raeto-romance written
-^raeto-romance written latin script
-^raeto-romance spoken
-^sursilvan,^sursilvan dialects,!surselvisch,^sursilvan idom of romansh
-^sursilvan spoken
-^tujetsch
-^medel
-^cadí
-^ilanz
-^lumnezia
-^flims
-^plaun
-^sutsilvan- surmiran
-^sutsilvan- surmiran spoken
-^sutsilvan-n
-^sutsilvan-s
-^surmiran-n
-^surmiran-c
-^surmiran-s
-^upper engadine
-^grischun,^rumantsch grischun,!rumantsch grischun,^grischun version of romansh
-^grischun spoken
-^bravuogn
-^putèr-s
-^putèr-n
-^vallader-w
-^vallader-e
-^vallader-se
-^ladin written
-^ladin written latin script
-^ladin spoken
-^atesino
-^nones
-^nones spoken
-^badio
-^badio spoken
-^badia
-^mareo
-^gründno
-^gründno spoken
-^fassa- fiamazzo
-^fassa- fiamazzo spoken
-^fassa
-^fiamazzo
-^cadorino
-^cadorino spoken
-^santa-lucia
-^livinallongo
-^comèlico
-^friulian written
-^friulian written latin script
-^friulian spoken
-^carnico
-^carnico spoken
-^degano
-^fella
-^tagliamento
-^furlan-w,^western friulan
-^furlan-w spoken
-^spilimbergo
-^pordenone
-^furlan-ce,^central friulan
-^furlan-ce spoken
-^udin
-^cividât
-^gurizze
-^istrioto
-^istrioto written
-^istrioto written latin script
-^istrioto spoken
-^rovigno
-^dignano
-^sissano
-^venetian written,!geschriebenes venetisch
-^venetian written latin script
-^venetian spoken,!gesprochenes venetisch
-^bisiacco
-^veneto-giuliano
-^feltrino–bellunese
-^trevigiano
-^veneziano-u
-^veneziano-della-laguna
-^veneziano-rural
-^vicentino- padovano
-^veronese
-^rovigo
-^gallo-italian cluster
-^trentino
-^trentino spoken
-^ticinese
-^ticinese spoken
-^lugano
-^bellinazona
-^locarno
-^lombardo-alpino
-^lombardo-alpino spoken
-^lombard written
-^lombard written latin script
-^lombardo spoken,^lombard spoken,!gesprochenes lombardisch
-^lombardo w,^western lombard
-^anaunico
-^cremonese,^cremunés
-^bresciano
-^bergamasco
-^comasco
-^varese
-^milanese
-^milanese written
-^milanese written latin script
-^milanes^u
-^milanes^rural
-^pavese
-^novarese
-^domodossolano
-^lombardo-siculo
-^lombardo-siculo spoken
-^piemontese written
-^piemontese written latin script
-^piemontese spoken
-^alto piemontese
-^basso piemontese
-^vercelli
-^canavese
-^torino-u
-^dora-riparia
-^alto-po
-^cuneo
-^langhe
-^asti
-^alessándria
-^brigasc
-^brigasc spoken
-^roya
-^tanaro
-^argentina
-^ligurian,!ligurisch
-^ligurian written
-^ligurian written latin script
-^ligurian spoken
-^monegasc
-^monegasc written
-^monegasc written latin script
-^imperia
-^savona
-^genovesi-rural
-^genovesi-u
-^lunigiano
-^genovesi-di-corsica
-^genovesi-di-corsica spoken
-^cargese
-^bonifacien
-^genovesi-di-sardegna
-^genovesi-di-sardegna spoken
-^carloforte
-^calasetta
-^emiliano- romagnolo
-^emiliano- romagnolo written,^emiliano-romagnolo written
-^emiliano- romagnolo written latin script,^emiliano-romagnolo written latin script
-^emiliano- romagnolo spoken
-^vogherese
-^mantovano
-^piacenza
-^parma
-^reggio
-^modena
-^bologna
-^ferrara
-^ravenna
-^forli
-^san-marino
-^marchigiano-n
-^corsican cluster
-^corsican written
-^corsican written latin script
-^corsicans spoken
-^corsu-n
-^corsu-n spoken
-^cortenais
-^castagniccia
-^casinca
-^bastiais
-^nebbio
-^balanin
-^galéria
-^corsu-c
-^corsu-c spoken
-^vicu
-^ajaccien
-^tavarais
-^petreto-bicchisano
-^bastelica
-^fiumorbais
-^solenzara
-^corsu-s
-^corsu-s spoken
-^zonza
-^sartè
-^purtivechju
-^gallurese
-^gallurese spoken
-^sassarese,^sassarese sardinian,^northwestern sardinian
-^sassarese spoken
-^italo-romance,!italoromanisch
-^italian cluster
-^toscano,!toskanisch
-^toscano spoken
-^fiorentino-u
-^fiorentino-rural
-^lucca
-^pistoia
-^pisa
-^livorno
-^aretino
-^senese
-^grosseto
-^romano-rural
-^italian written,!geschriebenes italienisch
-^italian written latin script historical
-^italian written latin script
-^italian spoken,!gesprochenes italienisch
-^abruzzese,!abruzzesisch
-^marchigiano c
-^laziale
-^italiano-g
-^italiano-g spoken
-^italiano-di-torino
-^italiano-di-genova
-^italiano-di-milano
-^italiano-di-venezia
-^italiano-di-trieste
-^italiano-di-roma
-^italiano-di-napoli
-^italiano-di-palermo
-^sicilian written,!geschriebenes sizilianisch
-^sicilian written latin script
-^sicilian spoken,!gesprochenes sizilianisch
-^sicilianw
-^metafonetica c
-^metafonetica se
-^nonmetafonetie
-^isole eolie
-^pantesco
-^calabro s
-^umbro–romanesco
-^umbro–romanesco spoken
-^umbro
-^romanesco-rural
-^neapolitan written
-^neapolitan written latin script
-^neapolitan spoken
-^marchigiano-s
+^belge-f,^belgian french,!belgisches französisch
+^suisse-f,^swiss french,!schweizer französisch
 ^reatino- aquilano,^reatino-aquilano
-^abruzzese
-^molisano
-^campano
-^napoletano-u
-^puglies^n
-^lucano
 ^salentino,!salentinisch
-^salentino spoken
 ^calabrese,!kalabresisch
 ^calabrese spoken,!gesprochenes kalabresisch
-^siciliano-ce
-^siciliano-ce spoken
-^messinese
-^catanes^ siracusano
-^siciliano-ne
-^siciliano-se
-^agrigentino-e
-^nisseno-ennese
-^siciliano-dell^madonìe
-^siciliano-w
-^siciliano-w spoken
-^agrigentino-cw
-^trapanese
-^palermitano
-^sardinian
-^sassarese sardinian
-^sassarese sardinian written
-^sassarese sardinian written latin script
-^sassarese sardinian spoken
-^logudores^w
-^logudorese sardinian,^sard,^sardarese,^logudorese,^central sardinian
-^logudorese sardinian written
-^logudorese sardinian written latin script
-^logudorese sardinian spoken
-^logudorese s,^southwestern logudorese
-^logudorese n,^northern logudorese
-^barbaricino
-^gallurese sardinian,^northeastern sardinian,^gallurese
-^gallurese sardinian written
-^gallurese sardinian written latin script
-^gallurese sardinian spoken
-^nuorese
-^nuorese spoken
-^gennargentese
-^gennargentese spoken
-^campidanese sardinian,^sardu,^campidanese,^campidese,^south sardinian
-^campidanese sardinian written
-^campidanese sardinian written latin script
-^campidanese sardinian spoken
-^campidanese w
-^campidanese c,^central campidanese
-^cagliare,^cagliari,^cagliaritan
-^ogliastrino
-^sulcitano
-^meridionale
-^dalmatian cluster
-^dalmatian,?dálmata,^dalmatic
-^vegliot
-^ragusan
-^latino-faliscan
-^latin written,!geschriebenes latein,!geschriebenes lateinisch,!schriftlatein
-^latin written latin script historical
-^latin written latin script
-^latin spoken,!gesprochenes latein,!gesprochenes lateinisch,!sprechlatein
-^latin^a
-^latin^a spoken
-^latin-formal
-^latin-v
-^interlingua,simplified latin spoken
-^hebraicised romance
-^shaudit
-^zarphatic
-^judeo-spanish
-^judeo-spanish written
-^judeo-spanish written hebrew script
-^judeo-spanish written latin script
-^hakitia
-^hakitia spoken
-^tetauni
-^tetauni spoken
-^ladino,^judeo-spanish,^judæo-spanish,!ladino,!judenspanisch,!spaniolisch
-^ladino written
-^ladino written latin script
-^ladino written hebrew script
-^ladino spoken
-^djudezmo-formal
-^la’az
-^djudezmo-kérkira
-^djudezmo-thessaloníki
-^djudezmo-türkiye
-^djudezmo-sofiya
-^djudezmo-skopje
-^djudezmo-bosnia- serbia
-^djudezmo-new-york
-^djudezmo-buenos-aires
-^djudezmo-israel
-^judeo-arogonese
-^catalanic
-^lusitanic
-^judeo-italian,!judäo-italienisch
-^judeo-italian written
-^judeo-italian written hebrew script
-^judeo-italian written latin script
-^judeo-italian spoken
-^judeo-veneziano
-^judeo-ferraran
-^judeo-florentine
-^judeo-mantaun
-^judeo-piedmontese
-^judeo-reggian
-^judeo-roman
-^lingua-franca written
-^lingua-franca written latin script
-^contsructed romance,^constructed romance
-^esperanto written,?esperanto escrito
-^esperanto written latin script
-^esperanto spoken,?esperanto falado
-^ido written,!geschriebenes ido,?ido escrito
-^ido written latin script
-^ido spoken,!gesprochenes ido,?ido falado
-^novial,!novial,?novial
-^novial written
-^novial written latin script
-^novial spoken
-^pidgins and creoles
-^creol^romance
-^creol^portuguese based cluster,^?based creole,^portuguese creole
-^kabuverdianu,^cape verdean creole,!kapverdisches kreol
-^kabuverdianu written
-^kabuverdianu written latin script
-^kabuverdianu spoken
-^barlavento
-^sotavento
-^upper guinea crioulo,^upper guinea creole
-^upper guinea crioulo written,^upper guinea creole written
-^upper guinea crioulo written latin script
-^upper guinea crioulo spoken,^upper guinea creole spoken
-^guineens^n
-^guineens^bissau
-^guineens^bijago
-^guineens^c
-^sãotomense
-^sãotomense spoken
-^forro
-^principense
-^principense spoken
-^angolar
-^angolar spoken
-^fa d'ambu
-^fa d'ambu written
-^fa d'ambu written latin script
-^fa d'ambu spoken
-^cafundo creole
-^cafundo creole spoken
-^indo-portugues
-^indo-portugues written
-^indo-portugues written latin script
-^indo-portugues spoken
-^diu
-^daman
-^korlai creole portugese
-^korlai creole portugese written
-^korlai creole portugese written latin script
-^korlai creole portugese written devanagari script
-^korlai creole portugese spoken
-^cochin
-^ceilão
-^malaccan creole potuguese
-^malaccan creole potuguese written
-^malaccan creole potuguese written latin script
-^malaccan creole potuguese spoken
-^malaquense
-^singapore
-^sumatra
-^java
-^flores- adonara
-^timor pidgin
-^maluku
-^ternateño
-^ternateño spoken
-^sulawesi
-^borneo
-^macanese,^macau creole,?patuá macaense
-^macanese spoken
-^makista-macão
-^makista-hon!kong
-^spanish based creole
-^chavacano
-^chavacano written
-^chavacano written latin script
-^chavacano spoken
-^caviteño
-^cotabato-chabacano
-^ternateño-chabacano
-^davao-chabacano
-^zamboangueño
-^ermitaño
-^chabacano-sabah
-^chocoano
-^chocoano spoken
-^palanquero
-^palanquero spoken
-^criollo-d^bobures
-^criollo-d^bobures spoken
-^iberian based creole
-^papiamento written
-^papiamento written latin script
-^papiamento spoken
-^curassese,^curaçoleño
-^aruba,^aruban papiamento,^arubiano
-^bonaire,^boneriano,^bonaire's papiamentu
-^maíz
-^french based créole,^french creole,^french-based creole language
-^louisiana creole french,^louisiana creole
-^louisiana creole french written
-^louisiana creole french written latin script
-^louisiana creole french spoken
-^saint-martin
-^new-roads-edgard
-^houma
-^gombo-texas
-^gombo-california
-^haitian creole french,^haitian creole,!haitianisch,?crioulo haitiano
-^haitian creole french written
-^haitian creole french written latin script
-^haitian creole french spoken
-^port-au-prince
-^fablas
-^plateau-haitien
-^haitien-n
-^guadeloupean creole french
-^guadeloupean creole french written
-^guadeloupean creole french written latin script
-^guadeloupean creole french spoken
-^saint-barthélemy
-^grand^terre
-^bass^terre
-^mari^galante
-^dominiquais,^dominican creole french
-^martiniquais
-^saint lucian creole french,^saint lucian creole
-^saint lucian creole french written
-^saint lucian creole french written latin script
-^saint lucian creole french spoken
-^san miguel creole french
-^san miguel creole french spoken
-^carriacou
-^grenadien
-^trinidadien
-^guianese creole french,^french guiana creole
-^guianese creole french spoken
-^guyanais-c
-^guyanais-nw
-^guyanais-se
-^amapá
-^amapá spoken
-^karipúna
-^karipúna spoken
-^seselwa creole french,^seychellois creole
-^seselwa creole french written
-^seselwa creole french written latin script
-^seselwa creole french spoken
-^seychellois
-^aldabra
 ^morisyen,^mauritian creole,^kreol morisyen
-^morisyen written
-^morisyen written latin script
-^morisyen spoken
-^rodriguais
-^agalega
-^chagos
 ^réunion creole french,,^réunion creole french,^réunion creole,^reunionese creole,?crioulo de reunião
-^réunion creole french,written
-^réunion creole french,written latin script
-^réunion creole french,spoken
-^réunion creole french,urban
-^réunion creole french,popular
-^tayo
-^tayo spoken
-^continental eastern
-^continental north eastern
-^istro-romanian
-^istro-romanian written
-^istro-romanian written latin script
-^istro-romanian spoken
-^jeiani
-^jeiani spoken
-^susnjevica
-^susnjevica spoken
-^continental southeastern
 ^macedo romanian,!aromunisch,!makedoromanisch,^arumanian,^aromanian
-^macedo romanian written,^aromanian written
-^macedo romanian written latin script,^aromanian written latin script
-^macedo romanian written greek script,^aromanian written greek script
-^macedo romanian spoken,^arumanian spoken
-^bitolia
-^vlorë- berat,^vlorë-berat
-^muscopola
-^pindhos
-^olympo-vlach
-^aliákmon
-^megleno romanian,!meglenorumänisch,!meglenitisch
-^megleno romanian written
-^megleno romanian written latin script
-^megleno romanian spoken
-^romanaian writtten,^romanian writtten
-^romanaian written latin script romania model
-^romanaian written cyrillic script: moldova model
-^romanaian spoken,^romanian spoken
-^limba-româneasca-g
-^limba-româneasca-g spoken
-^muntenia
-^muntenia spoken
-^oltenia
-^oltenia spoken
-^banat
-^banat spoken
-^bayash
-^transilvania-s
-^transilvania-s spoken
-^transilvania-n
-^transilvania-n spoken
-^crisana
-^crisana spoken
-^maramures
-^maramures spoken
-^bucovina
-^bucovina spoken
-^moldavian,!moldauisch,!moldawisch,?moldávio,^moldovan
-^moldavian written
-^moldavian written latin script
-^moldavian written cyrillic script
-^moldavian spoken
-^saharan
-^western saharan cluster
-^bilma kanuri
-^bilma kanuri spoken
-^fachi
-^bilma
-^tumari kanuri
-^tumari kanuri written
-^tumari kanuri written ajami script
-^tumari kanuri spoken
-^manga kanuri
-^manga kanuri written
-^manga kanuri written arab script
-^manga kanuri spoken
-^manga-n
-^manga-s
-^central kanuri
-^central kanuri written
-^central kanuri written arab script
-^central kanuri spoken
-^dagara
-^njesko
-^kabari
-^sugurti
-^lare
-^ngazar
-^guvja
-^kagama
-^fadawa
-^maiduguri
-^mao
-^kwayyamo
-^kwayyamo spoken
-^mavar
-^mavar spoken
-^kanembu
-^kanembu written
-^kanembu written latin script
-^kanembu written arabic script
-^kanembu spoken
-^karkawu
-^mando
-^nguri
-^haddad
-^haddad spoken
-^tubu cluster
-^tedaga
-^tedaga written
-^tedaga written arab script
-^tedaga written latin script
-^tedaga spoken
-^gunda
-^brawia
-^chigaa
-^tomagra
-^daza
-^daza written
-^daza written latin script
-^daza written arab script
-^dazaga spoken
-^kasherda
-^wannala
-^gaduwa
-^chitati
-^kreda
-^kreda spoken
-^yorda
-^karda
-^norea
-^iria
-^eastern saharan cluster
-^zaghawa
-^zaghawa written
-^zaghawa written latin script
-^zaghawa written arabic script
-^zaghawa spoken
-^tuer-gala
-^diron!guruf
-^kob^kapka
-^bideyat
-^beli written
-^beli written arab script
-^beli written latin script
-^beli spoken
-^baele
-^anna
-^awe
-^terawia
-^berti
-^balto-slavic
-^slavic
-^slavic south
-^old church slavic
-^old church slavic written
-^old church slavic written glagolitic script
-^old church slavic written cyrillic script
-^church slavic written
-^church slavic written glagolitic script,^old church slavonic (glagolitic)
-^church slavic written cyrillic script
-^church slavic written latin script
-^church slavic spoken
-^russian church slavonic
-^russian church slavonic written
-^serbian church slavonic
-^serbian church slavonic written
-^bulgarian church slavonic
-^bulgarian church slavonic written
-^macedonian church slavonic
-^macedonian church slavonic written
-^ukrainska-l church slavonic
-^ukrainska-l church slavonic written
-^croation church slavonic
-^croation church slavonic written
-^slavic west
-^slavic west central
-^lower sorbian written
-^lower sorbian written latin script
-^lower sorbian spoken
-^dolno-serbska formal
-^lubnow
-^chósebuz
-^rogow
-^zly-komarow
-^bukojna- kóšynka
-^grodk
-^slepe
-^upper sorbian written
-^upper sorbian written latin script
 ^upper sorbian spoken,!gesprochenes obersorbisch
 ^hornjo-serbšcina formal
-^košyna–Luta
-^budyšin
-^Šprejcy
-^trelno–wochozy
-^mužakow
-^slavic west north
 ^polabian,?polábio
-^polabian written
 ^pomeranian cluster,^pomeranian language
-^slowincki
-^kashubian written
-^kashubian written latin script kashubuan model
-^kashubian spoken
 ^polish written,?polaco escrito
-^polish written latin script historical
-^polish written latin script
-^polish spoken,?polaco falado
-^formal polish
-^generalised polish
-^bory
-^kociewie
-^krajna
-^kujawy
-^wielko-polska
-^leczyckie
-^sieradzkie
-^Slaski
-^orawa-n
-^podhale
-^spisz-n
-^malo-polska
-^mazowiecki
-^podlasie
-^mazury
-^warmia
-^chelminsko- dobrzynska
-^polski-amerikanski
-^slavic west south
-^czech written
-^czech written latin script historical
-^czech written latin script
-^czech spoken
-^formal czech
-^generalised czech
-^Ceština-w
-^Ceština-s
-^doudlebski
-^Ceština-c
-^praha-u
-^Ceština-ne
-^Cesko-moravská
-^hanák
-^dolsky
-^lasky
-^knaanic
-^knaanic written
-^slovak written
-^slovak written latin script
-^slovak spoken
-^slovencina formal
-^slovencina -general
-^moravsko- slovencina
-^dolná-morava
-^trencín-n
-^trencín-s
-^orava-s
-^liptov
-^turiec
-^zvolen
-^tekov
-^hont
-^novohrad
-^gemer
-^spiš-s
-^Šariš
-^zemplin
-^už
-^slovencina-amerika
-^slavic east
-^slavic east north
 ^russian written,!geschriebenes russisch,?russo escrito
 ^russian written cyrillic script historical
 ^russian written cyrillic script
 ^russian spoken,!gesprochenes russisch,?russo falado
-^russkiy formal
-^russkiy general
-^arkhangelskiy
-^olonetskiy
-^novgorodskiy
-^vologdo-viatkiy
-^povolzhskiy
-^sankt-peterburgskiy
-^moskovskiy
-^pskovskiy
-^russkiy-cw
-^russkiy-ce
-^bryanskiy
-^tulskiy
-^orlovskiy
-^tambovskiy
-^donskiy
-^doukhobor-emigré
-^molokan-emigré
 ^belarusan written,?bielorrusso escrito
 ^belarusan written cyrillic script
 ^belarusan spoken,?bielorrusso falado
-^belaruskaya-f
-^belaruskaya-g
-^polotsk
-^vitebsk- mogilev
-^minsk-u
-^grodno- baranovichi
-^slutsk- mozyr
-^rusyn
-^rusyn written
-^rusyn spoken
-^rusyn-n
-^rusyn-w
-^rusyn-se
-^slavic east south
 ^ukrainian written,?ucraniano escrito
-^ukrainian written cyrillic script historical
-^ukrainian written cyrillic script
 ^ukrainian spoken,?ucraniano falado,!gesprochenes ukrainisch
-^ukrainska-f
-^ukrainska-g
-^ukrainska- belaruskaya
-^ukrainska-nw
-^kiev-u
-^ukrainska-ne
-^ukrainska-sw
-^dnestr-nw
-^lviv-u
-^turka
-^kuty
-^prut-n
-^dnestr-m
-^ukrainska-se
 ^surzhik,^surzhyk,!surschyk,!suržyk
 ^canadian-ukrainian,^canadian ukrainian,^canadian-ukrainian
-^slavic south west
-^slovenian written
-^slovenian written latin script historical
-^slovenian written latin script
-^slovenian spoken
-^slovenian-f
-^slovenian-sava
-^slovenian-g
-^slovenian-"amerika"
-^slovenian argentina
-^koroško
-^koroško spoken
-^ziljsko
-^rožansko
-^krksko
-^obirsko
-^meùzisko
-^podjunsko
-^remšniško
-^primorsko littoral sub cluster
 ^resian,!resianisch,^resian dialect of slovenian
-^resian written
-^resian written latn script
-^resian spoken
-^beneško
-^beneško spoken
-^tersko
-^nadiško
-^brisko
-^oboško
-^oboško spoken
-^bovško
-^kobariško
-^borjansko
-^kraško
-^kraško spoken
-^kraško-nw
-^kraško-se
-^istrsko
-^istrsko spoken
-^brkinsko
-^Šavrinsko
-^notranjsko
-^notranjsko spoken
-^gorenjsko- rovtarsko
-^gorenjsko- rovtarsko spoken
-^gorenjsko
-^selško
-^tolminsko
-^cerkljansko
-^Crnovrško
-^logaško
-^vrhniško- horjuljsko
-^poljansko
-^Škofjeloško
-^dolenjsko
-^dolenjsko spoken
-^dolenjsko-c
-^dolenjsko-e
-^posavsko
-^belo-krajinsko
-^belo-krajinsko spoken
-^kostelsko
-^belo-krajinsko-c
-^privrško
-^poljsko
-^Šokarsko
-^Štajersko-w
-^Štajersko-w spoken
-^sotelsko
-^Štajersko-c
-^savinjsko
-^pohorsko
-^kozjaško
-^Štajersko-e
-^Štajersko-e spoken
-^goricansko
-^prleško
-^haloško
-^prleško-e
-^središcansko
-^prekmursko transmural
-^serbo-croatian cluster
-^srpsko- hrvatski-l
-^srpsko- hrvatski-l written
-^srpsko-hrvatski-l written cyrillic script
-^srpsko- hrvatski-l written glagolitic script
-^srpsko- hrvatski-l written latin script
-^serbian written
-^serbian written latin script
-^serbian written cyrillic script
-^serbian spoken,?sérvio falado
-^croation written,^croatian written
-^croation written latin script,^croatian written latin script
-^croation spoken,^croatian spoken,?croata falado
-^ikavski-formalised
-^ikavski-formalised spoken
-^bosnian written
-^bosnian written latin script
-^bosnian spoken
-^srpski-g
-^srpski-g spoken
-^hrvatski-g
-^hrvatski-g spoken
-^kajkavski
-^kajkavski spoken
-^kajkavski-e
-^kajkavski- sw
-^kajkavski-nw
-^Cakavski
-^Cakavski spoken
-^buzet
-^Štokavian-Cakavian
-^ekavian Cakavian
-^ikavian-ekavian
-^ikavian Cakavian
-^ijekavian Cakavian
-^Štokavski
-^Štokavski spoken
-^Štokavski-nw
-^Štokavski-w
-^Štokavski-c
-^Štokavski-n
-^Štokavski-ce
-^Štokavski-ne
-^Štokavski-e
-^Štokavski-s
-^italo-Štokavski
-^torlakski
-^slavic south east
-^macedonian written
-^macedonian written cyrillic script skopje model
-^macedonian spoken
-^makedonski-f
-^makedonski-n
-^makedonski-c
-^makedonski-cw
-^makedonski-w
-^makedonski-e
-^pirinski
-^makedonski-ce
-^makedonski-se
-^makedonski-sw
-^bulgarian written
-^bulgarian written cyrillic script
-^bulgarian spoken
-^bulgarski-f
-^bulgarski-g
-^bulgarski-nw
-^bulgarski-sw
-^bulgarski-se
-^pomakika
-^bulgarski-ne
-^palityan
-^pomak
-^songhai,^songhay
-^southern songhai cluster
-^koyra chiini songhay
-^koyra chiini songhay written
-^koyra chiini songhay spoken
-^koyra chiini
-^jenekine
-^timbuktu
-^araouane
-^tombata
-^humburi senni songhay,^songhay,^humburi senni,^songhay of hombori,^humburi senni songhai,^humburi senni songai
-^humburi senni songhay written
-^humburi senni songhay spoken
-^homborikine
-^tinie
-^marense
-^kaado
-^koyraboro senni songhay
-^koyraboro senni songhay written
-^koyraboro senni songhay written arab script
-^koyraboro senni songhay written latin script
-^koyraboro senni songhay spoken
-^bamba
-^gaokine
-^alkaseybaten
-^gabero
-^zarma
-^zarma written
-^zarma spoken
-^dosso
-^karimama
-^wogo
-^dendi
-^dendi written
-^dendi spoken
-^dendi-n
-^kandi
-^paraku
-^jugu
-^tagdal
-^tagdal written
-^tagdal written arabic script
-^tagdal spoken
-^tihisit
-^tagdalt
-^taborog
-^northern songhai cluster
-^tadaksahak
-^tadaksahak written
-^tadaksahak spoken
-^tasawaq
-^tasawaq spoken
-^korandje
-^korandje written
-^korandje spoken
 ^apartment,!apartment,!wohnung,?apartamento
 ^trilby,!filzhut
 ^boater,!strohhut
@@ -18864,7 +15881,6 @@
 !einschreiben,!einschreiben,^certified mail,?com aviso de recepção
 !strahlend,^brilliant,?radiante
 !radius,^radius,?raio
-^åland islands,!åland-inseln,?ilhas åland
 ^american samoa,!amerikanisch-samoa,?samoa americana
 ^top hat,!zylinderhut,!zylinder,^beaver hat,^cylinder hat,^topper,^chimney pot hat,^stove pipe hat,?cartola
 ^wellington,!wellington,?wellington
@@ -18898,7 +15914,6 @@
 !archäometrie,^archaeometry,^archaeological science
 !radiokohlenstoffdatierung,!radiokarbonmethode,^radiocarbon dating
 !organhandel,^organ trade,?tráfico de órgãos
-^sister-in-law,!schwägerin
 ^sister-in-law,!schwägerin,?cunhada
 ^ravello,!ravello
 ^nail clippers,^nail trimmer,!nagelknipser
@@ -18966,8 +15981,6 @@
 !restgebiet,^subarea,?sub-área
 ^terekeme,^karapapak,^garapapag
 ^sacrifice,!opfern,?sacrificar
-^yerazi
-^qazax
 !verbannt,^banished,?sacrificado
 ^naxçivan,^nakhchivan
 !weisheit,^wisdom,?sabedoria
@@ -19092,8 +16105,6 @@
 !dementieren,^deny,^refute,?desmentir
 !tim,^tintin,?tintim
 ^hacking,!hacken
-^hacking
-^blackfoot
 ^musquito,!mücke,^mosquito,!stechmücke,?mosquito
 ^tsetse fly,!tsetsefliege,?mosca tsé-tsé,!tsetsefliegen
 ^ray,!lichtstrahl,?raio
@@ -19138,8 +16149,6 @@
 ^water strider,!wasserläufer,!gemeiner wasserläufer,^common water strider,^common pond skater
 ^devanagari,!devanagari,?devanagari
 ^himalayas,!himalaya,^himalaya
-^karnataka
-^kerala
 ^andhra pradesh,?andhra pradesh
 ^arunachal pradesh
 ^himachal pradesh
@@ -19180,8 +16189,8 @@
 ^trna,^transfer rna,!transfer-rna,!trna
 ^genetic code,!genetischer code
 ^stop codon,!stoppcodon,!stop?codon,!terminatorcodon
-^aerobic
-^anaerobic
+^aerobic,?aeróbico
+^anaerobic,?anaeróbico
 ^cell culture
 ^biotransformation,!biotransformation
 ^melting temperature
@@ -19202,7 +16211,7 @@
 !neigen,^tend,?tender
 ^overheat
 ^reheat
-^ask
+^ask,?perguntar
 ^utility model,?modelo de utilidade
 ^well-known mark,?marca notoriamente conhecida
 ^conciliation,?conciliação,!versöhnung
@@ -19231,9 +16240,8 @@
 ^wood frog,!waldfrosch
 ^purpose,^topic,^subject,!gegenstand,!thema
 ^resolution
-^solution
+^solution,?solução
 ^solution,!lösung
-^solution
 ^cancellation
 ^cancel,!annulieren,!stornieren,^annul,^invalidate
 ^cancel,!ausstreichen,!durchstreichen,^cross out,^strike out
@@ -19263,7 +16271,6 @@
 !übergang,^transition,?transição
 ^move,!umziehen,?mudar-se,^move house
 ^all-party,!parteiübergreifend,?transversal
-^help
 !quer,^crosswise,?transversal,^thwartwise,^transverse,^transversal
 ?atravessar,^go through
 ^cultivate,?cultivar
@@ -19280,9 +16287,6 @@
 ^expand,!erweitern
 ^widen
 ^host,?anfitrião
-^host
-^host
-^house
 ^house,^establishment,^business firm,^firm
 ^house,^dynasty,!haus,!dynastie,!geschlecht
 ^house,^put up,^domiciliate
@@ -19370,7 +16374,7 @@
 ^bremen,!bremen,!freie hansestadt bremen
 ^hamburg,!hamburg,?hamburgo,!freie und hansestadt hamburg
 ^rhineland-palatinate,!rheinland-pfalz,?renânia-palatinado
-^schleswi!holstein,!schleswi!holstein
+^schleswig-holstein,!schleswig-holstein
 ^saarland,!saarland
 ^thuringia,!thüringen,?turíngia
 ^united states virgin islands,!amerikanische jungferninseln,?ilhas virgens americanas
@@ -19411,7 +16415,7 @@
 ^iso 3166-2:fr
 ^aisne,!aisne,?aisne
 ^allier,?allier,!allier
-^alpes-d^haut^provence,?alpes da alta provença,!alpes-d^haut^provence
+^alpes-de-haute-provence,?alpes da alta provença,!alpes-de-haute-provence
 ^hautes-alpes,!hautes-alpes,?altos-alpes
 ^alpes-maritimes,?alpes marítimos,!alpes-maritimes
 ^ardèche,?ardèche,!ardèche
@@ -19424,33 +16428,33 @@
 ^calvados,?calvados,!calvados
 ^cantal,?cantal,!cantal
 ^charente,?charente,!charente
-^charent^maritime,?charent^maritime,!charent^maritime
+^charente-maritime,?charente-maritime,!charente-maritime
 ^cher,?cher,!cher
 ^corrèze,?corrèze,!corrèze
-^côt^d'or,!côt^d’or
+^côte-d'or,!côte-d’or
 ^côtes-d'armor,?côtes-d'armor,!côtes-d’armor
 ^creuse,?creuse,!creuse
 ^dordogne,?dordonha,!dordogne
 ^doubs,?doubs,!doubs
 ^drôme,?drôme,!drôme
 ^eure,?eure,!eure
-^eur^et-loir,?eur^et-loir,!eur^et-loir
+^eure-et-loir,?eure-et-loir,!eure-et-loir
 ^finistère,?finistère,!finistère
-^cors^du-sud,?córsega do sul,!südkorsika,!cors^du-sud
-^haut^corse,?alta córsega,!haut^corse
+^corse-du-sud,?córsega do sul,!südkorsika,!corse-du-sud
+^haute-corse,?alta córsega,!haute-corse
 ^gard,?gard,!gard
-^haut^garonne,?alta garona,!haut^garonne
+^haute-garonne,?alta garona,!haute-garonne
 ^gironde,?gironda,!gironde
 ^hérault,?hérault,!hérault
 ^ill^et-vilaine,?ill^et-vilaine,!ill^et-vilaine
 ^indre,?indre,!indre
-^indr^et-loire,?indr^et-loire,!indr^et-loire
+^indre-et-loire,?indre-et-loire,!indre-et-loire
 ^isère,?isère,!isère
 ^jura,!jura
 ^loir-et-cher,?loir-et-cher,!loir-et-cher
 ^loire,?loire,!loire
-^haut^loire,!haut^loire
-^loir^atlantique,!loir^atlantique
+^haute-loire,!haute-loire
+^loire-atlantique,!loire-atlantique
 ^loiret,?loiret,!loiret
 ^lot,!lot,?lot
 ^lot-et-garonne,?lot e garona,!lot-et-garonne
@@ -19459,7 +16463,7 @@
 ^landes,!landes
 ^main^et-loire,!main^et-loire
 ^marne,?marne,!marne
-^haut^marne,?haut^marne,!haut^marne
+^haute-marne,?haute-marne,!haute-marne
 ^mayenne,!mayenne
 ^meurth^et-moselle,!meurth^et-moselle,?meurth^et-moselle
 ^meuse,?meuse,!meuse
@@ -19469,19 +16473,19 @@
 ^nord,!nord,?nord
 ^oise,!oise,?oise
 ^orne,?orne,!orne
-^pas-d^calais,?pas-d^calais,!pas-d^calais
-^puy-d^dôme,!puy-d^dôme,?puy-d^dôme
+^pas-de-calais,?pas-de-calais,!pas-de-calais
+^puy-de-dôme,!puy-de-dôme,?puy-de-dôme
 ^pyrénées-atlantiques,?pirenéus-atlânticos,!pyrénées-atlantiques
 ^hautes-pyrénées,?altos-pirenéus,!hautes-pyrénées
 ^pyrénées-orientales,?pirenéus-orientais,!pyrénées-orientales
 ^bas-rhin,!unterelsass,!bas-rhin
 ^haut-rhin,?alto reno,!oberelsass,!haut-rhin
 ^rhône,!rhône,?ródano
-^haut^saône,?haut^saône,!haut^saône
+^haute-saône,?haute-saône,!haute-saône
 ^saôn^et-loire,?saôn^et-loire,!saôn^et-loire
 ^sarthe,?sarthe,!sarthe
 ^savoie,?sabóia,!savoyen,!savoie
-^haut^savoie,?alta sabóia,!haut^savoie,!obersavoyen,!hochsavoyen
+^haute-savoie,?alta sabóia,!haute-savoie,!obersavoyen,!hochsavoyen
 ^sein^maritime,!sein^maritime,?sena marítimo
 ^sein^et-marne,?sein^et-marne,!sein^et-marne
 ^yvelines,?yvelines,!yvelines
@@ -19497,15 +16501,15 @@
 ^vendée,!vendée
 ^vienne,?vienne,!vienne
 ^gush,!sprudeln,?jorrar
-^haut^vienne,?haut^vienne,!haut^vienne
+^haute-vienne,?haute-vienne,!haute-vienne
 ^vosges,!vosges,?vosges
 ^yonne,?yonne,!yonne
 ^territoire de belfort,?território de belfort,!territoire de belfort
 ^essonne,?essonne,!essonne
-^hauts-d^seine,?altos do sena,!hauts-d^seine
+^hauts-de-seine,?altos do sena,!hauts-de-seine
 ^resign,!abdanken,?abdicar
 ^sein^saint-denis,?sein^saint-denis,!sein^saint-denis
-^val-d^marne,?val-d^marne,!val-d^marne
+^val-de-marne,?val-de-marne,!val-de-marne
 ^val-d'oise,?val-d'oise,!val-d’oise
 !abschaffung,^abolishment,?abolição,^abolition,!aufhebung,!beseitigung
 ^new caledonia,!neukaledonien,?nova caledónia
@@ -19604,7 +16608,7 @@
 ^gers,?gers,!gers
 ?pireneus,^pyrenees,!pyrenäen
 ^toulouse,?toulouse,!toulouse,!tholosen
-?îl^d^france,^îl^d^france,!îl^d^france
+?îl^de-france,^îl^de-france,!îl^de-france
 ^kampong thom,!kampong thom
 ^essonne,?essonne
 ^kampot,!kampot,!kâmpôt
@@ -19631,7 +16635,7 @@
 ?entregar,!zuerkennen,^award
 ^lyon,?lyon,!lyon,!leyden
 ^ardèche,?ardèche,!ardèche
-^bass^normandie,?baixa-normandia
+^basse-normandie,?baixa-normandia
 ^orne,?orne
 ^english channel,?mancha,!ärmelkanal
 ?epicontinental,^epicontinental,^epeiric
@@ -19690,7 +16694,7 @@
 ?lozère,^lozère
 ^champagn^ardenne
 ^aube
-^nord-pas-d^calais
+^nord-pas-de-calais
 ^strait of dover
 ^auvergne
 ^allier
@@ -19701,7 +16705,7 @@
 ^macerata,?macerata
 ^milan,?milão
 ^mantua,?mântua
-^haut^normandie
+^haute-normandie
 ^poitou-charentes
 ^charente
 ^var,?var
@@ -20235,7 +17239,7 @@
 ^rendering,?renderização,!bildsynthese,!rendern
 ^gpu,^graphics processing unit,!gpu,!grafikprozessor,^graphics processing unit
 ^video game console,?consola de videojogos,!spielkonsole,!konsole
-^larik^wakasihu
+^larike-wakasihu
 ^alune
 ^algonquin
 ^'are'are
@@ -20763,7 +17767,7 @@
 ^interface,?interface
 ^interoperability,!interoperabilität
 ^paradigm,!paradigma,?paradigma,!musterbeispiel
-^reengineering,^r^engineering
+^reengineering,^re-engineering
 ^specification,!spezifikation
 ^concurrent engineering
 ^maintainability
@@ -20795,37 +17799,6 @@
 ^nonviolence:,^nonviolence,!gewaltlosigkeit
 ^pacifism,!pazifismus
 ^civil disobedience,!ziviler ungehorsam
-^civil society
-^karyogamy
-^karyogram
-^karyotype,!karyotyp
-^transgenesis
-^transgene
-^gule
-^afforestation,!wiederaufforstung
-^afforestation,!aufforstung
-^beaver,!beaver
-^bebele
-^icev^maci
-^bedoanas
-^byangsi
-^benabena
-^belait
-^biali
-^bekati'
-^bedawi
-^bebeli
-^beami
-^besoa
-^beembe
-^besme
-^guiberoua béte
-^blagar
-^daloa bété
-^betawi
-^jur modo
-^beli
-^bena
 ^northern bai,!nördliches bai
 ^bafut
 ^betaf
@@ -20834,21 +17807,6 @@
 ^blafe
 ^bafanji
 ^ban khor sign language,^bksl,!ban-khor-gebärdensprache
-^banda-ndélé
-^mmen
-^bunak
-^malba birifor
-^beba
-^southern bai,!südliches bai
-^balti
-^gahri,^ghara,^lahuli of bunan,^boonan,^punan,^poonan,^erankad,^keylong boli,^bunan
-^gwamhi-wuri
-^bobongko
-^bangandu
-^bugun
-^giangan
-^bangolan
-^bo
 ^focus,!brennpunkt
 ^baga mboteni
 ^western balochi
@@ -20903,19 +17861,6 @@
 ^bimin
 ^bathari
 ^bohtan neo-aramaic,!bohtan-neu-aramäisch
-^bima
-^tukang besi south
-^bara malagasy
-^bahau
-^biak
-^bhele
-^bada
-^badimaya
-^bissa
-^bikaru
-^bepour
-^biafada
-^biangai
 ^bisu,!bisu
 ^vaghat-ya-bijim-legeri
 ^bile
@@ -20938,22 +17883,6 @@
 ^boxer,!boxer,?boxeador,?pugilista
 ^bandjigali
 ^barzani jewish neo-aramaic,!barzani-neu-aramäisch
-^bidyogo
-^bahinemo
-^barok
-^bulu
-^bajelani
-^banjar
-^mid-southern banda
-^southern betsimisaraka malagasy
-^binumarien
-^bajan
-^balanta-ganja
-^busuu
-^bakwé
-^banao itneg
-^bayali
-^baruga
 !bekochen,^cook for
 !interdisziplinär,^interdisciplinary
 ^massif central,!zentralmassiv
@@ -20967,43 +17896,7 @@
 ^cryptography,?criptografia,!kryptographie
 ^decryption
 ^vpn,^virtual private network
-^kyak
-^finallig
-^baka
-^binukid
-^byte,!byte
-^bengkulu
-^beeke
-^buraka
-^bakoko
-^baki
-^pande
 ^kilobyte,!kilobyte
-^berik
-^kom
-^bukitan
-^kwa'
-^boko
-^bakairí
-^bakumpai
-^masbate sorsogon
-^buhid
-^bekwarra
-^bekwil
-^baikeno
-^bokyi
-^bungku
-^bilua
-^bella coola
-^bolango
-^balanta-kentohe
-^buol
-^balau
-^kuwaa
-^bolia
-^boloki
-^boma
-^bolondo
 ?miranda do douro,^miranda do douro
 ^cladistics,?cladística,!kladistik
 ^phylogenetics,?filogenia,?filogênese,!phylogenetik
@@ -21452,7 +18345,7 @@
 ^bosngun
 ^bamukumbit
 ^boguru
-^begber^ejar
+^begbere-ejar
 ^buru
 ^baangi
 ^bali sign language,!balinesische gebärdensprache
@@ -21570,7 +18463,7 @@
 ^montepertusan,!montepertusaner
 ^baetora
 ^batak simalungun
-^bet^bendi
+^bete-bendi
 ^batu
 ^butuanon
 ^batak karo
@@ -21831,7 +18724,7 @@
 ^serif
 ^sans serif
 ^monochrome,!monochrom
-^yahoo,^yahoo!
+^yahoo,^yahoog-
 ^unix
 ^webcam,!webcam
 ^downsample
@@ -22699,7 +19592,7 @@
 ^cluttered,!überhäuft,?desordenado
 ^inscribe,!einschreiben,?inscrever
 !muschelförmig,^shell-shaped,!muschelförmig,?concha
-!aufstockung,^superelevation,?sobr^elevação
+!aufstockung,^superelevation,?sobre-elevação
 !sich wieder durchsetzen,^reaffirm,?reafirmar-se
 !anknüpfen,^reconnect,?juntar de novo
 !sich entziehen,^elude,?eludir,?esquivar-se
@@ -22902,7 +19795,7 @@
 ^drents
 ^rukai
 ^darwazi
-!baiji,^baiji,^chinese river dolphin,^yangtze river dolphin,^whitefin dolphin,^yangtze dolphin,^pai-chi,!chinesischer flussdelfin,!jangts^delfin
+!baiji,^baiji,^chinese river dolphin,^yangtze river dolphin,^whitefin dolphin,^yangtze dolphin,^pai-chi,!chinesischer flussdelfin,!jangtse-delfin
 ^so much
 ^dutch sign language,!niederländische gebärdensprache
 ^disa
@@ -23205,7 +20098,7 @@
 ^lushootseed
 ^northeast maidu
 ^northwest maidu
-^malecit^passamaquoddy
+^malecite-passamaquoddy
 ^mandan
 ^maricopa
 ^menominee
@@ -23284,7 +20177,7 @@
 ^tuscarora
 ^tututni
 ^umatilla
-^ut^southern paiute,^colorado river numic
+^ute-southern paiute,^colorado river numic
 ^walla walla,^northeast sahaptin
 ^wasco-wishram
 ^washo
@@ -23642,7 +20535,7 @@
 ^gobu,!gobu
 ^goundo
 ^gozarkhani
-^17th century,!17. jahrhundert,!17. jh.,?século xvii
+^century,!17. jahrhundert,!17. jh.,?século xvii
 ^metropolitan area,!metropolregion
 ^subsidiary,!tochtergesellschaft
 ^protestantism,!protestantismus
@@ -23652,31 +20545,6 @@
 ^macrophage,!makrophage,?macrófago
 ^macrophage,?macrófago
 ^psychologist,!psychologe,?psicólogo
-^propinquity
-^orifice
-^ontogeny,^ontogenesis
-^ontogeny
-^retirement
-^gupa-abawa
-^taiap
-^guiqiong
-^guana
-^guruntum-mbaaru
-^madi
-^gbiri-niragu
-^ghari
-^southern grebo
-^kota marudu talantang
-^groma
-^gorovu
-^gresi
-^garo
-^kistane
-^central grebo
-^gweda
-^guriaso
-^barclayville grebo
-^guramalum
 ^footnote,?nota de rodapé,!fußnote,!fn.,!anmerkung
 ^footnote,!fußnote,!anmerkung,!fn.
 ^ornithologist,!ornithologe,!ornithologin
@@ -23697,36 +20565,12 @@
 ^german sign language,!deutsche gebärdensprache,!dgs
 ^gusilay
 ^guatemalan sign language,!guatemalische gebärdensprache,!guatemaltekische gebärdensprache
-^gusan
-^wasembo
 ^greek sign language,!griechische gebärdensprache
 !würgen,^retch
-^guató
-^gbati-ri
-^shiki
-^reduction
 ^reduction,!verminderung,!reduzierung
 ^reduction,!einreduzierung
 ^reduce,!einreduzieren
-^guajajára
-^yocoboué dida
-^gurinji
-^gupapuyngu
-^paraguayan guaraní
-^guahibo
-^eastern bolivian guaraní
-^guambiano
-^mbyá guaraní
-^guayabero
-^gunwinggu
-^farefare,^ninkare
 ^guinean sign language,!guineische gebärdensprache
-^maléku jaíka
-^yanomamö
-^gey
-^gun
-^gourmanchéma
-^gusii
 ^diocese,!diözese,?diocese,^diocese,^diocese,^bishopric,!bistum,!sprengel,!kirchensprengel
 ^grid,!stromnetz,!energieverbundnetz,!elektroenergienetz,!energieversorgungsnetz,!stromversorgungsnetz,!elektrizitätsnetz
 ^analgesic,!analgetikum,?analgésico,^painkiller,!schmerzmittel
@@ -23760,29 +20604,6 @@
 ^joker
 ^sumo,?sumô,!sumo
 ^falsetto,!falsett,?falsete
-^mbato
-^gwa
-^gweno
-^moo
-^gwere
-^guwamu
-^kwini
-^gua
-^wè southern
-^northwest gbaya
-^garus
-^kayardild
-^gyem
-^gungabula
-^gbayi
-^gyele
-^ngäbere
-^guyanese creole english
-^guarayu
-^gunya
-^ganza
-^gazi
-^gane
 ^hanoi sign language,!hanoi-gebärdensprache
 ^gurani,^hawrami
 ^hatam
@@ -23834,10 +20655,9 @@
 ^acrolect,!akrolekt
 ^censor
 ^censor,!zensieren,?censurar
-^hoax
 ^extinct,!ausgestorben,?extincto
 ^insidious,^pernicious,^subtle,!heimtückisch,!hinterhältig,!hinterlistig,!subtil
-^woolly rhinoceros,!wollnashorn,?rinoceront^lanudo
+^woolly rhinoceros,!wollnashorn,?rinoceronte-lanudo
 ^ming dynasty,?dinastia ming
 ^bull terrier,!bullterrier
 !elch,?alce
@@ -23846,21 +20666,8 @@
 ^glycolysis,!glykolyse,?glicólise
 ^irish sign language,!irische gebärdensprache
 ^indonesian sign language,!indonesische gebärdensprache
-^hahon
-^hakka
 ^norwegian sign language,!norwegische gebärdensprache
-^natagaimas
 ^indian sign language,?língua de sinais indiana,!indische gebärdensprache
-^hewa
-^hangaza
-^hakö
-^hupla
-^harari
-^haisla
-^havu
-^southern haida
-^haya
-^hazaragi
 ^decennial,!zehnjähriges jubiläum,!zehnjährige jubiläum,!zehnte jahrestag,!zehnjährige jubiläum
 ^usher's syndrome
 ^synthetic,?sintético,!synthetisch
@@ -23872,8 +20679,6 @@
 ^opaque
 ^paradigm,!paradigma,?paradigma
 ^nationalist,!nationalist,!nationalistin,!nationalist
-^ctla4
-^cell marker
 ^rope ladder,!strickleiter
 ^thin,^thin
 ^haggard,?extenuado,!abgezehrt,!ausgezehrt,!abgespannt
@@ -23896,35 +20701,11 @@
 ^birthday cake,!geburtstagskuchen
 ^instantaneous,!augenblicklich
 ^divergent,?divergente
-^aortic valve stenosis
 ?corpulento,^stout,^corpulent,^bulky,^heavily built,^thickset,?volumoso
 ^toothpick,!zahnstocher,?palito,?palito de dentes
-^hamba
-^huba
-^habu
-^andaman creole hindi
-^huichol
 ^honduras sign language,!honduranische gebärdensprache
-^herdé
-^helong
-^hehe
-^heiltsuk
-^hemba
 ^herero,!herero,!otjiherero,!ochiherero,?hereró
-^saan
-^haigwai
-^kerak
-^hibito
-^pamosu
-^hijuk
-^seit-kaitetu
-^rant
 ^hiligaynon,^ilonggo
-^himarimã
-^hiw
-^kahe
-^hunde
-^halia
 !pelotte,^pelotte
 ^matu chin
 ^apostate,!abtrünnige
@@ -23943,53 +20724,21 @@
 ^javelin,!wurfspeer
 ^porcelain,!porzellan,?porcelana
 ^alpha male,!alphamännchen
-^prowess
 ^intercontinental,!interkontinental
 ^untenable,!unhaltbar
 ^junta,!militärjunta,!junta
 ^pelotte
 ^baby face,!milchgesicht,!kindergesicht
 ^worldwide,!weltweit
-^transparency
 ^racket,^racquet,?raquete
 ^optic nerve,!sehnerv,?nervo óptico
 ^clandestine,?clandestino
 ^hiri motu,!hiri motu,!police motu,^police motu,^pidgin motu,?hiri motu
-^eastern qiandong hmong
-^hmar
-^hamtai
-^hamap
-^mina
-^hani
-^hanunoo
 ^corporal,!korporal
-^tenant
-^rostrum
 ^beatboxing,!beatboxing,!beatboxen
 ^pedigree,?pedigree
-^hoava
-^mari
-^horom
-^hobyót
-^holu
-^homa
-^holoholo
 ^ho chi minh city sign language,!ho-chi-minh-stadt-gebärdensprache
-^hote
-^hovongan
-^honi
-^hpon
-^hrangkhol
-^haruku
-^haroi
-^horuru
 ^hértevin,!hertevin
-^hruso
-^harzani
-^southeastern huastec
-^hungarian sign language,!ungarische gebärdensprache
-^hausa sign language,!hausa-gebärdensprache
-^xiang,^hunanese,^xiang chinese
 ^javeling thrower,!speerwerfer
 ^nudism,!nudismus,!freikörperkultur,?nudismo
 ^harsusi
@@ -24012,22 +20761,6 @@
 ^cricketer
 ^qirad
 ^discourse,?discurso
-^hitu
-^huambisa,^huambiza,^wambisa
-^huaulu
-^san francisco del mar huave
-^humene
-^huachipaeri
-^huilliche
-^huli
-^hulung
-^hula
-^hungana
-^tsat
-^veracruz huastec,^huastec,^wastek
-^humla
-^murui huitoto
-^san mateo del mar huave
 !zuckertüte,!schultüte
 ^hukumina
 ^nüpode huitoto,^n?pode
@@ -24048,18 +20781,10 @@
 ^renew,!erneuern
 ^confidant,!vertraute,?confidente
 ^due to,!aufgrund,!infolge
-^american
-^american
 ^dermatology,!dermatologie,?dermatologia
 !mittellatein,^medieval latin,!mittellateinisch,?latim medieval
 ^differential calculus,^differential calculus,!differentialrechnung
 ^islamabad,!islamabad
-^iaai
-^iatmul
-^iapama
-^purari
-^times
-^regular
 !karatschai-see,^lake karachay,^lake karachai,?lago karachai
 ^tribulation,^adversity,!trübsal,?tribulação
 !altlatein,^old latin,^early latin,^archaic latin,!altlateinisch
@@ -24070,43 +20795,19 @@
 ^carnage,^bloodbath,^massacre,!massaker,?massacre,^massacre,^bloodbath,^carnage
 ^maroon
 ^society of jesus,?companhia de jesus
-^freshet
 ^drawback,^disadvantage,!nachteil
 ^edman degradation,!edman-abbau
 ^drawback
 ^snakepit,!schlangengrube,^snake pit
 !bergig,^mountainous,!gebirgig
-^ibibio
-^iwaidja
-^akpes
-^ibanag
-^ibilo
-^ibaloi
-^agoi
-^ibino
-^ibuoro
-^ibu
-^ibani
-^ede ica
-^etkywan
 ^icelandic sign language,!isländische gebärdensprache
 ^rebate card,!rabattkarte
 ^islander creole english
 ^retina,!netzhaut,?retina
 ^wakhi
 ^idakho-isukha-tiriki
-^indo-portuguese
-^idon
-^ede idaca
-^idere
 ^dacia,!dakien
 ^supreme,?supremo
-^facebook
-^idi
-^indri
-^idesa
-^idaté
-^idoma
 ^team,^group,!gruppe
 ^red-haired,^redheaded,!rothaarig
 !holunderbeersaft,!holundersaft,^elderberry juice
@@ -24116,7 +20817,7 @@
 ^ifè
 ^ifo
 ^tuwali ifugao
-^tek^fuumu
+^teke-fuumu
 ^mayoyao ifugao
 ^claw hammer,!schreinerhammer
 ^archive,^file,!archivieren,?arquivar
@@ -24137,28 +20838,10 @@
 ^gastrointestinal tract,^alimentary canal,?aparelho digestivo,!verdauungstrakt,!verdauungsapparat,!magen-darm-trakt,!gastrointestinaltrakt,^digestive tract,^gi tract,^gut
 ^jaundice,!gelbsucht,!ikterus,^icterus,?ictericia,?icterícia
 ^bittern,!rohrdommel
-^jaundiced eye
-^keley-i kallahan
-^ebira
-^igede
-^igana
-^igala,!igala
-^kanggape
-^ignaciano
-^isebe
-^interglossa
-^igwe
-^iha based pidgin
-^ihievbe
-^iha
 ^sichuan yi,!sichuan yi,?yi de sichuan,^nuosu,^northern yi,^liangshan yi,^nosu
 ^kalabari
 ^southeast ijo
 ^eastern canadian inuktitut,?inuktitut canadiano oriental,^inuktitut
-^iko
-^ikulu
-^olulumo-ikom
-^ikpeshi
 ^western canadian inuktitut,?inuktitut canadiano ocidental,^inuvialuk,^inuvialuktun
 ^iku-gora-ankwa
 !pompejisch,^pompeian,!pompejanisch
@@ -24175,13 +20858,6 @@
 ^tonogenesis
 ^atonal,!atonal
 ^adhesive bandage,!pflaster
-^philanthropist
-^ikwere
-^ikizu
-^gambler
-^paganism
-^mameluke
-^in-band signaling
 ^bellows,!blasebalg
 ^stoning,!steinigung,?lapidação
 ^post office,!postamt,!post,!postfiliale,?estação de correios,?correio
@@ -24198,22 +20874,6 @@
 ^portal vein
 ^leverpoortader,^hepatic portal vein
 ^hypofysepoortader,^hypophyseal portal system
-^ile ape
-^ila
-^gari!ilgar
-^ili turki
-^ilongot
-^iranun
-^ili'uun
-^ilue
-^talur
-^imeraguen
-^anamgura
-^imonda
-^imbongu
-^imroing
-^inga
-^jungle inga
 ^heart failure,!herzinsuffizienz,?insuficiência cardíaca,^congestive heart failure,^hf,^chf
 ^atherosclerosis,!arteriosklerose
 ^ischemia,!ischämie,?isquémia
@@ -24240,9 +20900,6 @@
 ^tusk,!stoßzahn,?colmilho
 !oktoberfest,^oktoberfest
 ^ball-peen hammer,!hammer mit runder bahn
-^isinai
-^inok^yate
-^port moresby
 ^borders on,?faz fronteira com,!grenzt an
 ^iñapari
 ^pea,?ervilha,!erbse
@@ -24257,48 +20914,17 @@
 ^kura
 ^koblenz,!koblenz,!coblenz,?coblença
 ?vesícula biliar,^gallbladder,!gallenblase
-^ineseño
-^inor
-^tuma-irumu
-^iowa-oto
-^ipili
-^ipiko
-^iquito
-^iresim
-^irarutu
-^irigwe
-^ikoma
 ^quay,!kai,?cais
-^irántxe
-^vientiane
 ^taipei,?taipé
 ^new delhi,?nova deli,!neu-delhi
 ^bay of bengal,!golf von bengalen,?golfo de bengala
 ^is written in,?é escrito em,^is written in the,!wird geschrieben in
 ^trailer,!anhänger,?reboque
 ^affectionate,!anhänglich,?afectuoso,^warm,^warm-hearted,^goodhearted
-^kamberau
-^iraya
-^manila
-^isabi
 ^announce,!verkünden,!anmelden,?anunciar
 ^persian gulf,?golfo pérsico,!persischer golf
 ^gulf of oman,!golf von oman
-^isconahua
-^isnag
 ^italian sign language,!italienische gebärdensprache
-^is expressed by
-^sign,^signing
-^esan
-^nkem-nkum
-^masimasi
-^isanzu
-^isoko
-^jeruzalem
-^tunis,!tunis,?tunes
-^istriot
-^isu
-^bight of bonny
 ^bight,^inlet,!bucht
 ^ionian sea,!ionisches meer,?mar jônico
 ^tyrrhenian sea,!tyrrhenisches meer
@@ -24312,32 +20938,6 @@
 ^mental reservation
 ^passenger train,!personenzug
 ^drain,?drenar
-^itu mbon uzo
-^itonama
-^iteri
-^isekiri
-^maeng itneg
-^itutang
-^itawit
-^ito
-^itik
-^moyadan itneg
-^itza'
-^ibatan
-^ivatan
-^i-wak
-^iwam
-^iwur
-^sepik iwam
-^ixcatec
-^nebaj ixil
-^chajul ixil
-^iyayu
-^mesaka
-^yaka
-^ingrian
-^izi-ezaa-ikwo-mgbo
-^jamamadí
 ^continuous,^non-stop,^endless,^incessant,!anhaltend,!andauernd,^permanent,!ununterbrochen
 ^hyam
 ^eastern jakalteko,^jakalteko,^jakaltek,^poptí,?jacalteco,?popti
@@ -24359,24 +20959,9 @@
 ?batida,^daiquiri
 ?batida,?vitamina,^shake,^milk shake,^shake,^milk shake,^shake,^fruit shake,^fruit juice shake,?batido,?néctar,!milchshake,!fruchtshake
 ?batida,^eg!yolk shake,?gemada,?batida de ovo
-^jahanka
-^yabem
-^kuala lumpur,!kuala lumpur
-^western jacaltec
-^jakun
-^yalahatan
 ^jamaican creole english,^limón creole english,^panamanian creole english
-^jaruára
-^yaqay
-^jarawa
-^new caledonian javanese
-^caac
-^hmwaveke
-^yaur
+edonian javanese
 ^singapore city,!singapur
-^jambi malay
-^jarnango
-^jawe
 ^ausculation,^auscultation
 ^crepitation
 ^laparoscopy,?laparoscopia,!laparoskopie
@@ -24387,20 +20972,11 @@
 ^shilha
 !zitronengelb,^citreous,^lemon-yellow
 ^lojban,!lojban,?lojban
-^jabutí
-^jukun takum
-^jamaican country sign language
-^jad
-^judeo-tat
-^jebero
-^jerung
 ^kathmandu,?catmandu
 ^accentuation,?acentuação,!akzentuierung
-^frolic
 ^abasement,!erniedrigung,^debasement,^degradation
 !übersetzbar,^translatable,?traduzível
 !untranslatable,^untranslatable,!unübersetzbar
-!untranslatable
 ^lyons sign language,!lyoner gebärdensprache
 ^appendectomy,!appendectomie,?apendicectomia,^appendisectomy,^appendicectomy,!appendektomie
 ^embolism,!embolie
@@ -24408,70 +20984,31 @@
 ^australian dollar,?dólar australiano,^australian dollar
 ^iso 4217 code,?código iso 4217,!iso-4217-code
 ^danish krone,!dänische krone
-^mcburney's incision
 ^abash,!beschämen,?vexar
 ^lao kip,!kip
-^yei
-^jeri kuo
 ^cfa franc,^franc,^west african cfa franc
 ^guinean franc,!franc guinéen
-^fad
-^yelmek
-^dza
-^jere
-^manem
 ^abatement,?abatimento,!reduktion,!rabatt,!ermäßigung,!minderung
 ^amstel,!amstel
-^ngbee
-^ngomba
 ^demonym,?gentílico,^gentilic,!volksbezeichnung,!demonym,!ethnikon,!völkername
 ^cameroonian,!kameruner
 ^frenchman,!franzose
 ^amsterdammer,^amsterdamer,!amsterdamer
 ^abduct,^kidnap,?raptar,!entführen
-^jehai
-^jibu
-^tol
-^gulf of honduras
-^gulf of fonseca
-^lempira
 ^hondurant.,^honduran,!honduraner
-^bu
 ^nigerian,!nigerianer
 ^nigerian naira,!naira,!nigerianischer naira
-^djingili
-^jiiddu
-^gulf of aden
-^somali shilling
-^jilim
-^jimi
-^guanyinqiao
 ^tok pisin,!tok pisin,^melanesian pidgin english,^neo-melanesian,^new guinea pidgin,!pidgin-englisch,!neuguinea-pidgin,!neomelanesisch,!melanesisch-pidgin
 ^papua new guinean kina
 !tarnen,^camouflage
 ^mlomp
 ^kun!gobabis
-^pula
-^namibian dollar
-^jita
-^tanzanian shilling
-^youle jinuo
-^shuar
 ^ecuadorian,!ecuadorianer,?equatoriano
-^buyuan jinuo
-^kubo
-^labir
 ^tuber,!knolle
 !smaragden
 !smaragden,!smaragdgrün,^emerald-green
 ^abductor,^kidnapper,!entführer,!kidnapper,?raptor
 ^abhorrent,!ekelhaft,?repugnante,?nojento,^disgusting,!eklig
-^dima
-^machame
-^yamdena
-^jimi
-^kamara
-^mashi
 ^chinese,?chinês
 ^vietnamese d?ng,^d?ng
 ^abiding,!dauerhaft
@@ -24490,11 +21027,6 @@
 ^western juxtlahuaca mixtec
 ^kazakhstani tenge
 ^tashkent,!taschkent
-^jangshung
-^janji
-^yemsa
-^rawat
-^joba
 ^congolese franc,^franc
 ^congolese
 ^aboriginal,!aborigine,^aborigine
@@ -24513,16 +21045,7 @@
 ^abreviate,!abkürzen,^abbreviate
 ^stereoisomer
 ^network time protocol,^ntp
-^claymore
-^legendre's conjecture
-^dzhidi
-^jaqaru
-^jarai
-^cambodian riel
-^gulf of thailand
 ^cambodian,!kambodschaner
-^jiru
-^japrería
 ^abasia,!abasie
 ^japanese sign language,!japanische gebärdensprache
 ^júma
@@ -24557,14 +21080,8 @@
 ^guyanese,!guyaner
 ^karakalpak,!karakalpakisch
 ^uzbekistan som,^uzbekistani som
-^jingpho,^kachin
-^naypyidaw
-^kyat
 ^andaman sea,?mar de andamão
-^kadara
-^kajaman
 ^sampling frequency,!abtastrate
-^jju
 ^kayapa kallahan
 ^slaugterer,!schlachter,^slaughterer
 ^annual ring,!jahresring,!jahrring
@@ -24578,16 +21095,6 @@
 ^request stop,!bedarfshalt,!halt auf verlangen,^demand stop,^flag stop
 ^xaasongaxango,^xasonga
 ^capanahua
-!rheingold
-^katukína
-^kaxuiâna
-^kadiwéu
-^kanju
-^kakauhua
-^khamba
-^camsá
-^kari
-^grass koiari
 !verstrahlen
 !verstrahlt,!radioaktiv kontaminiert,!radioaktiv verseucht,^radioactively contaminated
 ^lynx,?lince,!luchs
@@ -24601,10 +21108,6 @@
 ^secular,!säkular,!weltlich
 ^serendipity
 ^darkroom,!dunkelkammer
-^iwal
-^kare
-^kaliko
-^kabiyé
 ^dazzle,!blenden,?encandear
 !kurpark,!kuranlage,!kurgarten,^spa gardens
 ^faithless,!truelos,?infiel,!treulos,!untreu
@@ -24667,19 +21170,9 @@
 ^aboard,!an bord,?a bordo
 ^abadi
 ^abound,!überfluß haben an,?ser rico
-^dera
-^kaiep
-^ap ma
-^khanty
-^kawacha
-^lubila
 ^ngkâlmpw kanum
 ^abortive,!fehlgeschlagen,?fracassado
 ^abreast,^side biy side,!nebeneinander,?lado a lado,^side by side,!seite an seite
-^kaivi
-^ukaan
-^tyap
-^vono
 ^script,^writing system,!schrift,!schriftsystem,^writing
 ^kamantan
 ^kobiana
@@ -24705,12 +21198,9 @@
 ^latvian lats
 ^daugava
 ^gulf of riga,!rigaischer meerbusen
-^kinalakna
-^kanga
 ^lithuanian litas,!litas,^litas
 ^estonian kroon,!krone
 ^dandelion,!löwenzahn
-^nap
 ^potassium nitrate,!kaliumnitrat,?nitrato de potássio,!kalisalpeter
 ^magnolia,!magnolie
 ^dutch gulden,!niederländischer gulden,?florim neerlandês,^guilder,^gulden,^florin,^dutch florin
@@ -24730,19 +21220,7 @@
 ^macedonian denar,!mazedonischer denar,!denar,^denar
 ^albanian lek
 ^serbian dinar,!serbischer dinar,!dinar,^dinar
-^romanian leu
-^romanian
-^hungarian forint
-^kamo
-^kaian
-^kami
 ^dar es salaam,!daressalam,?dar es salaam
-^kete
-^kabwari
-^konongo
-^worimi
-^kutu
-^makonde
 ^maputo,?maputo
 ^mozambican,!mosambikaner
 ^mozambican metical
@@ -24762,7 +21240,7 @@
 ^lesotho loti
 ^swati,!siswati,?suázi
 ^praia
-^cape verdean escudo,?escudo cabo-verdiano,!ka?verd^escudo
+^cape verdean escudo,?escudo cabo-verdiano,!ka?verde-escudo
 ^qatari,!katarer
 ^qatari riyal,^riyal
 ^maltese lira,!maltesische lira,!lira,^lira
@@ -24793,10 +21271,6 @@
 ^encephalitis,!enzephalitis,?encefalite,!gehirnentzündung
 ^exude,?exsudar
 ^eclectic,!eklektisch,?eclético
-^kekchí,!kekchí,^q'eqchi'
-^kela
-^kemak
-^kenyang
 ^rchinoderm,^echinoderm
 ^was formerly known as,?foi conhecido anteriormente como,!war früher bekannt als
 ^rhodesia,!rhodesien,?rodésia,^rhodesia,^rhodesia,^rhodesia,^rhodesia,^rhodesia,^rhodesia,^rhodesia,^rhodesia
@@ -24847,7 +21321,7 @@
 !sich scheiden lassen,^divorce,^get a divorce,^get divorced
 ^divorcée,^divorcee,!geschiedene
 ^divorcé,!geschiedener
-^fiancée,!verlobte,^fiancee,!zukünftige,^betrothed,^brid^to-be,^betrothed
+^fiancée,!verlobte,^fiancee,!zukünftige,^betrothed,^bride-to-be,^betrothed
 ^fiancé,^fiance,!verlobter,!zukünftiger,^betrothed,^groom-to-be,^betrothed
 ^curare
 ^surgery,!operationssaal
@@ -24882,21 +21356,8 @@
 ^acclaim,^acclamation,!beifall,?aclamação
 ^acclimatization
 ^curettage,!kürettage
-^extravasation
-^kurumba
-^kemiehua
-^kinnauri
-^kung
-^khunsari
-^kuk
-^korku
-^korlai creole portuguese
 ^acclimatize,!akklimatisieren,?aclimatar
-^kachchi
 ^accommodating,!entgegenkommend,?prestável
-^kharam naga
-^kumauni
-^koromfé
 ^accompanist,!begleiter,?acompanhante
 ^accomplished,!geschickt,?consumado,^competent,!versiert
 ^accomplished,?cumplido
@@ -24913,13 +21374,10 @@
 ^neglect
 ^baud,!baud,!zeichen pro sekunde,^symbols per second,^pulses per second
 ^bandwidth,^digital bandwidth,^network bandwidth,!datenübertragungsrate,!datentransferrate,!bandbreite,!kapazität,!verbindungsgeschwindigkeit,!übertragungsgeschwindigkeit,!datenrate
-^compression
-^compression
 ^compression,!datenkompression,!datenkomprimierung
 ^streaming
 ^accordingly,!entsprechend,?em conformidade
 ^according to,!laut,?segundo,!gemäß,!nach,!entsprechend,!übereinstimmend,^according
-^kaiwá
 ^accost,!anreden,^abord
 ^accountability,^liability,!verantwortlichkeit,?responsabilidade,!haftung
 ^accountable,!verantwortlich
@@ -24934,25 +21392,10 @@
 ^ghanaian cedi
 ^accurate,!genau,^exact,^precise
 ^ghanaian,!ghanaer
-^exactly
+^exactly,!genau,?exatamente
 ^precisely,?precisamente
 ^accursed,!verflucht,?amaldiçoado
 ^accursed,!verflucht,?maldito
-^chala
-^maasina fulfulde
-^kunggari
-^karingani
-^krongo
-^kaingáng,^kaingang
-^kamoro
-^abun
-^kumbainggar
-^somyev,^somyev
-^kobol
-^karas
-^karon dori
-^kamaru
-^kyerung
 ^nouakchott,!nouakchott
 ^accusal,^accusation,!anklage
 ^mauritanian ouguiya
@@ -24983,7 +21426,6 @@
 !nostratisch,^nostratic
 ^inaugurate,?inaugurar
 ^fluid,!fluid,?fluido
-^acquaint,!(sich) vertraut machen
 ^acquaint,!mitteilen,^inform,!informieren,^advise,^apprise,^tell,^notify,!mittheilen
 ^beside,!neben,^next to,!bei,^by
 ^just,^only,^simply
@@ -25132,23 +21574,12 @@
 ^neap tide,!nippflut,!nipptide,?água-morta
 ^tidal range,!tidenhub
 ^adventure,!abenteuer,?aventura
-^khandesi
-^kapori
-^kasua
 ^nkhumbi,^nkumbi,^khumbi
 ^adventurer,!abenteurer,?aventureiro,!glücksritter
-^kanu
-^kele
-^keapara
 ^netherlands antillean gulden,!antillen-gulden,!niederländisch^antillen-gulden
 ^adventurous,!abenteuerlustig,?aventureiro,^adventuresome
 ^short story,!kurzgeschichte,?conto
 ^novella,!novelle
-^kim
-^koshin
-^eastern parbate
-^kimaama
-^kilmeri
 ^adversarial,!konfliktreich
 ^advertise,!werben
 ^advertiser,?anunciante,!werber
@@ -25168,23 +21599,11 @@
 ^niue,!niueanisch
 ^yucatec maya sign language
 ^aerial,!antenne,?antena
-^alofi
 ^is member of,?é membro de,!ist mitglied von
 ^consort,?consorte
 ^aerobatics,!kunstfliegen,?acrobacia aérea
 ^aerobics,!aerobic
 ^aerodrome,!flughafen,?aeródromo
-!schmuddelwetter
-!nasskalt
-^sheshi kham
-^kosadle
-^kis
-^agob
-^kirmanjki
-^kimbu
-^northeast kiwai
-^kirikiri
-^kisi
 ^aerodynamic,?aerodinâmico,!aerodynamisch
 ^aeronautic,?aeronáutico,!aeronautisch,^aeronautical
 ^aeronautics,!luftfahrt
@@ -25208,17 +21627,6 @@
 ^harvest,!ernten,?colher,^reap
 ^microstraining
 ^affecting,!rührend
-^mlap
-^eastern q'anjob'al,^kanjobal
-^coastal konjo
-^southern kiwai
-^kisar
-^khalaj
-^zabana
-^honiara
-^solomon islands dollar
-^anuta
-^gela
 !tomatenmesser,^tomato knife
 !brotmesser,^bread knife
 ^canadian ukrainian,!kanadisches ukrainisch
@@ -25249,7 +21657,7 @@
 ^affront,!beleidigung
 ^affront,!beleidigen,^debase
 ^afresh,!noch einmal,!aufs neue
-^vesical,!vesikal,!blasen-
+^vesical,!vesikal,!blasen
 ^column,!spalte
 ^saterfriesisch,!saterfriesische sprache,!saterfriesisch,^sater frisian
 ^aftercare,!nachsorge
@@ -25270,7 +21678,7 @@
 ^trombonist
 ^partners with,?faz parceria com,!ist das pendant zu
 ^brother-in-law,!schwager
-^ag^old,!uralt
+^age-old,!uralt
 ^flautist,^flutist,!flötist,!flötistin
 ^aggression,!angriff,!aggression,?agressão
 ^autotrophic
@@ -25280,21 +21688,10 @@
 ^aggrieved
 !hinderungsgrund,^obstacle
 ^muharram,!muharram
-^dhu al-hijjah,!dhu l-hiddscha
-^?? ??????,^dhu al-qa'dah,!dhu l-qa'da
-^?????,^shawwal,!schauwal
-^sha'aban,!scha'ban
-^???,^rajab,!radschab
-^jumada al-thani,!dschumada ath-thani,!dschumada al-akhir,!dschumada ii.,^jumaada-ul-akhir,^jumada-l-akhra
 ^jumada al-awwal,!dschumada al-ula,!dschumada al-auwal,!dschumada i.
 ^apure,^apure river
-^rabi' al-thani,!rabi' ath-thani,!rabi' al-akhir,!rabi' ii.,^rabi`-ul-akhir
 ^apure
-^rabi' al-awwal,!rabi' al-auwal,!rabi' al-awwal,!rabi' i.
-^???,^safar,!safar
-^arauca
-^arauca
-^arauca
+^safar,!safar
 ^aghast,!entsetzt,?horrorizado
 ^barima
 ^casiquiare
@@ -25352,7 +21749,7 @@
 ^kinnauri harijan
 ^pwo eastern karen
 ^kurudu
-!rotmilan,^red kite,!roter milan,!gabelweihe,!königsweihe,?milhafr^real
+!rotmilan,^red kite,!roter milan,!gabelweihe,!königsweihe,?milhafre-real
 ^east kewa
 ^phrae pwo karen
 ^ramopa
@@ -25435,7 +21832,7 @@
 ^biotic potential
 ^aquitard
 ^boiling point elevation
-^boyle's law,!boyl^mariottesches gesetz,!boyl^mariott^gesetz,!gesetz von boyl^mariotte,?lei de boyl^mariotte,^mariott^boyle law,^boyle's law
+^boyle's law,!boyl^mariottesches gesetz,!boyl^mariotte-gesetz,!gesetz von boyl^mariotte,?lei de boyl^mariotte,^mariotte-boyle law,^boyle's law
 ^avogadro's number,!avogadro-konstante,!avogadro-zahl
 ^avogadro's principle
 ^antimatter,!antimaterie
@@ -25624,7 +22021,7 @@
 ^koi
 ^tumi
 ^kangean
-^tek^kukuya
+^teke-kukuya
 ^kohin
 ^guguyimidjir,^gogo-yimidjir,^gugu-yimidhirr,^gugu yimithirr,^guugu yimidhirr,^gugu yimijir,^kukuyimidir,^koko imudji,^koko yimidir,^kuku jimidir,^kuku yimithirr,^kuku yimidhirr
 ^kaska
@@ -26022,7 +22419,7 @@
 ^komi-zyrian
 ^mountain koiali
 !kiritimati,^kiritimati,^christmas island,!weihnachtsinsel
-^arrenslee,!pferdeschlitten,^hors^sleigh
+^arrenslee,!pferdeschlitten,^horse-sleigh
 ^apposition,!apposition
 ^rundi,^kirundi,!kirundi,?kirundi,?rundi
 ^tsonga,!xitsonga,!shangaan,!thonga,!tsonga,?tsonga
@@ -26247,7 +22644,7 @@
 ^bilge
 ^chewa,^nyanja,^chichewa,^chinyanja
 ^crazy,^mad,!verrückt,^daft,^insane
-!spitzwinklig,^acut^angled
+!spitzwinklig,^acute-angled
 !beresina,!bjaresina,^berezina,^beresina,!berezina,^berezina river
 ^kurchatovium,!kurtschatowium
 ^astral,?astral,!astral
@@ -27173,7 +23570,7 @@
 ^barely,!kaum
 ^bareness,!blöße
 ^goede vrijdag
-^do!ear,!eselsohr,^dogear
+^dog-ear,!eselsohr,^dogear
 ^weathercock,!fähnchen im wind
 ^routing
 ^barn,!scheune,?celeiro
@@ -27928,7 +24325,7 @@
 !brandwunde
 !vernarben,^scar over
 ^break up,!schluß machen,!schluss machen
-^greater whit^toothed shrew,!hausspitzmaus
+^greater white-toothed shrew,!hausspitzmaus
 ^blender,!mixer
 ^blessing,!segen,?bênção
 ^blindworm,^slowworm,!blindschleiche
@@ -27955,7 +24352,7 @@
 !blois
 ?alençon
 ?honfleur,!honfleur
-?bolonha-sobr^o-mar
+?bolonha-sobre-o-mar
 ?la rochelle,^la rochelle,!la rochelle
 ^brest,!brest
 ^lakalei
@@ -27972,7 +24369,7 @@
 ^hermit
 ^hermit,!einsiedler,?eremita,!eremit,!klausner
 ^lole
-^tek^laali
+^teke-laali
 ^lelak
 ^lilau
 ^lasalimu
@@ -28038,7 +24435,7 @@
 ?saint-brieuc,^saint-brieuc,!saint-brieuc
 ?le mans,^le mans,!le mans
 ?hendaye,^hendaye
-^saint-jean-d^luz,?saint-jean-d^luz
+^saint-jean-de-luz,?saint-jean-de-luz
 ?saint-tropez,^saint-tropez,!saint-tropez
 ?bayeux,^bayeux,!bayeux
 ?sèvres,^sèvres,!sèvres
@@ -28268,7 +24665,7 @@
 ^bunch,!traube
 ^bundle,!bündel,^sheaf,^packet,^package
 ^makasar
-^coconut crab,^robber crab,^palm thief,^terrestrial hermit crab,!palmendieb,!ganjokrebs,!kokoskrebs,?caranguejo-dos-coqueiros,?ladrão-d^coco
+^coconut crab,^robber crab,^palm thief,^terrestrial hermit crab,!palmendieb,!ganjokrebs,!kokoskrebs,?caranguejo-dos-coqueiros,?ladrão-de-coco
 ^bunk,!koje
 ^bunker,!bunker,?abrigo
 ^burble,!last,?fardo
@@ -28612,7 +25009,7 @@
 ^cumulus,?cumulus,!cumulus
 !wasserkrieg,^water war
 ^postwar,^post-war
-^prewar,^pr^war,^antebellum
+^prewar,^pre-war,^antebellum
 ^amagasaki,!amagasaki
 ^biopic,^biographical motion picture,^biographical film,!filmbiografie,!filmbiographie
 !misogynie,^misogyny,!frauenverachtung,!frauenfeindlichkeit,!frauenhass,?misoginia
@@ -29383,7 +25780,7 @@
 !ermüden,^tire,^fatigue,^weary,^wear down,^outwear,^wear,^wear out,^wear upon,^tire out,^fag out
 !kriegsmüde,^war-weary
 !ermüden,^weary,^fatigue,^tire
-^clos^up,!nahaufnahme
+^close-up,!nahaufnahme
 !eiskugel,^scoop
 !geburtstagsgeschenk,^birthday present
 ^confluent
@@ -29640,7 +26037,7 @@
 ^linear function
 ^linear
 ^offline,^off-line
-^precomputed,^pr^computed
+^precomputed,^pre-computed
 ^powerful,?poderoso
 ^filtering,^filtration
 ^filtering,^packet filtering
@@ -30111,10 +26508,10 @@
 ^colon,!doppelpunkt,?dois pontos
 ^colonel,?coronel
 ^colonial,?colonial
-^cape gooseberry,^ground cherry,^bladder-cherry,^chinese lantern,^japanes^lantern,^winter cherry,^physalis,^poha berry,^ground-cherry,^haranksh,^golden berry,^inca berry,!ananaskirsche,!capische stachelberre,!essbare judaskirsche,!judenkirsche,!ka?stachelbeere,!kapstachelbeere,^goldenberry,^horse tomato,^peruvian cherry,^peruvian groundcherry
+^cape gooseberry,^ground cherry,^bladder-cherry,^chinese lantern,^japanese-lantern,^winter cherry,^physalis,^poha berry,^ground-cherry,^haranksh,^golden berry,^inca berry,!ananaskirsche,!capische stachelberre,!essbare judaskirsche,!judenkirsche,!ka?stachelbeere,!kapstachelbeere,^goldenberry,^horse tomato,^peruvian cherry,^peruvian groundcherry
 !mordopfer,^murder victim
 !seidenschal,^silk scarf
-^physalis,^bladder-cherry,^chinese lantern,^japanes^lantern,^winter cherry,^bladder cherry,^ground cherry,!blasenkirsche,!judenkirsche
+^physalis,^bladder-cherry,^chinese lantern,^japanese-lantern,^winter cherry,^bladder cherry,^ground cherry,!blasenkirsche,!judenkirsche
 ^colorless,!farblos
 ^colossal,!kolossal
 !paschminaschal,^pashmina scarf,!pashminaschal,!pashmina,!paschmina
@@ -30714,7 +27111,7 @@
 ^hot (very high temperature),^hot,!heiß
 ^filipino,!philippiner,!filipino
 ^philippine peso
-^fort-d^france
+^fort-de-france
 ^cayenne,?caiena
 ^contingent,!kontingent,?contingente
 ^contort,!verdrehen
@@ -30796,7 +27193,7 @@
 ^ganymede,!ganymed,?ganímedes
 ^europa
 ^kale,^borecole,!grünkohl
-^brussels sprouts,^spruitkool,!rosenkohl,?couv^d^bruxelas,^brussels sprout
+^brussels sprouts,^spruitkool,!rosenkohl,?couv^de-bruxelas,^brussels sprout
 ^sauerkraut,!sauerkraut,?chucrute,!sauerkappes
 ^papaya,?mamão,!papaya,^papaya,^papaya
 ^copier,^duplicator,!kopiergerät,!kopiermaschine,^photocopier,^copy machine,!fotokopierer
@@ -31103,7 +27500,7 @@
 ^dogma,!dogma
 ^cure,^remedy,!rezept
 ^curio,!kuriosität,?raridade
-^login,^lo!in,^log in,!anmelden
+^login,^log-in,^log in,!anmelden
 ^dogmatic,!dogmatisch,?dogmático
 ^usefulness,!nützlichkeit
 ^curiosity,^inquisitiveness,!neugier,?curiosidade,!neugierde
@@ -31315,7 +27712,7 @@
 !ertauben,^numb
 ^deafen
 !erblinden,^go blind
-!erlogen,!erfunden,^mad^up,^fabricated,^concocted
+!erlogen,!erfunden,^made-up,^fabricated,^concocted
 !erlügen
 ^defeatism,!defätismus,?derrotismo
 ^inauguration,!inauguration,?tomada de posse
@@ -31337,7 +27734,7 @@
 ^defensible,^defendable,!zu verteidigen,?defendível
 ^cerebral palsy,?paralisia cerebral,!infantile zerebralparese,!infantile cerebralparese
 ^brain haemorrhage,^cerebralhaemorrhage,^cerebral haemorrhage,!hirnblutung,!gehirnblutung
-^antebellum,^pr^civil war
+^antebellum,^pre-civil war
 !benzintank,^gasoline tank,^fuel tank,!tank,!kraftstofftank
 !flugangst,^fear of flying,^aerophobia,^aviatophobia,^aviophobia,^pteromechanophobia,!aviophobie,?aerofobia
 !wassertank,^water tank
@@ -31465,7 +27862,7 @@
 ^dementia,!demenz,?demência
 ^menopausal,!menopausal,!klimakterisch,?menopáusico,?menopáusica
 ^post-menopausal,^postmenopausal,!postmenopausal
-^pr^menopausal,^premenopausal,!prämenopausal
+^pre-menopausal,^premenopausal,!prämenopausal
 ^credit-financed,!kreditfinanziert
 !knesset,^knesset,?knesset
 !kinderleiche,^child's corpse
@@ -31836,7 +28233,7 @@
 ^disbeliever,^unbeliever
 ^discernible,^distinguishable,!wahrnehmbar
 ^göteborg,^gothenburg,!göteborg,?gotemburgo
-^sound sample of expression,!tonaufzeichnung des ausdrucks,^pronunciation file from "commons",?ficheiro de pronúncia do "commons"
+^sound sample of expression,!tonaufzeichnung des ausdrucks
 ^the damned,!die verdammten
 ^damned,^cursed,^reprobate,^doomed,!verdammt,!verflucht
 ^daniel,!daniel
@@ -31888,7 +28285,7 @@
 ^dangerousness,!gefährlichkeit
 ^dynamically,!dynamisch
 ^dumortierite,!dumortierit
-^duodecimal,^bas^12,^dozenal,!duodezimalsystem,!zwölfersystem,^duodecimal system
+^duodecimal,^base-12,^dozenal,!duodezimalsystem,!zwölfersystem,^duodecimal system
 ^duodecimal,^twelfth,!zwölftel
 ^duodecimal,!duodezimal
 !drittel,^third,?terço
@@ -32115,9 +28512,6 @@
 !karolinger,^carlovingians,^carolings,^karlings,^carolingians
 !karolingisch,^carolingian
 ^are
-^are
-^are
-^are
 !magensonde,^nasogastric tube,^ng tube,!nasogastrale sonde
 ^grammar
 ^divergence,^divergency,!divergence,!divergenz
@@ -32279,7 +28673,6 @@
 ^black tea,!schwarztee,!schwarzer tee,?chá preto
 !dement,^demented
 ^syzygy,!syzygie,!syzygium
-^syzygy,!syzygie
 ^effectuate,!bewirken
 ^effeminacy,!weibisch,!weibischkeit
 ^effeminate,!weibisch,?efeminado,!effeminiert,!verweiblicht
@@ -32289,9 +28682,7 @@
 !mandäisch,^neo-mandaic,^mandaic,^mandaean,^modern mandaic,!modernes mandäisch,!neumandäisch
 ^effortless,!mühelos
 ^onbeschaamdheid,^effrontery,!unverschämtheit
-^effusive
 ^eggshell,!eierschale,?casca de ovo
-^eggshell
 ^ego,!ego
 ^egocentric,!egozentrisch,?egocêntrico
 ^egoism,^egotism,^selfishness,!egoismus,?egoísmo
@@ -32468,7 +28859,7 @@
 ^ieee computer society
 ^swebok,^software engineering body of knowledge
 ^software requirements
-^software configuration management,!softwar^configuration-management,!softwarekonfigurationsmanagement
+^software configuration management,!software-configuration-management,!softwarekonfigurationsmanagement
 ^case,^computer-aided software engineering,^computer-aided software engineering,?ferramenta case,^case tool
 ^system lifecycle
 ^systems engineering process
@@ -32637,9 +29028,6 @@
 ^difficulty,?dificuldade
 ^electoral,?eleitoral
 ^electoral,?eleitoral
-^platform
-^platform
-^platform
 ^platform,!bahnsteig,?plataforma,?peron,?chei,^railway platform
 ^round
 ^ethnologic
@@ -32662,12 +29050,8 @@
 ^financial capacity,!vermögenslage
 ^eucharist,!eucharistie
 ^eugenics,!eugenik
-^eugenic
-^hygroscopic
 ^eulogize,^praise,!preisen
 ^eulogy,!lobrede,?panegírico
-^varied
-^won
 ^euphemistic,!euphemistisch,^inoffensive,!beschönigend
 ^euphoria,!euphorie
 ^encompassed,?abarcado
@@ -32851,7 +29235,6 @@
 ?proporcionar,^proportion
 ^supply,^provide,^render,^furnish
 ^originate,?provir
-?estrear
 ^commission,?encarregar
 ^populate,?povoar
 ^populate,?preencher
@@ -33014,10 +29397,6 @@
 ^eagerly
 ^knave,^rogue
 ^knave,^jack,!bube
-^tart
-^sore
-^drub
-^snub
 !hässlich,^ugly
 ^post mortem
 ^exhoration
@@ -33130,7 +29509,7 @@
 ^plumage,^feather,^plume,^feathers,?plumagem
 ^immune,?imune
 ^correlated,^correlative,^correlate,!korrelieren
-^trad^off,^tradeoff,?compromisso,?dilema,!kompromiss,!tausch,!abwägung,!abtausch
+^trade-off,^tradeoff,?compromisso,?dilema,!kompromiss,!tausch,!abwägung,!abtausch
 ^thermal,?termal
 ^thermal,?térmico
 ^tactic,?tática
@@ -33314,7 +29693,7 @@
 ^stationary,?estacionário
 ^stationary,?imóvel
 ^angouma,^gaboon,^okoumé,!okoumé,!gabun-mahagoni
-^decrepit,^age worn,^ag^worn
+^decrepit,^age worn,^age-worn
 ^worn-out,^worn out
 ^ragged,^tattered,?esfarrapado
 ^resonant,?ressonante,?ressoante
@@ -34062,7 +30441,7 @@
 ^dutch-speaking
 ^occitan-speaking
 ^russian-speaking
-^chines^speaking
+^chinese-speaking
 ^swedish-speaking
 ^swahili-speaking
 ^hindi-speaking
@@ -34070,7 +30449,7 @@
 ^lovage,!liebstöckel,!maggikraut,!lusstock,!luststock
 ^hunch,!ahnung,!vorahnung,!gefühl,^intuition,^suspicion,!verdacht
 ^hunch,!krümmen,!sich krumm machen
-^eastern lon!beaked echidna,^barton's lon!beaked echidna,!barton-langschnabeligel,!östlicher langschnabeligel,?equidna-d^barton,?zaglosso-d^barton,^barton's echidna
+^eastern lon!beaked echidna,^barton's lon!beaked echidna,!barton-langschnabeligel,!östlicher langschnabeligel,?equidna-de-barton,?zaglosso-de-barton,^barton's echidna
 ^xanthoma
 ^xerographic
 ^xerophilous,!xerophil,?xerófilo
@@ -34768,7 +31147,7 @@
 ^strain,^tense,!spannen,!anspannen
 ^globe,!globus
 !pinyin,^pinyin,!hanyu pinyin,^hanyu pinyin
-^wad^giles,!wad^giles-system
+^wade-giles,!wade-giles-system
 ^velar,!velar,^velar consonant,!velarer konsonant
 ^ephemeral,^ephemeron
 ^velar,!velar
@@ -34997,7 +31376,7 @@
 ^together,^in concert
 ^break the ice,!das eis brechen
 !melken,^milk,?ordenhar
-^brussels sprout,!rosenkohl,?couv^d^bruxelas
+^brussels sprout,!rosenkohl,?couv^de-bruxelas
 !irmgard,^ermengarde,!irmingard,!irmengard
 ^tripwire,^tripline,^trip cord,!stolperdraht
 ^tripwire
@@ -35230,8 +31609,8 @@
 ^caliphate,!kalifat,^caliphate
 ^to be honest,!ehrlichkeitshalber
 ^whiteout,!dichter schneesturm im polargebiet,!whiteout
-^whiteout,^whit^out
-^whiteout,^whit^out,^white out
+^whiteout,^white-out
+^whiteout,^white-out,^white out
 ^whiteout,!korrekturlack
 ^move in,!einziehen
 ^adrenalitis,^adrenitis,!adrenalitis,!nebennierenentzündung
@@ -35348,7 +31727,7 @@
 ^isothermally,^isothermically,!isothermisch,!isotherm
 !alles in butter,!alles ist in butter,!alles im grünen bereich
 ^leadership
-^anti-seismic,^earthquak^proof,^earthquake resistant,^earthquak^resistant,!erdbebensicher,^antiseismic
+^anti-seismic,^earthquake-proof,^earthquake resistant,^earthquake-resistant,!erdbebensicher,^antiseismic
 ^gas pedal,^accelerator,^accelerator pedal,!gaspedal,!fahrpedal
 ^port-au-princian
 ^port-au-princian
@@ -35529,7 +31908,7 @@
 ^clutch pedal,!kupplungspedal
 ^child soldier,!kindersoldat
 ^rear mirror,^rear-view mirror,^rearview mirror,^rear view mirror,!innenspiegel,^inside rearview mirror,^inside rear-view mirror,^inside rear view mirror,^inside mirror,^interior mirror,^interior rearview mirror,^interior rear-view mirror,^interior rear view mirror,!rückspiegel
-^sid^view mirror,^wing mirror,^door mirror,^side mirror,!außenspiegel,^exterior mirror,^exterior rear view mirror,^outside mirror,^outside rear view mirror,^exterior rearview mirror,^exterior rear-view mirror,^outside rearview mirror,^outside rear-view mirror
+^side-view mirror,^wing mirror,^door mirror,^side mirror,!außenspiegel,^exterior mirror,^exterior rear view mirror,^outside mirror,^outside rear view mirror,^exterior rearview mirror,^exterior rear-view mirror,^outside rearview mirror,^outside rear-view mirror
 ^segregation,^sequestration,!trennung,!segregation,!absonderung,!abgrenzung
 ^segregation,!segregation,^separatism
 ^segregation,!aussaigerung
@@ -35737,7 +32116,7 @@
 !beistehen
 ^cassation,^annulment,!kassation,?anulação
 ^cavatina,!cavatina
-^prewashed,^pr^washed,!vorgewaschen
+^prewashed,^pre-washed,!vorgewaschen
 !herunterschalten,^downshift,^gear down,^shift down,!runterschalten,!zurückschalten
 !hochschalten,!raufschalten,!hinaufschalten,!heraufschalten,^upshift,^shift up
 ^euphonium,?bombardino
@@ -35862,7 +32241,7 @@
 ^femoral nerve,!oberschenkelnerv
 ^deviled egg,^egg mimosa,!gefülltes ei,!russisches ei
 ^low beam,^dim light,^dimmed headlight,^dimmed headlights,^dipped head light,^low beam light,^low-beam light,^passing light,^passing beam,^meeting beam,!abblendlicht
-^fog lamp,^fog light,^fo!lamp,!nebelscheinwerfer,^anti-fog,?farol antinevoeiro,!nebelscheinwerferlampe,^foglight,^foglamp
+^fog lamp,^fog light,^fog-lamp,!nebelscheinwerfer,^anti-fog,?farol antinevoeiro,!nebelscheinwerferlampe,^foglight,^foglamp
 ^replace,^put back,?repor
 ^invite,^pay for
 ^invite,^ask in
@@ -35903,7 +32282,7 @@
 ^-logy
 ^-nomy,^-onomy
 !knochenjob,!knochenarbeit,^back breaking job
-^red-eye,^red-eye effect,^redeye,^red eye,^redeye effect,^red eye effect,!kaninchenaugen-effekt,!rot^augen-effekt
+^red-eye,^red-eye effect,^redeye,^red eye,^redeye effect,^red eye effect,!kaninchenaugen-effekt,!rote-augen-effekt
 ^pellagra,!pellagra,?pelagra
 ^red-eyed,!rotäugig
 ^common rudd,!rotfeder,!rötel,!rotblei,!unechtes rotauge
@@ -36201,7 +32580,7 @@
 ^male governor,!gouverneur
 ^okinawa,^okinawa island,^island of okinawa
 ^okinawan
-^topless,^bar^breasted,!barbusig,!oben ohne
+^topless,^bare-breasted,!barbusig,!oben ohne
 ^düsseldorf,!düsseldorf,?düsseldorf
 ^faisalabad,^lyallpur,!faisalabad,?faisalabad
 ^foshan,?foshan
@@ -36828,7 +33207,7 @@
 ^shot peening
 ^whisker,^monocrystalline whisker
 ^drown,!ertränken,!ersäufen,?afogar
-^erotomania,!erotomanie,!liebeswahn,!d^clérambault-syndrom,^de clérambault's syndrome,?erotomania
+^erotomania,!erotomanie,!liebeswahn,!de-clérambault-syndrom,^de clérambault's syndrome,?erotomania
 ^erotomane
 ^erotomaniac,^erotomaniacal
 ^rss,^really simple syndication
@@ -37022,7 +33401,7 @@
 ^lon!haired,!langhaarig
 ^short-haired,!kurzhaarig
 !feinporig,^fin^pored
-!grobporig,^larg^pored,^coars^pored
+!grobporig,^large-pored,^coarse-pored
 ^freemason,!freimaurer
 ^pore,!pore,?poro,!hautpore
 ^stoma,!stoma,!blattpore,!spaltöffnung
@@ -37500,7 +33879,7 @@
 ^salt,!salt
 ^unicode
 ^utf-8
-^whit^box testing,^clear box testing,^glass box testing,^transparent box testing,^structural testing,^pruebas estructurales
+^white-box testing,^clear box testing,^glass box testing,^transparent box testing,^structural testing,^pruebas estructurales
 ^touch
 ^sha-2
 !weg
@@ -37587,7 +33966,7 @@
 ^japanese encephalitis,!japanische enzephalitis
 ^chikungunya,!chikungunyafieber,?chikungunya,?febre chikungunya,!chikungunya-fieber
 ^west nile virus,!west-nil-virus,?vírus do oeste do nilo
-^purple pitcher plant,^sid^saddle flower,!rote schlauchpflanze
+^purple pitcher plant,^side-saddle flower,!rote schlauchpflanze
 ^rolling metal door
 ^blood sugar,!blutzucker,^blood glucose
 ^blood glucose level,^blood sugar concentration,!blutzuckerspiegel,^blood sugar,^level of blood sugar
@@ -37595,10 +33974,10 @@
 ^hypoglycemia,^hypoglycæmia,!hypoglykämie,!unterzuckerung,?hipoglicemia
 !bejahen,^answer in the affirmative
 !verneinen,^answer in the negative
-^african elephant,?elefant^africano,!afrikanischer elefant
+^african elephant,?elefante-africano,!afrikanischer elefant
 ^african bush elephant,^bush elephant,!afrikanischer elefant
 ^african forest elephant,!waldelefant
-^asian elephant,^asiatic elephant,!asiatischer elefant,?elefant^asiático
+^asian elephant,^asiatic elephant,!asiatischer elefant,?elefante-asiático
 ^inkscape,^inkscape,^inkscape
 ^glycol,^diol
 ^geminal diol,^gem-diol
@@ -38117,7 +34496,7 @@
 ^gingiva,^gums,!zahnfleisch,^gum,?gengiva
 !ketchup,!ketschup,^ketchup,^catsup,!tomatenketchup,?ketchup
 ^atomic clock,!atomuhr
-^rhubarb,!rhabarber,!gemeiner rhabarber,!gemüs^rhabarber,!krauser rhabarber,?ruibarbo
+^rhubarb,!rhabarber,!gemeiner rhabarber,!gemüse-rhabarber,!krauser rhabarber,?ruibarbo
 ^triple alpha process,^tripl^alpha process,!drei-alpha-prozess,!3a-prozess,!heliumbrennen,!salpeter-prozess,?processo triplo alfa,?processo triplo-alfa
 ^anthropic principle,!anthropisches prinzip,?princípio antrópico
 ^class,!unterricht
@@ -38133,7 +34512,7 @@
 ^titan arum,^corpse flower,^corpse plant,!titanenwurz,!titanwurz,?flor-cadáver,?jarro-titã,?titan arum
 !radiergummi,!radierer,!ratzefummel,?borracha escolar,?gumka do scierania
 ^cinnamon roll,^cinnamon bun,^cinnamon swirl,^cinnamon snail,!zimtschnecke
-^locking pliers,^mole grips,^mole wrench,^vis^grips
+^locking pliers,^mole grips,^mole wrench,^vise-grips
 ^safflower oil,!safloröl,!distelöl
 ^gratuity,^tip,!trinkgeld,^cumshaw
 ^shoe store,^shoe shop,!schuhgeschäft,!schuhladen
@@ -38157,7 +34536,7 @@
 ^hemolytic-uremic syndrome,^haemolytic-uraemic syndrome,^hus,!hämolytisch-urämisches syndrom,!hus,!gasser-syndrom,?síndrome hemolítico-urêmica
 ^skinless,!hautlos
 ^turkey tail,!schmetterlingstramete
-^blue whale,^sulfur-bottom whale,^sulphur bottom whale,!blauwal,?baleia-azul,?grand^rorqual,?rorqual-azul
+^blue whale,^sulfur-bottom whale,^sulphur bottom whale,!blauwal,?baleia-azul,?grande-rorqual,?rorqual-azul
 ^jug ears,!abstehende ohren,!segelohren,^protruding ears
 ^suspense,!spannung
 ^coffee table,^cocktail table,!couchtisch
@@ -38374,7 +34753,7 @@
 ^catamite
 ^ground beetle
 ^ground beetles
-^sugar cane,^sugarcane,!zuckerrohr,?cana-d^açúcar,^sugar-cane
+^sugar cane,^sugarcane,!zuckerrohr,?cana-de-açúcar,^sugar-cane
 ^ingratitude,^thanklessness,^unthankfulness,^ungratefulness,?ingratidão,!undankbarkeit
 ^ingrate,!undankbarer
 !undankbare
@@ -38385,7 +34764,7 @@
 ^night vision
 ^oil palm,!ölpalme,?dendezeiro
 ^coconut palm,^cocnut,!kokospalme,!kokosnusspalme,?coqueiro,^coconut
-^palm oil,!palmöl,?azeite de dendê,?azeit^d^dendém,?óleo de palma
+^palm oil,!palmöl,?azeite de dendê,?azeite-de-dendém,?óleo de palma
 ^cystic fibrosis,^mucoviscidosis,!mukoviszidose,!zystische fibrose,?fibrose cística,?mucoviscidose
 ^cephalometry,!zephalometrie,!kephalometrie
 ^cephalometric
@@ -38528,7 +34907,7 @@
 ^carbon nanotube
 ^lentil soup,!linseneintopf
 ^pick up,^pick up the phone,^pick the phone up,^pick up the telephone,^answer the phone,^answer
-^mak^up,^makeup,!schminke,!mak^up,?maquiagem
+^make-up,^makeup,!schminke,!make-up,?maquiagem
 ^flaxen
 ^flaxen,!flachsfarben,!flachsblond
 ^eyeliner,^eye liner,!eyeliner
@@ -38539,9 +34918,9 @@
 ^thisisatest,^thisisatest,^thisisatest,^thisisatest,^thisisatest,^thisisatest,^thisisatest
 !weltmarkt,^world market,^global market
 ^homemade,!hausgemacht
-^purebred,!reinrassig,^pur^bred,^thoroughbred,^truebred,^pedigreed
+^purebred,!reinrassig,^pure-bred,^thoroughbred,^truebred,^pedigreed
 ^purebred,^thoroughbred
-^pureblooded,!reinblütig,^pur^blooded
+^pureblooded,!reinblütig,^pure-blooded
 ^mechanical pencil,^propelling pencil,!druckbleistift,!minenschreiber,!mechanischer stift,?lapiseira,?lápis grafite,?lápis-grafite,?lápis de minas,?grafite
 !avocadobaum,^avocado,!avocado,?abacateiro
 ^antispasmodic,!krampflösend
@@ -38614,7 +34993,7 @@
 ^pin-point injection molding,^pin-point injection moulding
 ^injection blow molding,^injection blow moulding
 ^resin transfer molding,^resin transfer moulding,^rtm
-^prepreg,^pr^preg
+^prepreg,^pre-preg
 ^resin
 ^film blowing
 ^glass mat thermoplastic,^gmt
@@ -38655,7 +35034,7 @@
 ^cross-contaminate,!kreuzkontaminieren
 ^reservation,!reservierung,^booking
 ^room service
-^star-nosed mole,!sternmull,!sternnasenmaulwurf,?toupeira-nariz-d^estrela
+^star-nosed mole,!sternmull,!sternnasenmaulwurf,?toupeira-nariz-de-estrela
 ^clarified butter,!butterschmalz,!schmalzbutter,!geklärte butter,!eingesottene butter,!geläuterte butter,^ghee,^ghi
 ^biologically,!biologisch
 ^blindly,!blind,!blindlings
@@ -38685,7 +35064,7 @@
 ^jewelry store,^jewelry shop,^jewellery store,^jewellery shop
 ^tv dinner,^ready meal,!fertiggericht
 ^precook,!vorkochen
-^precooked,^pr^cooked,!vorgekocht
+^precooked,^pre-cooked,!vorgekocht
 ^declare,!deklarieren
 ^we,^we
 ^automated teller machine,^atm,^automatic teller machine,^atm machine,!geldautomat,!bankautomat,!bankomat,!geldausgabeautomat,?caixa automático
@@ -38850,7 +35229,7 @@
 !taschendiebin
 ^pickpocket
 ^pickpocketing,!taschendiebstahl
-^first class,!erst^klass^
+^first class,!erste-klasse-
 ^first class
 !butterschneidedraht
 ^self-fulfilling prophecy,!selbsterfüllende prophezeiung,?profecia autorrealizável,?profecia autorrealizada
@@ -39185,7 +35564,7 @@
 ^raccoon dog,^magnut,^tanuki
 ^illegality,!illegalität
 ^sandal,!sandale,?sandália,?chinelo
-^orange,!orange,?alaranjado,?cor-d^laranja,?laranja
+^orange,!orange,?alaranjado,?cor-de-laranja,?laranja
 ^salty,!salzig,?salgado
 ^twist,!verziehen,?torcer,!verdrehen
 ^seal,?selar
@@ -39213,7 +35592,7 @@
 ^magdalenian
 ^joke,!scherzen,?gracejar
 ^dadaism,^dada,!dadaismus
-^orang^bellied parrot,!goldbauchsittich,!orangebauchsittich
+^orange-bellied parrot,!goldbauchsittich,!orangebauchsittich
 ^wallonia
 ^boy
 ^diamond jubilee
@@ -39239,7 +35618,7 @@
 ^black kite
 ^black-winged kite
 ^black-shouldered kite,^australian black-shouldered kite
-^whit^tailed kite
+^white-tailed kite
 ^letter-winged kite
 ^scissor-tailed kite,^african swallow-tailed kite
 ^bat hawk
@@ -39254,10 +35633,10 @@
 ^whistling kite
 ^brahminy kite,^red-backed sea-eagle,!brahminenweih
 ^yellow-billed kite
-^squar^tailed kite
+^square-tailed kite
 ^black-breasted buzzard,^black-breasted kite
-^gray-headed kite,^grey-headed kite,?gavião-d^cabeça-cinza
-^whit^collared kite,?gavião-d^pescoço-branco
+^gray-headed kite,^grey-headed kite,?gavião-de-cabeça-cinza
+^white-collared kite,?gavião-de-pescoço-branco
 ^hook-billed kite
 ^cycling,^bicycling,^biking,!fahrradfahren,!radfahren,?ciclismo
 ^coccolith,!coccolith
@@ -39460,7 +35839,7 @@
 ^jamb
 ^lintel,^header,^architrave,?lintel
 ^sill
-^sill,^window sill,^ledg^sill,!fensterbank
+^sill,^window sill,^ledge-sill,!fensterbank
 ^sill plate,^sole plate,^bottom plate
 ^sill-beam
 ^noggin
@@ -39513,7 +35892,7 @@
 ^ridge purlin
 ^gable
 ^gable roof,!satteldach,^pitched roof,^span roof,^saddle roof
-^depth image based rendering,^depth-imag^based rendering,^dibr
+^depth image based rendering,^depth-image-based rendering,^dibr
 ^roof lath,^lath,^batten
 ^roof boarding,^çati örtüsü
 ^siding,^cladding
@@ -39641,8 +36020,8 @@
 ^zootherapy,^animal-assisted therapy,^aat
 ^zootherapeutic
 ^zootherapist
-^coco-d^mer,!seychellenpalme,^coco de mer,^sea coconut,^double coconut
-^coco-d^mer,^seychelles nut,^coco fesse,^double coconut,^love nut,^sea coconut
+^coco-de-mer,!seychellenpalme,^coco de mer,^sea coconut,^double coconut
+^coco-de-mer,^seychelles nut,^coco fesse,^double coconut,^love nut,^sea coconut
 ^cavernicolous,?cavernícolo
 ^shallow,!seicht,?raso
 ^mechanic,!mechaniker,?mecânico
@@ -40363,7 +36742,7 @@
 ^hidebound
 ^hidebound
 ^hidebound
-^narrow-minded,^hidebound,^narrowminded,^clos^minded,^closed-minded,^narrow minded,^myopic,^small-minded,!borniert,!engherzig,!engstirnig,^narrow of mind,!kleinkariert
+^narrow-minded,^hidebound,^narrowminded,^close-minded,^closed-minded,^narrow minded,^myopic,^small-minded,!borniert,!engherzig,!engstirnig,^narrow of mind,!kleinkariert
 ^frenemy,^frienemy
 ^tricky
 ^pull one's socks up
@@ -40451,7 +36830,7 @@
 ^court
 ^dedicate
 ^crash
-^crash,^gat^crash
+^crash,^gate-crash
 ^catch,^surprise
 ^oppose,?opor
 ^post mortem,^postmortem,^post-mortem
@@ -40577,7 +36956,7 @@
 ^périgord,!périgord
 ^usage note
 ^sun bear,!malaienbär,!sonnenbär,^malayan sun bear,^honey bear,?urso-malaio,?urso-dos-coqueiros
-^east african land snail,^giant african land snail,!große achatschnecke,!ostafrikanische riesenschnecke,?caramujo-gigant^africano
+^east african land snail,^giant african land snail,!große achatschnecke,!ostafrikanische riesenschnecke,?caramujo-gigante-africano
 ^giant ghana snail,^giant african land snail,^giant tiger land snail
 ^giant west african snail,^giant african land snail
 ^list
@@ -40758,7 +37137,7 @@
 ^gnotobiotic
 ^gnotobiotics
 ^lion cub,!löwenjunges
-^whit^tailed deer,^virginia deer
+^white-tailed deer,^virginia deer
 ^halibut
 ^partridge
 ^eastern canadian inuktitut (inuktitut syllabics)
@@ -40829,7 +37208,7 @@
 ^hollandic,^hollandish
 ^goutweed,!giersch,!geißfuß,!dreiblatt,!ziegenkraut,!ziegenfuß,!zipperleinskraut,!wiesenholler,!schettele,!zaungiersch,!baumtropf,^ground elder,^herb gerard,^bishop's weed,^snow-in-th^mountain
 ^engaged,!verlobt,?noivo,^betrothed
-^nitroaspirin,^2-acetoxybenzoat^2-(1-nitroxymethyl)phenyl ester,^m-no-aspirin,^nitric oxid^releasing aspirin,^nitro-aspirin,^nitric oxid^donating asa,^nitro aspirin
+^nitroaspirin,^2-acetoxybenzoate-2-(1-nitroxymethyl)phenyl ester,^m-no-aspirin,^nitric oxide-releasing aspirin,^nitro-aspirin,^nitric oxide-donating asa,^nitro aspirin
 ^shh,!still,!pst,!pscht,^sh,^shhh
 ^epiphyte,^air plant.,!aufsitzerpflanze,!epiphyt,^air plant
 ^epiphytic,!epiphytisch
@@ -40856,7 +37235,7 @@
 ^woodpecker,^pisculet,^wryneck,^sapsucker
 ^sucker
 ^sprain,!verstauchen
-^hula painted frog,!israelischer scheibenzüngler,!palästinensischer scheibenzüngler,!hulese^scheibenzüngler,!schwarzbäuchiger scheibenzüngler,?rã-pintada-da-palestina,?rã-pintada-d^hula
+^hula painted frog,!israelischer scheibenzüngler,!palästinensischer scheibenzüngler,!hulese^scheibenzüngler,!schwarzbäuchiger scheibenzüngler,?rã-pintada-da-palestina,?rã-pintada-de-hula
 ^loose,^unbound,^untied
 ^loose
 ^loose,?frouxo,?largo
@@ -41739,7 +38118,7 @@
 ^compare,^liken,^equate
 ^continue,^go on,^carry on,^proceed
 ^belief,^impression,^feeling,^notion
-^figure four,^figur^four
+^figure four,^figure-four
 ^chinlock
 ^nelson hold,^nelson
 ^armlock,^arm lock
@@ -42306,7 +38685,7 @@
 ^howler monkey,!brüllaffe
 ^spider monkey
 ^collared peccary,^javelina
-^whit^lipped peccary
+^white-lipped peccary
 ^guan
 ^jigger flea,^jigger,^chigoe flea,^sand flea
 ^cebus monkey,!kapuzineraffe,^capuchin monkey,^capuchin
@@ -42438,8 +38817,8 @@
 ^brutalize
 ^snowy
 ^elaborate
-^defend
-^futuristic
+^defend,?defender
+^futuristic,?futurista
 ^converge
 ^resume
 ^help
@@ -42450,9 +38829,9 @@
 ^precious,?precioso
 ^farsighted
 ^warlike
-^helpful
+^helpful,?útil
 ^tender
-^uninterested
+^uninterested,?desinteressado
 ^defeated
 ^helpless,!hilflos
 ^nervous
@@ -42460,7 +38839,7 @@
 ^thoughtless
 ^uptight
 ^worried
-^apprehensive
+^apprehensive,?apreensivo
 ^wee
 ^taxi
 ^fib
@@ -42473,24 +38852,6 @@
 ^model,?modelo,modell
 ^biceps curl
 !lungerjournalismus
-^overhead press,^shoulder press
-^strength training,^resistance training
-^stifling
-^ventilated
-^inflate
-^deflate
-^blanket
-^accompanied
-^unaccompanied
-^unaccompanied
-^loner
-^solitude
-^alienated
-^permanently
-^perpetual
-^level
-^quota
-^carload
 ^vanload,^truckload
 ^spoonful
 ^extent
@@ -42516,251 +38877,28 @@
 ^pose
 ^shirtless
 ^zucchero,^zucchero fornaciari,^adelmo fornaciari
-^pectoral
-^moody
-^indignant
-^resentful
-^handstand
-^bar
-^bar
 ^abdominal stretch,^cobra twist
-^sink
-^pasta
-^romance
-^flight
-^runner
 ^exercise,^exert
-^celebrate
+^celebrate,?celebrar
 ^look,^looking,!gucken,!sehen
 ^white,?branco
 ^purple,!violett
-^magenta
-^bill poster
-^amused
-^renowned
-^smart
-^finalist
 ^fratercula arctica,^puffin
 ^leg press,!beinpresse
-^angel of death
-^neighboring
-^land
-^land
-!entschirmt
 ^casket,!schatulle
 ^tactician
-^slap
-^talk
-^share
 ^grimace,!grimasse
-^grimace
-^classify
-^stomp
-^rings
-^bellow,^roar
-^roar
-^roar
-^cardiologic
-^nod
-^mll-93 protocol
-^hypertensive
-^watch,^view
-^watch
-^flying kick
-^wrestling lock,^lock
-^wristlock,^wrist lock
-^lock
-^incite
-^headlock
-^grip,^bring up
-^grip
-^raise
-^raise
-^manly,^manlike
-^manly
 ^starting block
 ^athletic,?atlético
-^swimmer
-^manageable
-^curl
-^love
-^glance
-^inattentive
 ^enjoy,?desfrutar,?gozar,^savour
-^cocky
-^distill
-^decompression chamber
-^serve
-^punching bag
-^loneliness
-^surprised
-^mockery
-^mocked
 ^beg,!betteln
-^occupy wall street
-^listening
-^figure four leglock,^figur^four,^figur^four leglock
+^figure four leglock,^figure-four,^figure-four leglock
 ^mexican surfboard,^surfboard
 ^lick,!lecken
 ^athletic,?atlético
-^running start
-^clasp
-^grapple
-^hand to hand,^hand-to-hand
-^hand in hand
-^catch
-^edit
-^direct
-^direct
-^run
-^binary
-^dilate
-^envision
-^relax,^chill,^chill out
-^relaxed
-^supine
-^prone
-^cold
-^cold
-^cold,^frigid
-^loss
-^abstract
-^brainstorm
-^ride
-^humiliated
-^uncertain
-^undecided
-^calm
-^hop
-^homoerotic
-^enthusiasm
-^young man
-^shake
-^reprehend
-^ice skate
-^machin^readable,^machine readable
-^point
-^handcuff
-^braze
-^flirt
 !selbstmörderin,!suizidentin,^suicide
 !suizident,!selbstmörder,^suicide
-^rip
-^launder
-^tailor
-^date
-^glamorous
-^depart
-^cycle
-^dried
-^ready
-^share
-^boycott
-^strap
-^chain
-^sadomasochistic,^sadomaso
-^revenge
-^hush
-^frown
-^gallop
-^gallop
-^chiseled,^well-defined
-^weld
-^scar
-^shovel
-^glide
-^slam
-^slam
-^yellow card
-^admonish
-^fling
-^trapped,^cornered
-^grind
-^groom
-^groom
-^harrow
-^herd
-^vindictive
-^hike
-^leap
-^tie
-^housekeep
-^hull
-^juggle
-^experiment
-^rivet
-^solder
-^bend
-^mould
-^mine
-^mourn
-^nail
-^pan
-^pant
-^pave
-^asphalt
-^plait
-^direct
-^direct
-^poach
-^chained
-^enchain
-^bromantic
-^bromance
-^pound
-^quilt
-^ram
-^recline
-^pale
-^recycle
-^refuel
-^admonish
-^torn,^lacerated
-^roll
-^roll
-^roll
-^roll
-^roll
-^ruminate
-^sample
-^sand
-^scavenge
-^scavenge
-^shore
-^skate
-^skim
-^skim
-^sled
-^sleepwalk
-^snorkel
-^spank
-^splash
-^spray
-^stamp
-^streak
-^survey
-^swab
-^swallow
-^swarm
-^swarm
-^chill
-^pet
-^trample
-^trawl
-^truck
-^tube
-^twirl
-^twirl
-^volunteer
 ^spinal disc herniation,^slipped disc,^herniated disc,^slipped disk,^herniated disk,^spinal disk herniation,!bandscheibenvorfall,?hérnia de disco
-^wade
-^wash
-^winnow
-^whittle
-^write
-^yacht
-^cross-dress
-^tahr
 ^himalayan tahr,^common tahr,!himalaya-tahr
 ^nilgiri tahr,^nilgiri ibex,^ibex,!nilgiri-tahr
 ^arabian tahr,!arabischer tahr
@@ -42771,227 +38909,23 @@
 !rotschwanz,^redstart
 ^przevalski's redstart,^ala shan redstart
 ^eversmann's redstart,^rufous-backed redstart,!sprosserrotschwanz,!zügelrotschwanz
-^blu^capped redstart
 ^common redstart
 ^hodgson's redstart
-^whit^throated redstart
+^white-throated redstart
 ^daurian redstart,!spiegelrotschwanz
 ^moussier's redstart,!diademrotschwanz
-^güldenstädt's redstart,!riesenrotschwanz,^whit^winged redstart
-^blu^fronted redstart
-^foul
-^cross
-^gluttonous
-^ebola virus,^zaire ebolavirus,!zair^ebolavirus
-^desired
-^go mad,^go crazy,^go nuts
-^go mad,^go crazy
-^suffering
-^frightened,^terrified
-^perplexed
-^wrathful
-^shameful
-^intercept
-^mud
-^muddy
-^muddy
-^colorful
-^camper
-^hang
+^güldenstädt's redstart,!riesenrotschwanz
+^ebola virus,^zaire ebolavirus
 ^eutectic,!eutektisch
-^launch
-^fight
-^graduate
-^conceive
-^synset,^synonym set
-^medicinal,^officinal
 ^tonsillectomy,!tonsillektomie
-^troll post
-^best friend
-^united
-^supportive
-^doubtful
-^pump
-^pull up,^pull-up,^trazioni alla sbarra
-^hotel room
-^smash
-^smash
-^smash
-^crash
-^strum
-^beating
-^knock
-^chop
-^chokehold
-^save
-^stare
-^load
-^load,^charge
-^transfer
 !kegeln,^play ninepins,^play skitties,^play bowls
-^discontinuous
-^free
-^lexicalize
-^stupidly
-^etioplast,!etioplast,?etioplasto
-^rhodium-plating
-^operate
-^busy
-^bubble
-^spectacular
-^nightmare
-^pose,^posture
-^bounce
-^figure
-^unload
-^pin,^peg
-^pin
-^pin,^brooch
-^pin,^badge
-^pin
-^pin,^tack
-^pin
-^pin
-^pin
-^pin
-^pin
-^pin
-^pin
-^pin,^immobilize
-^pin
-^pin
-^pin
-^brown-haired
-^whit^haired
-^black-haired
-^zodiacal
-^create
-^skim,^skim over
-^lurk
-^spread
-^cuff
-^jew's ear,^wood ear,^jelly ear,^ear fungus,^common ear fungus,^chinese fungus,^pig's ear,^black wood ear,^tree ear,^kikurage,!judasohr,!mu-err,!black fungus,!holunderpilz,!holunderschwamm,!ohrlappenpilz,!wolkenohrenpilz,?orelha-d^judas
-^optimistic
-^solidarity
-^sea
-^sea
-^sea,^mare
-^sea
-^sea
-^sea
-^sea
-^sea
-^sea,^deniz
-^sea
-^sea
-^sea
-^sea
-^sea
-^quintal
-^allah
-^quotation
-^steer
-^sunbathe
-^combatives
+^jew's ear,^wood ear,^jelly ear,^ear fungus,^common ear fungus,^chinese fungus,^pig's ear,^black wood ear,^tree ear,^kikurage,!judasohr,!mu-err,!black fungus,!holunderpilz,!holunderschwamm,!ohrlappenpilz,!wolkenohrenpilz,?orelha-de-judas
 ^hth,^hope that helps,!hoffentlich hilfts,!hoffentlich hilft es,!hoffentlich hilft das,!hoffentlich hat es geholfen,!hoffentlich hats geholfen,!ich hoffe,es hilft
 ^hth,^how the hell,!verdammt,wie ... ?,!wie um gottes willen,!wie,!wie ... ?
-^distributed
-^knock
-^macchiato,^caffè macchiato
-^beach volley,^beach volleyball
-^exult,^jubilate,^triumph
-^beach,^be beached
-^affogato
-^gigabyte
-^terabyte
-^petabyte
-^undressed
-^decameter
-^sensual
-^fracture,^break,!brechen
-^boundary marker
-^poor man
-^income
-^attention
-^attention
-^angle
-^piece
-^piece
-^piece
-^piece
-^piece
-^piece,^hairpiece
-^piece
-^period
 !schulstunde,!dreiviertelstunde,!45 minuten,^three quarters of an hour
 !schulstunde,^lesson,^minmall lesson,^minimal lesson,^short lessoon,!unterrichtsstunde,?lição,^short lesson
 ^spermophilus,^spermophilus stricto sensu
-^masculine
-^obtus^angled
-^boiling
 !papierähnlich,^paperlike
-^neurotic
-^humiliating,^mortifying
-^punish
-^punish
-^punish
-^punishment
-^punishment
-^punishment
-^penalty
-^penalty
-^theological
-^reward
-^prize
-^prize,^booty
-^prize
-^prize
-^revenge
-^vengeance
-^revenge,^rematch
-^revenge
-^variation,^varieté,^variety
-^form
-^style
-^error,^mistake,^fault
-^important,^significant
-^genre
-^genre
-^ontological
-^taxonomic,^taxonomical
-^cast
-^boulder
-^pole
-^rod
-^strong
-^strong
-^unattackable,^inviolable
-^strong
-^firm
-^passage
-^impact
-^resinous,^resiny
-^citrus grove
-^put
-^put
-^put
-^attribute,^assign,^put,^attach
-^feature
-^comic book shop
-^written account
-^locker
-^palace
-^claim
-^hot
-^hot
-^baozi,^bao,^bau,^humbow,^nunu,^bausak,^pow,^pau
-!zum arzt gehen
-!heuer
-^yesteryear
-!folgejahr
-^fire drill
-^putto
-^violent
 ^ankle monitor
 ^semordnilap,^emordnilap
 ^pangram,!pangramm,^holoalphabetic sentence,^holoalphabetic sentence,^pangram
@@ -43000,27 +38934,14 @@
 !watschenmann
 ?viajou na maionese
 ^tittle,!i-punkt
-^incompatible
-^lacustrine
-^syringe
 ^chronophotograph,^chronophoto
 ^pull away
 ^leg lace,^ankle lace,^ankle lock
-^babelfy
-^ventricular
 ^cold,^cold-blooded
-^perennial
 ^recurrent,^perennial,^lon!standing,^long standing
 ^lon!lasting
 ^whip
 ^bank,?banco
-^sea bass
-^bass
-^organic
-^capital
-^capital
-^capital
-^spark
 ^speckle,^spot
 ^reclaim
 ^westphalian,!westfälisch
@@ -43030,59 +38951,13 @@
 ^impure
 ^impure
 ^paralympic,?paraolímpico
-^ic^cream man,^ice cream man
-!gelatiere,^ice cream maker,^ic^cream maker
+!gelatiere,^ice cream maker
 !fußbande
-^traveling
-^express
 ^special delivery,!sonderzustellung
-^prizefighter
-^abdominal,^abs,^ab
-^pilfer
-^talk,^speak
-^ignorant
-^ignorant
-^ignorant
-^fertilize
-^fertilize
-^fertilize,^inseminate
-^digitalize
-^grief,^sorrow
-^position
-^seat,^place
-^truthful
-^decontaminate
-^a cappella
-^manzanita
-^tule
-^bridge
-^adonis
-^hunger
-^hunger
-!sauregurkenzeit
 !frühjahrsmüdigkeit,^springtime lethargy
-!geisterbahnhof
-!vergangenheitsbewältigung
-!erbsenzähler
-!honigkuchenpferd
-!blaumachen
-!eselsbrücke
-!pantoffelheld
-!zugzwang
-!zugzwang
 ^religion,^organized religion
 ^increase,^increment
 ^bearing puller,^wheel puller,^gear puller
-!mauerspecht
-^divert
-^shot
-^shock
-^beat
-^knock
-^normalize
-^normalize
-^waiter
-^palindromic
 ^frontal,!frontal,?frontal
 ^frontal
 ^terminological
@@ -43093,7 +38968,7 @@
 !barbe,^barbel
 ^central american spanish,!mittelamerikanisches spanisch
 !blutgefäß,^blood vessel
-^do!rose,!hundsrose,!hagebutte
+^dog-rose,!hundsrose,!hagebutte
 ^dreadful,!schrecklich,!fürchterlich,^fearful
 ^flank,!flanke
 ^freckle,!sommersprosse
@@ -43105,7 +38980,7 @@
 !nebensitzer,!banknachbar,^classmate
 !nestbeschmutzer
 !nesthäkchen
-^couldn't-car^less attitude
+^couldn't-care-less attitude
 ^indifferent
 ^gipsy,^gypsy
 ^glutton,!vielfraß
@@ -43128,22 +39003,14 @@
 ^dilute,!verdünnen
 ^dislocate,!ausrenken,!auskugeln
 ^grow up,!aufwachsen
-^hew
 ^hinder,!behindern
 ^infringe,!verstoßen
 ^marry off,!verheiraten
 ^offend,!beleidigen,!kränken
 ^pass by,!vorbeifahren,!vorbeigehen
-^brother of a man
-^brother of a woman
-^sister of a man
-^sister of a woman
 !unverschleiert
 ^rebel,!rebellieren
-^rise
-^spoil
 ^stand up,!aufstehen
-^sting
 ^strew,^scatter,!streuen,!verstreuen
 ^sway,!schwanken
 ^transit
@@ -43151,7 +39018,7 @@
 ^cozy togetherness
 ^circuit breaker
 ^southern quechua
-^safety pin,^baby pin,!sicherheitsnadel,?alfinete,?alfinete de fralda,?alfinete de dama,?alfinete de segurança,?alfinete de ama,?alfinet^d^ama
+^safety pin,^baby pin,!sicherheitsnadel,?alfinete,?alfinete de fralda,?alfinete de dama,?alfinete de segurança,?alfinete de ama,?alfinete-de-ama
 ^college student,^university student
 ^pinus sibirica,^siberian pine
 ^have lunch
@@ -43166,25 +39033,17 @@
 !platzen,^burst,^burst,!platzen,^burst,^explode
 ^talossan
 ^self-sufficiency,!selbstversorgung,?autossuficiência
-^rush
-^opisthenar
 ^prosody,!verslehre,?prosódia
 ^prosody,!prosodie,?prosódia
-^prosody
-^psychoneurotic
-^psychoneurotic
-^psychoneurosis
-^debauch
-^levant
 ^acid-free paper,?papel alcalino
 ^decontaminant
 ^woven
 ^wheaten
-^wast^ridden
+^waste-ridden
+^fuck off,?tomar no cu
 ^war-ridden
 ^violenc^ridden
 ^unwritten,?inescrito
-^typewritten
 ^stolen,^spoken
 ^stolen,^fallen
 ^fallen
@@ -43192,16 +39051,8 @@
 ^rasp,!raspel,?grosa,?raspa,?raspadeira
 ^rasp,?grosar
 ^abstractly,?abstratamente
-^cyclically
-^acyclically
 ^acyclic,?acíclico
 ^ad hoc,?ad hoc
-^biológicamente,^biologically
-^tile
-^confinement barrier,^containment barrier
-^oil boom
-^prefabricated
-^iso 9000
 ^barquisimeto,?barquisimeto
 ^maracay,?maracay
 ^ciudad guayana,?ciudad guayana
@@ -43236,124 +39087,13 @@
 ^ip address,?endereço ip
 ^electrolyte,?eletrólito
 ^fuse,?fusível
-^helical
-^hydrometer
-^intranet
-^jumper
-^mac address,^media access control address
-^nickel–cadmium battery,^ni-cd battery
-^oscillograph
-^overload
-^photovoltaic
-^photovoltaic cell,^solar cell
-^refractor telescope
-^autosome
-^bacterial artificial chromosome
-^plasmid
-^base,^nucleobase
-^base pair
-^base sequence
-^chromosomal deletion,^deletion,^deletion mutation,^gene deletion,^deleción,^deleción cromosómica
-^chromosomal inversion
-^comparative genomics
-^genomics
-^cytogenetics
-^dna replication
-^dna repair
-^dna sequence
-^electrophoresis
-^eukaryote
-^functional genomics
-^retroviral
-^retroviral infection
-^acceptance criteria
-^batch processing
-^business rule
-^code review,^peer review
-^configuration management
-^entity–relationship model
-^interface
-^life cycle,^lifecycle
-^object code
-^prototyping
-^pseudocode,?pseudocódigo
-^referential
-^reusability
-^self-join
-^timestamp
-^accredited
-^accredited translator
-^certify
-^certified translation
-^computer-aided design
-^design
-^computer-aided,^computer-assisted,^management system
-^computer-aided translation,^computer-assisted translation,^machin^aided translation
 ^interpreter,?interpretador
 ^conference interpreter
 ^freelance translator
 ^literal translation
 ^mother-tongue,^mother tongue,?língua materna
-^whispering,^whispered interpreting
-^simultaneous interpreting,^simultaneous interpretation
-^base anhydride
-^binary compound
-^absorber
-^absorption coefficient
-^attenuation coefficient
-^active solar heater
-^ampacity
-^amorphous semiconductor,^amorphous silicon
-^flowerpot
-^antireflection coating
-^antireflection
-^armored cable
-^electric arc,^arco eléctrico
-^breakdown voltage
-^electrical breakdown,^dielectric breakdown
-^arc-over voltage
-^base load
-^critical mass
-^electrical industry,^electric power industry
-^dielectric,^dielectric material
-^electric field
-^electromagnetic field
-^dustproof
-^failproof
-^fail-safe,^failsafe
-^fail-safe,^failsafe
-^electrical grid
-^electric line truck
-^truck-mounted crane
-^crawler crane
-^tower crane
-^bridge crane,^overhead crane
-^citric
-^absorbability
-^impracticable
-^deskfast
-^personal
-^personal
 ^test,^put to the proof
-^cast
-^cast
-^cast
-^cast
-^per
-^scene
-^scene,^stage
-^scene
 ^piezoelectricity,?piezoeletricidade
-^piezoelectric
-^piezoelectric effect
-^gravitational
-^ferroelectric
-^ferroelectricity
-^luminescence
-^incandescence
-^incandescent
-^incandescent
-^piezoluminescence
 ^fluorescence,?fluorescência
 ^quantum
 ^frictional
@@ -43373,45 +39113,15 @@
 ^crimean federal district
 ^streaming media
 ^acetic acid,^ethanoic acid,!essigsäure,?ácido acético
-^cosmetic
-^atrato
-^oil well
-^boring
-^flammability
-^flash point
-^fire point
 ^kindling point,^autoignition temperature
 ^autoignition
 ^chemical industry
 ^gas field,?campo de gás natural,^natural gas field
-^gas injection
-^liquefied natural gas
-^mud
-^hydration
-^rehydration
-^rehydrate
-^hydrate
-^hydrate
-^jupiter
-^echo chamber
-^echo chamber
-^anechoic chamber
-^filter bubble
-^disinformation
-^per stirpes
-^per capita
-^enemy
-^offshore
-^waterworks
-^header
-^header
 ^phinehas,^phineas,^phinees
 ^animal,?animal
 ^silver lining
 ^ossuary,?ossário,?ossuário
 ^crate,?engradado
-^crate
-^barge
 ^commit,^check in
 ^when
 !fernweh,^wanderlust
@@ -43435,14 +39145,6 @@
 ^eleutheromania
 ^locked
 !abblasvorrichtung:,!abblasvorrichtung,!abblasventil
-!anschlaghöhe
-!farbenblind
-!düsenziehverfahren
-!düsennippel
-!düsenlippen
-!düsenjäger
-!ausgeizen
-!ausgießen
 !zwiebelfurzaroma,!zwiebelfurzgeruch,!zwiebelfurzgestank
 !unbeschnitten
 !beschnitten
@@ -43460,56 +39162,16 @@
 ^panel,!verschalungsteil,!verschalungsbauteil
 ^panel,!rateteam
 ^panel,!verschalen
-^panel
-^panel
-^panel
-!tafelbild
-!schattenkühl
 !hammerruheleiste,^hammer-rest rail
-!pst,!psst,!pssst,!pst,!pscht
-!brr,!brrr
-!pf,!pff,!pfft,!pft
-!peng,^bang,!bums,^thump,!bum,!peng
-!pißvoleger,!pissvorleger
-!papiergroschen
-^daft
-^deadlift
-^lateral raise
-^leg curl
-^leg extension
-^pullover
-^squat
-^chin-up
-^bent-over row
-^stiff-legged deadlift
-^superslow
-!mitteltasche
-!tasche
-!au
-^debug
-^septum
-^president
-^button-down shirt
 ^kopfball,!kopfball,^header
-^stator
-!hilflos
 ^bull,!bulle
 ^bull,!bulle
 !siegel,^seal
 !pfiffig,!schlau,!gewitzt,^clever,^alert,!aufgeweckt
-^high contracting party
-!kamisol
 ^zhuang,!chinesisch
 !umziehen,!sich umziehen,^change dress
-!westpfälzisch
-!vorderpfälzisch
-!egge,!ääg,!eeg
-!frischer aal
-!inhaberin
-!läufer
 ^effort,!mühe,!aufwand
-!platt
-!sønderjysk,!südjütländisch,!plattdänisch,!norschleswigsch,!südjütisch,^south jutlandic,^south jutish,^angel danish
+!südjütländisch,!plattdänisch,!norschleswigsch,!südjütisch,^south jutlandic,^south jutish,^angel danish
 !wegen,!durch,!per,!aufgrund,!über,^because,^reason being,^since
 !freikaufen,!auslösen,^bail out
 ^leader,!anführrer,!rädelsführer,!führer,!chef,!führerin,!anführerin,!rädelsführerin,!leittier,!leithammel,!rudelführer,!rottenführer,!anführer
@@ -43520,26 +39182,8 @@
 !scharf,!begierig
 !stress,!aufregung,!bescheid,!angesagt,!überblick,!los sein,!streß
 ^break in,!einbrechen
-!hutmacher
-!beamter,!beamtin,!amtmann,!amtsfrau
-!50-pfenni!stück,!50-pfenni!münze,!fünzigpfennigstück,!fünzigpfennigmünze,!50 pfennig
-!5-pfenni!münze,!5-pfenni!stück,!fünfpfennigmünze,!fünfpfennigstück,!5 pfennig
-!einmarkstück,!1-mark-stück,!einemarkmünze,!einmarkmünze,!markstück,!1 mark
-!1 thaler,!1 taler,!taler,^1 thaler,^thaler,!thaler
-!2 thaler,!2 taler,^2 thaler
-!100 mark,!100-mark-schein,^100 mark
-!500-mark-schein,!500 mark,^500 mark
-!1000-mark-schein,^1000 mark,!1000 mark
-!2-mark-stück,!zweimarkstück
-!5 mark,!fünfmarkstück
 !auf der bank oder der bloßen diele schlafen
 !auf der bank schlafen,^to sleep on the bench
-!auf der eisenbahn treffen
-!50-mark-schein
-!zehner
-!zehner
-!zehner
-!10-pfenni!stück,!10-pfenni!münze,!zehnpfennigstück,!zehnpfennigmünze,!10 pfennig,!groschen,!zehn pfennig
 !deutsch (deutschland),^german (germany),!bundesrepublikanisches deutsch,!deutsch (brd),!deutsch der brd,!deutsch der bundesrepublik,!bundesdeutsch
 !zu den mädchen gehen
 !kasseler rippchen,^kasseler rippchen,^kasseler kotelett,^smoked pork chops
@@ -43551,74 +39195,28 @@
 !achtung!
 !halle,^hall
 !halle,^hall,!saal
-!5 mark,!fünfmarkstück,!5 mark
-!fünfmarkstück
 !wegbringen,!weg bringen,!fort bringen,!fortbringen,^bring away,^remove
 !faulen,!faul werden
-!1 mark
-!5 pfennig
-!50 pfennig
 ^teacher,!lehrer,!ausbilder
-!windmüller
-!wassermüller
-!wasserzähler
 !hehler,!ankäufer gestohlener waren
 ^gottal stop,!glottalstop,!glottaler stop,!stimmloser glottaler plosiv,!glottaler plosiv,^glottal stop,?oclusiva glotal
-^iso 639-2/b codes,!iso-2/b39-2/b-codes,?códigos iso 639-2/b
-^iso 639-2/t codes,!iso-2/t39-2/t-codes,?códigos iso 639-2/t
-^iso 639-5 codes,!iso-539-5-codes,?códigos iso 639-5
-^iso 639-6 codes,!iso-639-6-codes,?códigos iso 639-6
-^voiceless bilabial nasal
-^voiceless bilabial nasal
-^voiced bilabial nasal,^bilabial nasal
 ^labiodental nasal,!labiodentaler nasal,^voiced labiodental nasal
 ^protégé,^protégé
 !leipzig,^leipzig
 !ausweispapiere,!papiere,^papers,^documents
 !raubmörder
 ^red nose,!rote nase,!rothe nase
-!sachse
-!sachse
-!sachse
-!sachse
-!sachse
-!sachse
-!schnapsflasche
 ^drink liquor,!schnapstrinken,!schnaps trinken
 ^address,!anreden
 ^address,!anreden
-!aushorchen
-!bauernhaus
-!bauernsohn,!bauerssohn
-!bauersfrau,!bauernfrau
-!bauersfrau,!bäurin,!bäuerin,!bauernfrau
-!bauernkinder
-!besser wissen
-!bier trinken,!biertrinken
-!diebesgut,!diebesware
-!diebesware
 !diebesbande,^gang of thieves
-!diebeswerkzeug
-!diebeswerkzeug mit 28 theilen
-!10 pfennig
 !schiffen,!schiff fahren,!schiff fahren
-!schiff fahren
-!beichtstuhl,!thekenschaaf,!kontörchen,!theke
-!hötter platt
-^iana language subtag
-^iana language subtag registry
-^iana language subtag
 !darum,^about,^that is why,^because,^about which,^about that,^about it
-^iana language subtag
-!klapprechner
 !dunstabzugshaube,^kitchen hood,^cooker hood,^exhaust hood,^wall chimney hood,^fume extractor hood,^range hood
-!gießkanne
 !ein lied von sinen können,!ein lied von singen können
 !vorsichtshalber,!sicherheitshalber,^for the sake of safety,^precauciously,^to be on the safe side,^better,!lieber
 !entenjunge,!entenhirt,!entenhirte
 !hausmeister,^caretaker
-!dreckige hohe schuhe
-!gemmernicher platt
 !kerkrader dialekt,!kerkrader platt
 !krefelder platt,!kiewelsch,!kiewelsch platt
 ^beating,^thrashing,^blows,^punches,^punching,^smacks,^smacking,^slaps,^battering,^knocking,^slapping,^hits,^hitting,!prügel
@@ -43630,9 +39228,6 @@
 ^sixty-one,!einundsechzig
 !essensreste,!reste,!utz,!otz
 !teigschaber,^scraper,^spatula
-!händler
-!quitt
-!pfund
 !pause bei der morgendlichen arbeit
 !name des junggesellenvereins von neroth
 !nachmittäglche kaffepause
@@ -43641,37 +39236,17 @@
 !schlafen in der herberge
 !schlafstelle auf ebener erde
 ^play cards,!karten spielen
-!spinnerei
-!spinnerei
-!spinnerin
-!spinnerei
 !verfänden,!verpfänden,!versetzen
 !gastwirtin,!wirtin,!wirtsfrau
 ^tinder,!zunder
 ^rotten teeth,!faule zähne
 !glühend,^glowing
-!seite
-!seite
-!seite
-!stechen
-!stechen
 !unsauber,!unrein
 ^ticket,!protokoll,!knöllchen
 !protokoll
 !protokoll
 !protokoll,!polizeiprotokoll
-!stellen
-!stellen
-!stellen
-!stellen
-!stellen
 !angesehen,^respected
-!bass,!baß
-!bursche
-!bursche
-!bursche
-!eisenbahn
-!eisenbahn
 !expression:untersuchungshaft,!untersuchungsarrest
 !unsauber,!unrein
 !unsauber,!unrein
@@ -43689,17 +39264,6 @@
 !stehendes gewerbe
 !wandergeselle
 !gesellenwanderung,!walz,!wanderschaft,!tippelei,!wanderjahre,!wanderzeit
-!einheimischer
-!einheimischer
-!einheimischer
-!schacht
-!schmal machen
-!schmal machen
-!schallern
-!schallern
-!kuhkopp
-!kuhköppe
-!kuhkopf
 !handwerksmeister,!krauter
 !gesellschaften,!ine herberge aufsuchen,!eine herberge aufsuchen
 !jungwandernder
@@ -43720,271 +39284,9 @@
 !fein,^classy,!nobel
 !fein,!erlesen,^choice
 !fein,^posh,^vornehm,^nobel
-!fein
-!fein
-!fein
-!fein
-^genteel
-^genteel
-^genteel
 !förster,!forstmann,^forester,^forest ranger,!waldhüter
-^earthenware
-!protestant
-!pfennig
-!zigarrenkiste,!zigarrenkistchen
-!moräne,!grundmoräne,!seitenmoräne,!endmoräne,!geschiebe
-!grundmoräne
-!endmoräne
-!seitenmoräne
-!schmarotzer,!nassauer
-!rednerpult
-!waschzuber,!bottich,!wanne,!badewanne
-!eine rede halten,^deliver a speech
-!laufbursche
-!schrottplatz,^scrapyard
-!asozialer
-!schwerer vorschlaghammer,!vorschlaghammer,!riesenfäustel
-!bedenkenträger
-!adja
-!adjd
-!adv
-!appr
-!apprart
-!appo
-!apzr
-!art
-!card
-!fm
-!itj
-!nn
-!ne
-^ne
-!koui
-!kous
-!kon
-!kokom
-!pds
-!pdat
-!pis
-!piat
-!piat,!pidat
-!pper
-!blümchenkaffee
-!pposs
-!pposat
-!prels
-!prelat
-!prf
-!pws
-!pwat
-!pwav
-!pav
-!ptkzu
-!ptkneg
-!ptkvz
-!ptkant
-!ptka
-!trunc
-!vvfin
-!vvimp
-!vvinf
-!vvizu
-!vvpp
-!vafin
-!vaimp
-!vainf
-!vapp
-!vmfin
-!vminf
-!xy
-!$,
-!$.
-!$(
-^voiceless bilabial nasal
 ^voiceless,!stimmlos
 ^voiced,!stimmhaft
-^pulmonic consonant
-^coronal
-^dorsal
-^laryngeal
-^labiodental
-^linguolabial
-^alveolar
-^palato-alveolar
-^retroflex
-^alveolo-palatal
-^nasal
-^voiceless linguolabial nasal
-^linguolabial nasal,^voiced linguolabial nasal
-^voiceless alveolar nasal
-^voiced alveolar nasal
-^voiceless retroflex nasal
-^voiced retroflex nasal
-^voiceless palatal nasal
-^voiced palatal nasal
-^voiceless velar nasal
-^voiced velar nasal
-^voiceless uvular nasal
-^voiced uvular nasal
-^stop
-^voiceless bilabial stop
-^voiced bilabial stop
-^voiceless labiodental stop
-^voiced labiodental stop
-^voiceless linguolabial stop
-^voiced linguolabial stop
-^voiceless alveolar stop
-^voiced alveolar stop
-^voiceless retroflex stop
-^voiced retroflex stop
-^voiceless palatal stop
-^voiced palatal stop
-^voiceless velar stop
-^voiced velar stop
-^voiceless uvular stop
-^voiced uvular stop
-^pharyngeal stop
-^affricate
-^voiceless alveolar sibilant affricate
-^voiceless palato-alveolar sibilant affricate
-^voiced palato-alveolar sibilant affricate
-^voiceless retroflex sibilant affricate
-^voiced retroflex sibilant affricate
-^voiceless alveolo-palatal sibilant affricate
-^voiced alveolo-palatal sibilant affricate
-^voiceless bilabial affricate
-^voiced bilabial affricate
-^voiceless labiodental affricate
-^voiced labiodental affricate
-^voiceless dental non-sibilant affricate
-^voiced dental non-sibilant affricate
-^voiceless alveolar non-sibilant affricate
-^voiced alveolar non-sibilant affricate
-^voiceless postalveolar non-sibilant affricate
-^voiced postalveolar non-sibilant affricate
-^voiceless palatal affricate
-^voiced palatal affricate
-^voiceless velar affricate
-^voiced velar affricate
-^voiceless uvular affricate
-^voiced uvular affricate
-^voiceless pharyngeal affricate
-^voiced pharyngeal affricate
-^voiceless glottal affricate
-^fricative
-^voiceless alveolar sibilant
-^voiced alveolar sibilant
-^voiced palato-alveolar sibilant fricative
-^voiceless retroflex sibilant fricative
-^voiced retroflex sibilant fricative
-^voiceless alveolo-palatal sibilant fricative
-^voiced alveolo-palatal sibilant fricative
-^voiceless bilabial fricative
-^voiced bilabial fricative
-^voiceless labiodental fricative
-^voiced labiodental fricative
-^voiceless linguolabial fricative
-^voiced linguolabial fricative
-^voiceless dental non-sibilant fricative
-^voiced dental non-sibilant fricative
-^voiceless alveolar non-sibilant fricative
-^voiced alveolar non-sibilant fricative
-^voiceless postalveolar non-sibilant fricative
-^voiced postalveolar non-sibilant fricative
-^voiceless palatal fricative
-^voiced palatal fricative
-^voiceless velar fricative
-^voiced velar fricative
-^voiceless uvular fricative
-^voiced uvular fricative
-^voiceless pharyngeal fricative
-^voiced pharyngeal fricative
-^voiceless glottal fricative
-^voiced glottal fricative
-^creaky-voiced glottal approximant
-^approximant
-^voiceless bilabial approximant
-^voiced bilabial approximant
-^voiceless labiodental approximant
-^voiced labiodental approximant
-^voiceless denti-alveolar sibilant
-^voiced dental approximant
-^voiceless alveolar approximant
-^voiced alveolar approximant
-^voiceless postalveolar approximant
-^voiced postalveolar approximant
-^voiceless retroflex approximant
-^voiced retroflex approximant
-^voiceless palatal approximant
-^voiced palatal approximant
-^voiceless velar approximant
-^voiced velar approximant
-^voiced uvular approximant
-^voiced pharyngeal approximant
-^bilabial flap
-^labiodental flap
-^voiced linguolabial flap
-^voiceless alveolar flap
-^voiceless alveolar tapped fricative
-^tap,^flap
-^voiced alveolar flap
-^voiced alveolar tapped fricative
-^voiceless retroflex flap
-^voiced retroflex flap
-^uvular flap
-^epiglottal flap
-^trill
-^voiceless bilabial trill
-^voiced bilabial trill
-^voiceless linguolabial trill
-^voiced linguolabial trill
-^voiceless alveolar trill
-^voiced alveolar trill
-^raised alveolar trill
-^voiceless retroflex trill
-^voiced retroflex trill
-^voiceless uvular trill
-^voiced uvular trill
-^voiceless epiglottal trill
-^voiced epiglottal trill
-^lateral affricate
-^lateral
-^voiceless alveolar lateral affricate
-^voiced alveolar lateral affricate
-^voiceless retroflex lateral affricate
-^voiced retroflex lateral affricate
-^voiceless palatal lateral affricate
-^voiced palatal lateral affricate
-^voiceless velar lateral affricate
-^lateral fricative
-^voiceless alveolar lateral fricative
-^voiced alveolar lateral fricative
-^voiceless retroflex lateral fricative
-^voiced retroflex lateral fricative
-^voiceless palatal lateral fricative
-^voiced palatal lateral fricative
-^voiceless velar lateral fricative
-^voiced velar lateral fricative
-^lateral approximant
-^linguolabial lateral approximant
-^voiceless alveolar lateral approximant
-^voiceless alveolar lateral approximant
-^voiced alveolar lateral approximant
-^voiceless palatal lateral approximant
-^voiced palatal lateral approximant
-^voiceless velar lateral approximant
-^voiced velar lateral approximant
-^uvular lateral approximant
-^lateral flap
-^alveolar lateral flap
-^retroflex lateral flap
-^palatal lateral flap
-^velar lateral flap
-^voiceless alveolar lateral approximant
-^voiceless retroflex lateral approximant
-^voiced retroflex lateral approximant
-^consonantal
-^tapped fricative
 !dreihundert,^threehundert,^three hundred
 !sekundaner,^sophomore
 !tertianer
@@ -43994,18 +39296,6 @@
 !additive zweisprachigkeit
 !subtraktive zweisprachigkeit
 !xenolekt,^foreigner talk
-!verkehrssprache
-!urbanolekt,!stadtsprache
-!territorialsprache
-!substandard,!substandardvarität
-!standardvarietät,!standard
-!slangismus
-!sexolekt
-!situolekt
-!pidgin
-!minderheitssprache
-!mehrheitssprache
-!migrationslinguistik
 ^creole,^creole,!kreolisch
 !kontaktvarietät
 !jugendsprache
@@ -44027,26 +39317,21 @@
 ^illegit,!nicht legiitim,!illegiitim
 ^illegit,!nicht legiitim,!illegiitim
 ^legit,!legitim
-^legit,!legitim
-^legit,!legitim
-^legit,!legitim
 !vorbestrafter
 ^amicoumacin a
 ^brass monkeys,^bitter cold,!eiseskälte,!hundekälte,!saukälte
 ^kurdish
-!kroatien
+!kroatien,?croata
 ^stole,!stola
 ^too tight,^tight,^very tight
 ^meager,^poor
-^fast
-!objektball
 ^touching ball,!press liegender ball
 !böse,!ungehalten
 !wirsingkohl,!wirsing,!savoyer kohl,!welschkohl,!welschkraut,^savoy cabbage
 ^flerovium
 ^tort law
 !erscheinen,^show up
-^supple,^lithe,^fit,^acrobatic,^deft,^willowy,^graceful,^elegant,^agile,^loos^jointed,^loos^limbed,^flexible,^nimble,^lissom,^limber
+^supple,^lithe,^fit,^acrobatic,^deft,^willowy,^graceful,^elegant,^agile,^loose-jointed,^loose-limbed,^flexible,^nimble,^lissom,^limber
 ^supple
 ^was,!war,?era
 ^providing,?provendo,!bereitstellen

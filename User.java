@@ -1,8 +1,6 @@
 package testeTexto;
 
-import java.io.FileNotFoundException;
-import java.io.RandomAccessFile;
-import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 public class User {
   protected int ID;
@@ -269,6 +267,36 @@ class TextosLidos{
    
    public void setDificuldade(short dificuldade){
 	   this.dificuldade = dificuldade;
+   }
+   
+   public int dificuldadeTexto(String texto){
+   	
+	   int npalavras = 0;  
+	   
+	   StringTokenizer str = new StringTokenizer((texto), " ");
+	   while(str.hasMoreElements())
+		   if(str.nextToken() != null)
+			   npalavras++;
+	   if(npalavras <= 500)
+		   this.dificuldade = 1;
+	   else if(npalavras > 500 && npalavras <= 1500)
+		   this.dificuldade = 2;
+	   else if(npalavras > 1500 && npalavras <= 2500)
+		   this.dificuldade = 3;
+	   else if(npalavras > 3500 && npalavras <= 4500)
+		   this.dificuldade = 4;
+	   else if(npalavras >= 4500)
+		   this.dificuldade = 5;
+		
+	   return npalavras;
+   }
+   
+   public void calculaCompreensao(int totalPalavras, int palavrasProcuradas){
+	   	
+	   float entendimento = (float) palavrasProcuradas/totalPalavras;
+	   float fatorDificuldade = 1 + (int)this.dificuldade*(float)0.01;
+	   
+	   this.compreensao = entendimento * fatorDificuldade;
    }
    
    @Override

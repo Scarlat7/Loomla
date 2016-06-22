@@ -6,8 +6,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.StringTokenizer;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
@@ -20,11 +23,14 @@ import javax.swing.table.JTableHeader;
 
 public class LoomlaUI extends javax.swing.JFrame {
 	
-	public static String currentLang;
-	public static String secondLang;
 	public static boolean[] ordemPalavra = new boolean[3];
 	public static boolean[] ordemTexto = new boolean[3];
+	
 	public static User loggedUser;
+	public static String currentLang;
+	public static String secondLang;
+	public static TextosLidos currentText;
+	public static int	palavrasTraduzidas = 0;
 	
     public LoomlaUI() {
         initComponents();
@@ -773,8 +779,8 @@ public class LoomlaUI extends javax.swing.JFrame {
         String pass = String.valueOf(password);
         String username = LoginText.getText();
         
-        User loggedUser = UserFiles.getUserData(username);
-        	
+        loggedUser = UserFiles.getUserData(username);
+        
         if(loggedUser == null){
         	ErrorMessage.setText("Nome de usuário não encontrado.");
         }	
@@ -796,7 +802,6 @@ public class LoomlaUI extends javax.swing.JFrame {
             i = 0;
             while(i<loggedUser.textosLidos.length && loggedUser.textosLidos[i] != null){
             	for(int j = 0; j<TabelaTextos.getRowCount(); j++){
-            		System.out.println(loggedUser.textosLidos[i].getNome());
             		TabelaTextos.setValueAt(ToString.toString(loggedUser.textosLidos[i].getNome()), i, 0);
         			String aux = String.valueOf(loggedUser.textosLidos[i].data);
         			String a = aux.substring(0, 2)+"/" + aux.substring(2, 4)+"/"+ aux.substring(4, 6);
@@ -859,14 +864,35 @@ public class LoomlaUI extends javax.swing.JFrame {
     }
 
     private void UserButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-            CardLayout card = (CardLayout)mainPanel.getLayout();
+    		try {
+    			
+				UserFiles.addUserData(loggedUser);
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    	
+    		CardLayout card = (CardLayout)mainPanel.getLayout();
             card.show(mainPanel, "User");
     }
 
     private void OpenButtonActionPerformed(java.awt.event.ActionEvent evt) {
-    String selected = TextChooser.getSelectedValue();
-    System.out.println("AAAH");
-    System.out.println(selected);
+    	String selected = TextChooser.getSelectedValue();
+    	
+    	currentText = new TextosLidos();
+    	
+    	if(!Text.getText().equals("")){
+        	roundUpText();
+        }
+    	
+        Date time = new Date();
+        SimpleDateFormat ft =  new SimpleDateFormat("dd/MM/yy");
+        ft.format(time);
+        
+        currentText.setData(ft.format(time).toCharArray());
+        currentText.setNome(selected.toCharArray());
+    	
         try {
           Text.read( new FileReader(selected), null );
         }catch(IOException e){
@@ -878,6 +904,19 @@ public class LoomlaUI extends javax.swing.JFrame {
         int returnVal = FileChooser.showOpenDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file = FileChooser.getSelectedFile();
+            
+            currentText = new TextosLidos();
+            
+            if(Text.getText() != ""){
+            	roundUpText();
+            }
+            
+            Date time = new Date();
+            SimpleDateFormat ft =  new SimpleDateFormat("dd/MM/yy");
+            ft.format(time);
+            currentText.setData(ft.format(time).toCharArray());
+            currentText.setNome(file.getName().toCharArray()); 
+            
             try {
               Text.read( new FileReader( file.getAbsolutePath() ), null );
             }catch(IOException e){
@@ -908,6 +947,10 @@ public class LoomlaUI extends javax.swing.JFrame {
 
     private void TextMouseReleased(java.awt.event.MouseEvent evt) throws IOException {
         String busca = (Text.getSelectedText());
+        palavrasTraduzidas++;
+        System.out.println(loggedUser);
+        loggedUser.newWord(busca);
+        
         String language = currentLang;
         String nativa = secondLang;
         int nIDs = 0, i;
@@ -969,8 +1012,6 @@ public class LoomlaUI extends javax.swing.JFrame {
         
         while(j<s.length && s[j] != null)
         	j++;
-        for(int k = 0; k<j; k++)
-        	System.out.println(s[k]);
         
         Sort.MergeSortTextos(s,0,j,name,ordemTexto[col]);
         
@@ -990,9 +1031,13 @@ public class LoomlaUI extends javax.swing.JFrame {
         for (int i = 0 ; i < nLin ; i++)
                 tableData[i] = t.getValueAt(i,col);
         return tableData;
-    }
+    } 
     
- 
+    private void roundUpText(){
+    	int totalPalavras = currentText.dificuldadeTexto(Text.getText());
+    	currentText.calculaCompreensao(totalPalavras, palavrasTraduzidas);
+    	loggedUser.newRead(currentText);
+    }
 
     public static void main(String args[]) {
 

@@ -287,7 +287,12 @@ public class LoomlaUI extends javax.swing.JFrame {
         LogOutButton.setContentAreaFilled(false);
         LogOutButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogOutButtonActionPerformed(evt);
+                try {
+					LogOutButtonActionPerformed(evt);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
         });
 
@@ -569,7 +574,12 @@ public class LoomlaUI extends javax.swing.JFrame {
         LogOutButton2.setContentAreaFilled(false);
         LogOutButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogOutButton2ActionPerformed(evt);
+                try {
+					LogOutButton2ActionPerformed(evt);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
         });
 
@@ -627,7 +637,12 @@ public class LoomlaUI extends javax.swing.JFrame {
         Text.setSelectionColor(new java.awt.Color(0, 204, 0));
         Text.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                TextMouseReleased(evt);
+                try {
+					TextMouseReleased(evt);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
         });
         TextContainer.setViewportView(Text);
@@ -871,13 +886,13 @@ public class LoomlaUI extends javax.swing.JFrame {
         }
     }
 
-    private void LogOutButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        CardLayout card = (CardLayout)mainPanel.getLayout();
-        card.show(mainPanel, "Login");
+    private void LogOutButton2ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
+	    LogOutButtonActionPerformed(evt);
     }
 
-    private void LogOutButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        CardLayout card = (CardLayout)mainPanel.getLayout();
+    private void LogOutButtonActionPerformed(java.awt.event.ActionEvent evt) throws IOException {
+        UserFiles.addUserData(loggedUser);
+    	CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "Login");
     }
 
@@ -891,14 +906,26 @@ public class LoomlaUI extends javax.swing.JFrame {
         secondLang = (String)cb.getSelectedItem(); 
     }
 
-    private void TextMouseReleased(java.awt.event.MouseEvent evt) {
+    private void TextMouseReleased(java.awt.event.MouseEvent evt) throws IOException {
         String busca = (Text.getSelectedText());
+        String language = currentLang;
+        String nativa = secondLang;
+        int nIDs = 0, i;
         Trieteste teste = new Trieteste();
+        
         RandomAccessFile arquivo;
         try {
-                arquivo = new RandomAccessFile("Trie.bin", "rw");
+        		BNode data = new BNode(nativa);
+                //arquivo = new RandomAccessFile("Eusei", "rw");
                 String translation = "";
-                //ArrayList<Integer> ID = teste.searchTrie(arquivo, busca);
+                ArrayList<Integer> ID = teste.searchTrie("Eusei", busca, language, 4);
+                while(ID.get(nIDs)!= -1){
+                	ArrayList<String> translations = data.getTranslations(ID.get(nIDs), language);
+                	for(String meaning: translations){
+                		translation += nIDs+ "." +meaning+ "\r\n";
+                	}
+                	nIDs++;
+                }
                 // ArrayList<Integer> ID2 = teste2.searchTrie(arquivo, "rena");
                  //System.out.println(ID);
                  //System.out.println(ID2);
